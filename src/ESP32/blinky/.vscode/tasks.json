@@ -1,0 +1,99 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+
+    // Build in debug mode
+    {
+      "label": "build debug",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "xbuild" ],
+      "options":{
+        "env": {
+          "RUST_BACKTRACE": "1",
+          "XARGO_RUST_SRC": "D:\\SourceCode\\External\\rust-xtensa\\library",
+          "RUSTC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc",
+          "RUSTDOC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+        }
+      }
+    },
+
+    // Build in debug mode and upload to the board flash
+    {
+      "label": "build debug - flash upload",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "espflash", "--chip=esp32", "--tool=\"xbuild\"", "${config:SerialPort}" ],
+      "options": {
+        "env": {
+          "RUST_BACKTRACE": "1",
+          "XARGO_RUST_SRC": "D:\\SourceCode\\External\\rust-xtensa\\library",
+          "RUSTC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc",
+          "RUSTDOC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+        }
+      }
+    },
+
+    // Build in release mode
+    {
+      "label": "build release",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "xbuild", "--release" ],
+      "options": {
+        "env": {
+          "RUST_BACKTRACE": "1",
+          "XARGO_RUST_SRC": "D:\\SourceCode\\External\\rust-xtensa\\library",
+          "RUSTC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc",
+          "RUSTDOC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+        }
+      }
+    },
+
+    // Build in release mode and upload to the board flash
+    {
+      "label": "build release - flash upload",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "espflash", "--chip=esp32", "--tool=\"xbuild\"", "--release", "${config:SerialPort}" ],
+      "options": {
+        "env": {
+          "RUST_BACKTRACE": "1",
+          "XARGO_RUST_SRC": "D:\\SourceCode\\External\\rust-xtensa\\library",
+          "RUSTC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc",
+          "RUSTDOC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+        }
+      }
+    },
+
+    // Clean the target build directory
+    {
+      "label": "clean",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "clean" ],
+    },
+
+    // This gets the ESP32 Flash id and displays it in the console
+    // It can also be used to reset the device
+    {
+      "label": "esp32 get flashid",
+      "command": "esptool.py",
+      "type": "process",
+      "args": [ "-p", "${config:SerialPort}", "flash_id" ],
+    },
+
+    // Erase the flash
+    {
+      "label": "esp32 erase flash",
+      "command": "esptool.py",
+      "type": "process",
+      "args": [ "--chip", "esp32", "-p", "${config:SerialPort}", "erase_flash" ],
+    },
+  ],
+}

@@ -1,0 +1,4 @@
+{
+    // Custom setting used to specify the serial port
+    "SerialPort": "COM4"
+}

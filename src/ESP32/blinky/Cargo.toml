@@ -1,0 +1,25 @@
+[package]
+name = "blinky"
+version = "0.1.0"
+authors = ["grbd <hecatrons.workshop@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+xtensa-lx-rt = "0.5.0"
+xtensa-lx = "0.3.0"
+panic-halt = "0.2.0"
+
+# because we cant have optional dev-deps, these must go here
+esp32-hal = { version = "0.2.0", optional = true }
+
+[features]
+default = ["xtensa-lx-rt/lx6", "xtensa-lx/lx6", "esp32-hal"]
+
+[[bin]]
+name = "blinky"
+required-features = ["xtensa-lx-rt/lx6", "xtensa-lx/lx6", "esp32-hal"]
+
+# Todo remove after moving to cargo proper
+[package.metadata.cargo-xbuild]
+memcpy = false
+panic_immediate_abort = false

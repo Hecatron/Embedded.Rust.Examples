@@ -5,6 +5,7 @@ Example accessing sdmmc from ESP32 using Fat32
 ## Libs
 
   * https://github.com/rafalh/rust-fatfs
+  * https://github.com/rust-embedded-community/embedded-sdmmc-rs
 
 ## TODO
 

@@ -1,0 +1,28 @@
+# Hardware
+
+Currently the hardware I'm using on these examples is the ESP32-WROVER-B
+
+  * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-wrover-kit.html
+
+
+## Flash Size
+
+By Default the flash size is 4MiB (MegaByte)
+
+
+## SPI PSRAM
+
+By Default there's 512KiB (KiloBytes) or 4Mb (Megabits)
+This is split into 328k DRAM and 192k IRAM (Instruction Ram)
+
+There's also and additional 4Mb PSRAM on some boards such as the ESP-WROVER-B
+called pseudo static RAM
+
+  * https://thingpulse.com/esp32-how-to-use-psram/
+  * https://arduinojson.org/v6/how-to/use-external-ram-on-esp32/
+  * https://www.esp32.com/viewtopic.php?t=1831
+  * http://blog.pagefault-limited.co.uk/lolin32-lite-esp32-8mb-psram-upgrade-mod
+
+Apparantley only 4Mb is accessible even when 8Mb is attached. but you can access the rest via bank switching
+
+  * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/himem.html

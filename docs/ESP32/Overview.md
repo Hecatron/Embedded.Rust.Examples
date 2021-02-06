@@ -12,6 +12,8 @@ Some of this is based on the xtensa-rust-quickstart
   * [JTag Setup](./JTagSetup.md)
   * [Debugging using JTag](./Debug.md)
 
+  * [VSCode Setup](./VSCode.md)
+
 ## Links
 
   * https://github.com/MabezDev/xtensa-rust-quickstart

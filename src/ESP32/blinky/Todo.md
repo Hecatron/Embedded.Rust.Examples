@@ -8,14 +8,8 @@
   * python wrapper to set the env variables for vscode
   * test the jlink ocd setup
 
-## Documentation
 
-  * Add the following for install to the docs
-  openocd - https://github.com/espressif/openocd-esp32/releases/tag/v0.10.0-esp32-20201202
-  * Add cargo-xbuild to the installs
-
-
-## Switch from Xbuild to build
+## Switch from cargo xbuild to cargo build
 
 Currently there's an issue with the mem functions being duplicated between esp32-hal / compiler-builtins
 So to get around this we use cargo-xbuild instead of cargo

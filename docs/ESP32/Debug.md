@@ -1,24 +1,13 @@
 # Debugging
 
-## Flashing
-
-To upload to the board (COM port should be the second one out of the two)
-```
-cargo espflash --chip esp32 --tool="xbuild" COM4
-```
-
-Sometimes before connecting via the cargo espflash module I find things only work if I try running the esptool.py first
-```
-esptool.py -p COM4 flash_id
-```
-
-
-TODO
+For hardware gdb debugging we can ether use the Segger or for the ESP-WROVER-KIT board the inbuilt Jtag interface
 
   * https://demo-dijiudu.readthedocs.io/en/latest/api-guides/jtag-debugging/tips-and-quirks.html
+  * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/jtag-debugging/index.html
+  * https://dzone.com/articles/eclipse-jtag-debugging-the-esp32-with-a-segger-j-l
 
 
-## JTag (dev board)
+## JTag (esp32 dev board)
 
 ### WinUSB Driver
 
@@ -36,3 +25,8 @@ A reboot may be needed afterwards in order for the serial port for flashing to c
 ### JTag Jumpers
 
   * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-wrover-kit.html
+
+
+## Jtag Segger
+
+TODO

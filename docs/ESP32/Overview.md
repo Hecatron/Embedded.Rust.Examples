@@ -17,3 +17,4 @@ Some of this is based on the xtensa-rust-quickstart
 ## Links
 
   * https://github.com/MabezDev/xtensa-rust-quickstart
+  * https://dentrassi.de/2019/06/16/rust-on-the-esp-and-how-to-get-started/

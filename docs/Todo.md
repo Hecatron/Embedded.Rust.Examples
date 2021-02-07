@@ -6,3 +6,9 @@
   * https://doc.rust-lang.org/stable/cargo/reference/overriding-dependencies.html#the-patch-section
 
 see if cargo patch can be used to override compiler builtins
+
+## Patch
+
+This looks promising
+
+https://github.com/mettke/cargo-patch

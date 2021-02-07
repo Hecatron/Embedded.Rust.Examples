@@ -17,7 +17,7 @@ cd esp-idf
 git checkout v4.2
 ```
 
-## Build Library
+### Build Library
 
 ```
 # Set the paths for rustc for the esp32
@@ -27,6 +27,7 @@ set RUSTDOC=D:\SourceCode\External\rust-xtensa\build\x86_64-pc-windows-msvc\stag
 
 # Set the path for the downloaded idf
 set export IDF_PATH=D:\SourceCode\External\esp-idf
-```
 
-TODO I think build.rs is using make
+# Build the library
+cargo xbuild
+```

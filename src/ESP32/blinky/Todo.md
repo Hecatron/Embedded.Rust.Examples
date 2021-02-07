@@ -7,6 +7,7 @@
   * look at the runner under .cargo/config
   * python wrapper to set the env variables for vscode
   * test the jlink ocd setup
+  * does println work via jtag?
 
 
 ## Switch from cargo xbuild to cargo build

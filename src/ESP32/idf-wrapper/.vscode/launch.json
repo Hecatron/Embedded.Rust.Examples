@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        // TODO set program to right path
+	// set target to the library only
+	// how to not set rustc for the build script?
+        {
+            "name": "Debug build script",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/scripts/target/debug/main_e7de597a31997feaa9e7433c.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false,
+            "sourceLanguages": ["rust"],
+        },        
+    ]
+}

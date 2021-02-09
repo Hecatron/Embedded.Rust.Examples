@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+
+    // Build in debug mode
+    {
+      "label": "build debug",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "xbuild" ],
+      "options":{
+        "env": {
+          "RUST_BACKTRACE": "1",
+          "XARGO_RUST_SRC": "D:\\SourceCode\\External\\rust-xtensa\\library",
+          "RUSTC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc",
+          "RUSTDOC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+        }
+      }
+    },
+
+    // Build in release mode
+    {
+      "label": "build release",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "xbuild", "--release" ],
+      "options": {
+        "env": {
+          "RUST_BACKTRACE": "1",
+          "XARGO_RUST_SRC": "D:\\SourceCode\\External\\rust-xtensa\\library",
+          "RUSTC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc",
+          "RUSTDOC": "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+        }
+      }
+    },
+
+    // Clean the target build directory
+    {
+      "label": "clean",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "clean" ],
+    },
+  ],
+}

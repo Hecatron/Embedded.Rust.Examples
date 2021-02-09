@@ -56,3 +56,10 @@ cargo xbuild
 # To buld release
 cargo xbuild --release
 ```
+
+### Minimising build size
+
+So far I've not managed to get all of these to work for the ESP32
+Probably due to the use of xbuild and not build-std
+
+  * https://github.com/johnthagen/min-sized-rust

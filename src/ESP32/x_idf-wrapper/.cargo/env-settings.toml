@@ -1,0 +1,8 @@
+[env]
+# Show debugging info on error of build
+RUST_BACKTRACE = 1
+
+# Set custom paths for rustc for the esp32
+XARGO_RUST_SRC = "D:\\SourceCode\\External\\rust-xtensa\\library"
+RUSTC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc"
+RUSTDOC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"

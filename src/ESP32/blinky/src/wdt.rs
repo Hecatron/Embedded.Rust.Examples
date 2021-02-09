@@ -3,7 +3,6 @@ use esp32_hal::target;
 const WDT_WKEY_VALUE: u32 = 0x50D83AA1;
 
 pub fn disable_wdts(dp: &mut target::Peripherals) {
-
     let rtccntl = &mut dp.RTCCNTL;
     let timg0 = &mut dp.TIMG0;
     let timg1 = &mut dp.TIMG1;

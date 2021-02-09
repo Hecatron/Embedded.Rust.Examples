@@ -1,11 +1,11 @@
 #![no_std]
 #![no_main]
 
+use esp32_hal as hal;
 use esp32_hal::target;
 use hal::prelude::*;
-use xtensa_lx::timer::delay;
 use panic_halt as _;
-use esp32_hal as hal;
+use xtensa_lx::timer::delay;
 
 mod wdt;
 
@@ -15,7 +15,6 @@ const CORE_HZ: u32 = 40_000_000;
 
 #[entry]
 fn main() -> ! {
-
     // Get Peripherals
     let mut dp = target::Peripherals::take().expect("Failed to obtain Peripherals");
 

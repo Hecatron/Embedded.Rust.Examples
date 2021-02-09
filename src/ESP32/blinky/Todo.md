@@ -9,6 +9,7 @@
   * test the jlink ocd setup
   * does println work via jtag?
 
+  * set env vars via cargo-make
 
 ## Switch from cargo xbuild to cargo build
 

@@ -60,3 +60,13 @@ For JTag debuggging one tool we need is the version of openocd built for the esp
 This can be used with the ESP32 Wrover Kit board
 
   * https://github.com/espressif/openocd-esp32/releases/tag/v0.10.0-esp32-20201202
+
+
+## Util
+
+This is a useful wrapper tool for cargo
+```
+cargo install cargo-make
+```
+
+  * https://sagiegurari.github.io/cargo-make/

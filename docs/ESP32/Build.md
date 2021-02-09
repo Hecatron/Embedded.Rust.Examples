@@ -43,8 +43,6 @@ set export RUST_BACKTRACE=1
 # To clean
 cargo clean
 
-set export RUST_BACKTRACE=1 
-
 # We should be able to get rid of these once these can be placed into .cargo/cargo.toml
 # when using cargo build instead of cargo xbuild
 set XARGO_RUST_SRC=D:\SourceCode\External\rust-xtensa\library

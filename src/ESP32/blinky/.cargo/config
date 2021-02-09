@@ -3,9 +3,6 @@
 
 [build]
 target = "xtensa-esp32-none-elf"
-# Todo only used under cargo not xbuild
-rustc = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc.exe"
-rustdoc = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc.exe"
 
 # Re-enable when we switch from xbuild to build
 #[unstable]

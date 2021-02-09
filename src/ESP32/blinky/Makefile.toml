@@ -1,0 +1,42 @@
+[env]
+# Show debugging info on error of build
+RUST_BACKTRACE = 1
+
+# Set custom paths for rustc for the esp32
+XARGO_RUST_SRC = "D:\\SourceCode\\External\\rust-xtensa\\library"
+RUSTC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc"
+RUSTDOC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+
+# Serial port for flashing
+ESP32_FLASH_SERIAL = "COM4"
+
+
+[tasks.build]
+command = "cargo"
+args = ["xbuild", "${@}"]
+category = "ESP32-Build"
+
+[tasks.build-release]
+command = "cargo"
+args = ["xbuild", "--release", "${@}"]
+category = "ESP32-Build"
+
+[tasks.flash-build]
+command = "cargo"
+args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "${ESP32_FLASH_SERIAL}", "${@}"]
+category = "ESP32-Build"
+
+[tasks.flash-build-release]
+command = "cargo"
+args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "--release", "${ESP32_FLASH_SERIAL}", "${@}"]
+category = "ESP32-Build"
+
+[tasks.esp32-flashid]
+command = "esptool"
+args = ["--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "flash_id", "${@}"]
+category = "ESP32-Flash"
+
+[tasks.esp32-eraseflash]
+command = "esptool"
+args = ["--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "erase_flash", "${@}"]
+category = "ESP32-Flash"

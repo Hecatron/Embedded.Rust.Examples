@@ -9,6 +9,13 @@ documentation = "https://reitermarkus.github.io/esp-idf-bindgen/esp_idf_bindgen/
 license = "MIT OR Apache-2.0"
 exclude = ["/.github/*"]
 
+[features]
+esp32 = []
+esp8266 = []
+
+#default = ["esp32"]
+default = ["esp8266"]
+
 #[dependencies]
 #libc = { version = "0.2.85", default-features = false }
 

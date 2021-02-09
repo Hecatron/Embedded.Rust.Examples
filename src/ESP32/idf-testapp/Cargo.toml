@@ -1,0 +1,15 @@
+[package]
+name = "testapp"
+version = "0.1.0"
+authors = ["grbd <hecatrons.workshop@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "testapp"
+
+#[dependencies]
+#libc = { version = "0.2.85", default-features = false }
+
+[build-dependencies]
+bindgen = "0.57.0"
+globwalk = "0.8.1"

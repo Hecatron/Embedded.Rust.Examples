@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Debug build script",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/testapp",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false,
+            "sourceLanguages": ["rust"],
+        },   
+        
+    ]
+}

@@ -10,6 +10,6 @@ name = "testapp"
 #[dependencies]
 #libc = { version = "0.2.85", default-features = false }
 
-[build-dependencies]
-bindgen = "0.57.0"
+[dependencies]
 globwalk = "0.8.1"
+bindgen = "0.57.0"

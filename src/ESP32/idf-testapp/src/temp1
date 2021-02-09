@@ -1,41 +1,5 @@
 
 /*
-  let (idf_target, linker) = match env::var("TARGET")?.as_ref() {
-    "xtensa-esp32-none-elf" => {
-      println!(r#"cargo:rustc-cfg=target_device="esp32""#);
-      ("esp32".to_string(), env::var("RUSTC_LINKER").unwrap_or("xtensa-esp32-elf-ld".to_string()))
-    },
-    "xtensa-esp8266-none-elf" => {
-      println!(r#"cargo:rustc-cfg=target_device="esp8266""#);
-      ("esp8266".to_string(), env::var("RUSTC_LINKER").unwrap_or("xtensa-lx106-elf-ld".to_string()))
-    },
-    target => {
-      println!("cargo:warning=Generating ESP IDF bindings for target '{}' it not supported. The resulting crate will be empty.", target);
-      return Ok(())
-    },
-  };
-
-  let idf_path = PathBuf::from(env::var("IDF_PATH").expect("IDF_PATH not set"));
-
-  let sysroot = Command::new(linker)
-    .arg("--print-sysroot")
-    .output()
-    .map(|mut output| {
-      // Remove newline from end.
-      output.stdout.pop();
-      PathBuf::from(OsStr::from_bytes(&output.stdout))
-        .canonicalize().expect("failed to canonicalize sysroot")
-    })
-    .expect("failed getting sysroot");
-
-  let component_includes =
-    globwalk::GlobWalkerBuilder::from_patterns(
-      &idf_path,
-      &["components/*/include"],
-    )
-    .build()?
-    .filter_map(Result::ok)
-    .map(|d| d.into_path());
 
   let component_additional_includes = globwalk::GlobWalkerBuilder::from_patterns(
       &idf_path,

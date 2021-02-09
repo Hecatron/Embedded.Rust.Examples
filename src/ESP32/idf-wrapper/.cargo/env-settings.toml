@@ -6,6 +6,3 @@ RUST_BACKTRACE = 1
 XARGO_RUST_SRC = "D:\\SourceCode\\External\\rust-xtensa\\library"
 RUSTC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc"
 RUSTDOC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
-
-# Serial port for flashing
-ESP32_FLASH_SERIAL = "COM4"

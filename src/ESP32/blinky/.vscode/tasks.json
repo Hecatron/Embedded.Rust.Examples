@@ -2,66 +2,74 @@
   "version": "2.0.0",
   "tasks": [
 
-    // Build in debug mode
     {
       "label": "build debug",
+      "detail": "Build in debug mode",
       "command": "cargo",
       "type": "process",
       "group": "build",
       "args": [ "make", "build" ]
     },
 
-    // Build in debug mode and upload to the board flash
     {
       "label": "build debug - flash upload",
+      "detail": "Build in debug mode then upload to the flash",
       "command": "cargo",
       "type": "process",
       "group": "build",
       "args": [ "make", "flash-build" ]
     },
 
-    // Build in release mode
     {
       "label": "build release",
+      "detail": "Build in release mode",
       "command": "cargo",
       "type": "process",
       "group": "build",
       "args": [ "make", "build-release" ]
     },
 
-    // Build in release mode and upload to the board flash
     {
       "label": "build release - flash upload",
+      "detail": "Build in release mode then upload to the flash",
       "command": "cargo",
       "type": "process",
       "group": "build",
       "args": [ "make", "flash-build-release" ]
     },
 
-    // Clean the target build directory
     {
       "label": "clean",
+      "detail": "Clean the target build directory",
       "command": "cargo",
       "type": "process",
       "group": "build",
-      "args": [ "make", "clean" ],
+      "args": [ "make", "clean" ]
     },
 
-    // This gets the ESP32 Flash id and displays it in the console
-    // It can also be used to reset the device
+    {
+      "label": "rust format",
+      "detail": "Auto format the code",
+      "command": "cargo",
+      "type": "process",
+      "group": "build",
+      "args": [ "make", "clean" ]
+    },
+
     {
       "label": "esp32 get flashid",
+      "detail": "This gets the ESP32 Flash id and displays it in the console. It can also be used to reset the device",
       "command": "cargo",
       "type": "process",
       "args": [ "make", "esp32-flashid" ],
     },
 
-    // Erase the flash
     {
       "label": "esp32 erase flash",
+      "detail": "Erase the flash",
       "command": "cargo",
       "type": "process",
-      "args": [ "make", "esp32-eraseflash" ],
+      "args": [ "make", "esp32-eraseflash" ]
     },
   ],
 }

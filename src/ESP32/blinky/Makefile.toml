@@ -11,6 +11,11 @@ RUSTDOC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\
 ESP32_FLASH_SERIAL = "COM4"
 
 
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
 [tasks.build]
 command = "cargo"
 args = ["xbuild", "${@}"]

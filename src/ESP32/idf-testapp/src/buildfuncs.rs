@@ -64,3 +64,20 @@ pub fn get_tgt_linker() -> (String, String) {
 
     (idf_target, linker)
 }
+
+pub fn print_dbg_component_includes(idf_path: &PathBuf) {
+
+    let component_includes =
+    globwalk::GlobWalkerBuilder::from_patterns(
+    &idf_path,
+    &["components/*/include"],
+    )
+    .build().unwrap()
+    .filter_map(Result::ok)
+    .map(|d| d.into_path());
+
+    println!("Debug: component_includes");
+    for item in component_includes {
+        println!("{:?}", item.to_str());
+    }
+}

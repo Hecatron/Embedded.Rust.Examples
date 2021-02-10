@@ -22,9 +22,9 @@ fn main() -> Result<(), Box<dyn Error>> {
   let (idf_target, linker) = buildfuncs::get_tgt_linker();
   let idf_path = buildfuncs::get_idf_path();
   let sysroot = buildfuncs::get_sysroot();
-
-
+  buildfuncs::print_dbg_component_includes(&idf_path);
   
+
   // Get the component includes
   let component_includes =
   globwalk::GlobWalkerBuilder::from_patterns(
@@ -35,15 +35,9 @@ fn main() -> Result<(), Box<dyn Error>> {
   .filter_map(Result::ok)
   .map(|d| d.into_path());
 
-  //println!("Debug: component_includes");
-  //for item in component_includes {
-  //  println!("{:?}", item.to_str());
-  //}
-
 
   // Get Additional Includes
   // TODO I think this calls make?
-
   let component_additional_includes = globwalk::GlobWalkerBuilder::from_patterns(
     &idf_path,
     &["components/*/component.mk"],

@@ -3,7 +3,7 @@
     "configurations": [
 
         {
-            "name": "Debug build script",
+            "name": "Debug lldb",
             "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/target/debug/testapp",
@@ -14,9 +14,22 @@
             "env": {
                 "TARGET": "xtensa-esp32-none-elf",
                 "IDF_PATH": "D:\\SourceCode\\External\\esp-idf",
-                "SYS_ROOT": "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf"
-            }
-        },   
-        
+                "SYS_ROOT": "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf",
+                "OUT_DIR": "D:\\SourceCode\\Local\\Hecatron\\Hecatron.Local\\Embedded.Rust.Examples\\src\\ESP32\\idf-testapp\\testout"
+            },
+            "preLaunchTask": "build debug"
+        },
+
+        {
+            "name": "Debug cppvsdbg",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/testapp",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "envFile": "${workspaceFolder}/.cargo/env.txt",
+            "preLaunchTask": "build debug"
+        },
     ]
 }

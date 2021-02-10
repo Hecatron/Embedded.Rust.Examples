@@ -1,58 +1,30 @@
 use std::{
-  env,
+  //env,
   error::Error,
   //ffi::OsStr,
-  //fs::read_to_string,
-  //io::{BufReader, BufRead, Write},
+  fs::read_to_string,
+  io::{BufReader, BufRead, Write},
   //os::unix::ffi::OsStrExt,
   //os::windows::ffi::OsStrExt,
-  path::PathBuf,
-  //process::{Command, Stdio},
+  //path::PathBuf,
+  process::{Command, Stdio},
 };
 
 extern crate globwalk;
 //use bindgen::EnumVariation;
 
+mod buildfuncs;
+
 fn main() -> Result<(), Box<dyn Error>> {
   println!("cargo:rerun-if-changed=src/bindings.h");
   println!("cargo:rerun-if-changed=src/sdkconfig.h");
 
-  // Get the target and linker exe
-  // target = "xtensa-esp32-none-elf", pulled from TARGET env
-  // linker = xtensa-esp32-elf-ld
-  // Set the rustc cfg for esp32 conditional compile
-  let (idf_target, linker) = match env::var("TARGET")?.as_ref() {
-    "xtensa-esp32-none-elf" => {
-      println!(r#"cargo:rustc-cfg=target_device="esp32""#);
-      ("esp32".to_string(), env::var("RUSTC_LINKER").unwrap_or("xtensa-esp32-elf-ld".to_string()))
-    },
-    "xtensa-esp8266-none-elf" => {
-      println!(r#"cargo:rustc-cfg=target_device="esp8266""#);
-      ("esp8266".to_string(), env::var("RUSTC_LINKER").unwrap_or("xtensa-lx106-elf-ld".to_string()))
-    },
-    target => {
-      println!("cargo:warning=Generating ESP IDF bindings for target '{}' it not supported. The resulting crate will be empty.", target);
-      return Ok(())
-    },
-  };
+  let (idf_target, linker) = buildfuncs::get_tgt_linker();
+  let idf_path = buildfuncs::get_idf_path();
+  let sysroot = buildfuncs::get_sysroot();
 
-  // Make sure the IDF_PATH is set in env and get the value
-  let idf_path = PathBuf::from(env::var("IDF_PATH").expect("IDF_PATH not set"));
 
-  // Get the sysroot from the linker
-  let sysroot = PathBuf::from(env::var("SYS_ROOT").expect("SYS_ROOT not set"));
-  /*let sysroot = Command::new(linker)
-  .arg("--print-sysroot")
-  .output()
-  .map(|mut output| {
-    // Remove newline from end.
-    output.stdout.pop();
-    PathBuf::from(OsStr::from_bytes(&output.stdout))
-      .canonicalize().expect("failed to canonicalize sysroot")
-  })
-  .expect("failed getting sysroot");
-*/
-
+  
   // Get the component includes
   let component_includes =
   globwalk::GlobWalkerBuilder::from_patterns(
@@ -63,10 +35,77 @@ fn main() -> Result<(), Box<dyn Error>> {
   .filter_map(Result::ok)
   .map(|d| d.into_path());
 
-  for item in component_includes {
-    println!("{:?}", item.to_str());
-  }
+  //println!("Debug: component_includes");
+  //for item in component_includes {
+  //  println!("{:?}", item.to_str());
+  //}
 
+
+  // Get Additional Includes
+  // TODO I think this calls make?
+
+  let component_additional_includes = globwalk::GlobWalkerBuilder::from_patterns(
+    &idf_path,
+    &["components/*/component.mk"],
+  )
+  .build()?
+  .filter_map(Result::ok)
+  .flat_map(|makefile| {
+    let path = makefile.into_path();
+    let component_path = path.parent().unwrap();
+
+    let mut contents = read_to_string(&path).expect("failed reading component.mk").replace("$(info ", "$(warn ");
+    // Define these variables since they affect `COMPONENT_ADD_INCLUDEDIRS`.
+    contents.insert_str(0, r"
+      CONFIG_SYSVIEW_ENABLE :=
+      CONFIG_AWS_IOT_SDK :=
+      CONFIG_BT_ENABLED :=
+      CONFIG_BLUEDROID_ENABLED :=
+    ");
+    contents.push_str("\n$(info ${COMPONENT_ADD_INCLUDEDIRS})");
+
+    let mut child = Command::new("make")
+      .current_dir(&component_path)
+      .arg("-f")
+      .arg("-")
+      .stdin(Stdio::piped())
+      .stdout(Stdio::piped())
+      .stderr(Stdio::null())
+      .env("IDF_TARGET", &idf_target)
+      .env("SOC_NAME", &idf_target)
+      .env("COMPONENT_PATH", &component_path)
+      .spawn()
+      .expect("make failed");
+
+    let mut stdin = child.stdin.take().unwrap();
+    let stdout = child.stdout.take().unwrap();
+
+    writeln!(stdin, "{}", contents).unwrap();
+
+    BufReader::new(stdout).lines()
+      .filter_map(Result::ok)
+      .map(|s| s.trim_end().to_string())
+      .filter(|s| !s.is_empty())
+      .flat_map(|s| {
+        let s = s.split(' ');
+        let s = s.map(|s| s.to_string());
+        s.collect::<Vec<_>>().into_iter()
+      })
+      .map(move |s| path.parent().unwrap().join(s))
+      .filter(|s| s.is_dir())
+  });
+
+  let mut includes = component_includes.chain(component_additional_includes)
+    .map(|include| format!("-I{}", include.display()))
+    .collect::<Vec<_>>();
+
+  includes.sort();
+  includes.dedup();
+
+  //println!("Debug: component_additional_includes");
+  //for item in component_additional_includes {
+  //  println!("{:?}", item.to_str());
+  //}
 
   Ok(())
 }

@@ -1,11 +1,11 @@
 [package]
-name = "testapp"
+name = "bindings-generator"
 version = "0.1.0"
 authors = ["grbd <hecatrons.workshop@gmail.com>"]
 edition = "2018"
 
 [[bin]]
-name = "testapp"
+name = "bindings-generator"
 
 #[dependencies]
 #libc = { version = "0.2.85", default-features = false }

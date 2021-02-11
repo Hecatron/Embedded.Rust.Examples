@@ -1,0 +1,12 @@
+[env]
+# Show debugging info on error of build
+RUST_BACKTRACE = 1
+
+# Set which target to generate the bindings for
+TARGET = "xtensa-esp32-none-elf"
+
+# Directory of downloaded esp-idf
+IDF_PATH = "D:\\SourceCode\\External\\esp-idf"
+
+# Sysroot directory of xtensa-esp32-elf tools
+SYS_ROOT = "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf"

@@ -5,37 +5,35 @@
     {
       "label": "build debug",
       "detail": "Build in debug mode",
-      "command": "cargo",
       "type": "process",
       "group": "build",
+      "command": "cargo",
       "args": [ "make", "build" ]
     },
 
     {
       "label": "build release",
       "detail": "Build in release mode",
-      "command": "cargo",
       "type": "process",
       "group": "build",
+      "command": "cargo",
       "args": [ "make", "build-release" ]
     },
 
     {
       "label": "clean",
       "detail": "Clean the target build directory",
-      "command": "cargo",
       "type": "process",
-      "group": "build",
+      "command": "cargo",
       "args": [ "make", "clean" ]
     },
 
     {
       "label": "rust format",
       "detail": "Auto format the code",
-      "command": "cargo",
       "type": "process",
-      "group": "build",
-      "args": [ "make", "clean" ]
+      "command": "cargo",
+      "args": [ "make", "format" ]
     },
 
   ],

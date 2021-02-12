@@ -3,7 +3,7 @@ use std::{
     //error::Error,
     //ffi::OsStr,
     fs::read_to_string,
-    io::{BufReader, BufRead, Write},
+    io::{BufRead, BufReader, Write},
     //os::unix::ffi::OsStrExt,
     //os::windows::ffi::OsStrExt,
     path::PathBuf,
@@ -22,7 +22,6 @@ pub struct Builder {
 }
 
 impl Builder {
-
     pub fn new(setts: Settings) -> Builder {
         Builder {
             settings: setts,
@@ -35,19 +34,19 @@ impl Builder {
         self.get_component_includes();
         self.get_additional_incs();
         // TODO
-
     }
 
     /// Get component includes
     fn get_component_includes(&mut self) {
-        let comp_incs: Vec<PathBuf> =
-            globwalk::GlobWalkerBuilder::from_patterns(
-                &self.settings.idf_path.as_deref().unwrap(),
-                &["components/*/include"],
-            )
-            .build().expect("Unable to glob the components directory")
-            .filter_map(Result::ok)
-            .map(|d| d.into_path()).collect();
+        let comp_incs: Vec<PathBuf> = globwalk::GlobWalkerBuilder::from_patterns(
+            &self.settings.idf_path.as_deref().unwrap(),
+            &["components/*/include"],
+        )
+        .build()
+        .expect("Unable to glob the components directory")
+        .filter_map(Result::ok)
+        .map(|d| d.into_path())
+        .collect();
 
         self.comp_incs = Some(comp_incs);
         info!("component_includes:");
@@ -58,18 +57,15 @@ impl Builder {
 
     // Get Additional includes
     fn get_additional_incs(&mut self) {
-
-        let mkfiles = 
-            globwalk::GlobWalkerBuilder::from_patterns(
+        let mkfiles = globwalk::GlobWalkerBuilder::from_patterns(
             &self.settings.idf_path.as_deref().unwrap(),
             &["components/*/component.mk"],
-            )
-            .build().expect("Unable to glob the components directory")
-            .filter_map(Result::ok);
+        )
+        .build()
+        .expect("Unable to glob the components directory")
+        .filter_map(Result::ok);
     }
 }
-
-
 
 /*
     // Get Additional Includes
@@ -81,10 +77,10 @@ impl Builder {
         .build()?
         .filter_map(Result::ok)
         .flat_map(|makefile| {
-    
+
             let path = makefile.into_path();
             let component_path = path.parent().unwrap();
-    
+
             let mut contents = read_to_string(&path).expect("failed reading component.mk").replace("$(info ", "$(warn ");
             // Define these variables since they affect `COMPONENT_ADD_INCLUDEDIRS`.
             contents.insert_str(0, r"
@@ -94,10 +90,10 @@ impl Builder {
                 CONFIG_BLUEDROID_ENABLED :=
             ");
             contents.push_str("\n$(info ${COMPONENT_ADD_INCLUDEDIRS})");
-    
+
             info!("component_path: {:?}", component_path);
             info!("contents: {:?}", contents);
-    
+
             let mut child = Command::new("make")
                 .current_dir(&component_path)
                 .arg("-f")
@@ -110,12 +106,12 @@ impl Builder {
                 .env("COMPONENT_PATH", &component_path)
                 .spawn()
                 .expect("make failed");
-    
+
             let mut stdin = child.stdin.take().unwrap();
             let stdout = child.stdout.take().unwrap();
-    
+
             writeln!(stdin, "{}", contents).unwrap();
-    
+
             BufReader::new(stdout).lines()
                 .filter_map(Result::ok)
                 .map(|s| s.trim_end().to_string())
@@ -128,14 +124,14 @@ impl Builder {
                 .map(move |s| path.parent().unwrap().join(s))
                 .filter(|s| s.is_dir())
         });
-    
+
         let mut includes = component_includes.chain(component_additional_includes)
             .map(|include| format!("-I{}", include.display()))
             .collect::<Vec<_>>();
-    
+
         includes.sort();
         includes.dedup();
-    
+
         println!("Debug: includes");
         for item in includes {
             println!("{:?}", item);
@@ -144,9 +140,6 @@ impl Builder {
 }
 
 */
-
-
-
 
 /*
   let bindings = bindgen::Builder::default()
@@ -171,9 +164,6 @@ impl Builder {
     .write_to_file(out_path.join("bindings.rs"))?;
 
 */
-
-
-
 
 /*
 

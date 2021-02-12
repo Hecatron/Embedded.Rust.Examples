@@ -1,8 +1,4 @@
-use std::{
-    env,
-    path::PathBuf,
-    process::Command,
-};
+use std::{env, path::PathBuf, process::Command};
 
 pub struct Settings {
     pub idf_path: Option<PathBuf>,
@@ -12,7 +8,6 @@ pub struct Settings {
 }
 
 impl Settings {
-
     pub fn new() -> Settings {
         Settings {
             idf_path: None,
@@ -58,17 +53,20 @@ impl Settings {
 
         // If env isn't set then try and determine linker from target
         match self.target.as_deref() {
-            Some("xtensa-esp32-none-elf") => { 
+            Some("xtensa-esp32-none-elf") => {
                 let linker = "xtensa-esp32-elf-ld".to_string();
                 self.linker = Some(linker);
-            },
-            Some("xtensa-esp8266-none-elf") => { 
+            }
+            Some("xtensa-esp8266-none-elf") => {
                 let linker = "xtensa-lx106-elf-ld".to_string();
                 self.linker = Some(linker);
             }
             _ => {
                 let tgt = self.target.as_deref().unwrap();
-                warn!("Unable to determine linker for target '{}', target is unsupported.", tgt);
+                warn!(
+                    "Unable to determine linker for target '{}', target is unsupported.",
+                    tgt
+                );
             }
         }
         if self.linker != None {
@@ -91,20 +89,18 @@ impl Settings {
 
         // If not then get via the linker command
         let sysroot = Command::new(self.linker.as_deref().unwrap())
-        .arg("--print-sysroot")
-        .output()        
-        .map(|output| {
-            // Remove newline from end.
-            let mut stdout = String::from_utf8(output.stdout).unwrap();
-            stdout = stdout.trim_end().to_string();
-            // Covert to PathBuf
-            dunce::canonicalize(PathBuf::from(stdout))
-            .expect("failed to strip path")
-        })
-        .expect("failed getting sysroot");
+            .arg("--print-sysroot")
+            .output()
+            .map(|output| {
+                // Remove newline from end.
+                let mut stdout = String::from_utf8(output.stdout).unwrap();
+                stdout = stdout.trim_end().to_string();
+                // Covert to PathBuf
+                dunce::canonicalize(PathBuf::from(stdout)).expect("failed to strip path")
+            })
+            .expect("failed getting sysroot");
 
         self.sysroot = Some(sysroot);
         info!("sysroot: {:?}", self.sysroot.as_deref().unwrap());
-        
     }
 }

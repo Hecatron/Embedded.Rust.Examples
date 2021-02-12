@@ -2,7 +2,8 @@ use std::error::Error;
 
 extern crate globwalk;
 extern crate pretty_env_logger;
-#[macro_use] extern crate log;
+#[macro_use]
+extern crate log;
 
 mod builder;
 mod settings;
@@ -24,7 +25,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // Start building the bindings
     let mut builder = builder::Builder::new(setts);
     builder.run();
-    
+
     info!("Generation Complete");
     Ok(())
 }

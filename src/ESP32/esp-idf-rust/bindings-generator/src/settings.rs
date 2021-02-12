@@ -97,17 +97,14 @@ impl BindingSettings {
             // Remove newline from end.
             let mut stdout = String::from_utf8(output.stdout).unwrap();
             stdout = stdout.trim_end().to_string();
-
             // Covert to PathBuf
-            debug!("sysroot: {}", stdout);
-            PathBuf::from(stdout)
-            .canonicalize().expect("failed to canonicalize sysroot")
+            dunce::canonicalize(PathBuf::from(stdout))
+            .expect("failed to strip path")
         })
         .expect("failed getting sysroot");
-        
-        // TODO check path is ok
+
         self.sysroot = Some(sysroot);
-        debug!("test1: {:?}", self.sysroot);
+        debug!("sysroot: {:?}", self.sysroot.as_deref().unwrap());
         
     }
 }

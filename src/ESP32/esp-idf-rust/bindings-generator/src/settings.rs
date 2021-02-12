@@ -89,21 +89,25 @@ impl BindingSettings {
             return;
         }
 
-        // TODO doesn't work yet
-
         // If not then get via the linker command
         let sysroot = Command::new(self.linker.as_deref().unwrap())
         .arg("--print-sysroot")
-        .output()
-        .map(|mut output| {
+        .output()        
+        .map(|output| {
             // Remove newline from end.
-            output.stdout.pop();
-            let stdout = String::from_utf8(output.stdout).unwrap();
+            let mut stdout = String::from_utf8(output.stdout).unwrap();
+            stdout = stdout.trim_end().to_string();
+
+            // Covert to PathBuf
             debug!("sysroot: {}", stdout);
             PathBuf::from(stdout)
             .canonicalize().expect("failed to canonicalize sysroot")
         })
         .expect("failed getting sysroot");
+        
+        // TODO check path is ok
         self.sysroot = Some(sysroot);
+        debug!("test1: {:?}", self.sysroot);
+        
     }
 }

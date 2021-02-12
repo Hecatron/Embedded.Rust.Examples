@@ -11,10 +11,11 @@
             "stopOnEntry": false,
             "sourceLanguages": ["rust"],
             "env": {
+                "RUST_BACKTRACE": "1",
                 "RUST_LOG": "trace",
                 "TARGET": "xtensa-esp32-none-elf",
                 "IDF_PATH": "D:\\SourceCode\\External\\esp-idf",
-                "SYS_ROOT": "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf",
+                //"SYS_ROOT": "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf",
                 "OUT_DIR": "D:\\SourceCode\\Local\\Hecatron\\Hecatron.Local\\Embedded.Rust.Examples\\src\\ESP32\\idf-testapp\\testout"
             },
             "preLaunchTask": "build debug"

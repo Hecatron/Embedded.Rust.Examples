@@ -1,11 +1,10 @@
-use std::{error::Error, fs::read_to_string, io::{BufReader, BufRead, Write}, path::Path, process::{Command, Stdio}};
+use std::error::Error;
 
 extern crate globwalk;
 extern crate pretty_env_logger;
 #[macro_use] extern crate log;
-//use bindgen::EnumVariation;
 
-mod buildfuncs;
+mod builder;
 mod settings;
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -15,32 +14,19 @@ fn main() -> Result<(), Box<dyn Error>> {
     info!("Reading Settings");
 
     // Read Settings
-    let mut setts = settings::BindingSettings::new();
+    let mut setts = settings::Settings::new();
     setts.read();
     if setts.linker == None {
-        warn!("Aborting Binding Generation");
+        warn!("Linker not specified, aborting binding generation");
         return Ok(());
     }
 
-
-    // TODO
+    // Start building the bindings
+    let mut builder = builder::Builder::new();
+    builder.settings = Some(setts);
+    builder.run();
     
     info!("Generation Complete");
     Ok(())
 }
 
-/*
-fn create_child(component_path: &Path, idf_target: &String) -> &mut Command {
-    let mut child = Command::new("make")
-        .current_dir(&component_path)
-        .arg("-f")
-        .arg("-")
-        .stdin(Stdio::piped())
-        .stdout(Stdio::piped())
-        .stderr(Stdio::null())
-        .env("IDF_TARGET", &idf_target)
-        .env("SOC_NAME", &idf_target)
-        .env("COMPONENT_PATH", &component_path);
-    return child;
-}
-*/

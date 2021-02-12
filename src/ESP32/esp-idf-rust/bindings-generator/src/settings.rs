@@ -4,17 +4,17 @@ use std::{
     process::{Command},
 };
 
-pub struct BindingSettings {
+pub struct Settings {
     pub idf_path: Option<PathBuf>,
     pub target: Option<String>,
     pub linker: Option<String>,
     pub sysroot: Option<PathBuf>,
 }
 
-impl BindingSettings {
+impl Settings {
 
-    pub fn new() -> BindingSettings {
-        BindingSettings {
+    pub fn new() -> Settings {
+        Settings {
             idf_path: None,
             target: None,
             linker: None,

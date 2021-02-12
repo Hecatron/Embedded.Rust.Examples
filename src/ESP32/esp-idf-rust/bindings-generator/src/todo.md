@@ -54,12 +54,6 @@ println!("cargo:warning=Generating ESP IDF bindings for target '{}' it not suppo
 
 
 
-
-
-
-    let (idf_target, linker) = buildfuncs::get_tgt_linker();
-    let idf_path = buildfuncs::get_idf_path();
-    let sysroot = buildfuncs::get_sysroot();
     buildfuncs::print_dbg_component_includes(&idf_path);
 
 

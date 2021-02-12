@@ -12,7 +12,7 @@
             "sourceLanguages": ["rust"],
             "env": {
                 "RUST_BACKTRACE": "1",
-                "RUST_LOG": "trace",
+                "RUST_LOG": "info",
                 "TARGET": "xtensa-esp32-none-elf",
                 "IDF_PATH": "D:\\SourceCode\\External\\esp-idf",
                 //"SYS_ROOT": "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf",

@@ -22,11 +22,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     }
 
     // Start building the bindings
-    let mut builder = builder::Builder::new();
-    builder.settings = Some(setts);
+    let mut builder = builder::Builder::new(setts);
     builder.run();
     
     info!("Generation Complete");
     Ok(())
 }
-

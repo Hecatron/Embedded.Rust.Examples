@@ -1,7 +1,7 @@
 use std::{
     env,
     path::PathBuf,
-    process::{Command},
+    process::Command,
 };
 
 pub struct Settings {
@@ -35,7 +35,7 @@ impl Settings {
         let idf_path = PathBuf::from(env::var("IDF_PATH").expect("IDF_PATH not set"));
         self.idf_path = Some(idf_path);
         let pth = self.idf_path.as_deref().unwrap();
-        debug!("idf_path: {:?}", pth);
+        info!("idf_path: {:?}", pth);
     }
 
     /// Get the device target - esp32 / esp8266
@@ -43,7 +43,7 @@ impl Settings {
         let idf_target = env::var("TARGET").expect("TARGET not set");
         self.target = Some(idf_target);
         let tgt = self.target.as_deref().unwrap();
-        debug!("target: {:?}", tgt);
+        info!("target: {:?}", tgt);
     }
 
     /// Get the targets linker
@@ -51,7 +51,7 @@ impl Settings {
         // Check if it's been set in the env variable
         if env::var("RUSTC_LINKER").is_ok() {
             let linker = env::var("RUSTC_LINKER").unwrap();
-            debug!("linker: {}", linker);
+            info!("linker: {}", linker);
             self.linker = Some(linker);
             return;
         }
@@ -73,9 +73,9 @@ impl Settings {
         }
         if self.linker != None {
             let linker = self.linker.as_deref().unwrap();
-            debug!("linker: {}", linker);
+            info!("linker: {}", linker);
         } else {
-            debug!("linker: None",);
+            info!("linker: None",);
         }
     }
 
@@ -84,7 +84,7 @@ impl Settings {
         // Check if it's been set in the env variable
         if env::var("SYS_ROOT").is_ok() {
             let sysroot = env::var("SYS_ROOT").unwrap();
-            debug!("sysroot: {}", sysroot);
+            info!("sysroot: {}", sysroot);
             self.sysroot = Some(PathBuf::from(sysroot));
             return;
         }
@@ -104,7 +104,7 @@ impl Settings {
         .expect("failed getting sysroot");
 
         self.sysroot = Some(sysroot);
-        debug!("sysroot: {:?}", self.sysroot.as_deref().unwrap());
+        info!("sysroot: {:?}", self.sysroot.as_deref().unwrap());
         
     }
 }

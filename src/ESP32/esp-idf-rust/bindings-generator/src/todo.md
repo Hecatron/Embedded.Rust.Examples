@@ -1,6 +1,24 @@
+# Todo
 
-/*
+## Detect file changes
 
+Not sure if we need these
+
+``` rust
+    println!("cargo:rerun-if-changed=src/bindings.h");
+    println!("cargo:rerun-if-changed=src/sdkconfig.h");
+```
+
+## Set target for library
+
+``` rust
+    println!(r#"cargo:rustc-cfg=target_device="esp32""#);
+    println!(r#"cargo:rustc-cfg=target_device="esp8266""#);
+```
+
+## Remaining code
+
+``` rust
   let bindings = bindgen::Builder::default()
     .use_core()
     .layout_tests(false)
@@ -21,5 +39,4 @@
   bindings.generate()
     .expect("Failed to generate bindings")
     .write_to_file(out_path.join("bindings.rs"))?;
-
-*/
+```

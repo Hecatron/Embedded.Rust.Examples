@@ -1,4 +1,8 @@
 [env]
+
+# Logging
+RUST_LOG = "info"
+
 # Show debugging info on error of build
 RUST_BACKTRACE = 1
 

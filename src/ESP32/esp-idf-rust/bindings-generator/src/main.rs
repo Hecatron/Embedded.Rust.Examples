@@ -1,13 +1,18 @@
 use std::{error::Error, fs::read_to_string, io::{BufReader, BufRead, Write}, path::Path, process::{Command, Stdio}};
 
 extern crate globwalk;
+extern crate pretty_env_logger;
+#[macro_use] extern crate log;
 //use bindgen::EnumVariation;
 
 mod buildfuncs;
+mod settings;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    println!("cargo:rerun-if-changed=src/bindings.h");
-    println!("cargo:rerun-if-changed=src/sdkconfig.h");
+
+    let mut setts = settings::BindingSettings::new();
+    setts.read();
+
 
     let (idf_target, linker) = buildfuncs::get_tgt_linker();
     let idf_path = buildfuncs::get_idf_path();
@@ -21,9 +26,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     &idf_path,
     &["components/*/include"],
     )
-    .build()?
-    .filter_map(Result::ok)
-    .map(|d| d.into_path());
+        .build()?
+        .filter_map(Result::ok)
+        .map(|d| d.into_path());
 
 
     // Get Additional Includes

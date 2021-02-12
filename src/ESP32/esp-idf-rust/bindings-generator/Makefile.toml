@@ -6,3 +6,8 @@ description = "reformat the rust code using rustfmt"
 install_crate = "rustfmt"
 command = "cargo"
 args = ["fmt", "--", "--emit=files"]
+
+[tasks.run]
+description = "run the app with the env variables set"
+command = "cargo"
+args = ["run"]

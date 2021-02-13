@@ -1,0 +1,7 @@
+# Read in the env settings
+extend = "./env-settings.toml"
+
+[tasks.build]
+description = "run the app with the env variables set"
+command = "cmake"
+args = [".", "-G", "Ninja"]

@@ -1,7 +1,13 @@
 # Read in the env settings
 extend = "./env-settings.toml"
 
+[tasks.pyenv-setup]
+command = "tox"
+cwd = "pyvirtenv"
+args = ["-c", "tox.ini"]
+
 [tasks.build]
 description = "run the app with the env variables set"
+cwd = "build"
 command = "cmake"
 args = [".", "-G", "Ninja"]

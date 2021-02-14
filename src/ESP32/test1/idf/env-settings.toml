@@ -16,3 +16,5 @@ TARGET_DIR = "../target/xtensa-esp32-none-elf/release"
 
 # Type of device for idf
 IDF_TARGET="esp32"
+
+IDF_PYTHON_ENV_PATH = "build/py38"

@@ -16,8 +16,16 @@ git submodule update --init --recursive
   * CMake
   * Ninja build system
     https://github.com/ninja-build/ninja/tags
- 
-I think we also need python with certain depends
+  * python
 
 
 ## TODO
+
+  * Setting a custom python within cmake nearly works
+    but causes the parition table to fail to build under ninja
+
+  * Can we use a more generic python environment than py38 for tox?
+
+  * do we need the env var IDF_PYTHON_ENV_PATH setup ?
+
+  * bring in the changes from https://github.com/lexxvir/esp32-hello

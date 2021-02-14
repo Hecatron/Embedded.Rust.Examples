@@ -1,13 +1,5 @@
 [env]
 
-# Set which target to generate the bindings for
-#TARGET = "xtensa-esp32-none-elf"
-
-# export PATH=/opt/gcc-xtensa-esp32-elf-1.22.0-80-g6c4433a-5.2.0/bin:$PATH
-
-
-
-
 # Directory of downloaded esp-idf
 IDF_PATH = "D:\\SourceCode\\External\\esp-idf"
 
@@ -17,4 +9,4 @@ TARGET_DIR = "../target/xtensa-esp32-none-elf/release"
 # Type of device for idf
 IDF_TARGET="esp32"
 
-IDF_PYTHON_ENV_PATH = "build/py38"
+#IDF_PYTHON_ENV_PATH = "build/py38/Scripts/python"

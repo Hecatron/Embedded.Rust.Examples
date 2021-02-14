@@ -2,12 +2,22 @@
 extend = "./env-settings.toml"
 
 [tasks.pyenv-setup]
+description = "setup the python virtual environment"
 command = "tox"
 cwd = "pyvirtenv"
 args = ["-c", "tox.ini"]
+condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/../build/py38/pyvenv.cfg"] }
 
-[tasks.build]
-description = "run the app with the env variables set"
+[tasks.cmake]
+description = "generate the build files using cmake"
 cwd = "build"
 command = "cmake"
-args = [".", "-G", "Ninja"]
+args = ["..", "-G", "Ninja"]
+dependencies = ["pyenv-setup"]
+
+[tasks.build]
+description = "runs ninja to build the project"
+cwd = "build"
+command = "ninja"
+args = []
+dependencies = ["cmake"]

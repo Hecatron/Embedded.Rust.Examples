@@ -1,7 +1,7 @@
 # Read in the env settings
 extend = "./env-settings.toml"
 
-[tasks.pyenv-setup]
+[tasks.pyenv]
 description = "setup the python virtual environment"
 command = "tox"
 cwd = "pyvirtenv"
@@ -13,7 +13,8 @@ description = "generate the build files using cmake"
 cwd = "build"
 command = "cmake"
 args = ["..", "-G", "Ninja"]
-dependencies = ["pyenv-setup"]
+condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/../build/CMakeCache.txt"] }
+dependencies = ["pyenv"]
 
 [tasks.build]
 description = "runs ninja to build the project"

@@ -1,9 +1,10 @@
-# The following five lines of boilerplate have to be in your project's
-# CMakeLists in this exact order for cmake to work correctly
 cmake_minimum_required(VERSION 3.5)
 
-# TODO this nearly works but caues the partition table to fail to build
-# set( PYTHON "pyenv/Scripts/python.exe" )
+# Override to using the python virtual env
+set( PYTHON "${CMAKE_CURRENT_BINARY_DIR}/pyenv/Scripts/python.exe")
 
+# Include idf cmake file
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+
+# Project binary
 project(blink)

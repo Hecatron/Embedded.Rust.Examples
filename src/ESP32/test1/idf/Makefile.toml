@@ -22,3 +22,10 @@ cwd = "build"
 command = "ninja"
 args = []
 dependencies = ["cmake"]
+
+[tasks.menuconfig]
+description = "select which options for the idf are required"
+cwd = "build"
+command = "ninja"
+args = ["menuconfig"]
+dependencies = ["cmake"]

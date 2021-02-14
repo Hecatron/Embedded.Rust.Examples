@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # TODO this nearly works but caues the partition table to fail to build
-# set( PYTHON "py38/Scripts/python.exe" )
+# set( PYTHON "pyenv/Scripts/python.exe" )
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(blink)

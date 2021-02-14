@@ -2,7 +2,7 @@
 SETLOCAL
 
 set "venv=%1"
-if "%venv%" == "" ( set "venv=..\build\py38" )
+if "%venv%" == "" ( set "venv=..\build\pyenv" )
 
 IF EXIST "%venv%" (
     echo "Entering virtual environment %venv%"

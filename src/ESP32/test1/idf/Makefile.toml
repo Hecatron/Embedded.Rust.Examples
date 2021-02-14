@@ -6,7 +6,7 @@ description = "setup the python virtual environment"
 command = "tox"
 cwd = "pyvirtenv"
 args = ["-c", "tox.ini"]
-condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/../build/py38/pyvenv.cfg"] }
+condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/../build/pyenv/pyvenv.cfg"] }
 
 [tasks.cmake]
 description = "generate the build files using cmake"

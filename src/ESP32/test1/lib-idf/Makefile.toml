@@ -1,5 +1,5 @@
 # Read in the env settings
-extend = "./env-settings.toml"
+extend = "../.cargo/env-settings.toml"
 
 [tasks.pyenv]
 description = "setup the python virtual environment"

@@ -1,5 +1,20 @@
 [env]
 
+# Rust / Idf settings
+
+# Directory of downloaded esp-idf
+IDF_PATH = "D:\\SourceCode\\External\\esp-idf"
+
+# Type of device for idf
+IDF_TARGET="esp32"
+
+# TODO this isn't used currently for lib-idf
+# Destination directory for idf binaries
+# TARGET_DIR = "../target/xtensa-esp32-none-elf/release"
+
+
+# Rust Settings
+
 # Logging
 RUST_LOG = "trace"
 
@@ -9,8 +24,6 @@ RUST_BACKTRACE = 1
 # Set which target to generate the bindings for
 TARGET = "xtensa-esp32-none-elf"
 
-# Directory of downloaded esp-idf
-IDF_PATH = "D:\\SourceCode\\External\\esp-idf"
-
 # Sysroot directory of xtensa-esp32-elf tools
+# used for bindgen
 SYS_ROOT = "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf"

@@ -1,0 +1,17 @@
+# Read in the env settings
+extend = "../.cargo/env-settings.toml"
+
+# TODO
+[tasks.bindgen]
+description = "runs bindgen to generate the bindings"
+command = "python"
+args = ["build-bindgen.py"]
+
+
+# TODO
+# rustup run nightly rustfmt src/bindings.rs
+#[tasks.format]
+#description = "reformat the rust code using rustfmt"
+#install_crate = "rustfmt"
+#command = "cargo"
+#args = ["fmt", "--", "--emit=files"]

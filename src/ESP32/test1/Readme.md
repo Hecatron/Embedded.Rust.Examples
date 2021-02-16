@@ -13,10 +13,3 @@ The goal here is to build what we need from the IDF into a library file that we 
 ## lib-idf-rust
 
 This is a rust library that contains a generated wrapper for accessing the idf library
-
-
-## TODO
-
-It looks like the idf build system generates a final binary that includes a bootloader and partition table
-See if we can exclude that from the build
-look at the ninja build file for the targets in there

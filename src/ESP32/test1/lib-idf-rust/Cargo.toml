@@ -1,0 +1,10 @@
+[package]
+name = "lib-idf-rust"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+
+[dev-dependencies]
+bindgen = "0.57.0"
+#rustfmt = "1.4.34-nightly"

@@ -38,5 +38,15 @@ git submodule update --init --recursive
 ## TODO
 
 Need to look at https://github.com/lexxvir/esp32-hello
-Is there a way to just build lib-idf as a library we can link against
-and exclude the partition table / bootloader?
+
+It looks like the idf build system generates a final binary that includes a bootloader and partition table
+See if we can exclude that from the build
+look at the ninja build file for the targets in there
+
+object files can be linked into a static library
+but you cant really link static libs to one another
+but you can split the obj files from a binary with ar
+https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-static-libraries
+https://users.rust-lang.org/t/linking-with-custom-c-library/637/9
+
+can we extract obj files from the final built binary?

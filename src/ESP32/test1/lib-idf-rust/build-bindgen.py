@@ -49,7 +49,7 @@ class BuildBindgen(object):
         clangflags = ["--sysroot=" + self.SYS_ROOT]
         # -I$(pwd)/build/include - from the build using idf.py todo look at this
         clangflags += ["-D__bindgen"]
-        clangflags += ["-target", "xtensa"]
+        #clangflags += ["-target", "xtensa"] - not in mainline
         clangflags += ["-x", "c"]
 
         # Search for all include directories
@@ -71,7 +71,7 @@ class BuildBindgen(object):
         cmdopts += ["src/bindings.h", "--"]
         clangflags = self.get_clangflags()
         cmdopts += clangflags
-        #print(cmdopts)
+        #print(" ".join(cmdopts))
 
         # TODO need a libclang.dll
         self.run_cmd(cmdopts, '.')

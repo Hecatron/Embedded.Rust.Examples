@@ -29,4 +29,4 @@ TARGET = "xtensa-esp32-none-elf"
 SYS_ROOT = "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf"
 
 # Needed for bindgen
-LIBCLANG_PATH = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\lib"
+LIBCLANG_PATH = "C:\\Program Files\\LLVM\\bin"

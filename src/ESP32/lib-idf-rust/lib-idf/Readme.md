@@ -51,3 +51,8 @@ https://stackoverflow.com/questions/2157629/linking-static-libraries-to-other-st
 https://users.rust-lang.org/t/linking-with-custom-c-library/637/9
 
 can we extract obj files from the final built binary?
+
+I think we can get the static libs from
+build\ldgen_libraries or maybe search for *.a
+
+Then search for *.ld for the linker maps

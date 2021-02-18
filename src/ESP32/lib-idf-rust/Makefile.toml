@@ -1,5 +1,5 @@
 # Read in the env settings
-extend = "../.cargo/env-settings.toml"
+extend = ".cargo/env-settings.toml"
 
 [tasks.install-rust-src]
 description = "install rust-src via rustup component add"

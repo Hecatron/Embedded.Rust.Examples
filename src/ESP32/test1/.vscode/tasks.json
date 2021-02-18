@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+
+    {
+      "label": "build debug",
+      "detail": "Build in debug mode",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "build" ]
+    },
+
+    {
+      "label": "build debug - flash upload",
+      "detail": "Build in debug mode then upload to the flash",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "flash-build" ]
+    },
+
+    {
+      "label": "build release",
+      "detail": "Build in release mode",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "build-release" ]
+    },
+
+    {
+      "label": "build release - flash upload",
+      "detail": "Build in release mode then upload to the flash",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "flash-build-release" ]
+    },
+
+    {
+      "label": "clean",
+      "detail": "Clean the target build directory",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "clean" ]
+    },
+
+    {
+      "label": "rust format",
+      "detail": "Auto format the code",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "clean" ]
+    },
+
+    {
+      "label": "esp32 get flashid",
+      "detail": "This gets the ESP32 Flash id and displays it in the console. It can also be used to reset the device",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "esp32-flashid" ],
+    },
+
+    {
+      "label": "esp32 erase flash",
+      "detail": "Erase the flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "esp32-eraseflash" ]
+    },
+  ],
+}

@@ -1,0 +1,30 @@
+[env]
+
+# Rust / Idf settings
+
+# Directory of downloaded esp-idf
+IDF_PATH = "D:\\SourceCode\\External\\esp-idf"
+
+# Needed for bindgen
+# Sysroot directory of xtensa-esp32-elf tools - used for bindgen
+SYS_ROOT = "C:\\Apps\\xtensa-esp32-elf\\xtensa-esp32-elf"
+# Needed for bindgen
+LIBCLANG_PATH = "C:\\Program Files\\LLVM\\bin"
+
+# Set custom paths for rustc for the esp32
+XARGO_RUST_SRC = "D:\\SourceCode\\External\\rust-xtensa\\library"
+RUSTC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustc"
+RUSTDOC = "D:\\SourceCode\\External\\rust-xtensa\\build\\x86_64-pc-windows-msvc\\stage2\\bin\\rustdoc"
+
+# Type of device for idf
+IDF_TARGET="esp32"
+
+# TODO this isn't used currently for lib-idf
+# Destination directory for idf binaries
+# TARGET_DIR = "../target/xtensa-esp32-none-elf/release"
+
+# Logging
+#RUST_LOG = "trace"
+
+# Show debugging info on error of build
+RUST_BACKTRACE = 1

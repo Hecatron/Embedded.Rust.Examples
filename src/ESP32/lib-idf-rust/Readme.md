@@ -1,9 +1,15 @@
 # Readme
 
 This rust library represents the bindings to the esp-idf
-
 ```
+# install bindgen
 cargo install bindgen
+
+# generate bindongs
+cargo make bindgen
+
+# To do a build
+cargo make build
 ```
 
 ## TODO

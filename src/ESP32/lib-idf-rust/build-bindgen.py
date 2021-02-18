@@ -68,7 +68,7 @@ class BuildBindgen(object):
         clangflags += ["-I" + path.join(self.IDF_PATH, "components/soc/soc/esp32/include")]
 
         # Add in the lib-idf build config directory
-        clangflags += ["-I" + path.abspath("../lib-idf/build/config")]
+        clangflags += ["-I" + path.abspath("./lib-idf/build/config")]
 
         return clangflags
 

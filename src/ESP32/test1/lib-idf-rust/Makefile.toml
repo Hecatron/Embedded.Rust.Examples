@@ -9,8 +9,8 @@ args = ["build-bindgen.py"]
 
 # TODO
 # rustup run nightly rustfmt src/bindings.rs
-#[tasks.format]
-#description = "reformat the rust code using rustfmt"
-#install_crate = "rustfmt"
-#command = "cargo"
-#args = ["fmt", "--", "--emit=files"]
+[tasks.format]
+description = "reformat the rust code using rustfmt"
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files", "src/bindings.rs"]

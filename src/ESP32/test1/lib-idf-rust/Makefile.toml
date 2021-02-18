@@ -6,15 +6,9 @@ description = "install rust-src via rustup component add"
 install_crate = { rustup_component_name = "rust-src" }
 
 [tasks.bindgen]
-description = "runs bindgen to generate the bindings"
+description = "runs bindgen to generate the bindings, also runs rustfmt at the same time"
 command = "python"
 args = ["build-bindgen.py"]
-
-[tasks.format]
-description = "reformat the rust code using rustfmt"
-install_crate = "rustfmt"
-command = "cargo"
-args = ["fmt", "--", "--emit=files", "src/bindings.rs"]
 
 [tasks.build]
 description = "build the source in debug mode - ESP32"

@@ -17,27 +17,18 @@ cargo install bindgen
     since that target isn't in the mainline clang
     I don't think we need it anyway.
 
-  * Another thing is the way python is passing in the cmd line parameters on execute
-    passing in everything directly with spaces at the command line prompt seems to nearly work
-    but there's some kind of issue with the method I'm using to pass in the parameters, maybe the clang params should be grouped by space
+  * the lib.rs defines some of the std types since there's no std namespace
+    but this doesn't seem to work, maybe thats why the original used the 2015 type instead of 2018
 
 
-
-  * sys/reent.h not found when run directly
-    I think I need to add the include -IC:\Apps\xtensa-esp32-elf\xtensa-esp32-elf\sys-include
-
-  * next missing include is sdkconfig.h, this seems to be a generated file from the project
-    -ID:\SourceCode\Local\Hecatron\Hecatron.Local\Embedded.Rust.Examples\src\ESP32\test1\lib-idf\build\config
-
-  * next is hal/cpu_ll.h
-    -ID:\SourceCode\External\esp-idf\components\soc\src\esp32\include
-
-  * next is soc/cpu_caps.h
-    -ID:\SourceCode\External\esp-idf\components\soc\soc\esp32\include
-
-
-I think that's everything, it seems to generate a file with the above
-Look at building the lib-idf project with idf.py next to see how that turns out
-we may be able to get rid of some of the above includes
-
-We also need to do a rust fmt on the output after it's generated
+::std::os::raw::c_char		i8
+::std::os::raw::c_int		i32
+::std::os::raw::c_uchar		u8
+::std::os::raw::c_schar		i8
+::std::os::raw::c_short		i16
+::std::os::raw::c_ushort	u16
+::std::os::raw::c_uint		u32
+::std::os::raw::c_long		i32
+::std::os::raw::c_ulong		u32
+::std::os::raw::c_longlong	i64
+::std::os::raw::c_ulonglong	u64

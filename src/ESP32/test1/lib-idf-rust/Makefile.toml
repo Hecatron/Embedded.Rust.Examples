@@ -1,7 +1,6 @@
 # Read in the env settings
 extend = "../.cargo/env-settings.toml"
 
-# TODO
 [tasks.bindgen]
 description = "runs bindgen to generate the bindings"
 command = "python"

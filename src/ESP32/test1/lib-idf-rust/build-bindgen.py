@@ -61,19 +61,31 @@ class BuildBindgen(object):
         incs2 = glob(incpath2)
         for item in (incs1 + incs2):
             clangflags += ["-I" + item]
+        
+        # Add some additional include directories that are needed
+        clangflags += ["-I" + path.join(self.SYS_ROOT, "sys-include")]
+        clangflags += ["-I" + path.join(self.IDF_PATH, "components/soc/src/esp32/include")]
+        clangflags += ["-I" + path.join(self.IDF_PATH, "components/soc/soc/esp32/include")]
+
+        # Add in the lib-idf build config directory
+        clangflags += ["-I" + path.abspath("../lib-idf/build/config")]
+
         return clangflags
 
 
     def run(self, args):
+        # Bindgen options
         cmdopts = [self.BINDGEN]
         cmdopts += ["--use-core", "--no-layout-tests"]
         cmdopts += ["--output", "src/bindings.rs"]
         cmdopts += ["src/bindings.h", "--"]
+
+        # Add the clang flags
         clangflags = self.get_clangflags()
         cmdopts += clangflags
+        
+        # Run
         #print(" ".join(cmdopts))
-
-        # TODO need a libclang.dll
         self.run_cmd(cmdopts, '.')
 
     def main(self):

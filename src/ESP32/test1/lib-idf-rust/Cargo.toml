@@ -7,4 +7,3 @@ edition = "2018"
 
 [dev-dependencies]
 bindgen = "0.57.0"
-#rustfmt = "1.4.34-nightly"

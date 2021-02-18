@@ -6,9 +6,6 @@ description = "runs bindgen to generate the bindings"
 command = "python"
 args = ["build-bindgen.py"]
 
-
-# TODO
-# rustup run nightly rustfmt src/bindings.rs
 [tasks.format]
 description = "reformat the rust code using rustfmt"
 install_crate = "rustfmt"

@@ -1,0 +1,16 @@
+# Todo rename this file to config.toml
+# after moving from cargo xbuild to cargo build using build-std
+
+[build]
+target = "xtensa-esp32-none-elf"
+
+# Re-enable when we switch from xbuild to build
+#[unstable]
+#build-std = ["core", "alloc"]
+
+[target.xtensa-esp32-none-elf]
+runner = "xtensa-esp32-elf-gdb -q -x openocd.gdb"
+rustflags = [
+  "-C", "link-arg=-Wl,-Tlink.x",
+  "-C", "link-arg=-nostartfiles",
+]

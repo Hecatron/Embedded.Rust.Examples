@@ -6,26 +6,18 @@ description = "setup the python virtual environment"
 command = "tox"
 cwd = "pyvirtenv"
 args = ["-c", "tox.ini"]
-condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/../build/pyenv/pyvenv.cfg"] }
+condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/pyenv/pyvenv.cfg"] }
+
+[tasks.idf]
+description = "Run idf.py"
+command = "${CARGO_MAKE_WORKING_DIRECTORY}/pyvirtenv/pyenv/Scripts/python.exe"
+args = ["${IDF_PATH}/tools/idf.py", "${@}"]
+dependencies = ["pyenv"]
 
 [tasks.cmake]
-description = "generate the build files using cmake"
+description = "generate the build files using cmake, note idf.py will do this automatically"
 cwd = "build"
 command = "cmake"
 args = ["..", "-G", "Ninja"]
 condition = { files_not_exist = ["${CARGO_MAKE_WORKING_DIRECTORY}/../build/CMakeCache.txt"] }
 dependencies = ["pyenv"]
-
-[tasks.build]
-description = "runs ninja to build the project"
-cwd = "build"
-command = "ninja"
-args = []
-dependencies = ["cmake"]
-
-[tasks.menuconfig]
-description = "select which options for the idf are required"
-cwd = "build"
-command = "ninja"
-args = ["menuconfig"]
-dependencies = ["cmake"]

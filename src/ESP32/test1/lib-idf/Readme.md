@@ -1,20 +1,21 @@
 # Readme
 
 Test build for the idf
-There are 3 steps to this build currently
+There are 2 steps to this build currently
 
 ```
 # Sets up the python virtual environment
 cargo make pyenv
 # Triggers a cmake setup under the build directory
-cargo make cmake
-# Runs ninja to do the build
-cargo make build
+cargo make idf all
 ```
 
-The idf can also be configured via
+other commands include
 ```
-cargo make menuconfig
+# To run the menuconfig
+cargo make idf menuconfig
+# To fully clean the build dir
+cargo make idf fullclean
 ```
 
 

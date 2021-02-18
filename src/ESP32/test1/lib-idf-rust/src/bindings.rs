@@ -2624,29 +2624,29 @@ pub const UART_NUM_1: u32 = 1;
 pub const UART_NUM_2: u32 = 2;
 pub const UART_NUM_MAX: u32 = 3;
 pub const UART_PIN_NO_CHANGE: i32 = -1;
-pub type size_t = ::std::os::raw::c_ulonglong;
-pub type wchar_t = ::std::os::raw::c_ushort;
+pub type size_t = bindgen_ctypes::c_ulonglong;
+pub type wchar_t = bindgen_ctypes::c_ushort;
 pub type max_align_t = f64;
-pub type __int8_t = ::std::os::raw::c_char;
-pub type __uint8_t = ::std::os::raw::c_uchar;
-pub type __int16_t = ::std::os::raw::c_short;
-pub type __uint16_t = ::std::os::raw::c_ushort;
-pub type __int32_t = ::std::os::raw::c_int;
-pub type __uint32_t = ::std::os::raw::c_uint;
-pub type __int64_t = ::std::os::raw::c_longlong;
-pub type __uint64_t = ::std::os::raw::c_ulonglong;
-pub type __int_least8_t = ::std::os::raw::c_char;
-pub type __uint_least8_t = ::std::os::raw::c_uchar;
-pub type __int_least16_t = ::std::os::raw::c_short;
-pub type __uint_least16_t = ::std::os::raw::c_ushort;
-pub type __int_least32_t = ::std::os::raw::c_int;
-pub type __uint_least32_t = ::std::os::raw::c_uint;
-pub type __int_least64_t = ::std::os::raw::c_longlong;
-pub type __uint_least64_t = ::std::os::raw::c_ulonglong;
-pub type __intmax_t = ::std::os::raw::c_longlong;
-pub type __uintmax_t = ::std::os::raw::c_ulonglong;
-pub type __intptr_t = ::std::os::raw::c_longlong;
-pub type __uintptr_t = ::std::os::raw::c_ulonglong;
+pub type __int8_t = bindgen_ctypes::c_char;
+pub type __uint8_t = bindgen_ctypes::c_uchar;
+pub type __int16_t = bindgen_ctypes::c_short;
+pub type __uint16_t = bindgen_ctypes::c_ushort;
+pub type __int32_t = bindgen_ctypes::c_int;
+pub type __uint32_t = bindgen_ctypes::c_uint;
+pub type __int64_t = bindgen_ctypes::c_longlong;
+pub type __uint64_t = bindgen_ctypes::c_ulonglong;
+pub type __int_least8_t = bindgen_ctypes::c_char;
+pub type __uint_least8_t = bindgen_ctypes::c_uchar;
+pub type __int_least16_t = bindgen_ctypes::c_short;
+pub type __uint_least16_t = bindgen_ctypes::c_ushort;
+pub type __int_least32_t = bindgen_ctypes::c_int;
+pub type __uint_least32_t = bindgen_ctypes::c_uint;
+pub type __int_least64_t = bindgen_ctypes::c_longlong;
+pub type __uint_least64_t = bindgen_ctypes::c_ulonglong;
+pub type __intmax_t = bindgen_ctypes::c_longlong;
+pub type __uintmax_t = bindgen_ctypes::c_ulonglong;
+pub type __intptr_t = bindgen_ctypes::c_longlong;
+pub type __uintptr_t = bindgen_ctypes::c_ulonglong;
 pub type intmax_t = __intmax_t;
 pub type uintmax_t = __uintmax_t;
 pub type int_least8_t = __int_least8_t;
@@ -2657,17 +2657,17 @@ pub type int_least32_t = __int_least32_t;
 pub type uint_least32_t = __uint_least32_t;
 pub type int_least64_t = __int_least64_t;
 pub type uint_least64_t = __uint_least64_t;
-pub type int_fast8_t = ::std::os::raw::c_char;
-pub type uint_fast8_t = ::std::os::raw::c_uchar;
-pub type int_fast16_t = ::std::os::raw::c_short;
-pub type uint_fast16_t = ::std::os::raw::c_ushort;
-pub type int_fast32_t = ::std::os::raw::c_int;
-pub type uint_fast32_t = ::std::os::raw::c_uint;
-pub type int_fast64_t = ::std::os::raw::c_longlong;
-pub type uint_fast64_t = ::std::os::raw::c_ulonglong;
+pub type int_fast8_t = bindgen_ctypes::c_char;
+pub type uint_fast8_t = bindgen_ctypes::c_uchar;
+pub type int_fast16_t = bindgen_ctypes::c_short;
+pub type uint_fast16_t = bindgen_ctypes::c_ushort;
+pub type int_fast32_t = bindgen_ctypes::c_int;
+pub type uint_fast32_t = bindgen_ctypes::c_uint;
+pub type int_fast64_t = bindgen_ctypes::c_longlong;
+pub type uint_fast64_t = bindgen_ctypes::c_ulonglong;
 pub type va_list = __builtin_va_list;
 pub type __gnuc_va_list = __builtin_va_list;
-pub type _lock_t = ::std::os::raw::c_int;
+pub type _lock_t = bindgen_ctypes::c_int;
 pub type _LOCK_RECURSIVE_T = _lock_t;
 pub type _LOCK_T = _lock_t;
 extern "C" {
@@ -2689,10 +2689,10 @@ extern "C" {
     pub fn _lock_acquire_recursive(lock: *mut _lock_t);
 }
 extern "C" {
-    pub fn _lock_try_acquire(lock: *mut _lock_t) -> ::std::os::raw::c_int;
+    pub fn _lock_try_acquire(lock: *mut _lock_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _lock_try_acquire_recursive(lock: *mut _lock_t) -> ::std::os::raw::c_int;
+    pub fn _lock_try_acquire_recursive(lock: *mut _lock_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _lock_release(lock: *mut _lock_t);
@@ -2700,53 +2700,53 @@ extern "C" {
 extern "C" {
     pub fn _lock_release_recursive(lock: *mut _lock_t);
 }
-pub type __blkcnt_t = ::std::os::raw::c_long;
-pub type __blksize_t = ::std::os::raw::c_long;
+pub type __blkcnt_t = bindgen_ctypes::c_long;
+pub type __blksize_t = bindgen_ctypes::c_long;
 pub type __fsblkcnt_t = __uint64_t;
 pub type __fsfilcnt_t = __uint32_t;
-pub type _off_t = ::std::os::raw::c_long;
-pub type __pid_t = ::std::os::raw::c_int;
-pub type __dev_t = ::std::os::raw::c_short;
-pub type __uid_t = ::std::os::raw::c_ushort;
-pub type __gid_t = ::std::os::raw::c_ushort;
+pub type _off_t = bindgen_ctypes::c_long;
+pub type __pid_t = bindgen_ctypes::c_int;
+pub type __dev_t = bindgen_ctypes::c_short;
+pub type __uid_t = bindgen_ctypes::c_ushort;
+pub type __gid_t = bindgen_ctypes::c_ushort;
 pub type __id_t = __uint32_t;
-pub type __ino_t = ::std::os::raw::c_ushort;
+pub type __ino_t = bindgen_ctypes::c_ushort;
 pub type __mode_t = __uint32_t;
-pub type _off64_t = ::std::os::raw::c_longlong;
+pub type _off64_t = bindgen_ctypes::c_longlong;
 pub type __off_t = _off_t;
 pub type __loff_t = _off64_t;
-pub type __key_t = ::std::os::raw::c_long;
-pub type _fpos_t = ::std::os::raw::c_long;
-pub type __size_t = ::std::os::raw::c_ulonglong;
-pub type _ssize_t = ::std::os::raw::c_longlong;
+pub type __key_t = bindgen_ctypes::c_long;
+pub type _fpos_t = bindgen_ctypes::c_long;
+pub type __size_t = bindgen_ctypes::c_ulonglong;
+pub type _ssize_t = bindgen_ctypes::c_longlong;
 pub type __ssize_t = _ssize_t;
-pub type wint_t = ::std::os::raw::c_ushort;
+pub type wint_t = bindgen_ctypes::c_ushort;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _mbstate_t {
-    pub __count: ::std::os::raw::c_int,
+    pub __count: bindgen_ctypes::c_int,
     pub __value: _mbstate_t__bindgen_ty_1,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union _mbstate_t__bindgen_ty_1 {
     pub __wch: wint_t,
-    pub __wchb: [::std::os::raw::c_uchar; 4usize],
+    pub __wchb: [bindgen_ctypes::c_uchar; 4usize],
     _bindgen_union_align: [u16; 2usize],
 }
 pub type _flock_t = _LOCK_RECURSIVE_T;
-pub type _iconv_t = *mut ::core::ffi::c_void;
-pub type __clock_t = ::std::os::raw::c_ulong;
-pub type __time_t = ::std::os::raw::c_long;
-pub type __clockid_t = ::std::os::raw::c_ulong;
-pub type __timer_t = ::std::os::raw::c_ulong;
+pub type _iconv_t = *mut bindgen_ctypes::c_void;
+pub type __clock_t = bindgen_ctypes::c_ulong;
+pub type __time_t = bindgen_ctypes::c_long;
+pub type __clockid_t = bindgen_ctypes::c_ulong;
+pub type __timer_t = bindgen_ctypes::c_ulong;
 pub type __sa_family_t = __uint8_t;
 pub type __socklen_t = __uint32_t;
-pub type __nlink_t = ::std::os::raw::c_ushort;
-pub type __suseconds_t = ::std::os::raw::c_long;
-pub type __useconds_t = ::std::os::raw::c_ulong;
-pub type __va_list = *mut ::std::os::raw::c_char;
-pub type __ULong = ::std::os::raw::c_ulong;
+pub type __nlink_t = bindgen_ctypes::c_ushort;
+pub type __suseconds_t = bindgen_ctypes::c_long;
+pub type __useconds_t = bindgen_ctypes::c_ulong;
+pub type __va_list = *mut bindgen_ctypes::c_char;
+pub type __ULong = bindgen_ctypes::c_ulong;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __locale_t {
@@ -2756,30 +2756,30 @@ pub struct __locale_t {
 #[derive(Debug, Copy, Clone)]
 pub struct _Bigint {
     pub _next: *mut _Bigint,
-    pub _k: ::std::os::raw::c_int,
-    pub _maxwds: ::std::os::raw::c_int,
-    pub _sign: ::std::os::raw::c_int,
-    pub _wds: ::std::os::raw::c_int,
+    pub _k: bindgen_ctypes::c_int,
+    pub _maxwds: bindgen_ctypes::c_int,
+    pub _sign: bindgen_ctypes::c_int,
+    pub _wds: bindgen_ctypes::c_int,
     pub _x: [__ULong; 1usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __tm {
-    pub __tm_sec: ::std::os::raw::c_int,
-    pub __tm_min: ::std::os::raw::c_int,
-    pub __tm_hour: ::std::os::raw::c_int,
-    pub __tm_mday: ::std::os::raw::c_int,
-    pub __tm_mon: ::std::os::raw::c_int,
-    pub __tm_year: ::std::os::raw::c_int,
-    pub __tm_wday: ::std::os::raw::c_int,
-    pub __tm_yday: ::std::os::raw::c_int,
-    pub __tm_isdst: ::std::os::raw::c_int,
+    pub __tm_sec: bindgen_ctypes::c_int,
+    pub __tm_min: bindgen_ctypes::c_int,
+    pub __tm_hour: bindgen_ctypes::c_int,
+    pub __tm_mday: bindgen_ctypes::c_int,
+    pub __tm_mon: bindgen_ctypes::c_int,
+    pub __tm_year: bindgen_ctypes::c_int,
+    pub __tm_wday: bindgen_ctypes::c_int,
+    pub __tm_yday: bindgen_ctypes::c_int,
+    pub __tm_isdst: bindgen_ctypes::c_int,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _on_exit_args {
-    pub _fnargs: [*mut ::core::ffi::c_void; 32usize],
-    pub _dso_handle: [*mut ::core::ffi::c_void; 32usize],
+    pub _fnargs: [*mut bindgen_ctypes::c_void; 32usize],
+    pub _dso_handle: [*mut bindgen_ctypes::c_void; 32usize],
     pub _fntypes: __ULong,
     pub _is_cxa: __ULong,
 }
@@ -2787,26 +2787,26 @@ pub struct _on_exit_args {
 #[derive(Debug, Copy, Clone)]
 pub struct _atexit {
     pub _next: *mut _atexit,
-    pub _ind: ::std::os::raw::c_int,
+    pub _ind: bindgen_ctypes::c_int,
     pub _fns: [::core::option::Option<unsafe extern "C" fn()>; 32usize],
     pub _on_exit_args_ptr: *mut _on_exit_args,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __sbuf {
-    pub _base: *mut ::std::os::raw::c_uchar,
-    pub _size: ::std::os::raw::c_int,
+    pub _base: *mut bindgen_ctypes::c_uchar,
+    pub _size: bindgen_ctypes::c_int,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct __sFILE_fake {
-    pub _p: *mut ::std::os::raw::c_uchar,
-    pub _r: ::std::os::raw::c_int,
-    pub _w: ::std::os::raw::c_int,
-    pub _flags: ::std::os::raw::c_short,
-    pub _file: ::std::os::raw::c_short,
+    pub _p: *mut bindgen_ctypes::c_uchar,
+    pub _r: bindgen_ctypes::c_int,
+    pub _w: bindgen_ctypes::c_int,
+    pub _flags: bindgen_ctypes::c_short,
+    pub _file: bindgen_ctypes::c_short,
     pub _bf: __sbuf,
-    pub _lbfsize: ::std::os::raw::c_int,
+    pub _lbfsize: bindgen_ctypes::c_int,
     pub _data: *mut _reent,
 }
 extern "C" {
@@ -2815,90 +2815,90 @@ extern "C" {
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct __sFILE {
-    pub _p: *mut ::std::os::raw::c_uchar,
-    pub _r: ::std::os::raw::c_int,
-    pub _w: ::std::os::raw::c_int,
-    pub _flags: ::std::os::raw::c_short,
-    pub _file: ::std::os::raw::c_short,
+    pub _p: *mut bindgen_ctypes::c_uchar,
+    pub _r: bindgen_ctypes::c_int,
+    pub _w: bindgen_ctypes::c_int,
+    pub _flags: bindgen_ctypes::c_short,
+    pub _file: bindgen_ctypes::c_short,
     pub _bf: __sbuf,
-    pub _lbfsize: ::std::os::raw::c_int,
+    pub _lbfsize: bindgen_ctypes::c_int,
     pub _data: *mut _reent,
-    pub _cookie: *mut ::core::ffi::c_void,
+    pub _cookie: *mut bindgen_ctypes::c_void,
     pub _read: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _reent,
-            arg2: *mut ::core::ffi::c_void,
-            arg3: *mut ::std::os::raw::c_char,
-            arg4: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
+            arg2: *mut bindgen_ctypes::c_void,
+            arg3: *mut bindgen_ctypes::c_char,
+            arg4: bindgen_ctypes::c_int,
+        ) -> bindgen_ctypes::c_int,
     >,
     pub _write: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _reent,
-            arg2: *mut ::core::ffi::c_void,
-            arg3: *mut ::std::os::raw::c_char,
-            arg4: ::std::os::raw::c_int,
-        ) -> ::std::os::raw::c_int,
+            arg2: *mut bindgen_ctypes::c_void,
+            arg3: *mut bindgen_ctypes::c_char,
+            arg4: bindgen_ctypes::c_int,
+        ) -> bindgen_ctypes::c_int,
     >,
     pub _seek: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _reent,
-            arg2: *mut ::core::ffi::c_void,
+            arg2: *mut bindgen_ctypes::c_void,
             arg3: _fpos_t,
-            arg4: ::std::os::raw::c_int,
+            arg4: bindgen_ctypes::c_int,
         ) -> _fpos_t,
     >,
     pub _close: ::core::option::Option<
         unsafe extern "C" fn(
             arg1: *mut _reent,
-            arg2: *mut ::core::ffi::c_void,
-        ) -> ::std::os::raw::c_int,
+            arg2: *mut bindgen_ctypes::c_void,
+        ) -> bindgen_ctypes::c_int,
     >,
     pub _ub: __sbuf,
-    pub _up: *mut ::std::os::raw::c_uchar,
-    pub _ur: ::std::os::raw::c_int,
-    pub _ubuf: [::std::os::raw::c_uchar; 3usize],
-    pub _nbuf: [::std::os::raw::c_uchar; 1usize],
+    pub _up: *mut bindgen_ctypes::c_uchar,
+    pub _ur: bindgen_ctypes::c_int,
+    pub _ubuf: [bindgen_ctypes::c_uchar; 3usize],
+    pub _nbuf: [bindgen_ctypes::c_uchar; 1usize],
     pub _lb: __sbuf,
-    pub _blksize: ::std::os::raw::c_int,
+    pub _blksize: bindgen_ctypes::c_int,
     pub _offset: _off_t,
     pub _lock: _flock_t,
     pub _mbstate: _mbstate_t,
-    pub _flags2: ::std::os::raw::c_int,
+    pub _flags2: bindgen_ctypes::c_int,
 }
 pub type __FILE = __sFILE;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _glue {
     pub _next: *mut _glue,
-    pub _niobs: ::std::os::raw::c_int,
+    pub _niobs: bindgen_ctypes::c_int,
     pub _iobs: *mut __FILE,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _rand48 {
-    pub _seed: [::std::os::raw::c_ushort; 3usize],
-    pub _mult: [::std::os::raw::c_ushort; 3usize],
-    pub _add: ::std::os::raw::c_ushort,
-    pub _rand_next: ::std::os::raw::c_ulonglong,
+    pub _seed: [bindgen_ctypes::c_ushort; 3usize],
+    pub _mult: [bindgen_ctypes::c_ushort; 3usize],
+    pub _add: bindgen_ctypes::c_ushort,
+    pub _rand_next: bindgen_ctypes::c_ulonglong,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _mprec {
     pub _result: *mut _Bigint,
-    pub _result_k: ::std::os::raw::c_int,
+    pub _result_k: bindgen_ctypes::c_int,
     pub _p5s: *mut _Bigint,
     pub _freelist: *mut *mut _Bigint,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct _misc_reent {
-    pub _strtok_last: *mut ::std::os::raw::c_char,
+    pub _strtok_last: *mut bindgen_ctypes::c_char,
     pub _mblen_state: _mbstate_t,
     pub _wctomb_state: _mbstate_t,
     pub _mbtowc_state: _mbstate_t,
-    pub _l64a_buf: [::std::os::raw::c_char; 8usize],
-    pub _getdate_err: ::std::os::raw::c_int,
+    pub _l64a_buf: [bindgen_ctypes::c_char; 8usize],
+    pub _getdate_err: bindgen_ctypes::c_int,
     pub _mbrlen_state: _mbstate_t,
     pub _mbrtowc_state: _mbstate_t,
     pub _mbsrtowcs_state: _mbstate_t,
@@ -2908,30 +2908,30 @@ pub struct _misc_reent {
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _reent {
-    pub _errno: ::std::os::raw::c_int,
+    pub _errno: bindgen_ctypes::c_int,
     pub _stdin: *mut __FILE,
     pub _stdout: *mut __FILE,
     pub _stderr: *mut __FILE,
-    pub _inc: ::std::os::raw::c_int,
-    pub _emergency: *mut ::std::os::raw::c_char,
-    pub __sdidinit: ::std::os::raw::c_int,
-    pub _unspecified_locale_info: ::std::os::raw::c_int,
+    pub _inc: bindgen_ctypes::c_int,
+    pub _emergency: *mut bindgen_ctypes::c_char,
+    pub __sdidinit: bindgen_ctypes::c_int,
+    pub _unspecified_locale_info: bindgen_ctypes::c_int,
     pub _locale: *mut __locale_t,
     pub _mp: *mut _mprec,
     pub __cleanup: ::core::option::Option<unsafe extern "C" fn(arg1: *mut _reent)>,
-    pub _gamma_signgam: ::std::os::raw::c_int,
-    pub _cvtlen: ::std::os::raw::c_int,
-    pub _cvtbuf: *mut ::std::os::raw::c_char,
+    pub _gamma_signgam: bindgen_ctypes::c_int,
+    pub _cvtlen: bindgen_ctypes::c_int,
+    pub _cvtbuf: *mut bindgen_ctypes::c_char,
     pub _r48: *mut _rand48,
     pub _localtime_buf: *mut __tm,
-    pub _asctime_buf: *mut ::std::os::raw::c_char,
-    pub _sig_func: *mut ::core::option::Option<unsafe extern "C" fn(arg1: ::std::os::raw::c_int)>,
+    pub _asctime_buf: *mut bindgen_ctypes::c_char,
+    pub _sig_func: *mut ::core::option::Option<unsafe extern "C" fn(arg1: bindgen_ctypes::c_int)>,
     pub _atexit: *mut _atexit,
     pub _atexit0: _atexit,
     pub __sglue: _glue,
     pub __sf: *mut __FILE,
     pub _misc: *mut _misc_reent,
-    pub _signal_buf: *mut ::std::os::raw::c_char,
+    pub _signal_buf: *mut bindgen_ctypes::c_char,
 }
 extern "C" {
     pub static mut __sf_fake_stdin: __sFILE_fake;
@@ -2955,10 +2955,10 @@ pub type u_int8_t = __uint8_t;
 pub type u_int16_t = __uint16_t;
 pub type u_int32_t = __uint32_t;
 pub type u_int64_t = __uint64_t;
-pub type register_t = ::std::os::raw::c_int;
-pub type __sigset_t = ::std::os::raw::c_ulong;
+pub type register_t = bindgen_ctypes::c_int;
+pub type __sigset_t = bindgen_ctypes::c_ulong;
 pub type suseconds_t = __suseconds_t;
-pub type time_t = ::std::os::raw::c_long;
+pub type time_t = bindgen_ctypes::c_long;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct timeval {
@@ -2969,7 +2969,7 @@ pub struct timeval {
 #[derive(Debug, Copy, Clone)]
 pub struct timespec {
     pub tv_sec: time_t,
-    pub tv_nsec: ::std::os::raw::c_long,
+    pub tv_nsec: bindgen_ctypes::c_long,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -2978,32 +2978,32 @@ pub struct itimerspec {
     pub it_value: timespec,
 }
 pub type sigset_t = __sigset_t;
-pub type fd_mask = ::std::os::raw::c_ulong;
+pub type fd_mask = bindgen_ctypes::c_ulong;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _types_fd_set {
     pub fds_bits: [fd_mask; 2usize],
 }
 extern "C" {
-    pub fn select() -> ::std::os::raw::c_int;
+    pub fn select() -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn pselect() -> ::std::os::raw::c_int;
+    pub fn pselect() -> bindgen_ctypes::c_int;
 }
 pub type in_addr_t = __uint32_t;
 pub type in_port_t = __uint16_t;
-pub type u_char = ::std::os::raw::c_uchar;
-pub type u_short = ::std::os::raw::c_ushort;
-pub type u_int = ::std::os::raw::c_uint;
-pub type u_long = ::std::os::raw::c_ulong;
-pub type ushort = ::std::os::raw::c_ushort;
-pub type uint = ::std::os::raw::c_uint;
-pub type ulong = ::std::os::raw::c_ulong;
+pub type u_char = bindgen_ctypes::c_uchar;
+pub type u_short = bindgen_ctypes::c_ushort;
+pub type u_int = bindgen_ctypes::c_uint;
+pub type u_long = bindgen_ctypes::c_ulong;
+pub type ushort = bindgen_ctypes::c_ushort;
+pub type uint = bindgen_ctypes::c_uint;
+pub type ulong = bindgen_ctypes::c_ulong;
 pub type blkcnt_t = __blkcnt_t;
 pub type blksize_t = __blksize_t;
-pub type clock_t = ::std::os::raw::c_ulong;
-pub type daddr_t = ::std::os::raw::c_long;
-pub type caddr_t = *mut ::std::os::raw::c_char;
+pub type clock_t = bindgen_ctypes::c_ulong;
+pub type daddr_t = bindgen_ctypes::c_long;
+pub type caddr_t = *mut bindgen_ctypes::c_char;
 pub type fsblkcnt_t = __fsblkcnt_t;
 pub type fsfilcnt_t = __fsfilcnt_t;
 pub type id_t = __id_t;
@@ -3024,198 +3024,198 @@ pub type sbintime_t = __int64_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct sched_param {
-    pub sched_priority: ::std::os::raw::c_int,
+    pub sched_priority: bindgen_ctypes::c_int,
 }
 extern "C" {
-    pub fn sched_yield() -> ::std::os::raw::c_int;
+    pub fn sched_yield() -> bindgen_ctypes::c_int;
 }
 pub type pthread_t = __uint32_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct pthread_attr_t {
-    pub is_initialized: ::std::os::raw::c_int,
-    pub stackaddr: *mut ::core::ffi::c_void,
-    pub stacksize: ::std::os::raw::c_int,
-    pub contentionscope: ::std::os::raw::c_int,
-    pub inheritsched: ::std::os::raw::c_int,
-    pub schedpolicy: ::std::os::raw::c_int,
+    pub is_initialized: bindgen_ctypes::c_int,
+    pub stackaddr: *mut bindgen_ctypes::c_void,
+    pub stacksize: bindgen_ctypes::c_int,
+    pub contentionscope: bindgen_ctypes::c_int,
+    pub inheritsched: bindgen_ctypes::c_int,
+    pub schedpolicy: bindgen_ctypes::c_int,
     pub schedparam: sched_param,
-    pub detachstate: ::std::os::raw::c_int,
+    pub detachstate: bindgen_ctypes::c_int,
 }
 pub type pthread_mutex_t = __uint32_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct pthread_mutexattr_t {
-    pub is_initialized: ::std::os::raw::c_int,
-    pub recursive: ::std::os::raw::c_int,
+    pub is_initialized: bindgen_ctypes::c_int,
+    pub recursive: bindgen_ctypes::c_int,
 }
 pub type pthread_cond_t = __uint32_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct pthread_condattr_t {
-    pub is_initialized: ::std::os::raw::c_int,
+    pub is_initialized: bindgen_ctypes::c_int,
     pub clock: clock_t,
 }
 pub type pthread_key_t = __uint32_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct pthread_once_t {
-    pub is_initialized: ::std::os::raw::c_int,
-    pub init_executed: ::std::os::raw::c_int,
+    pub is_initialized: bindgen_ctypes::c_int,
+    pub init_executed: bindgen_ctypes::c_int,
 }
 pub type FILE = __FILE;
 pub type fpos_t = _fpos_t;
 extern "C" {
-    pub fn ctermid(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn ctermid(arg1: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn tmpfile() -> *mut FILE;
 }
 extern "C" {
-    pub fn tmpnam(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn tmpnam(arg1: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn tempnam(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn fclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fclose(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fflush(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fflush(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn freopen(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut FILE,
     ) -> *mut FILE;
 }
 extern "C" {
-    pub fn setbuf(arg1: *mut FILE, arg2: *mut ::std::os::raw::c_char);
+    pub fn setbuf(arg1: *mut FILE, arg2: *mut bindgen_ctypes::c_char);
 }
 extern "C" {
     pub fn setvbuf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
         arg4: size_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fprintf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fscanf(arg1: *mut FILE, arg2: *mut ::std::os::raw::c_char, ...)
-        -> ::std::os::raw::c_int;
+    pub fn fscanf(arg1: *mut FILE, arg2: *mut bindgen_ctypes::c_char, ...)
+        -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn printf(arg1: *mut ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+    pub fn printf(arg1: *mut bindgen_ctypes::c_char, ...) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn scanf(arg1: *mut ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+    pub fn scanf(arg1: *mut bindgen_ctypes::c_char, ...) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn sscanf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vfprintf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vsprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fgetc(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fgetc(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fgets(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn fputc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fputc(arg1: bindgen_ctypes::c_int, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fputs(arg1: *mut ::std::os::raw::c_char, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fputs(arg1: *mut bindgen_ctypes::c_char, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn getc(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn getc(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn getchar() -> ::std::os::raw::c_int;
+    pub fn getchar() -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn gets(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn gets(arg1: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn putc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn putc(arg1: bindgen_ctypes::c_int, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn putchar(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn putchar(arg1: bindgen_ctypes::c_int) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn puts(arg1: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn puts(arg1: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn ungetc(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn ungetc(arg1: bindgen_ctypes::c_int, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fread(
-        arg1: *mut ::core::ffi::c_void,
-        _size: ::std::os::raw::c_ulonglong,
-        _n: ::std::os::raw::c_ulonglong,
+        arg1: *mut bindgen_ctypes::c_void,
+        _size: bindgen_ctypes::c_ulonglong,
+        _n: bindgen_ctypes::c_ulonglong,
         arg2: *mut FILE,
-    ) -> ::std::os::raw::c_ulonglong;
+    ) -> bindgen_ctypes::c_ulonglong;
 }
 extern "C" {
     pub fn fwrite(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg2: *mut FILE,
     ) -> size_t;
 }
 extern "C" {
-    pub fn fgetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> ::std::os::raw::c_int;
+    pub fn fgetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fseek(
         arg1: *mut FILE,
-        arg2: ::std::os::raw::c_long,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg2: bindgen_ctypes::c_long,
+        arg3: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fsetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> ::std::os::raw::c_int;
+    pub fn fsetpos(arg1: *mut FILE, arg2: *mut fpos_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn ftell(arg1: *mut FILE) -> ::std::os::raw::c_long;
+    pub fn ftell(arg1: *mut FILE) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn rewind(arg1: *mut FILE);
@@ -3224,452 +3224,452 @@ extern "C" {
     pub fn clearerr(arg1: *mut FILE);
 }
 extern "C" {
-    pub fn feof(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn feof(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn ferror(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn ferror(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn perror(arg1: *mut ::std::os::raw::c_char);
+    pub fn perror(arg1: *mut bindgen_ctypes::c_char);
 }
 extern "C" {
     pub fn fopen(
-        _name: *mut ::std::os::raw::c_char,
-        _type: *mut ::std::os::raw::c_char,
+        _name: *mut bindgen_ctypes::c_char,
+        _type: *mut bindgen_ctypes::c_char,
     ) -> *mut FILE;
 }
 extern "C" {
     pub fn sprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn remove(arg1: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn remove(arg1: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn rename(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fseeko(
         arg1: *mut FILE,
         arg2: off_t,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg3: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn ftello(arg1: *mut FILE) -> off_t;
 }
 extern "C" {
     pub fn snprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: size_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vsnprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: size_t,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vfscanf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vscanf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vsscanf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn asiprintf(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: *mut *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn asniprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: *mut size_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn asnprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: *mut size_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn diprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fiprintf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fiscanf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn iprintf(arg1: *mut ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+    pub fn iprintf(arg1: *mut bindgen_ctypes::c_char, ...) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn iscanf(arg1: *mut ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+    pub fn iscanf(arg1: *mut bindgen_ctypes::c_char, ...) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn siprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn siscanf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn sniprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: size_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vasiprintf(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vasniprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: *mut size_t,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn vasnprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: *mut size_t,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn vdiprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vfiprintf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vfiscanf(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn viprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn viscanf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vsiprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vsiscanf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn vsniprintf(
-        arg1: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
         arg2: size_t,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fdopen(arg1: ::std::os::raw::c_int, arg2: *mut ::std::os::raw::c_char) -> *mut FILE;
+    pub fn fdopen(arg1: bindgen_ctypes::c_int, arg2: *mut bindgen_ctypes::c_char) -> *mut FILE;
 }
 extern "C" {
-    pub fn fileno(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fileno(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn pclose(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn pclose(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn popen(arg1: *mut ::std::os::raw::c_char, arg2: *mut ::std::os::raw::c_char)
+    pub fn popen(arg1: *mut bindgen_ctypes::c_char, arg2: *mut bindgen_ctypes::c_char)
         -> *mut FILE;
 }
 extern "C" {
     pub fn setbuffer(
         arg1: *mut FILE,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
     );
 }
 extern "C" {
-    pub fn setlinebuf(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn setlinebuf(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn getw(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn getw(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn putw(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn putw(arg1: bindgen_ctypes::c_int, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn getc_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn getc_unlocked(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn getchar_unlocked() -> ::std::os::raw::c_int;
+    pub fn getchar_unlocked() -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn flockfile(arg1: *mut FILE);
 }
 extern "C" {
-    pub fn ftrylockfile(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn ftrylockfile(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn funlockfile(arg1: *mut FILE);
 }
 extern "C" {
-    pub fn putc_unlocked(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn putc_unlocked(arg1: bindgen_ctypes::c_int, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn putchar_unlocked(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn putchar_unlocked(arg1: bindgen_ctypes::c_int) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn dprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fmemopen(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut bindgen_ctypes::c_void,
         arg2: size_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
     ) -> *mut FILE;
 }
 extern "C" {
-    pub fn open_memstream(arg1: *mut *mut ::std::os::raw::c_char, arg2: *mut size_t) -> *mut FILE;
+    pub fn open_memstream(arg1: *mut *mut bindgen_ctypes::c_char, arg2: *mut size_t) -> *mut FILE;
 }
 extern "C" {
     pub fn vdprintf(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn renameat(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _asiprintf_r(
         arg1: *mut _reent,
-        arg2: *mut *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _asniprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut size_t,
-        arg4: *mut ::std::os::raw::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
         ...
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _asnprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut size_t,
-        arg4: *mut ::std::os::raw::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
         ...
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _asprintf_r(
         arg1: *mut _reent,
-        arg2: *mut *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _diprintf_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _dprintf_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _fclose_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _fclose_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _fcloseall_r(arg1: *mut _reent) -> ::std::os::raw::c_int;
+    pub fn _fcloseall_r(arg1: *mut _reent) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fdopen_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
     ) -> *mut FILE;
 }
 extern "C" {
-    pub fn _fflush_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _fflush_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _fgetc_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _fgetc_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _fgetc_unlocked_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _fgetc_unlocked_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fgets_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
         arg4: *mut FILE,
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _fgets_unlocked_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
         arg4: *mut FILE,
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _fgetpos_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
         arg3: *mut fpos_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fsetpos_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
         arg3: *mut fpos_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fiprintf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fiscanf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fmemopen_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         arg3: size_t,
-        arg4: *mut ::std::os::raw::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
     ) -> *mut FILE;
 }
 extern "C" {
     pub fn _fopen_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
     ) -> *mut FILE;
 }
 extern "C" {
     pub fn _freopen_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         arg4: *mut FILE,
     ) -> *mut FILE;
 }
@@ -3677,45 +3677,45 @@ extern "C" {
     pub fn _fprintf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _fpurge_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _fpurge_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fputc_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fputc_unlocked_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fputs_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fputs_unlocked_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fread_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg3: *mut FILE,
@@ -3724,7 +3724,7 @@ extern "C" {
 extern "C" {
     pub fn _fread_unlocked_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg3: *mut FILE,
@@ -3734,28 +3734,28 @@ extern "C" {
     pub fn _fscanf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fseek_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: ::std::os::raw::c_long,
-        arg4: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg3: bindgen_ctypes::c_long,
+        arg4: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _fseeko_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
         arg3: _off_t,
-        arg4: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg4: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _ftell_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_long;
+    pub fn _ftell_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn _ftello_r(arg1: *mut _reent, arg2: *mut FILE) -> _off_t;
@@ -3766,7 +3766,7 @@ extern "C" {
 extern "C" {
     pub fn _fwrite_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg3: *mut FILE,
@@ -3775,161 +3775,161 @@ extern "C" {
 extern "C" {
     pub fn _fwrite_unlocked_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg3: *mut FILE,
     ) -> size_t;
 }
 extern "C" {
-    pub fn _getc_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _getc_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _getc_unlocked_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn _getc_unlocked_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _getchar_r(arg1: *mut _reent) -> ::std::os::raw::c_int;
+    pub fn _getchar_r(arg1: *mut _reent) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _getchar_unlocked_r(arg1: *mut _reent) -> ::std::os::raw::c_int;
+    pub fn _getchar_unlocked_r(arg1: *mut _reent) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _gets_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _iprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _iscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _open_memstream_r(
         arg1: *mut _reent,
-        arg2: *mut *mut ::std::os::raw::c_char,
+        arg2: *mut *mut bindgen_ctypes::c_char,
         arg3: *mut size_t,
     ) -> *mut FILE;
 }
 extern "C" {
-    pub fn _perror_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_char);
+    pub fn _perror_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_char);
 }
 extern "C" {
     pub fn _printf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _putc_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _putc_unlocked_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _putchar_unlocked_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg2: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _putchar_r(arg1: *mut _reent, arg2: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn _putchar_r(arg1: *mut _reent, arg2: bindgen_ctypes::c_int) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _puts_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn _puts_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _remove_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_char)
-        -> ::std::os::raw::c_int;
+    pub fn _remove_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_char)
+        -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _rename_r(
         arg1: *mut _reent,
-        _old: *mut ::std::os::raw::c_char,
-        _new: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        _old: *mut bindgen_ctypes::c_char,
+        _new: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _scanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _siprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _siscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _sniprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
-        arg4: *mut ::std::os::raw::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _snprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
-        arg4: *mut ::std::os::raw::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _sprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _sscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         ...
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _tempnam_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _tmpfile_r(arg1: *mut _reent) -> *mut FILE;
@@ -3937,190 +3937,190 @@ extern "C" {
 extern "C" {
     pub fn _tmpnam_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _ungetc_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vasiprintf_r(
         arg1: *mut _reent,
-        arg2: *mut *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vasniprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut size_t,
-        arg4: *mut ::std::os::raw::c_char,
-        arg5: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg4: *mut bindgen_ctypes::c_char,
+        arg5: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _vasnprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut size_t,
-        arg4: *mut ::std::os::raw::c_char,
-        arg5: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg4: *mut bindgen_ctypes::c_char,
+        arg5: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _vasprintf_r(
         arg1: *mut _reent,
-        arg2: *mut *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vdiprintf_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vdprintf_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vfiprintf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vfiscanf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vfprintf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vfscanf_r(
         arg1: *mut _reent,
         arg2: *mut FILE,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _viprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _viscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vsiprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vsiscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vsniprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
-        arg4: *mut ::std::os::raw::c_char,
-        arg5: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg4: *mut bindgen_ctypes::c_char,
+        arg5: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vsnprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
-        arg4: *mut ::std::os::raw::c_char,
-        arg5: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg4: *mut bindgen_ctypes::c_char,
+        arg5: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vsprintf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _vsscanf_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fpurge(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fpurge(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn __getdelim(
-        arg1: *mut *mut ::std::os::raw::c_char,
+        arg1: *mut *mut bindgen_ctypes::c_char,
         arg2: *mut size_t,
-        arg3: ::std::os::raw::c_int,
+        arg3: bindgen_ctypes::c_int,
         arg4: *mut FILE,
     ) -> ssize_t;
 }
 extern "C" {
     pub fn __getline(
-        arg1: *mut *mut ::std::os::raw::c_char,
+        arg1: *mut *mut bindgen_ctypes::c_char,
         arg2: *mut size_t,
         arg3: *mut FILE,
     ) -> ssize_t;
@@ -4129,26 +4129,26 @@ extern "C" {
     pub fn clearerr_unlocked(arg1: *mut FILE);
 }
 extern "C" {
-    pub fn feof_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn feof_unlocked(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn ferror_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn ferror_unlocked(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fileno_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fileno_unlocked(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fflush_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fflush_unlocked(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fgetc_unlocked(arg1: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fgetc_unlocked(arg1: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn fputc_unlocked(arg1: ::std::os::raw::c_int, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn fputc_unlocked(arg1: bindgen_ctypes::c_int, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn fread_unlocked(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg2: *mut FILE,
@@ -4156,94 +4156,94 @@ extern "C" {
 }
 extern "C" {
     pub fn fwrite_unlocked(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut bindgen_ctypes::c_void,
         _size: size_t,
         _n: size_t,
         arg2: *mut FILE,
     ) -> size_t;
 }
 extern "C" {
-    pub fn __srget_r(arg1: *mut _reent, arg2: *mut FILE) -> ::std::os::raw::c_int;
+    pub fn __srget_r(arg1: *mut _reent, arg2: *mut FILE) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn __swbuf_r(
         arg1: *mut _reent,
-        arg2: ::std::os::raw::c_int,
+        arg2: bindgen_ctypes::c_int,
         arg3: *mut FILE,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn funopen(
-        __cookie: *mut ::core::ffi::c_void,
+        __cookie: *mut bindgen_ctypes::c_void,
         __readfn: ::core::option::Option<
             unsafe extern "C" fn(
-                __cookie: *mut ::core::ffi::c_void,
-                __buf: *mut ::std::os::raw::c_char,
-                __n: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
+                __cookie: *mut bindgen_ctypes::c_void,
+                __buf: *mut bindgen_ctypes::c_char,
+                __n: bindgen_ctypes::c_int,
+            ) -> bindgen_ctypes::c_int,
         >,
         __writefn: ::core::option::Option<
             unsafe extern "C" fn(
-                __cookie: *mut ::core::ffi::c_void,
-                __buf: *mut ::std::os::raw::c_char,
-                __n: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
+                __cookie: *mut bindgen_ctypes::c_void,
+                __buf: *mut bindgen_ctypes::c_char,
+                __n: bindgen_ctypes::c_int,
+            ) -> bindgen_ctypes::c_int,
         >,
         __seekfn: ::core::option::Option<
             unsafe extern "C" fn(
-                __cookie: *mut ::core::ffi::c_void,
+                __cookie: *mut bindgen_ctypes::c_void,
                 __off: fpos_t,
-                __whence: ::std::os::raw::c_int,
+                __whence: bindgen_ctypes::c_int,
             ) -> fpos_t,
         >,
         __closefn: ::core::option::Option<
-            unsafe extern "C" fn(__cookie: *mut ::core::ffi::c_void) -> ::std::os::raw::c_int,
+            unsafe extern "C" fn(__cookie: *mut bindgen_ctypes::c_void) -> bindgen_ctypes::c_int,
         >,
     ) -> *mut FILE;
 }
 extern "C" {
     pub fn _funopen_r(
         arg1: *mut _reent,
-        __cookie: *mut ::core::ffi::c_void,
+        __cookie: *mut bindgen_ctypes::c_void,
         __readfn: ::core::option::Option<
             unsafe extern "C" fn(
-                __cookie: *mut ::core::ffi::c_void,
-                __buf: *mut ::std::os::raw::c_char,
-                __n: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
+                __cookie: *mut bindgen_ctypes::c_void,
+                __buf: *mut bindgen_ctypes::c_char,
+                __n: bindgen_ctypes::c_int,
+            ) -> bindgen_ctypes::c_int,
         >,
         __writefn: ::core::option::Option<
             unsafe extern "C" fn(
-                __cookie: *mut ::core::ffi::c_void,
-                __buf: *mut ::std::os::raw::c_char,
-                __n: ::std::os::raw::c_int,
-            ) -> ::std::os::raw::c_int,
+                __cookie: *mut bindgen_ctypes::c_void,
+                __buf: *mut bindgen_ctypes::c_char,
+                __n: bindgen_ctypes::c_int,
+            ) -> bindgen_ctypes::c_int,
         >,
         __seekfn: ::core::option::Option<
             unsafe extern "C" fn(
-                __cookie: *mut ::core::ffi::c_void,
+                __cookie: *mut bindgen_ctypes::c_void,
                 __off: fpos_t,
-                __whence: ::std::os::raw::c_int,
+                __whence: bindgen_ctypes::c_int,
             ) -> fpos_t,
         >,
         __closefn: ::core::option::Option<
-            unsafe extern "C" fn(__cookie: *mut ::core::ffi::c_void) -> ::std::os::raw::c_int,
+            unsafe extern "C" fn(__cookie: *mut bindgen_ctypes::c_void) -> bindgen_ctypes::c_int,
         >,
     ) -> *mut FILE;
 }
 extern "C" {
     pub fn __assert(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
     );
 }
 extern "C" {
     pub fn __assert_func(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-        arg3: *mut ::std::os::raw::c_char,
-        arg4: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: bindgen_ctypes::c_int,
+        arg3: *mut bindgen_ctypes::c_char,
+        arg4: *mut bindgen_ctypes::c_char,
     );
 }
 pub type esp_err_t = i32;
@@ -4259,7 +4259,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param code esp_err_t error code"]
     #[doc = " @return string error message"]
-    pub fn esp_err_to_name(code: esp_err_t) -> *mut ::std::os::raw::c_char;
+    pub fn esp_err_to_name(code: esp_err_t) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     #[doc = " @brief Returns string for esp_err_t and system error codes"]
@@ -4278,206 +4278,206 @@ extern "C" {
     #[doc = " @return buf containing the string error message"]
     pub fn esp_err_to_name_r(
         code: esp_err_t,
-        buf: *mut ::std::os::raw::c_char,
+        buf: *mut bindgen_ctypes::c_char,
         buflen: size_t,
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     #[doc = " @cond"]
     pub fn _esp_error_check_failed(
         rc: esp_err_t,
-        file: *mut ::std::os::raw::c_char,
-        line: ::std::os::raw::c_int,
-        function: *mut ::std::os::raw::c_char,
-        expression: *mut ::std::os::raw::c_char,
+        file: *mut bindgen_ctypes::c_char,
+        line: bindgen_ctypes::c_int,
+        function: *mut bindgen_ctypes::c_char,
+        expression: *mut bindgen_ctypes::c_char,
     );
 }
 extern "C" {
     #[doc = " @cond"]
     pub fn _esp_error_check_failed_without_abort(
         rc: esp_err_t,
-        file: *mut ::std::os::raw::c_char,
-        line: ::std::os::raw::c_int,
-        function: *mut ::std::os::raw::c_char,
-        expression: *mut ::std::os::raw::c_char,
+        file: *mut bindgen_ctypes::c_char,
+        line: bindgen_ctypes::c_int,
+        function: *mut bindgen_ctypes::c_char,
+        expression: *mut bindgen_ctypes::c_char,
     );
 }
 extern "C" {
-    pub static mut Xthal_rev_no: ::std::os::raw::c_uint;
+    pub static mut Xthal_rev_no: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_save_extra(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_extra(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_extra(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_extra(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cpregs(base: *mut ::core::ffi::c_void, arg1: ::std::os::raw::c_int);
+    pub fn xthal_save_cpregs(base: *mut bindgen_ctypes::c_void, arg1: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn xthal_restore_cpregs(base: *mut ::core::ffi::c_void, arg1: ::std::os::raw::c_int);
+    pub fn xthal_restore_cpregs(base: *mut bindgen_ctypes::c_void, arg1: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn xthal_save_cp0(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp0(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp1(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp1(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp2(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp2(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp3(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp3(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp4(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp4(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp5(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp5(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp6(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp6(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_save_cp7(base: *mut ::core::ffi::c_void);
+    pub fn xthal_save_cp7(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp0(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp0(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp1(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp1(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp2(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp2(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp3(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp3(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp4(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp4(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp5(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp5(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp6(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp6(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_restore_cp7(base: *mut ::core::ffi::c_void);
+    pub fn xthal_restore_cp7(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub static mut Xthal_cpregs_save_fn: [*mut ::core::ffi::c_void; 8usize];
+    pub static mut Xthal_cpregs_save_fn: [*mut bindgen_ctypes::c_void; 8usize];
 }
 extern "C" {
-    pub static mut Xthal_cpregs_restore_fn: [*mut ::core::ffi::c_void; 8usize];
+    pub static mut Xthal_cpregs_restore_fn: [*mut bindgen_ctypes::c_void; 8usize];
 }
 extern "C" {
-    pub static mut Xthal_cpregs_save_nw_fn: [*mut ::core::ffi::c_void; 8usize];
+    pub static mut Xthal_cpregs_save_nw_fn: [*mut bindgen_ctypes::c_void; 8usize];
 }
 extern "C" {
-    pub static mut Xthal_cpregs_restore_nw_fn: [*mut ::core::ffi::c_void; 8usize];
+    pub static mut Xthal_cpregs_restore_nw_fn: [*mut bindgen_ctypes::c_void; 8usize];
 }
 extern "C" {
-    pub static mut Xthal_extra_size: ::std::os::raw::c_uint;
+    pub static mut Xthal_extra_size: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_extra_align: ::std::os::raw::c_uint;
+    pub static mut Xthal_extra_align: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cpregs_size: [::std::os::raw::c_uint; 8usize];
+    pub static mut Xthal_cpregs_size: [bindgen_ctypes::c_uint; 8usize];
 }
 extern "C" {
-    pub static mut Xthal_cpregs_align: [::std::os::raw::c_uint; 8usize];
+    pub static mut Xthal_cpregs_align: [bindgen_ctypes::c_uint; 8usize];
 }
 extern "C" {
-    pub static mut Xthal_all_extra_size: ::std::os::raw::c_uint;
+    pub static mut Xthal_all_extra_size: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_all_extra_align: ::std::os::raw::c_uint;
+    pub static mut Xthal_all_extra_align: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_names: [*mut ::std::os::raw::c_char; 8usize];
+    pub static mut Xthal_cp_names: [*mut bindgen_ctypes::c_char; 8usize];
 }
 extern "C" {
-    pub fn xthal_init_mem_extra(arg1: *mut ::core::ffi::c_void);
+    pub fn xthal_init_mem_extra(arg1: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_init_mem_cp(arg1: *mut ::core::ffi::c_void, arg2: ::std::os::raw::c_int);
+    pub fn xthal_init_mem_cp(arg1: *mut bindgen_ctypes::c_void, arg2: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub static mut Xthal_num_coprocessors: ::std::os::raw::c_uint;
+    pub static mut Xthal_num_coprocessors: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_num: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_num: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_max: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_max: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_num_aregs: ::std::os::raw::c_uint;
+    pub static mut Xthal_num_aregs: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_num_aregs_log2: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_aregs_log2: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_icache_linewidth: ::std::os::raw::c_uchar;
+    pub static mut Xthal_icache_linewidth: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_dcache_linewidth: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dcache_linewidth: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_icache_linesize: ::std::os::raw::c_ushort;
+    pub static mut Xthal_icache_linesize: bindgen_ctypes::c_ushort;
 }
 extern "C" {
-    pub static mut Xthal_dcache_linesize: ::std::os::raw::c_ushort;
+    pub static mut Xthal_dcache_linesize: bindgen_ctypes::c_ushort;
 }
 extern "C" {
-    pub static mut Xthal_icache_size: ::std::os::raw::c_uint;
+    pub static mut Xthal_icache_size: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_dcache_size: ::std::os::raw::c_uint;
+    pub static mut Xthal_dcache_size: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_dcache_is_writeback: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dcache_is_writeback: bindgen_ctypes::c_uchar;
 }
 extern "C" {
     pub fn xthal_icache_region_invalidate(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_region_invalidate(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_region_writeback(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_region_writeback_inv(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
-    pub fn xthal_icache_line_invalidate(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_icache_line_invalidate(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_dcache_line_invalidate(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_dcache_line_invalidate(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_dcache_line_writeback(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_dcache_line_writeback(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_dcache_line_writeback_inv(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_dcache_line_writeback_inv(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     pub fn xthal_icache_sync();
@@ -4486,16 +4486,16 @@ extern "C" {
     pub fn xthal_dcache_sync();
 }
 extern "C" {
-    pub fn xthal_icache_get_ways() -> ::std::os::raw::c_uint;
+    pub fn xthal_icache_get_ways() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_icache_set_ways(ways: ::std::os::raw::c_uint);
+    pub fn xthal_icache_set_ways(ways: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_dcache_get_ways() -> ::std::os::raw::c_uint;
+    pub fn xthal_dcache_get_ways() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_dcache_set_ways(ways: ::std::os::raw::c_uint);
+    pub fn xthal_dcache_set_ways(ways: bindgen_ctypes::c_uint);
 }
 extern "C" {
     pub fn xthal_cache_coherence_on();
@@ -4510,139 +4510,139 @@ extern "C" {
     pub fn xthal_cache_coherence_optout();
 }
 extern "C" {
-    pub fn xthal_get_cache_prefetch() -> ::std::os::raw::c_int;
+    pub fn xthal_get_cache_prefetch() -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn xthal_set_cache_prefetch(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn xthal_set_cache_prefetch(arg1: bindgen_ctypes::c_int) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_set_cache_prefetch_long(
-        arg1: ::std::os::raw::c_ulonglong,
-    ) -> ::std::os::raw::c_int;
+        arg1: bindgen_ctypes::c_ulonglong,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub static mut Xthal_debug_configured: ::std::os::raw::c_int;
+    pub static mut Xthal_debug_configured: bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn xthal_set_soft_break(addr: *mut ::core::ffi::c_void) -> ::std::os::raw::c_uint;
+    pub fn xthal_set_soft_break(addr: *mut bindgen_ctypes::c_void) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_remove_soft_break(addr: *mut ::core::ffi::c_void, arg1: ::std::os::raw::c_uint);
+    pub fn xthal_remove_soft_break(addr: *mut bindgen_ctypes::c_void, arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
     pub fn xthal_disassemble(
-        instr_buf: *mut ::std::os::raw::c_uchar,
-        tgt_addr: *mut ::core::ffi::c_void,
-        buffer: *mut ::std::os::raw::c_char,
-        buflen: ::std::os::raw::c_uint,
-        options: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        instr_buf: *mut bindgen_ctypes::c_uchar,
+        tgt_addr: *mut bindgen_ctypes::c_void,
+        buffer: *mut bindgen_ctypes::c_char,
+        buflen: bindgen_ctypes::c_uint,
+        options: bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn xthal_disassemble_size(instr_buf: *mut ::std::os::raw::c_uchar)
-        -> ::std::os::raw::c_int;
+    pub fn xthal_disassemble_size(instr_buf: *mut bindgen_ctypes::c_uchar)
+        -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_memcpy(
-        dst: *mut ::core::ffi::c_void,
-        src: *mut ::core::ffi::c_void,
-        len: ::std::os::raw::c_uint,
-    ) -> *mut ::core::ffi::c_void;
+        dst: *mut bindgen_ctypes::c_void,
+        src: *mut bindgen_ctypes::c_void,
+        len: bindgen_ctypes::c_uint,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn xthal_bcopy(
-        src: *mut ::core::ffi::c_void,
-        dst: *mut ::core::ffi::c_void,
-        len: ::std::os::raw::c_uint,
-    ) -> *mut ::core::ffi::c_void;
+        src: *mut bindgen_ctypes::c_void,
+        dst: *mut bindgen_ctypes::c_void,
+        len: bindgen_ctypes::c_uint,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn xthal_compare_and_set(
-        addr: *mut ::std::os::raw::c_int,
-        test_val: ::std::os::raw::c_int,
-        compare_val: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        addr: *mut bindgen_ctypes::c_int,
+        test_val: bindgen_ctypes::c_int,
+        compare_val: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub static mut Xthal_release_major: ::std::os::raw::c_uint;
+    pub static mut Xthal_release_major: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_release_minor: ::std::os::raw::c_uint;
+    pub static mut Xthal_release_minor: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_release_name: *mut ::std::os::raw::c_char;
+    pub static mut Xthal_release_name: *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub static mut Xthal_release_internal: *mut ::std::os::raw::c_char;
+    pub static mut Xthal_release_internal: *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub static mut Xthal_memory_order: ::std::os::raw::c_uchar;
+    pub static mut Xthal_memory_order: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_windowed: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_windowed: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_density: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_density: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_booleans: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_booleans: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_loops: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_loops: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_nsa: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_nsa: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_minmax: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_minmax: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_sext: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_sext: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_clamps: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_clamps: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_mac16: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_mac16: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_mul16: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_mul16: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_fp: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_fp: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_speculation: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_speculation: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_threadptr: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_threadptr: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_pif: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_pif: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_writebuffer_entries: ::std::os::raw::c_ushort;
+    pub static mut Xthal_num_writebuffer_entries: bindgen_ctypes::c_ushort;
 }
 extern "C" {
-    pub static mut Xthal_build_unique_id: ::std::os::raw::c_uint;
+    pub static mut Xthal_build_unique_id: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_hw_configid0: ::std::os::raw::c_uint;
+    pub static mut Xthal_hw_configid0: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_hw_configid1: ::std::os::raw::c_uint;
+    pub static mut Xthal_hw_configid1: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_hw_release_major: ::std::os::raw::c_uint;
+    pub static mut Xthal_hw_release_major: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_hw_release_minor: ::std::os::raw::c_uint;
+    pub static mut Xthal_hw_release_minor: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_hw_release_name: *mut ::std::os::raw::c_char;
+    pub static mut Xthal_hw_release_name: *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub static mut Xthal_hw_release_internal: *mut ::std::os::raw::c_char;
+    pub static mut Xthal_hw_release_internal: *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn xthal_clear_regcached_code();
@@ -4651,268 +4651,268 @@ extern "C" {
     pub fn xthal_window_spill();
 }
 extern "C" {
-    pub fn xthal_validate_cp(arg1: ::std::os::raw::c_int);
+    pub fn xthal_validate_cp(arg1: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn xthal_invalidate_cp(arg1: ::std::os::raw::c_int);
+    pub fn xthal_invalidate_cp(arg1: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn xthal_set_cpenable(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_cpenable(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_get_cpenable() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_cpenable() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_num_intlevels: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_intlevels: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_interrupts: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_interrupts: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_excm_level: ::std::os::raw::c_uchar;
+    pub static mut Xthal_excm_level: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_intlevel_mask: [::std::os::raw::c_uint; 16usize];
+    pub static mut Xthal_intlevel_mask: [bindgen_ctypes::c_uint; 16usize];
 }
 extern "C" {
-    pub static mut Xthal_intlevel_andbelow_mask: [::std::os::raw::c_uint; 16usize];
+    pub static mut Xthal_intlevel_andbelow_mask: [bindgen_ctypes::c_uint; 16usize];
 }
 extern "C" {
-    pub static mut Xthal_intlevel: [::std::os::raw::c_uchar; 32usize];
+    pub static mut Xthal_intlevel: [bindgen_ctypes::c_uchar; 32usize];
 }
 extern "C" {
-    pub static mut Xthal_inttype: [::std::os::raw::c_uchar; 32usize];
+    pub static mut Xthal_inttype: [bindgen_ctypes::c_uchar; 32usize];
 }
 extern "C" {
-    pub static mut Xthal_inttype_mask: [::std::os::raw::c_uint; 11usize];
+    pub static mut Xthal_inttype_mask: [bindgen_ctypes::c_uint; 11usize];
 }
 extern "C" {
-    pub static mut Xthal_timer_interrupt: [::std::os::raw::c_int; 4usize];
+    pub static mut Xthal_timer_interrupt: [bindgen_ctypes::c_int; 4usize];
 }
 extern "C" {
-    pub fn xthal_get_intenable() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_intenable() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_intenable(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_intenable(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_get_interrupt() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_interrupt() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_intset(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_intset(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_set_intclear(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_intclear(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub static mut Xthal_num_ibreak: ::std::os::raw::c_int;
+    pub static mut Xthal_num_ibreak: bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub static mut Xthal_num_dbreak: ::std::os::raw::c_int;
+    pub static mut Xthal_num_dbreak: bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub static mut Xthal_have_ccount: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_ccount: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_ccompare: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_ccompare: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub fn xthal_get_ccount() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_ccount() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_ccompare(arg1: ::std::os::raw::c_int, arg2: ::std::os::raw::c_uint);
+    pub fn xthal_set_ccompare(arg1: bindgen_ctypes::c_int, arg2: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_get_ccompare(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+    pub fn xthal_get_ccompare(arg1: bindgen_ctypes::c_int) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_have_prid: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_prid: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_exceptions: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_exceptions: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_xea_version: ::std::os::raw::c_uchar;
+    pub static mut Xthal_xea_version: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_interrupts: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_interrupts: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_highlevel_interrupts: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_highlevel_interrupts: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_nmi: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_nmi: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub fn xthal_get_prid() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_prid() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_vpri_to_intlevel(vpri: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn xthal_vpri_to_intlevel(vpri: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_intlevel_to_vpri(intlevel: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn xthal_intlevel_to_vpri(intlevel: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_int_enable(arg1: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn xthal_int_enable(arg1: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_int_disable(arg1: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn xthal_int_disable(arg1: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
     pub fn xthal_set_int_vpri(
-        intnum: ::std::os::raw::c_int,
-        vpri: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        intnum: bindgen_ctypes::c_int,
+        vpri: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn xthal_get_int_vpri(intnum: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn xthal_get_int_vpri(intnum: bindgen_ctypes::c_int) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn xthal_set_vpri_locklevel(intlevel: ::std::os::raw::c_uint);
+    pub fn xthal_set_vpri_locklevel(intlevel: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_get_vpri_locklevel() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_vpri_locklevel() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_vpri(vpri: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn xthal_set_vpri(vpri: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_get_vpri() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_vpri() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_vpri_intlevel(intlevel: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn xthal_set_vpri_intlevel(intlevel: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_vpri_lock() -> ::std::os::raw::c_uint;
+    pub fn xthal_set_vpri_lock() -> bindgen_ctypes::c_uint;
 }
 pub type XtHalVoidFunc = ::core::option::Option<unsafe extern "C" fn()>;
 extern "C" {
-    pub static mut Xthal_tram_pending: ::std::os::raw::c_uint;
+    pub static mut Xthal_tram_pending: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_tram_enabled: ::std::os::raw::c_uint;
+    pub static mut Xthal_tram_enabled: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_tram_sync: ::std::os::raw::c_uint;
+    pub static mut Xthal_tram_sync: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_tram_pending_to_service() -> ::std::os::raw::c_uint;
+    pub fn xthal_tram_pending_to_service() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_tram_done(serviced_mask: ::std::os::raw::c_uint);
+    pub fn xthal_tram_done(serviced_mask: bindgen_ctypes::c_uint);
 }
 extern "C" {
     pub fn xthal_tram_set_sync(
-        intnum: ::std::os::raw::c_int,
-        sync: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        intnum: bindgen_ctypes::c_int,
+        sync: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_set_tram_trigger_func(trigger_fn: XtHalVoidFunc) -> XtHalVoidFunc;
 }
 extern "C" {
-    pub static mut Xthal_num_instrom: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_instrom: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_instram: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_instram: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_datarom: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_datarom: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_dataram: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_dataram: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_num_xlmi: ::std::os::raw::c_uchar;
+    pub static mut Xthal_num_xlmi: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_instrom_vaddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_instrom_vaddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_instrom_paddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_instrom_paddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_instrom_size: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_instrom_size: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_instram_vaddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_instram_vaddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_instram_paddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_instram_paddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_instram_size: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_instram_size: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_datarom_vaddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_datarom_vaddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_datarom_paddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_datarom_paddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_datarom_size: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_datarom_size: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_dataram_vaddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_dataram_vaddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_dataram_paddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_dataram_paddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_dataram_size: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_dataram_size: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_xlmi_vaddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_xlmi_vaddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_xlmi_paddr: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_xlmi_paddr: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_xlmi_size: [::std::os::raw::c_uint; 0usize];
+    pub static mut Xthal_xlmi_size: [bindgen_ctypes::c_uint; 0usize];
 }
 extern "C" {
-    pub static mut Xthal_icache_setwidth: ::std::os::raw::c_uchar;
+    pub static mut Xthal_icache_setwidth: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_dcache_setwidth: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dcache_setwidth: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_icache_ways: ::std::os::raw::c_uint;
+    pub static mut Xthal_icache_ways: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_dcache_ways: ::std::os::raw::c_uint;
+    pub static mut Xthal_dcache_ways: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_icache_line_lockable: ::std::os::raw::c_uchar;
+    pub static mut Xthal_icache_line_lockable: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_dcache_line_lockable: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dcache_line_lockable: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub fn xthal_get_cacheattr() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_cacheattr() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_get_icacheattr() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_icacheattr() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_get_dcacheattr() -> ::std::os::raw::c_uint;
+    pub fn xthal_get_dcacheattr() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn xthal_set_cacheattr(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_cacheattr(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_set_icacheattr(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_icacheattr(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xthal_set_dcacheattr(arg1: ::std::os::raw::c_uint);
+    pub fn xthal_set_dcacheattr(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
     pub fn xthal_set_region_attribute(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
-        cattr: ::std::os::raw::c_uint,
-        flags: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
+        cattr: bindgen_ctypes::c_uint,
+        flags: bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_icache_enable();
@@ -4945,171 +4945,183 @@ extern "C" {
     pub fn xthal_dcache_all_unlock();
 }
 extern "C" {
-    pub fn xthal_icache_region_lock(addr: *mut ::core::ffi::c_void, size: ::std::os::raw::c_uint);
+    pub fn xthal_icache_region_lock(
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
+    );
 }
 extern "C" {
-    pub fn xthal_dcache_region_lock(addr: *mut ::core::ffi::c_void, size: ::std::os::raw::c_uint);
+    pub fn xthal_dcache_region_lock(
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
+    );
 }
 extern "C" {
-    pub fn xthal_icache_region_unlock(addr: *mut ::core::ffi::c_void, size: ::std::os::raw::c_uint);
+    pub fn xthal_icache_region_unlock(
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
+    );
 }
 extern "C" {
-    pub fn xthal_dcache_region_unlock(addr: *mut ::core::ffi::c_void, size: ::std::os::raw::c_uint);
+    pub fn xthal_dcache_region_unlock(
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
+    );
 }
 extern "C" {
     pub fn xthal_icache_hugerange_invalidate(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_icache_hugerange_unlock(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_hugerange_invalidate(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_hugerange_unlock(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_hugerange_writeback(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
     pub fn xthal_dcache_hugerange_writeback_inv(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
     );
 }
 extern "C" {
-    pub fn xthal_icache_line_lock(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_icache_line_lock(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_dcache_line_lock(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_dcache_line_lock(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_icache_line_unlock(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_icache_line_unlock(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn xthal_dcache_line_unlock(addr: *mut ::core::ffi::c_void);
+    pub fn xthal_dcache_line_unlock(addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     pub fn xthal_memep_inject_error(
-        addr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_int,
+        addr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_int,
+        flags: bindgen_ctypes::c_int,
     );
 }
 extern "C" {
-    pub static mut Xthal_have_spanning_way: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_spanning_way: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_identity_map: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_identity_map: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_mimic_cacheattr: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_mimic_cacheattr: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_xlt_cacheattr: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_xlt_cacheattr: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_cacheattr: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_cacheattr: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_have_tlbs: ::std::os::raw::c_uchar;
+    pub static mut Xthal_have_tlbs: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_asid_bits: ::std::os::raw::c_uchar;
+    pub static mut Xthal_mmu_asid_bits: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_asid_kernel: ::std::os::raw::c_uchar;
+    pub static mut Xthal_mmu_asid_kernel: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_rings: ::std::os::raw::c_uchar;
+    pub static mut Xthal_mmu_rings: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_ring_bits: ::std::os::raw::c_uchar;
+    pub static mut Xthal_mmu_ring_bits: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_sr_bits: ::std::os::raw::c_uchar;
+    pub static mut Xthal_mmu_sr_bits: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_ca_bits: ::std::os::raw::c_uchar;
+    pub static mut Xthal_mmu_ca_bits: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_mmu_max_pte_page_size: ::std::os::raw::c_uint;
+    pub static mut Xthal_mmu_max_pte_page_size: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_mmu_min_pte_page_size: ::std::os::raw::c_uint;
+    pub static mut Xthal_mmu_min_pte_page_size: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_itlb_way_bits: ::std::os::raw::c_uchar;
+    pub static mut Xthal_itlb_way_bits: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_itlb_ways: ::std::os::raw::c_uchar;
+    pub static mut Xthal_itlb_ways: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_itlb_arf_ways: ::std::os::raw::c_uchar;
+    pub static mut Xthal_itlb_arf_ways: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_dtlb_way_bits: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dtlb_way_bits: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_dtlb_ways: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dtlb_ways: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_dtlb_arf_ways: ::std::os::raw::c_uchar;
+    pub static mut Xthal_dtlb_arf_ways: bindgen_ctypes::c_uchar;
 }
 extern "C" {
     pub fn xthal_static_v2p(
-        vaddr: ::std::os::raw::c_uint,
-        paddrp: *mut ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        vaddr: bindgen_ctypes::c_uint,
+        paddrp: *mut bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_static_p2v(
-        paddr: ::std::os::raw::c_uint,
-        vaddrp: *mut ::std::os::raw::c_uint,
-        cached: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        paddr: bindgen_ctypes::c_uint,
+        vaddrp: *mut bindgen_ctypes::c_uint,
+        cached: bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_set_region_translation(
-        vaddr: *mut ::core::ffi::c_void,
-        paddr: *mut ::core::ffi::c_void,
-        size: ::std::os::raw::c_uint,
-        cache_atr: ::std::os::raw::c_uint,
-        flags: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        vaddr: *mut bindgen_ctypes::c_void,
+        paddr: *mut bindgen_ctypes::c_void,
+        size: bindgen_ctypes::c_uint,
+        cache_atr: bindgen_ctypes::c_uint,
+        flags: bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_v2p(
-        arg1: *mut ::core::ffi::c_void,
-        arg2: *mut *mut ::core::ffi::c_void,
-        arg3: *mut ::std::os::raw::c_uint,
-        arg4: *mut ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_void,
+        arg2: *mut *mut bindgen_ctypes::c_void,
+        arg3: *mut bindgen_ctypes::c_uint,
+        arg4: *mut bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn xthal_invalidate_region(addr: *mut ::core::ffi::c_void) -> ::std::os::raw::c_int;
+    pub fn xthal_invalidate_region(addr: *mut bindgen_ctypes::c_void) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_set_region_translation_raw(
-        vaddr: *mut ::core::ffi::c_void,
-        paddr: *mut ::core::ffi::c_void,
-        cattr: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_int;
+        vaddr: *mut bindgen_ctypes::c_void,
+        paddr: *mut bindgen_ctypes::c_void,
+        cattr: bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_int;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -5139,7 +5151,7 @@ extern "C" {
     pub fn xthal_is_user_executable(accessRights: u32) -> i32;
 }
 extern "C" {
-    pub fn xthal_encode_memory_type(x: u32) -> ::std::os::raw::c_int;
+    pub fn xthal_encode_memory_type(x: u32) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_is_cacheable(memoryType: u32) -> i32;
@@ -5157,11 +5169,11 @@ extern "C" {
     pub fn xthal_write_map(entries: *mut xthal_MPU_entry, n: u32);
 }
 extern "C" {
-    pub fn xthal_check_map(entries: *mut xthal_MPU_entry, n: u32) -> ::std::os::raw::c_int;
+    pub fn xthal_check_map(entries: *mut xthal_MPU_entry, n: u32) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_get_entry_for_address(
-        vaddr: *mut ::core::ffi::c_void,
+        vaddr: *mut bindgen_ctypes::c_void,
         infgmap: *mut i32,
     ) -> xthal_MPU_entry;
 }
@@ -5170,166 +5182,167 @@ extern "C" {
 }
 extern "C" {
     pub fn xthal_mpu_set_region_attribute(
-        vaddr: *mut ::core::ffi::c_void,
+        vaddr: *mut bindgen_ctypes::c_void,
         size: size_t,
         accessRights: i32,
         memoryType: i32,
         flags: u32,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn xthal_read_background_map(entries: *mut xthal_MPU_entry) -> i32;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_FPU: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_FPU: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_FPU: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_FPU: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP1_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP1_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP1_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP1_IDENT: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP2_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP2_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP2_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP2_IDENT: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP3_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP3_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP3_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP3_IDENT: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP4_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP4_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP4_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP4_IDENT: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP5_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP5_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP5_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP5_IDENT: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP6_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP6_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP6_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP6_IDENT: bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub static mut Xthal_cp_id_XCHAL_CP7_IDENT: ::std::os::raw::c_uchar;
+    pub static mut Xthal_cp_id_XCHAL_CP7_IDENT: bindgen_ctypes::c_uchar;
 }
 extern "C" {
-    pub static mut Xthal_cp_mask_XCHAL_CP7_IDENT: ::std::os::raw::c_uint;
+    pub static mut Xthal_cp_mask_XCHAL_CP7_IDENT: bindgen_ctypes::c_uint;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct KernelFrame {
-    pub pc: ::std::os::raw::c_long,
-    pub ps: ::std::os::raw::c_long,
-    pub areg: [::std::os::raw::c_long; 4usize],
-    pub sar: ::std::os::raw::c_long,
-    pub lcount: ::std::os::raw::c_long,
-    pub lbeg: ::std::os::raw::c_long,
-    pub lend: ::std::os::raw::c_long,
-    pub acclo: ::std::os::raw::c_long,
-    pub acchi: ::std::os::raw::c_long,
-    pub mr: [::std::os::raw::c_long; 4usize],
+    pub pc: bindgen_ctypes::c_long,
+    pub ps: bindgen_ctypes::c_long,
+    pub areg: [bindgen_ctypes::c_long; 4usize],
+    pub sar: bindgen_ctypes::c_long,
+    pub lcount: bindgen_ctypes::c_long,
+    pub lbeg: bindgen_ctypes::c_long,
+    pub lend: bindgen_ctypes::c_long,
+    pub acclo: bindgen_ctypes::c_long,
+    pub acchi: bindgen_ctypes::c_long,
+    pub mr: [bindgen_ctypes::c_long; 4usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct UserFrame {
-    pub pc: ::std::os::raw::c_long,
-    pub ps: ::std::os::raw::c_long,
-    pub sar: ::std::os::raw::c_long,
-    pub vpri: ::std::os::raw::c_long,
-    pub a2: ::std::os::raw::c_long,
-    pub a3: ::std::os::raw::c_long,
-    pub a4: ::std::os::raw::c_long,
-    pub a5: ::std::os::raw::c_long,
-    pub exccause: ::std::os::raw::c_long,
-    pub lcount: ::std::os::raw::c_long,
-    pub lbeg: ::std::os::raw::c_long,
-    pub lend: ::std::os::raw::c_long,
-    pub acclo: ::std::os::raw::c_long,
-    pub acchi: ::std::os::raw::c_long,
-    pub mr: [::std::os::raw::c_long; 4usize],
-    pub pad: [::std::os::raw::c_long; 2usize],
+    pub pc: bindgen_ctypes::c_long,
+    pub ps: bindgen_ctypes::c_long,
+    pub sar: bindgen_ctypes::c_long,
+    pub vpri: bindgen_ctypes::c_long,
+    pub a2: bindgen_ctypes::c_long,
+    pub a3: bindgen_ctypes::c_long,
+    pub a4: bindgen_ctypes::c_long,
+    pub a5: bindgen_ctypes::c_long,
+    pub exccause: bindgen_ctypes::c_long,
+    pub lcount: bindgen_ctypes::c_long,
+    pub lbeg: bindgen_ctypes::c_long,
+    pub lend: bindgen_ctypes::c_long,
+    pub acclo: bindgen_ctypes::c_long,
+    pub acchi: bindgen_ctypes::c_long,
+    pub mr: [bindgen_ctypes::c_long; 4usize],
+    pub pad: [bindgen_ctypes::c_long; 2usize],
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct XtExcFrame {
-    pub exit: ::std::os::raw::c_long,
-    pub pc: ::std::os::raw::c_long,
-    pub ps: ::std::os::raw::c_long,
-    pub a0: ::std::os::raw::c_long,
-    pub a1: ::std::os::raw::c_long,
-    pub a2: ::std::os::raw::c_long,
-    pub a3: ::std::os::raw::c_long,
-    pub a4: ::std::os::raw::c_long,
-    pub a5: ::std::os::raw::c_long,
-    pub a6: ::std::os::raw::c_long,
-    pub a7: ::std::os::raw::c_long,
-    pub a8: ::std::os::raw::c_long,
-    pub a9: ::std::os::raw::c_long,
-    pub a10: ::std::os::raw::c_long,
-    pub a11: ::std::os::raw::c_long,
-    pub a12: ::std::os::raw::c_long,
-    pub a13: ::std::os::raw::c_long,
-    pub a14: ::std::os::raw::c_long,
-    pub a15: ::std::os::raw::c_long,
-    pub sar: ::std::os::raw::c_long,
-    pub exccause: ::std::os::raw::c_long,
-    pub excvaddr: ::std::os::raw::c_long,
-    pub lbeg: ::std::os::raw::c_long,
-    pub lend: ::std::os::raw::c_long,
-    pub lcount: ::std::os::raw::c_long,
-    pub tmp0: ::std::os::raw::c_long,
-    pub tmp1: ::std::os::raw::c_long,
-    pub tmp2: ::std::os::raw::c_long,
+    pub exit: bindgen_ctypes::c_long,
+    pub pc: bindgen_ctypes::c_long,
+    pub ps: bindgen_ctypes::c_long,
+    pub a0: bindgen_ctypes::c_long,
+    pub a1: bindgen_ctypes::c_long,
+    pub a2: bindgen_ctypes::c_long,
+    pub a3: bindgen_ctypes::c_long,
+    pub a4: bindgen_ctypes::c_long,
+    pub a5: bindgen_ctypes::c_long,
+    pub a6: bindgen_ctypes::c_long,
+    pub a7: bindgen_ctypes::c_long,
+    pub a8: bindgen_ctypes::c_long,
+    pub a9: bindgen_ctypes::c_long,
+    pub a10: bindgen_ctypes::c_long,
+    pub a11: bindgen_ctypes::c_long,
+    pub a12: bindgen_ctypes::c_long,
+    pub a13: bindgen_ctypes::c_long,
+    pub a14: bindgen_ctypes::c_long,
+    pub a15: bindgen_ctypes::c_long,
+    pub sar: bindgen_ctypes::c_long,
+    pub exccause: bindgen_ctypes::c_long,
+    pub excvaddr: bindgen_ctypes::c_long,
+    pub lbeg: bindgen_ctypes::c_long,
+    pub lend: bindgen_ctypes::c_long,
+    pub lcount: bindgen_ctypes::c_long,
+    pub tmp0: bindgen_ctypes::c_long,
+    pub tmp1: bindgen_ctypes::c_long,
+    pub tmp2: bindgen_ctypes::c_long,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct XtSolFrame {
-    pub exit: ::std::os::raw::c_long,
-    pub pc: ::std::os::raw::c_long,
-    pub ps: ::std::os::raw::c_long,
-    pub next: ::std::os::raw::c_long,
-    pub a0: ::std::os::raw::c_long,
-    pub a1: ::std::os::raw::c_long,
-    pub a2: ::std::os::raw::c_long,
-    pub a3: ::std::os::raw::c_long,
+    pub exit: bindgen_ctypes::c_long,
+    pub pc: bindgen_ctypes::c_long,
+    pub ps: bindgen_ctypes::c_long,
+    pub next: bindgen_ctypes::c_long,
+    pub a0: bindgen_ctypes::c_long,
+    pub a1: bindgen_ctypes::c_long,
+    pub a2: bindgen_ctypes::c_long,
+    pub a3: bindgen_ctypes::c_long,
 }
-pub type xt_handler = ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void)>;
+pub type xt_handler =
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut bindgen_ctypes::c_void)>;
 pub type xt_exc_handler = ::core::option::Option<unsafe extern "C" fn(arg1: *mut XtExcFrame)>;
 extern "C" {
-    pub fn xt_set_exception_handler(n: ::std::os::raw::c_int, f: xt_exc_handler) -> xt_exc_handler;
+    pub fn xt_set_exception_handler(n: bindgen_ctypes::c_int, f: xt_exc_handler) -> xt_exc_handler;
 }
 extern "C" {
     pub fn xt_set_interrupt_handler(
-        n: ::std::os::raw::c_int,
+        n: bindgen_ctypes::c_int,
         f: xt_handler,
-        arg: *mut ::core::ffi::c_void,
+        arg: *mut bindgen_ctypes::c_void,
     ) -> xt_handler;
 }
 extern "C" {
-    pub fn xt_ints_on(mask: ::std::os::raw::c_uint);
+    pub fn xt_ints_on(mask: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xt_ints_off(mask: ::std::os::raw::c_uint);
+    pub fn xt_ints_off(mask: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn xt_get_interrupt_handler_arg(n: ::std::os::raw::c_int) -> *mut ::core::ffi::c_void;
+    pub fn xt_get_interrupt_handler_arg(n: bindgen_ctypes::c_int) -> *mut bindgen_ctypes::c_void;
 }
 #[doc = " Function prototype for interrupt handler function"]
 pub type intr_handler_t =
-    ::core::option::Option<unsafe extern "C" fn(arg: *mut ::core::ffi::c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(arg: *mut bindgen_ctypes::c_void)>;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct intr_handle_data_t {
@@ -5352,8 +5365,8 @@ extern "C" {
     #[doc = " @return ESP_ERR_INVALID_ARG if cpu or intno is invalid"]
     #[doc = "         ESP_OK otherwise"]
     pub fn esp_intr_mark_shared(
-        intno: ::std::os::raw::c_int,
-        cpu: ::std::os::raw::c_int,
+        intno: bindgen_ctypes::c_int,
+        cpu: bindgen_ctypes::c_int,
         is_in_iram: bool,
     ) -> esp_err_t;
 }
@@ -5368,7 +5381,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return ESP_ERR_INVALID_ARG if cpu or intno is invalid"]
     #[doc = "         ESP_OK otherwise"]
-    pub fn esp_intr_reserve(intno: ::std::os::raw::c_int, cpu: ::std::os::raw::c_int) -> esp_err_t;
+    pub fn esp_intr_reserve(intno: bindgen_ctypes::c_int, cpu: bindgen_ctypes::c_int) -> esp_err_t;
 }
 extern "C" {
     #[doc = " @brief Allocate an interrupt with the given parameters."]
@@ -5403,10 +5416,10 @@ extern "C" {
     #[doc = "         ESP_ERR_NOT_FOUND No free interrupt found with the specified flags"]
     #[doc = "         ESP_OK otherwise"]
     pub fn esp_intr_alloc(
-        source: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_int,
+        source: bindgen_ctypes::c_int,
+        flags: bindgen_ctypes::c_int,
         handler: intr_handler_t,
-        arg: *mut ::core::ffi::c_void,
+        arg: *mut bindgen_ctypes::c_void,
         ret_handle: *mut intr_handle_t,
     ) -> esp_err_t;
 }
@@ -5445,12 +5458,12 @@ extern "C" {
     #[doc = "         ESP_ERR_NOT_FOUND No free interrupt found with the specified flags"]
     #[doc = "         ESP_OK otherwise"]
     pub fn esp_intr_alloc_intrstatus(
-        source: ::std::os::raw::c_int,
-        flags: ::std::os::raw::c_int,
+        source: bindgen_ctypes::c_int,
+        flags: bindgen_ctypes::c_int,
         intrstatusreg: u32,
         intrstatusmask: u32,
         handler: intr_handler_t,
-        arg: *mut ::core::ffi::c_void,
+        arg: *mut bindgen_ctypes::c_void,
         ret_handle: *mut intr_handle_t,
     ) -> esp_err_t;
 }
@@ -5479,7 +5492,7 @@ extern "C" {
     #[doc = " @param handle The handle, as obtained by esp_intr_alloc or esp_intr_alloc_intrstatus"]
     #[doc = ""]
     #[doc = " @return The core number where the interrupt is allocated"]
-    pub fn esp_intr_get_cpu(handle: intr_handle_t) -> ::std::os::raw::c_int;
+    pub fn esp_intr_get_cpu(handle: intr_handle_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Get the allocated interrupt for a certain handle"]
@@ -5487,7 +5500,7 @@ extern "C" {
     #[doc = " @param handle The handle, as obtained by esp_intr_alloc or esp_intr_alloc_intrstatus"]
     #[doc = ""]
     #[doc = " @return The interrupt number"]
-    pub fn esp_intr_get_intno(handle: intr_handle_t) -> ::std::os::raw::c_int;
+    pub fn esp_intr_get_intno(handle: intr_handle_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Disable the interrupt associated with the handle"]
@@ -5544,43 +5557,43 @@ extern "C" {
     #[doc = " XT_CLOCK_FREQ macro is used."]
     #[doc = " Update the code to use esp_clk_cpu_freq function instead."]
     #[doc = " @return current CPU clock frequency, in Hz"]
-    pub fn xt_clock_freq() -> ::std::os::raw::c_int;
+    pub fn xt_clock_freq() -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn alloca(arg1: ::std::os::raw::c_ulonglong) -> *mut ::core::ffi::c_void;
+    pub fn alloca(arg1: bindgen_ctypes::c_ulonglong) -> *mut bindgen_ctypes::c_void;
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct div_t {
-    pub quot: ::std::os::raw::c_int,
-    pub rem: ::std::os::raw::c_int,
+    pub quot: bindgen_ctypes::c_int,
+    pub rem: bindgen_ctypes::c_int,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct ldiv_t {
-    pub quot: ::std::os::raw::c_long,
-    pub rem: ::std::os::raw::c_long,
+    pub quot: bindgen_ctypes::c_long,
+    pub rem: bindgen_ctypes::c_long,
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct lldiv_t {
-    pub quot: ::std::os::raw::c_longlong,
-    pub rem: ::std::os::raw::c_longlong,
+    pub quot: bindgen_ctypes::c_longlong,
+    pub rem: bindgen_ctypes::c_longlong,
 }
 pub type __compar_fn_t = ::core::option::Option<
     unsafe extern "C" fn(
-        arg1: *mut ::core::ffi::c_void,
-        arg2: *mut ::core::ffi::c_void,
-    ) -> ::std::os::raw::c_int,
+        arg1: *mut bindgen_ctypes::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
+    ) -> bindgen_ctypes::c_int,
 >;
 extern "C" {
-    pub fn __locale_mb_cur_max() -> ::std::os::raw::c_int;
+    pub fn __locale_mb_cur_max() -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn abort();
 }
 extern "C" {
-    pub fn abs(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn abs(arg1: bindgen_ctypes::c_int) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn arc4random() -> __uint32_t;
@@ -5589,390 +5602,393 @@ extern "C" {
     pub fn arc4random_uniform(arg1: __uint32_t) -> __uint32_t;
 }
 extern "C" {
-    pub fn arc4random_buf(arg1: *mut ::core::ffi::c_void, arg2: size_t);
+    pub fn arc4random_buf(arg1: *mut bindgen_ctypes::c_void, arg2: size_t);
 }
 extern "C" {
-    pub fn atexit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> ::std::os::raw::c_int;
+    pub fn atexit(__func: ::core::option::Option<unsafe extern "C" fn()>) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn atof(__nptr: *mut ::std::os::raw::c_char) -> f64;
+    pub fn atof(__nptr: *mut bindgen_ctypes::c_char) -> f64;
 }
 extern "C" {
-    pub fn atoff(__nptr: *mut ::std::os::raw::c_char) -> f32;
+    pub fn atoff(__nptr: *mut bindgen_ctypes::c_char) -> f32;
 }
 extern "C" {
-    pub fn atoi(__nptr: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn atoi(__nptr: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _atoi_r(arg1: *mut _reent, __nptr: *mut ::std::os::raw::c_char)
-        -> ::std::os::raw::c_int;
+    pub fn _atoi_r(arg1: *mut _reent, __nptr: *mut bindgen_ctypes::c_char)
+        -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn atol(__nptr: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+    pub fn atol(__nptr: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn _atol_r(
         arg1: *mut _reent,
-        __nptr: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_long;
+        __nptr: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn bsearch(
-        __key: *mut ::core::ffi::c_void,
-        __base: *mut ::core::ffi::c_void,
+        __key: *mut bindgen_ctypes::c_void,
+        __base: *mut bindgen_ctypes::c_void,
         __nmemb: size_t,
         __size: size_t,
         _compar: __compar_fn_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn calloc(
-        __nmemb: ::std::os::raw::c_ulonglong,
-        __size: ::std::os::raw::c_ulonglong,
-    ) -> *mut ::core::ffi::c_void;
+        __nmemb: bindgen_ctypes::c_ulonglong,
+        __size: bindgen_ctypes::c_ulonglong,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
-    pub fn div(__numer: ::std::os::raw::c_int, __denom: ::std::os::raw::c_int) -> div_t;
+    pub fn div(__numer: bindgen_ctypes::c_int, __denom: bindgen_ctypes::c_int) -> div_t;
 }
 extern "C" {
-    pub fn exit(__status: ::std::os::raw::c_int);
+    pub fn exit(__status: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn free(arg1: *mut ::core::ffi::c_void);
+    pub fn free(arg1: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn getenv(__string: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn getenv(__string: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _getenv_r(
         arg1: *mut _reent,
-        __string: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        __string: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _findenv(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _findenv_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub static mut suboptarg: *mut ::std::os::raw::c_char;
+    pub static mut suboptarg: *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn getsubopt(
-        arg1: *mut *mut ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
-        arg3: *mut *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut *mut bindgen_ctypes::c_char,
+        arg2: *mut *mut bindgen_ctypes::c_char,
+        arg3: *mut *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn labs(arg1: ::std::os::raw::c_long) -> ::std::os::raw::c_long;
+    pub fn labs(arg1: bindgen_ctypes::c_long) -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn ldiv(__numer: ::std::os::raw::c_long, __denom: ::std::os::raw::c_long) -> ldiv_t;
+    pub fn ldiv(__numer: bindgen_ctypes::c_long, __denom: bindgen_ctypes::c_long) -> ldiv_t;
 }
 extern "C" {
-    pub fn malloc(__size: ::std::os::raw::c_ulonglong) -> *mut ::core::ffi::c_void;
+    pub fn malloc(__size: bindgen_ctypes::c_ulonglong) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
-    pub fn mblen(arg1: *mut ::std::os::raw::c_char, arg2: size_t) -> ::std::os::raw::c_int;
+    pub fn mblen(arg1: *mut bindgen_ctypes::c_char, arg2: size_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _mblen_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
         arg4: *mut _mbstate_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn mbtowc(
         arg1: *mut wchar_t,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _mbtowc_r(
         arg1: *mut _reent,
         arg2: *mut wchar_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         arg4: size_t,
         arg5: *mut _mbstate_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn wctomb(arg1: *mut ::std::os::raw::c_char, arg2: wchar_t) -> ::std::os::raw::c_int;
+    pub fn wctomb(arg1: *mut bindgen_ctypes::c_char, arg2: wchar_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _wctomb_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: wchar_t,
         arg4: *mut _mbstate_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn mbstowcs(arg1: *mut wchar_t, arg2: *mut ::std::os::raw::c_char, arg3: size_t) -> size_t;
+    pub fn mbstowcs(arg1: *mut wchar_t, arg2: *mut bindgen_ctypes::c_char, arg3: size_t) -> size_t;
 }
 extern "C" {
     pub fn _mbstowcs_r(
         arg1: *mut _reent,
         arg2: *mut wchar_t,
-        arg3: *mut ::std::os::raw::c_char,
+        arg3: *mut bindgen_ctypes::c_char,
         arg4: size_t,
         arg5: *mut _mbstate_t,
     ) -> size_t;
 }
 extern "C" {
-    pub fn wcstombs(arg1: *mut ::std::os::raw::c_char, arg2: *mut wchar_t, arg3: size_t) -> size_t;
+    pub fn wcstombs(arg1: *mut bindgen_ctypes::c_char, arg2: *mut wchar_t, arg3: size_t) -> size_t;
 }
 extern "C" {
     pub fn _wcstombs_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: *mut wchar_t,
         arg4: size_t,
         arg5: *mut _mbstate_t,
     ) -> size_t;
 }
 extern "C" {
-    pub fn mkdtemp(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn mkdtemp(arg1: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn mkstemp(arg1: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn mkstemp(arg1: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn mkstemps(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn mktemp(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn mktemp(arg1: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _mkdtemp_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _mkostemp_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _mkostemps_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-        arg4: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+        arg4: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _mkstemp_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _mkstemps_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _mktemp_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg2: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn qsort(
-        __base: *mut ::core::ffi::c_void,
+        __base: *mut bindgen_ctypes::c_void,
         __nmemb: size_t,
         __size: size_t,
         _compar: __compar_fn_t,
     );
 }
 extern "C" {
-    pub fn rand() -> ::std::os::raw::c_int;
+    pub fn rand() -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn realloc(
-        __r: *mut ::core::ffi::c_void,
-        __size: ::std::os::raw::c_ulonglong,
-    ) -> *mut ::core::ffi::c_void;
+        __r: *mut bindgen_ctypes::c_void,
+        __size: bindgen_ctypes::c_ulonglong,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn reallocarray(
-        arg1: *mut ::core::ffi::c_void,
+        arg1: *mut bindgen_ctypes::c_void,
         arg2: size_t,
         arg3: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
-    pub fn reallocf(__r: *mut ::core::ffi::c_void, __size: size_t) -> *mut ::core::ffi::c_void;
+    pub fn reallocf(
+        __r: *mut bindgen_ctypes::c_void,
+        __size: size_t,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn realpath(
-        path: *mut ::std::os::raw::c_char,
-        resolved_path: *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        path: *mut bindgen_ctypes::c_char,
+        resolved_path: *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn rpmatch(response: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn rpmatch(response: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn srand(__seed: ::std::os::raw::c_uint);
+    pub fn srand(__seed: bindgen_ctypes::c_uint);
 }
 extern "C" {
     pub fn strtod(
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
     ) -> f64;
 }
 extern "C" {
     pub fn _strtod_r(
         arg1: *mut _reent,
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
     ) -> f64;
 }
 extern "C" {
     pub fn strtof(
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
     ) -> f32;
 }
 extern "C" {
     pub fn strtol(
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_long;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn _strtol_r(
         arg1: *mut _reent,
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_long;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn strtoul(
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulong;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_ulong;
 }
 extern "C" {
     pub fn _strtoul_r(
         arg1: *mut _reent,
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulong;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_ulong;
 }
 extern "C" {
-    pub fn system(__string: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn system(__string: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn a64l(__input: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_long;
+    pub fn a64l(__input: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn l64a(__input: ::std::os::raw::c_long) -> *mut ::std::os::raw::c_char;
+    pub fn l64a(__input: bindgen_ctypes::c_long) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn _l64a_r(
         arg1: *mut _reent,
-        __input: ::std::os::raw::c_long,
-    ) -> *mut ::std::os::raw::c_char;
+        __input: bindgen_ctypes::c_long,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn on_exit(
         __func: ::core::option::Option<
-            unsafe extern "C" fn(arg1: ::std::os::raw::c_int, arg2: *mut ::core::ffi::c_void),
+            unsafe extern "C" fn(arg1: bindgen_ctypes::c_int, arg2: *mut bindgen_ctypes::c_void),
         >,
-        __arg: *mut ::core::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
+        __arg: *mut bindgen_ctypes::c_void,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _Exit(__status: ::std::os::raw::c_int);
+    pub fn _Exit(__status: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn putenv(__string: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn putenv(__string: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _putenv_r(
         arg1: *mut _reent,
-        __string: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        __string: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _reallocf_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         arg3: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn setenv(
-        __string: *mut ::std::os::raw::c_char,
-        __value: *mut ::std::os::raw::c_char,
-        __overwrite: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        __string: *mut bindgen_ctypes::c_char,
+        __value: *mut bindgen_ctypes::c_char,
+        __overwrite: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _setenv_r(
         arg1: *mut _reent,
-        __string: *mut ::std::os::raw::c_char,
-        __value: *mut ::std::os::raw::c_char,
-        __overwrite: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        __string: *mut bindgen_ctypes::c_char,
+        __value: *mut bindgen_ctypes::c_char,
+        __overwrite: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn __itoa(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn __utoa(
-        arg1: ::std::os::raw::c_uint,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+        arg1: bindgen_ctypes::c_uint,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn itoa(
-        arg1: ::std::os::raw::c_int,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+        arg1: bindgen_ctypes::c_int,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     pub fn utoa(
-        arg1: ::std::os::raw::c_uint,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_int,
-    ) -> *mut ::std::os::raw::c_char;
+        arg1: bindgen_ctypes::c_uint,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn rand_r(__seed: *mut ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
+    pub fn rand_r(__seed: *mut bindgen_ctypes::c_uint) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn drand48() -> f64;
@@ -5981,225 +5997,225 @@ extern "C" {
     pub fn _drand48_r(arg1: *mut _reent) -> f64;
 }
 extern "C" {
-    pub fn erand48(arg1: *mut ::std::os::raw::c_ushort) -> f64;
+    pub fn erand48(arg1: *mut bindgen_ctypes::c_ushort) -> f64;
 }
 extern "C" {
-    pub fn _erand48_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_ushort) -> f64;
+    pub fn _erand48_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_ushort) -> f64;
 }
 extern "C" {
-    pub fn jrand48(arg1: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+    pub fn jrand48(arg1: *mut bindgen_ctypes::c_ushort) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn _jrand48_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_ushort,
-    ) -> ::std::os::raw::c_long;
+        arg2: *mut bindgen_ctypes::c_ushort,
+    ) -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn lcong48(arg1: *mut ::std::os::raw::c_ushort);
+    pub fn lcong48(arg1: *mut bindgen_ctypes::c_ushort);
 }
 extern "C" {
-    pub fn _lcong48_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_ushort);
+    pub fn _lcong48_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_ushort);
 }
 extern "C" {
-    pub fn lrand48() -> ::std::os::raw::c_long;
+    pub fn lrand48() -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn _lrand48_r(arg1: *mut _reent) -> ::std::os::raw::c_long;
+    pub fn _lrand48_r(arg1: *mut _reent) -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn mrand48() -> ::std::os::raw::c_long;
+    pub fn mrand48() -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn _mrand48_r(arg1: *mut _reent) -> ::std::os::raw::c_long;
+    pub fn _mrand48_r(arg1: *mut _reent) -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn nrand48(arg1: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+    pub fn nrand48(arg1: *mut bindgen_ctypes::c_ushort) -> bindgen_ctypes::c_long;
 }
 extern "C" {
     pub fn _nrand48_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_ushort,
-    ) -> ::std::os::raw::c_long;
+        arg2: *mut bindgen_ctypes::c_ushort,
+    ) -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn seed48(arg1: *mut ::std::os::raw::c_ushort) -> *mut ::std::os::raw::c_ushort;
+    pub fn seed48(arg1: *mut bindgen_ctypes::c_ushort) -> *mut bindgen_ctypes::c_ushort;
 }
 extern "C" {
     pub fn _seed48_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_ushort,
-    ) -> *mut ::std::os::raw::c_ushort;
+        arg2: *mut bindgen_ctypes::c_ushort,
+    ) -> *mut bindgen_ctypes::c_ushort;
 }
 extern "C" {
-    pub fn srand48(arg1: ::std::os::raw::c_long);
+    pub fn srand48(arg1: bindgen_ctypes::c_long);
 }
 extern "C" {
-    pub fn _srand48_r(arg1: *mut _reent, arg2: ::std::os::raw::c_long);
+    pub fn _srand48_r(arg1: *mut _reent, arg2: bindgen_ctypes::c_long);
 }
 extern "C" {
     pub fn initstate(
-        arg1: ::std::os::raw::c_uint,
-        arg2: *mut ::std::os::raw::c_char,
+        arg1: bindgen_ctypes::c_uint,
+        arg2: *mut bindgen_ctypes::c_char,
         arg3: size_t,
-    ) -> *mut ::std::os::raw::c_char;
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn random() -> ::std::os::raw::c_long;
+    pub fn random() -> bindgen_ctypes::c_long;
 }
 extern "C" {
-    pub fn setstate(arg1: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+    pub fn setstate(arg1: *mut bindgen_ctypes::c_char) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn srandom(arg1: ::std::os::raw::c_uint);
+    pub fn srandom(arg1: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn atoll(__nptr: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_longlong;
+    pub fn atoll(__nptr: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_longlong;
 }
 extern "C" {
     pub fn _atoll_r(
         arg1: *mut _reent,
-        __nptr: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_longlong;
+        __nptr: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_longlong;
 }
 extern "C" {
-    pub fn llabs(arg1: ::std::os::raw::c_longlong) -> ::std::os::raw::c_longlong;
+    pub fn llabs(arg1: bindgen_ctypes::c_longlong) -> bindgen_ctypes::c_longlong;
 }
 extern "C" {
     pub fn lldiv(
-        __numer: ::std::os::raw::c_longlong,
-        __denom: ::std::os::raw::c_longlong,
+        __numer: bindgen_ctypes::c_longlong,
+        __denom: bindgen_ctypes::c_longlong,
     ) -> lldiv_t;
 }
 extern "C" {
     pub fn strtoll(
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_longlong;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_longlong;
 }
 extern "C" {
     pub fn _strtoll_r(
         arg1: *mut _reent,
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_longlong;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_longlong;
 }
 extern "C" {
     pub fn strtoull(
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulonglong;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_ulonglong;
 }
 extern "C" {
     pub fn _strtoull_r(
         arg1: *mut _reent,
-        __n: *mut ::std::os::raw::c_char,
-        __end_PTR: *mut *mut ::std::os::raw::c_char,
-        __base: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_ulonglong;
+        __n: *mut bindgen_ctypes::c_char,
+        __end_PTR: *mut *mut bindgen_ctypes::c_char,
+        __base: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_ulonglong;
 }
 extern "C" {
-    pub fn cfree(arg1: *mut ::core::ffi::c_void);
+    pub fn cfree(arg1: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
-    pub fn unsetenv(__string: *mut ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+    pub fn unsetenv(__string: *mut bindgen_ctypes::c_char) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _unsetenv_r(
         arg1: *mut _reent,
-        __string: *mut ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+        __string: *mut bindgen_ctypes::c_char,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn posix_memalign(
-        arg1: *mut *mut ::core::ffi::c_void,
+        arg1: *mut *mut bindgen_ctypes::c_void,
         arg2: size_t,
         arg3: size_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _dtoa_r(
         arg1: *mut _reent,
         arg2: f64,
-        arg3: ::std::os::raw::c_int,
-        arg4: ::std::os::raw::c_int,
-        arg5: *mut ::std::os::raw::c_int,
-        arg6: *mut ::std::os::raw::c_int,
-        arg7: *mut *mut ::std::os::raw::c_char,
-    ) -> *mut ::std::os::raw::c_char;
+        arg3: bindgen_ctypes::c_int,
+        arg4: bindgen_ctypes::c_int,
+        arg5: *mut bindgen_ctypes::c_int,
+        arg6: *mut bindgen_ctypes::c_int,
+        arg7: *mut *mut bindgen_ctypes::c_char,
+    ) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
-    pub fn _malloc_r(arg1: *mut _reent, arg2: size_t) -> *mut ::core::ffi::c_void;
+    pub fn _malloc_r(arg1: *mut _reent, arg2: size_t) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
-    pub fn _calloc_r(arg1: *mut _reent, arg2: size_t, arg3: size_t) -> *mut ::core::ffi::c_void;
+    pub fn _calloc_r(arg1: *mut _reent, arg2: size_t, arg3: size_t) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
-    pub fn _free_r(arg1: *mut _reent, arg2: *mut ::core::ffi::c_void);
+    pub fn _free_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     pub fn _realloc_r(
         arg1: *mut _reent,
-        arg2: *mut ::core::ffi::c_void,
+        arg2: *mut bindgen_ctypes::c_void,
         arg3: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
-    pub fn _mstats_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_char);
+    pub fn _mstats_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_char);
 }
 extern "C" {
-    pub fn _system_r(arg1: *mut _reent, arg2: *mut ::std::os::raw::c_char)
-        -> ::std::os::raw::c_int;
+    pub fn _system_r(arg1: *mut _reent, arg2: *mut bindgen_ctypes::c_char)
+        -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn __eprintf(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: ::std::os::raw::c_uint,
-        arg4: *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: bindgen_ctypes::c_uint,
+        arg4: *mut bindgen_ctypes::c_char,
     );
 }
 extern "C" {
     pub fn __bsd_qsort_r(
-        __base: *mut ::core::ffi::c_void,
+        __base: *mut bindgen_ctypes::c_void,
         __nmemb: size_t,
         __size: size_t,
-        __thunk: *mut ::core::ffi::c_void,
+        __thunk: *mut bindgen_ctypes::c_void,
         _compar: ::core::option::Option<
             unsafe extern "C" fn(
-                arg1: *mut ::core::ffi::c_void,
-                arg2: *mut ::core::ffi::c_void,
-                arg3: *mut ::core::ffi::c_void,
-            ) -> ::std::os::raw::c_int,
+                arg1: *mut bindgen_ctypes::c_void,
+                arg2: *mut bindgen_ctypes::c_void,
+                arg3: *mut bindgen_ctypes::c_void,
+            ) -> bindgen_ctypes::c_int,
         >,
     );
 }
 extern "C" {
     pub fn _strtold_r(
         arg1: *mut _reent,
-        arg2: *mut ::std::os::raw::c_char,
-        arg3: *mut *mut ::std::os::raw::c_char,
+        arg2: *mut bindgen_ctypes::c_char,
+        arg3: *mut *mut bindgen_ctypes::c_char,
     ) -> f64;
 }
 extern "C" {
     pub fn strtold(
-        arg1: *mut ::std::os::raw::c_char,
-        arg2: *mut *mut ::std::os::raw::c_char,
+        arg1: *mut bindgen_ctypes::c_char,
+        arg2: *mut *mut bindgen_ctypes::c_char,
     ) -> f64;
 }
 extern "C" {
-    pub fn aligned_alloc(arg1: size_t, arg2: size_t) -> *mut ::core::ffi::c_void;
+    pub fn aligned_alloc(arg1: size_t, arg2: size_t) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn at_quick_exit(
         arg1: ::core::option::Option<unsafe extern "C" fn()>,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn quick_exit(arg1: ::std::os::raw::c_int);
+    pub fn quick_exit(arg1: bindgen_ctypes::c_int);
 }
 #[doc = "< return successful in ets"]
 pub const ETS_STATUS_ETS_OK: ETS_STATUS = 0;
@@ -6207,7 +6223,7 @@ pub const ETS_STATUS_ETS_OK: ETS_STATUS = 0;
 pub const ETS_STATUS_ETS_FAILED: ETS_STATUS = 1;
 #[doc = " @addtogroup ets_apis"]
 #[doc = " @{"]
-pub type ETS_STATUS = ::std::os::raw::c_int;
+pub type ETS_STATUS = bindgen_ctypes::c_int;
 pub type ETSSignal = u32;
 pub type ETSParam = u32;
 pub type ETSEvent = ETSEventTag;
@@ -6221,7 +6237,7 @@ pub struct ETSEventTag {
 }
 pub type ETSTask = ::core::option::Option<unsafe extern "C" fn(e: *mut ETSEvent)>;
 pub type ets_idle_cb_t =
-    ::core::option::Option<unsafe extern "C" fn(arg: *mut ::core::ffi::c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(arg: *mut bindgen_ctypes::c_void)>;
 extern "C" {
     #[doc = " @brief  Start the Espressif Task Scheduler, which is an infinit loop. Please do not add code after it."]
     #[doc = ""]
@@ -6238,7 +6254,7 @@ extern "C" {
     #[doc = " @param  void *arg : Argument of the callback."]
     #[doc = ""]
     #[doc = " @return None"]
-    pub fn ets_set_idle_cb(func: ets_idle_cb_t, arg: *mut ::core::ffi::c_void);
+    pub fn ets_set_idle_cb(func: ets_idle_cb_t, arg: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief  Init a task with processer, priority, queue to receive Event, queue length."]
@@ -6268,7 +6284,7 @@ extern "C" {
     pub fn ets_post(prio: u8, sig: ETSSignal, par: ETSParam) -> ETS_STATUS;
 }
 extern "C" {
-    pub static mut exc_cause_table: [*mut ::std::os::raw::c_char; 40usize];
+    pub static mut exc_cause_table: [*mut bindgen_ctypes::c_char; 40usize];
 }
 extern "C" {
     #[doc = " @brief  Set Pro cpu Entry code, code can be called in PRO CPU when booting is not completed."]
@@ -6350,7 +6366,7 @@ extern "C" {
     #[doc = " @param  ... : See printf."]
     #[doc = ""]
     #[doc = " @return int : the length printed to the output device."]
-    pub fn ets_printf(fmt: *mut ::std::os::raw::c_char, ...) -> ::std::os::raw::c_int;
+    pub fn ets_printf(fmt: *mut bindgen_ctypes::c_char, ...) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief  Output a char to uart, which uart to output(which is in uart module in ROM) is not in scope of the function."]
@@ -6359,7 +6375,7 @@ extern "C" {
     #[doc = " @param  char c : char to output."]
     #[doc = ""]
     #[doc = " @return None"]
-    pub fn ets_write_char_uart(c: ::std::os::raw::c_char);
+    pub fn ets_write_char_uart(c: bindgen_ctypes::c_char);
 }
 extern "C" {
     #[doc = " @brief  Ets_printf have two output functions： putc1 and putc2, both of which will be called if need ouput."]
@@ -6369,7 +6385,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return None"]
     pub fn ets_install_putc1(
-        p: ::core::option::Option<unsafe extern "C" fn(c: ::std::os::raw::c_char)>,
+        p: ::core::option::Option<unsafe extern "C" fn(c: bindgen_ctypes::c_char)>,
     );
 }
 extern "C" {
@@ -6380,7 +6396,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return None"]
     pub fn ets_install_putc2(
-        p: ::core::option::Option<unsafe extern "C" fn(c: ::std::os::raw::c_char)>,
+        p: ::core::option::Option<unsafe extern "C" fn(c: bindgen_ctypes::c_char)>,
     );
 }
 extern "C" {
@@ -6395,7 +6411,7 @@ extern "C" {
 #[doc = " @addtogroup ets_timer_apis"]
 #[doc = " @{"]
 pub type ETSTimerFunc =
-    ::core::option::Option<unsafe extern "C" fn(timer_arg: *mut ::core::ffi::c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(timer_arg: *mut bindgen_ctypes::c_void)>;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct _ETSTIMER_ {
@@ -6408,7 +6424,7 @@ pub struct _ETSTIMER_ {
     #[doc = "< timer handler"]
     pub timer_func: ETSTimerFunc,
     #[doc = "< timer handler argument"]
-    pub timer_arg: *mut ::core::ffi::c_void,
+    pub timer_arg: *mut bindgen_ctypes::c_void,
 }
 pub type ETSTimer = _ETSTIMER_;
 extern "C" {
@@ -6477,7 +6493,7 @@ extern "C" {
     pub fn ets_timer_setfn(
         ptimer: *mut ETSTimer,
         pfunction: ETSTimerFunc,
-        parg: *mut ::core::ffi::c_void,
+        parg: *mut bindgen_ctypes::c_void,
     );
 }
 extern "C" {
@@ -6549,7 +6565,8 @@ extern "C" {
 }
 #[doc = " @addtogroup ets_intr_apis"]
 #[doc = " @{"]
-pub type ets_isr_t = ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void)>;
+pub type ets_isr_t =
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut bindgen_ctypes::c_void)>;
 extern "C" {
     #[doc = " @brief  Attach a interrupt handler to a CPU interrupt number."]
     #[doc = "         This function equals to _xtos_set_interrupt_handler_arg(i, func, arg)."]
@@ -6562,7 +6579,11 @@ extern "C" {
     #[doc = " @param  void *arg : argument of the handler."]
     #[doc = ""]
     #[doc = " @return None"]
-    pub fn ets_isr_attach(i: ::std::os::raw::c_int, func: ets_isr_t, arg: *mut ::core::ffi::c_void);
+    pub fn ets_isr_attach(
+        i: bindgen_ctypes::c_int,
+        func: ets_isr_t,
+        arg: *mut bindgen_ctypes::c_void,
+    );
 }
 extern "C" {
     #[doc = " @brief  Mask the interrupts which show in mask bits."]
@@ -6629,100 +6650,100 @@ extern "C" {
     #[doc = " @param  uint32_t intr_num : The interrupt number CPU, please see the interrupt cpu using table."]
     #[doc = ""]
     #[doc = " @return None"]
-    pub fn intr_matrix_set(cpu_no: ::std::os::raw::c_int, model_num: u32, intr_num: u32);
+    pub fn intr_matrix_set(cpu_no: bindgen_ctypes::c_int, model_num: u32, intr_num: u32);
 }
 pub const STATUS_OK: STATUS = 0;
 pub const STATUS_FAIL: STATUS = 1;
 pub const STATUS_PENDING: STATUS = 2;
 pub const STATUS_BUSY: STATUS = 3;
 pub const STATUS_CANCEL: STATUS = 4;
-pub type STATUS = ::std::os::raw::c_int;
+pub type STATUS = bindgen_ctypes::c_int;
 pub type TaskFunction_t =
-    ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut bindgen_ctypes::c_void)>;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct XtosCoreState {
-    pub signature: ::std::os::raw::c_long,
-    pub restore_label: ::std::os::raw::c_long,
-    pub aftersave_label: ::std::os::raw::c_long,
-    pub areg: [::std::os::raw::c_long; 64usize],
-    pub caller_regs: [::std::os::raw::c_long; 16usize],
-    pub caller_regs_saved: ::std::os::raw::c_long,
-    pub windowbase: ::std::os::raw::c_long,
-    pub windowstart: ::std::os::raw::c_long,
-    pub sar: ::std::os::raw::c_long,
-    pub epc1: ::std::os::raw::c_long,
-    pub ps: ::std::os::raw::c_long,
-    pub excsave1: ::std::os::raw::c_long,
-    pub depc: ::std::os::raw::c_long,
-    pub epc: [::std::os::raw::c_long; 6usize],
-    pub eps: [::std::os::raw::c_long; 6usize],
-    pub excsave: [::std::os::raw::c_long; 6usize],
-    pub lcount: ::std::os::raw::c_long,
-    pub lbeg: ::std::os::raw::c_long,
-    pub lend: ::std::os::raw::c_long,
-    pub vecbase: ::std::os::raw::c_long,
-    pub atomctl: ::std::os::raw::c_long,
-    pub memctl: ::std::os::raw::c_long,
-    pub ccount: ::std::os::raw::c_long,
-    pub ccompare: [::std::os::raw::c_long; 3usize],
-    pub intenable: ::std::os::raw::c_long,
-    pub interrupt: ::std::os::raw::c_long,
-    pub icount: ::std::os::raw::c_long,
-    pub icountlevel: ::std::os::raw::c_long,
-    pub debugcause: ::std::os::raw::c_long,
-    pub dbreakc: [::std::os::raw::c_long; 2usize],
-    pub dbreaka: [::std::os::raw::c_long; 2usize],
-    pub ibreaka: [::std::os::raw::c_long; 2usize],
-    pub ibreakenable: ::std::os::raw::c_long,
-    pub misc: [::std::os::raw::c_long; 4usize],
-    pub cpenable: ::std::os::raw::c_long,
-    pub tlbs: [::std::os::raw::c_long; 16usize],
-    pub ncp: [::std::os::raw::c_char; 48usize],
-    pub cp0: [::std::os::raw::c_char; 72usize],
+    pub signature: bindgen_ctypes::c_long,
+    pub restore_label: bindgen_ctypes::c_long,
+    pub aftersave_label: bindgen_ctypes::c_long,
+    pub areg: [bindgen_ctypes::c_long; 64usize],
+    pub caller_regs: [bindgen_ctypes::c_long; 16usize],
+    pub caller_regs_saved: bindgen_ctypes::c_long,
+    pub windowbase: bindgen_ctypes::c_long,
+    pub windowstart: bindgen_ctypes::c_long,
+    pub sar: bindgen_ctypes::c_long,
+    pub epc1: bindgen_ctypes::c_long,
+    pub ps: bindgen_ctypes::c_long,
+    pub excsave1: bindgen_ctypes::c_long,
+    pub depc: bindgen_ctypes::c_long,
+    pub epc: [bindgen_ctypes::c_long; 6usize],
+    pub eps: [bindgen_ctypes::c_long; 6usize],
+    pub excsave: [bindgen_ctypes::c_long; 6usize],
+    pub lcount: bindgen_ctypes::c_long,
+    pub lbeg: bindgen_ctypes::c_long,
+    pub lend: bindgen_ctypes::c_long,
+    pub vecbase: bindgen_ctypes::c_long,
+    pub atomctl: bindgen_ctypes::c_long,
+    pub memctl: bindgen_ctypes::c_long,
+    pub ccount: bindgen_ctypes::c_long,
+    pub ccompare: [bindgen_ctypes::c_long; 3usize],
+    pub intenable: bindgen_ctypes::c_long,
+    pub interrupt: bindgen_ctypes::c_long,
+    pub icount: bindgen_ctypes::c_long,
+    pub icountlevel: bindgen_ctypes::c_long,
+    pub debugcause: bindgen_ctypes::c_long,
+    pub dbreakc: [bindgen_ctypes::c_long; 2usize],
+    pub dbreaka: [bindgen_ctypes::c_long; 2usize],
+    pub ibreaka: [bindgen_ctypes::c_long; 2usize],
+    pub ibreakenable: bindgen_ctypes::c_long,
+    pub misc: [bindgen_ctypes::c_long; 4usize],
+    pub cpenable: bindgen_ctypes::c_long,
+    pub tlbs: [bindgen_ctypes::c_long; 16usize],
+    pub ncp: [bindgen_ctypes::c_char; 48usize],
+    pub cp0: [bindgen_ctypes::c_char; 72usize],
 }
 pub type _xtos_handler_func = ::core::option::Option<unsafe extern "C" fn()>;
 pub type _xtos_handler = _xtos_handler_func;
 extern "C" {
-    pub fn _xtos_ints_off(mask: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn _xtos_ints_off(mask: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn _xtos_ints_on(mask: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn _xtos_ints_on(mask: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn _xtos_set_intlevel(intlevel: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+    pub fn _xtos_set_intlevel(intlevel: bindgen_ctypes::c_int) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn _xtos_set_min_intlevel(intlevel: ::std::os::raw::c_int) -> ::std::os::raw::c_uint;
+    pub fn _xtos_set_min_intlevel(intlevel: bindgen_ctypes::c_int) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn _xtos_restore_intlevel(restoreval: ::std::os::raw::c_uint) -> ::std::os::raw::c_uint;
+    pub fn _xtos_restore_intlevel(restoreval: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
     pub fn _xtos_restore_just_intlevel(
-        restoreval: ::std::os::raw::c_uint,
-    ) -> ::std::os::raw::c_uint;
+        restoreval: bindgen_ctypes::c_uint,
+    ) -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn _xtos_set_interrupt_handler(n: ::std::os::raw::c_int, f: _xtos_handler)
+    pub fn _xtos_set_interrupt_handler(n: bindgen_ctypes::c_int, f: _xtos_handler)
         -> _xtos_handler;
 }
 extern "C" {
     pub fn _xtos_set_interrupt_handler_arg(
-        n: ::std::os::raw::c_int,
+        n: bindgen_ctypes::c_int,
         f: _xtos_handler,
-        arg: *mut ::core::ffi::c_void,
+        arg: *mut bindgen_ctypes::c_void,
     ) -> _xtos_handler;
 }
 extern "C" {
-    pub fn _xtos_set_exception_handler(n: ::std::os::raw::c_int, f: _xtos_handler)
+    pub fn _xtos_set_exception_handler(n: bindgen_ctypes::c_int, f: _xtos_handler)
         -> _xtos_handler;
 }
 extern "C" {
     pub fn _xtos_memep_initrams();
 }
 extern "C" {
-    pub fn _xtos_memep_enable(flags: ::std::os::raw::c_int);
+    pub fn _xtos_memep_enable(flags: bindgen_ctypes::c_int);
 }
 extern "C" {
     pub fn _xtos_dispatch_level1_interrupts();
@@ -6743,32 +6764,32 @@ extern "C" {
     pub fn _xtos_dispatch_level6_interrupts();
 }
 extern "C" {
-    pub fn _xtos_read_ints() -> ::std::os::raw::c_uint;
+    pub fn _xtos_read_ints() -> bindgen_ctypes::c_uint;
 }
 extern "C" {
-    pub fn _xtos_clear_ints(mask: ::std::os::raw::c_uint);
+    pub fn _xtos_clear_ints(mask: bindgen_ctypes::c_uint);
 }
 extern "C" {
-    pub fn _xtos_core_shutoff(flags: ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
+    pub fn _xtos_core_shutoff(flags: bindgen_ctypes::c_uint) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     pub fn _xtos_core_save(
-        flags: ::std::os::raw::c_uint,
+        flags: bindgen_ctypes::c_uint,
         savearea: *mut XtosCoreState,
-        code: *mut ::core::ffi::c_void,
-    ) -> ::std::os::raw::c_int;
+        code: *mut bindgen_ctypes::c_void,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
-    pub fn _xtos_core_restore(retvalue: ::std::os::raw::c_uint, savearea: *mut XtosCoreState);
+    pub fn _xtos_core_restore(retvalue: bindgen_ctypes::c_uint, savearea: *mut XtosCoreState);
 }
 extern "C" {
-    pub fn _xtos_timer_0_delta(cycles: ::std::os::raw::c_int);
+    pub fn _xtos_timer_0_delta(cycles: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn _xtos_timer_1_delta(cycles: ::std::os::raw::c_int);
+    pub fn _xtos_timer_1_delta(cycles: bindgen_ctypes::c_int);
 }
 extern "C" {
-    pub fn _xtos_timer_2_delta(cycles: ::std::os::raw::c_int);
+    pub fn _xtos_timer_2_delta(cycles: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " Initialize the crosscore interrupt system for this CPU."]
@@ -6789,7 +6810,7 @@ extern "C" {
     #[doc = " and should not be called by the user."]
     #[doc = ""]
     #[doc = " @param core_id Core that should do the yielding"]
-    pub fn esp_crosscore_int_send_yield(core_id: ::std::os::raw::c_int);
+    pub fn esp_crosscore_int_send_yield(core_id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " Send an interrupt to a CPU indicating it should update its"]
@@ -6799,7 +6820,7 @@ extern "C" {
     #[doc = " enabled, and should not be called from application code."]
     #[doc = ""]
     #[doc = " @param core_id Core that should update its CCOMPARE1 value"]
-    pub fn esp_crosscore_int_send_freq_switch(core_id: ::std::os::raw::c_int);
+    pub fn esp_crosscore_int_send_freq_switch(core_id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " Send an interrupt to a CPU indicating it should print its current backtrace"]
@@ -6808,7 +6829,7 @@ extern "C" {
     #[doc = " opposite core and should not be called from application code."]
     #[doc = ""]
     #[doc = " @param core_id Core that should print its backtrace"]
-    pub fn esp_crosscore_int_send_print_backtrace(core_id: ::std::os::raw::c_int);
+    pub fn esp_crosscore_int_send_print_backtrace(core_id: bindgen_ctypes::c_int);
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -6820,11 +6841,11 @@ pub type esp_timer_handle_t = *mut esp_timer;
 #[doc = " @brief Timer callback function type"]
 #[doc = " @param arg pointer to opaque user-specific data"]
 pub type esp_timer_cb_t =
-    ::core::option::Option<unsafe extern "C" fn(arg: *mut ::core::ffi::c_void)>;
+    ::core::option::Option<unsafe extern "C" fn(arg: *mut bindgen_ctypes::c_void)>;
 #[doc = "!< Callback is called from timer task"]
 pub const esp_timer_dispatch_t_ESP_TIMER_TASK: esp_timer_dispatch_t = 0;
 #[doc = " @brief Method for dispatching timer callback"]
-pub type esp_timer_dispatch_t = ::std::os::raw::c_int;
+pub type esp_timer_dispatch_t = bindgen_ctypes::c_int;
 #[doc = " @brief Timer configuration passed to esp_timer_create"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -6832,11 +6853,11 @@ pub struct esp_timer_create_args_t {
     #[doc = "!< Function to call when timer expires"]
     pub callback: esp_timer_cb_t,
     #[doc = "!< Argument to pass to the callback"]
-    pub arg: *mut ::core::ffi::c_void,
+    pub arg: *mut bindgen_ctypes::c_void,
     #[doc = "!< Call the callback from task or from ISR"]
     pub dispatch_method: esp_timer_dispatch_t,
     #[doc = "!< Timer name, used in esp_timer_dump function"]
-    pub name: *mut ::std::os::raw::c_char,
+    pub name: *mut bindgen_ctypes::c_char,
 }
 extern "C" {
     #[doc = " @brief Initialize esp_timer library"]
@@ -6976,7 +6997,7 @@ extern "C" {
 pub const watchpoint_trigger_t_WATCHPOINT_TRIGGER_ON_RO: watchpoint_trigger_t = 0;
 pub const watchpoint_trigger_t_WATCHPOINT_TRIGGER_ON_WO: watchpoint_trigger_t = 1;
 pub const watchpoint_trigger_t_WATCHPOINT_TRIGGER_ON_RW: watchpoint_trigger_t = 2;
-pub type watchpoint_trigger_t = ::std::os::raw::c_int;
+pub type watchpoint_trigger_t = bindgen_ctypes::c_int;
 extern "C" {
     #[doc = " Set and enable breakpoint at an instruction address."]
     #[doc = ""]
@@ -6984,13 +7005,13 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param id breakpoint to set [0..SOC_CPU_BREAKPOINTS_NUM - 1]"]
     #[doc = " @param addr address to set a breakpoint on"]
-    pub fn cpu_hal_set_breakpoint(id: ::std::os::raw::c_int, addr: *mut ::core::ffi::c_void);
+    pub fn cpu_hal_set_breakpoint(id: bindgen_ctypes::c_int, addr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " Clear and disable breakpoint."]
     #[doc = ""]
     #[doc = " @param id breakpoint to clear [0..SOC_CPU_BREAKPOINTS_NUM - 1]"]
-    pub fn cpu_hal_clear_breakpoint(id: ::std::os::raw::c_int);
+    pub fn cpu_hal_clear_breakpoint(id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " Set and enable a watchpoint, specifying the memory range and trigger operation."]
@@ -7000,8 +7021,8 @@ extern "C" {
     #[doc = " @param size number of bytes from starting address to watch"]
     #[doc = " @param trigger operation on specified memory range that triggers the watchpoint (read, write, read/write)"]
     pub fn cpu_hal_set_watchpoint(
-        id: ::std::os::raw::c_int,
-        addr: *mut ::core::ffi::c_void,
+        id: bindgen_ctypes::c_int,
+        addr: *mut bindgen_ctypes::c_void,
         size: size_t,
         trigger: watchpoint_trigger_t,
     );
@@ -7010,28 +7031,28 @@ extern "C" {
     #[doc = " Clear and disable watchpoint."]
     #[doc = ""]
     #[doc = " @param id watchpoint to clear [0..SOC_CPU_WATCHPOINTS_NUM - 1]"]
-    pub fn cpu_hal_clear_watchpoint(id: ::std::os::raw::c_int);
+    pub fn cpu_hal_clear_watchpoint(id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " Set exception vector table base address."]
     #[doc = ""]
     #[doc = " @param base address to move the exception vector table to"]
-    pub fn cpu_hal_set_vecbase(base: *mut ::core::ffi::c_void);
+    pub fn cpu_hal_set_vecbase(base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief Stall CPU using RTC controller"]
     #[doc = " @param cpu_id ID of the CPU to stall (0 = PRO, 1 = APP)"]
-    pub fn esp_cpu_stall(cpu_id: ::std::os::raw::c_int);
+    pub fn esp_cpu_stall(cpu_id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " @brief Un-stall CPU using RTC controller"]
     #[doc = " @param cpu_id ID of the CPU to un-stall (0 = PRO, 1 = APP)"]
-    pub fn esp_cpu_unstall(cpu_id: ::std::os::raw::c_int);
+    pub fn esp_cpu_unstall(cpu_id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " @brief Reset CPU using RTC controller"]
     #[doc = " @param cpu_id ID of the CPU to reset (0 = PRO, 1 = APP)"]
-    pub fn esp_cpu_reset(cpu_id: ::std::os::raw::c_int);
+    pub fn esp_cpu_reset(cpu_id: bindgen_ctypes::c_int);
 }
 extern "C" {
     #[doc = " @brief Returns true if a JTAG debugger is attached to CPU"]
@@ -7046,7 +7067,7 @@ pub type esp_cpu_ccount_t = u32;
 #[derive(Debug, Copy, Clone)]
 pub struct soc_memory_type_desc_t {
     #[doc = "< Name of this memory type"]
-    pub name: *mut ::std::os::raw::c_char,
+    pub name: *mut bindgen_ctypes::c_char,
     #[doc = "< Capabilities for this memory type (as a prioritised set)"]
     pub caps: [u32; 3usize],
     #[doc = "< If true, this is data memory that is is also mapped in IRAM"]
@@ -7118,7 +7139,7 @@ extern "C" {
         heap: multi_heap_handle_t,
         size: size_t,
         alignment: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief malloc() a buffer in a given heap"]
@@ -7129,14 +7150,17 @@ extern "C" {
     #[doc = " @param size Size of desired buffer."]
     #[doc = ""]
     #[doc = " @return Pointer to new memory, or NULL if allocation fails."]
-    pub fn multi_heap_malloc(heap: multi_heap_handle_t, size: size_t) -> *mut ::core::ffi::c_void;
+    pub fn multi_heap_malloc(
+        heap: multi_heap_handle_t,
+        size: size_t,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief free() a buffer aligned in a given heap."]
     #[doc = ""]
     #[doc = " @param heap Handle to a registered heap."]
     #[doc = " @param p NULL, or a pointer previously returned from multi_heap_aligned_alloc() for the same heap."]
-    pub fn multi_heap_aligned_free(heap: multi_heap_handle_t, p: *mut ::core::ffi::c_void);
+    pub fn multi_heap_aligned_free(heap: multi_heap_handle_t, p: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief free() a buffer in a given heap."]
@@ -7145,7 +7169,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param heap Handle to a registered heap."]
     #[doc = " @param p NULL, or a pointer previously returned from multi_heap_malloc() or multi_heap_realloc() for the same heap."]
-    pub fn multi_heap_free(heap: multi_heap_handle_t, p: *mut ::core::ffi::c_void);
+    pub fn multi_heap_free(heap: multi_heap_handle_t, p: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief realloc() a buffer in a given heap."]
@@ -7159,9 +7183,9 @@ extern "C" {
     #[doc = " @return New buffer of 'size' containing contents of 'p', or NULL if reallocation failed."]
     pub fn multi_heap_realloc(
         heap: multi_heap_handle_t,
-        p: *mut ::core::ffi::c_void,
+        p: *mut bindgen_ctypes::c_void,
         size: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Return the size that a particular pointer was allocated with."]
@@ -7173,7 +7197,7 @@ extern "C" {
     #[doc = " to padding and minimum block sizes."]
     pub fn multi_heap_get_allocated_size(
         heap: multi_heap_handle_t,
-        p: *mut ::core::ffi::c_void,
+        p: *mut bindgen_ctypes::c_void,
     ) -> size_t;
 }
 extern "C" {
@@ -7188,7 +7212,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return Handle of a new heap ready for use, or NULL if the heap region was too small to be initialised."]
     pub fn multi_heap_register(
-        start: *mut ::core::ffi::c_void,
+        start: *mut bindgen_ctypes::c_void,
         size: size_t,
     ) -> multi_heap_handle_t;
 }
@@ -7203,7 +7227,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param heap Handle to a registered heap."]
     #[doc = " @param lock Optional pointer to a locking structure to associate with this heap."]
-    pub fn multi_heap_set_lock(heap: multi_heap_handle_t, lock: *mut ::core::ffi::c_void);
+    pub fn multi_heap_set_lock(heap: multi_heap_handle_t, lock: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief Dump heap information to stdout"]
@@ -7284,7 +7308,7 @@ extern "C" {
 #[doc = " @param caps capabillites requested of failed allocation"]
 #[doc = " @param function_name function which generated the failure"]
 pub type esp_alloc_failed_hook_t = ::core::option::Option<
-    unsafe extern "C" fn(size: size_t, caps: u32, function_name: *mut ::std::os::raw::c_char),
+    unsafe extern "C" fn(size: size_t, caps: u32, function_name: *mut bindgen_ctypes::c_char),
 >;
 extern "C" {
     #[doc = " @brief registers a callback function to be invoked if a memory allocation operation fails"]
@@ -7305,7 +7329,7 @@ extern "C" {
     #[doc = "                    of memory to be returned"]
     #[doc = ""]
     #[doc = " @return A pointer to the memory allocated on success, NULL on failure"]
-    pub fn heap_caps_malloc(size: size_t, caps: u32) -> *mut ::core::ffi::c_void;
+    pub fn heap_caps_malloc(size: size_t, caps: u32) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Free memory previously allocated via heap_caps_malloc() or heap_caps_realloc()."]
@@ -7315,7 +7339,7 @@ extern "C" {
     #[doc = "  In IDF, ``free(p)`` is equivalent to ``heap_caps_free(p)``."]
     #[doc = ""]
     #[doc = " @param ptr Pointer to memory previously returned from heap_caps_malloc() or heap_caps_realloc(). Can be NULL."]
-    pub fn heap_caps_free(ptr: *mut ::core::ffi::c_void);
+    pub fn heap_caps_free(ptr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief Reallocate memory previously allocated via heap_caps_malloc() or heap_caps_realloc()."]
@@ -7334,10 +7358,10 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return Pointer to a new buffer of size 'size' with capabilities 'caps', or NULL if allocation failed."]
     pub fn heap_caps_realloc(
-        ptr: *mut ::core::ffi::c_void,
+        ptr: *mut bindgen_ctypes::c_void,
         size: size_t,
-        caps: ::std::os::raw::c_int,
-    ) -> *mut ::core::ffi::c_void;
+        caps: bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Allocate a aligned chunk of memory which has the given capabilities"]
@@ -7357,8 +7381,8 @@ extern "C" {
     pub fn heap_caps_aligned_alloc(
         alignment: size_t,
         size: size_t,
-        caps: ::std::os::raw::c_int,
-    ) -> *mut ::core::ffi::c_void;
+        caps: bindgen_ctypes::c_int,
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Allocate a aligned chunk of memory which has the given capabilities. The initialized value in the memory is set to zero."]
@@ -7379,7 +7403,7 @@ extern "C" {
         n: size_t,
         size: size_t,
         caps: u32,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Used to deallocate memory previously allocated with heap_caps_aligned_alloc"]
@@ -7388,7 +7412,7 @@ extern "C" {
     #[doc = " @note This function is aimed to deallocate only memory allocated with"]
     #[doc = "       heap_caps_aligned_alloc, memory allocated with heap_caps_malloc"]
     #[doc = "       MUST not be passed to this function"]
-    pub fn heap_caps_aligned_free(ptr: *mut ::core::ffi::c_void);
+    pub fn heap_caps_aligned_free(ptr: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief Allocate a chunk of memory which has the given capabilities. The initialized value in the memory is set to zero."]
@@ -7403,7 +7427,7 @@ extern "C" {
     #[doc = "                    of memory to be returned"]
     #[doc = ""]
     #[doc = " @return A pointer to the memory allocated on success, NULL on failure"]
-    pub fn heap_caps_calloc(n: size_t, size: size_t, caps: u32) -> *mut ::core::ffi::c_void;
+    pub fn heap_caps_calloc(n: size_t, size: size_t, caps: u32) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Get the total size of all the regions that have the given capabilities"]
@@ -7560,7 +7584,7 @@ extern "C" {
     #[doc = " @param num Number of variable paramters"]
     #[doc = ""]
     #[doc = " @return A pointer to the memory allocated on success, NULL on failure"]
-    pub fn heap_caps_malloc_prefer(size: size_t, num: size_t, ...) -> *mut ::core::ffi::c_void;
+    pub fn heap_caps_malloc_prefer(size: size_t, num: size_t, ...) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Allocate a chunk of memory as preference in decreasing order."]
@@ -7571,11 +7595,11 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return Pointer to a new buffer of size 'size', or NULL if allocation failed."]
     pub fn heap_caps_realloc_prefer(
-        ptr: *mut ::core::ffi::c_void,
+        ptr: *mut bindgen_ctypes::c_void,
         size: size_t,
         num: size_t,
         ...
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Allocate a chunk of memory as preference in decreasing order."]
@@ -7590,7 +7614,7 @@ extern "C" {
         size: size_t,
         num: size_t,
         ...
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief Dump the full structure of all heaps with matching capabilities."]
@@ -7629,11 +7653,11 @@ extern "C" {
     #[doc = ""]
     #[doc = " @return Size of the memory allocated at this block."]
     #[doc = ""]
-    pub fn heap_caps_get_allocated_size(ptr: *mut ::core::ffi::c_void) -> size_t;
+    pub fn heap_caps_get_allocated_size(ptr: *mut bindgen_ctypes::c_void) -> size_t;
 }
 pub type StackType_t = u8;
-pub type BaseType_t = ::std::os::raw::c_int;
-pub type UBaseType_t = ::std::os::raw::c_uint;
+pub type BaseType_t = bindgen_ctypes::c_int;
+pub type UBaseType_t = bindgen_ctypes::c_uint;
 pub type TickType_t = u32;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -7670,13 +7694,13 @@ extern "C" {
     pub fn esp_vApplicationTickHook();
 }
 extern "C" {
-    pub fn _xt_coproc_release(coproc_sa_base: *mut ::core::ffi::c_void);
+    pub fn _xt_coproc_release(coproc_sa_base: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     pub fn vApplicationSleep(xExpectedIdleTime: TickType_t);
 }
 extern "C" {
-    pub fn vPortSetStackWatchpoint(pxStackStart: *mut ::core::ffi::c_void);
+    pub fn vPortSetStackWatchpoint(pxStackStart: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " Return full IDF version string, same as 'git describe' output."]
@@ -7687,13 +7711,13 @@ extern "C" {
     #[doc = " pre-release and release versions, but the output of this function does."]
     #[doc = ""]
     #[doc = " @return constant string from IDF_VER"]
-    pub fn esp_get_idf_version() -> *mut ::std::os::raw::c_char;
+    pub fn esp_get_idf_version() -> *mut bindgen_ctypes::c_char;
 }
 pub const esp_mac_type_t_ESP_MAC_WIFI_STA: esp_mac_type_t = 0;
 pub const esp_mac_type_t_ESP_MAC_WIFI_SOFTAP: esp_mac_type_t = 1;
 pub const esp_mac_type_t_ESP_MAC_BT: esp_mac_type_t = 2;
 pub const esp_mac_type_t_ESP_MAC_ETH: esp_mac_type_t = 3;
-pub type esp_mac_type_t = ::std::os::raw::c_int;
+pub type esp_mac_type_t = bindgen_ctypes::c_int;
 #[doc = "!< Reset reason can not be determined"]
 pub const esp_reset_reason_t_ESP_RST_UNKNOWN: esp_reset_reason_t = 0;
 #[doc = "!< Reset due to power-on event"]
@@ -7717,7 +7741,7 @@ pub const esp_reset_reason_t_ESP_RST_BROWNOUT: esp_reset_reason_t = 9;
 #[doc = "!< Reset over SDIO"]
 pub const esp_reset_reason_t_ESP_RST_SDIO: esp_reset_reason_t = 10;
 #[doc = " @brief Reset reasons"]
-pub type esp_reset_reason_t = ::std::os::raw::c_int;
+pub type esp_reset_reason_t = bindgen_ctypes::c_int;
 #[doc = " Shutdown handler type"]
 pub type shutdown_handler_t = ::core::option::Option<unsafe extern "C" fn()>;
 extern "C" {
@@ -7803,7 +7827,7 @@ extern "C" {
     #[doc = ""]
     #[doc = " @param buf Pointer to buffer to fill with random numbers."]
     #[doc = " @param len Length of buffer in bytes"]
-    pub fn esp_fill_random(buf: *mut ::core::ffi::c_void, len: size_t);
+    pub fn esp_fill_random(buf: *mut bindgen_ctypes::c_void, len: size_t);
 }
 extern "C" {
     #[doc = " @brief  Set base MAC address with the MAC address which is stored in BLK3 of EFUSE or"]
@@ -7889,14 +7913,14 @@ extern "C" {
     #[doc = " @brief Trigger a software abort"]
     #[doc = ""]
     #[doc = " @param details Details that will be displayed during panic handling."]
-    pub fn esp_system_abort(details: *mut ::std::os::raw::c_char);
+    pub fn esp_system_abort(details: *mut bindgen_ctypes::c_char);
 }
 #[doc = "!< ESP32"]
 pub const esp_chip_model_t_CHIP_ESP32: esp_chip_model_t = 1;
 #[doc = "!< ESP32-S2"]
 pub const esp_chip_model_t_CHIP_ESP32S2: esp_chip_model_t = 2;
 #[doc = " @brief Chip models"]
-pub type esp_chip_model_t = ::std::os::raw::c_int;
+pub type esp_chip_model_t = bindgen_ctypes::c_int;
 #[doc = " @brief The structure represents information about the chip"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -7919,7 +7943,7 @@ extern "C" {
     pub fn pxPortInitialiseStack(
         pxTopOfStack: *mut StackType_t,
         pxCode: TaskFunction_t,
-        pvParameters: *mut ::core::ffi::c_void,
+        pvParameters: *mut bindgen_ctypes::c_void,
         xRunPrivileged: BaseType_t,
     ) -> *mut StackType_t;
 }
@@ -7953,38 +7977,38 @@ extern "C" {
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_LIST_ITEM {
     pub xDummy1: TickType_t,
-    pub pvDummy2: [*mut ::core::ffi::c_void; 4usize],
+    pub pvDummy2: [*mut bindgen_ctypes::c_void; 4usize],
 }
 pub type StaticListItem_t = xSTATIC_LIST_ITEM;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_MINI_LIST_ITEM {
     pub xDummy1: TickType_t,
-    pub pvDummy2: [*mut ::core::ffi::c_void; 2usize],
+    pub pvDummy2: [*mut bindgen_ctypes::c_void; 2usize],
 }
 pub type StaticMiniListItem_t = xSTATIC_MINI_LIST_ITEM;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_LIST {
     pub uxDummy1: UBaseType_t,
-    pub pvDummy2: *mut ::core::ffi::c_void,
+    pub pvDummy2: *mut bindgen_ctypes::c_void,
     pub xDummy3: StaticMiniListItem_t,
 }
 pub type StaticList_t = xSTATIC_LIST;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_TCB {
-    pub pxDummy1: *mut ::core::ffi::c_void,
+    pub pxDummy1: *mut bindgen_ctypes::c_void,
     pub xDummy2: xMPU_SETTINGS,
     pub xDummy3: [StaticListItem_t; 2usize],
     pub uxDummy5: UBaseType_t,
-    pub pxDummy6: *mut ::core::ffi::c_void,
+    pub pxDummy6: *mut bindgen_ctypes::c_void,
     pub ucDummy7: [u8; 16usize],
     pub uxDummyCoreId: UBaseType_t,
-    pub pxDummy8: *mut ::core::ffi::c_void,
+    pub pxDummy8: *mut bindgen_ctypes::c_void,
     pub uxDummy12: [UBaseType_t; 2usize],
-    pub pvDummy15: [*mut ::core::ffi::c_void; 1usize],
-    pub pvDummyLocalStorageCallBack: [*mut ::core::ffi::c_void; 1usize],
+    pub pvDummy15: [*mut bindgen_ctypes::c_void; 1usize],
+    pub pvDummyLocalStorageCallBack: [*mut bindgen_ctypes::c_void; 1usize],
     pub xDummy17: _reent,
     pub ulDummy18: u32,
     pub ucDummy19: u32,
@@ -7994,17 +8018,17 @@ pub type StaticTask_t = xSTATIC_TCB;
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct xSTATIC_QUEUE {
-    pub pvDummy1: [*mut ::core::ffi::c_void; 3usize],
+    pub pvDummy1: [*mut bindgen_ctypes::c_void; 3usize],
     pub u: xSTATIC_QUEUE__bindgen_ty_1,
     pub xDummy3: [StaticList_t; 2usize],
     pub uxDummy4: [UBaseType_t; 3usize],
-    pub pvDummy7: *mut ::core::ffi::c_void,
+    pub pvDummy7: *mut bindgen_ctypes::c_void,
     pub muxDummy: portMUX_TYPE,
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub union xSTATIC_QUEUE__bindgen_ty_1 {
-    pub pvDummy2: *mut ::core::ffi::c_void,
+    pub pvDummy2: *mut bindgen_ctypes::c_void,
     pub uxDummy2: UBaseType_t,
     _bindgen_union_align: u64,
 }
@@ -8021,25 +8045,25 @@ pub type StaticEventGroup_t = xSTATIC_EVENT_GROUP;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xSTATIC_TIMER {
-    pub pvDummy1: *mut ::core::ffi::c_void,
+    pub pvDummy1: *mut bindgen_ctypes::c_void,
     pub xDummy2: StaticListItem_t,
     pub xDummy3: TickType_t,
     pub uxDummy4: UBaseType_t,
-    pub pvDummy5: [*mut ::core::ffi::c_void; 2usize],
+    pub pvDummy5: [*mut bindgen_ctypes::c_void; 2usize],
 }
 pub type StaticTimer_t = xSTATIC_TIMER;
 #[doc = " Type by which queues are referenced.  For example, a call to xQueueCreate()"]
 #[doc = " returns an QueueHandle_t variable that can then be used as a parameter to"]
 #[doc = " xQueueSend(), xQueueReceive(), etc."]
-pub type QueueHandle_t = *mut ::core::ffi::c_void;
+pub type QueueHandle_t = *mut bindgen_ctypes::c_void;
 #[doc = " Type by which queue sets are referenced.  For example, a call to"]
 #[doc = " xQueueCreateSet() returns an xQueueSet variable that can then be used as a"]
 #[doc = " parameter to xQueueSelectFromSet(), xQueueAddToSet(), etc."]
-pub type QueueSetHandle_t = *mut ::core::ffi::c_void;
+pub type QueueSetHandle_t = *mut bindgen_ctypes::c_void;
 #[doc = " Queue sets can contain both queues and semaphores, so the"]
 #[doc = " QueueSetMemberHandle_t is defined as a type to be used where a parameter or"]
 #[doc = " return value can be either an QueueHandle_t or an SemaphoreHandle_t."]
-pub type QueueSetMemberHandle_t = *mut ::core::ffi::c_void;
+pub type QueueSetMemberHandle_t = *mut bindgen_ctypes::c_void;
 extern "C" {
     #[doc = " It is preferred that the macros xQueueSend(), xQueueSendToFront() and"]
     #[doc = " xQueueSendToBack() are used in place of calling this function directly."]
@@ -8115,7 +8139,7 @@ extern "C" {
     #[doc = " \\ingroup QueueManagement"]
     pub fn xQueueGenericSend(
         xQueue: QueueHandle_t,
-        pvItemToQueue: *mut ::core::ffi::c_void,
+        pvItemToQueue: *mut bindgen_ctypes::c_void,
         xTicksToWait: TickType_t,
         xCopyPosition: BaseType_t,
     ) -> BaseType_t;
@@ -8144,7 +8168,7 @@ extern "C" {
     #[doc = " \\ingroup QueueManagement"]
     pub fn xQueuePeekFromISR(
         xQueue: QueueHandle_t,
-        pvBuffer: *mut ::core::ffi::c_void,
+        pvBuffer: *mut bindgen_ctypes::c_void,
     ) -> BaseType_t;
 }
 extern "C" {
@@ -8234,7 +8258,7 @@ extern "C" {
     #[doc = " \\ingroup QueueManagement"]
     pub fn xQueueGenericReceive(
         xQueue: QueueHandle_t,
-        pvBuffer: *mut ::core::ffi::c_void,
+        pvBuffer: *mut bindgen_ctypes::c_void,
         xTicksToWait: TickType_t,
         xJustPeek: BaseType_t,
     ) -> BaseType_t;
@@ -8337,7 +8361,7 @@ extern "C" {
     #[doc = " \\ingroup QueueManagement"]
     pub fn xQueueGenericSendFromISR(
         xQueue: QueueHandle_t,
-        pvItemToQueue: *mut ::core::ffi::c_void,
+        pvItemToQueue: *mut bindgen_ctypes::c_void,
         pxHigherPriorityTaskWoken: *mut BaseType_t,
         xCopyPosition: BaseType_t,
     ) -> BaseType_t;
@@ -8425,7 +8449,7 @@ extern "C" {
     #[doc = " \\ingroup QueueManagement"]
     pub fn xQueueReceiveFromISR(
         xQueue: QueueHandle_t,
-        pvBuffer: *mut ::core::ffi::c_void,
+        pvBuffer: *mut bindgen_ctypes::c_void,
         pxHigherPriorityTaskWoken: *mut BaseType_t,
     ) -> BaseType_t;
 }
@@ -8457,7 +8481,7 @@ extern "C" {
     #[doc = " sacrifices execution speed to ensure better interrupt responsiveness."]
     pub fn xQueueAltGenericSend(
         xQueue: QueueHandle_t,
-        pvItemToQueue: *mut ::core::ffi::c_void,
+        pvItemToQueue: *mut bindgen_ctypes::c_void,
         xTicksToWait: TickType_t,
         xCopyPosition: BaseType_t,
     ) -> BaseType_t;
@@ -8465,7 +8489,7 @@ extern "C" {
 extern "C" {
     pub fn xQueueAltGenericReceive(
         xQueue: QueueHandle_t,
-        pvBuffer: *mut ::core::ffi::c_void,
+        pvBuffer: *mut bindgen_ctypes::c_void,
         xTicksToWait: TickType_t,
         xJustPeeking: BaseType_t,
     ) -> BaseType_t;
@@ -8473,28 +8497,28 @@ extern "C" {
 extern "C" {
     pub fn xQueueCRSendFromISR(
         xQueue: QueueHandle_t,
-        pvItemToQueue: *mut ::core::ffi::c_void,
+        pvItemToQueue: *mut bindgen_ctypes::c_void,
         xCoRoutinePreviouslyWoken: BaseType_t,
     ) -> BaseType_t;
 }
 extern "C" {
     pub fn xQueueCRReceiveFromISR(
         xQueue: QueueHandle_t,
-        pvBuffer: *mut ::core::ffi::c_void,
+        pvBuffer: *mut bindgen_ctypes::c_void,
         pxTaskWoken: *mut BaseType_t,
     ) -> BaseType_t;
 }
 extern "C" {
     pub fn xQueueCRSend(
         xQueue: QueueHandle_t,
-        pvItemToQueue: *mut ::core::ffi::c_void,
+        pvItemToQueue: *mut bindgen_ctypes::c_void,
         xTicksToWait: TickType_t,
     ) -> BaseType_t;
 }
 extern "C" {
     pub fn xQueueCRReceive(
         xQueue: QueueHandle_t,
-        pvBuffer: *mut ::core::ffi::c_void,
+        pvBuffer: *mut bindgen_ctypes::c_void,
         xTicksToWait: TickType_t,
     ) -> BaseType_t;
 }
@@ -8521,7 +8545,7 @@ extern "C" {
     ) -> QueueHandle_t;
 }
 extern "C" {
-    pub fn xQueueGetMutexHolder(xSemaphore: QueueHandle_t) -> *mut ::core::ffi::c_void;
+    pub fn xQueueGetMutexHolder(xSemaphore: QueueHandle_t) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn xQueueTakeMutexRecursive(xMutex: QueueHandle_t, xTicksToWait: TickType_t) -> BaseType_t;
@@ -8697,8 +8721,8 @@ pub struct xLIST_ITEM {
     pub xItemValue: TickType_t,
     pub pxNext: *mut xLIST_ITEM,
     pub pxPrevious: *mut xLIST_ITEM,
-    pub pvOwner: *mut ::core::ffi::c_void,
-    pub pvContainer: *mut ::core::ffi::c_void,
+    pub pvOwner: *mut bindgen_ctypes::c_void,
+    pub pvContainer: *mut bindgen_ctypes::c_void,
 }
 pub type ListItem_t = xLIST_ITEM;
 #[repr(C)]
@@ -8739,11 +8763,11 @@ extern "C" {
 #[doc = " be used as a parameter to vTaskDelete to delete the task."]
 #[doc = ""]
 #[doc = " \\ingroup Tasks"]
-pub type TaskHandle_t = *mut ::core::ffi::c_void;
+pub type TaskHandle_t = *mut bindgen_ctypes::c_void;
 #[doc = " Defines the prototype to which the application task hook function must"]
 #[doc = " conform."]
 pub type TaskHookFunction_t =
-    ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void) -> BaseType_t>;
+    ::core::option::Option<unsafe extern "C" fn(arg1: *mut bindgen_ctypes::c_void) -> BaseType_t>;
 #[doc = "< A task is querying the state of itself, so must be running."]
 pub const eTaskState_eRunning: eTaskState = 0;
 #[doc = "< The task being queried is in a read or pending ready list."]
@@ -8755,7 +8779,7 @@ pub const eTaskState_eSuspended: eTaskState = 3;
 #[doc = "< The task being queried has been deleted, but its TCB has not yet been freed."]
 pub const eTaskState_eDeleted: eTaskState = 4;
 #[doc = " Task states returned by eTaskGetState."]
-pub type eTaskState = ::std::os::raw::c_int;
+pub type eTaskState = bindgen_ctypes::c_int;
 #[doc = "< Notify the task without updating its notify value."]
 pub const eNotifyAction_eNoAction: eNotifyAction = 0;
 #[doc = "< Set bits in the task's notification value."]
@@ -8767,7 +8791,7 @@ pub const eNotifyAction_eSetValueWithOverwrite: eNotifyAction = 3;
 #[doc = "< Set the task's notification value if the previous value has been read by the task."]
 pub const eNotifyAction_eSetValueWithoutOverwrite: eNotifyAction = 4;
 #[doc = " Actions that can be performed when vTaskNotify() is called."]
-pub type eNotifyAction = ::std::os::raw::c_int;
+pub type eNotifyAction = bindgen_ctypes::c_int;
 #[doc = " @cond */"]
 #[doc = " Used internally only."]
 #[repr(C)]
@@ -8783,7 +8807,7 @@ pub type TimeOut_t = xTIME_OUT;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct xMEMORY_REGION {
-    pub pvBaseAddress: *mut ::core::ffi::c_void,
+    pub pvBaseAddress: *mut bindgen_ctypes::c_void,
     pub ulLengthInBytes: u32,
     pub ulParameters: u32,
 }
@@ -8794,9 +8818,9 @@ pub type MemoryRegion_t = xMEMORY_REGION;
 #[derive(Debug, Copy, Clone)]
 pub struct xTASK_PARAMETERS {
     pub pvTaskCode: TaskFunction_t,
-    pub pcName: *mut ::std::os::raw::c_char,
+    pub pcName: *mut bindgen_ctypes::c_char,
     pub usStackDepth: u32,
-    pub pvParameters: *mut ::core::ffi::c_void,
+    pub pvParameters: *mut bindgen_ctypes::c_void,
     pub uxPriority: UBaseType_t,
     pub puxStackBuffer: *mut StackType_t,
     pub xRegions: [MemoryRegion_t; 1usize],
@@ -8810,7 +8834,7 @@ pub struct xTASK_STATUS {
     #[doc = "< The handle of the task to which the rest of the information in the structure relates."]
     pub xHandle: TaskHandle_t,
     #[doc = "< A pointer to the task's name.  This value will be invalid if the task was deleted since the structure was populated!"]
-    pub pcTaskName: *mut ::std::os::raw::c_char,
+    pub pcTaskName: *mut bindgen_ctypes::c_char,
     #[doc = "< A number unique to the task."]
     pub xTaskNumber: UBaseType_t,
     #[doc = "< The state in which the task existed when the structure was populated."]
@@ -8834,7 +8858,7 @@ pub type TaskStatus_t = xTASK_STATUS;
 #[derive(Debug, Copy, Clone)]
 pub struct xTASK_SNAPSHOT {
     #[doc = "< Address of task control block."]
-    pub pxTCB: *mut ::core::ffi::c_void,
+    pub pxTCB: *mut bindgen_ctypes::c_void,
     #[doc = "< Points to the location of the last item placed on the tasks stack."]
     pub pxTopOfStack: *mut StackType_t,
     #[doc = "< Points to the end of the stack. pxTopOfStack < pxEndOfStack, stack grows hi2lo"]
@@ -8851,13 +8875,13 @@ pub const eSleepModeStatus_eStandardSleep: eSleepModeStatus = 1;
 #[doc = "< No tasks are waiting for a timeout so it is safe to enter a sleep mode that can only be exited by an external interrupt."]
 pub const eSleepModeStatus_eNoTasksWaitingTimeout: eSleepModeStatus = 2;
 #[doc = " Possible return values for eTaskConfirmSleepModeStatus()."]
-pub type eSleepModeStatus = ::std::os::raw::c_int;
+pub type eSleepModeStatus = bindgen_ctypes::c_int;
 extern "C" {
     pub fn xTaskCreatePinnedToCore(
         pvTaskCode: TaskFunction_t,
-        pcName: *mut ::std::os::raw::c_char,
+        pcName: *mut bindgen_ctypes::c_char,
         usStackDepth: u32,
-        pvParameters: *mut ::core::ffi::c_void,
+        pvParameters: *mut bindgen_ctypes::c_void,
         uxPriority: UBaseType_t,
         pvCreatedTask: *mut TaskHandle_t,
         xCoreID: BaseType_t,
@@ -9483,7 +9507,7 @@ extern "C" {
     #[doc = " set to 1 in FreeRTOSConfig.h for pcTaskGetTaskName() to be available."]
     #[doc = ""]
     #[doc = " \\ingroup TaskUtils"]
-    pub fn pcTaskGetTaskName(xTaskToQuery: TaskHandle_t) -> *mut ::std::os::raw::c_char;
+    pub fn pcTaskGetTaskName(xTaskToQuery: TaskHandle_t) -> *mut bindgen_ctypes::c_char;
 }
 extern "C" {
     #[doc = " Returns the high water mark of the stack associated with xTask."]
@@ -9534,7 +9558,7 @@ extern "C" {
     pub fn vTaskSetThreadLocalStoragePointer(
         xTaskToSet: TaskHandle_t,
         xIndex: BaseType_t,
-        pvValue: *mut ::core::ffi::c_void,
+        pvValue: *mut bindgen_ctypes::c_void,
     );
 }
 extern "C" {
@@ -9552,11 +9576,11 @@ extern "C" {
     pub fn pvTaskGetThreadLocalStoragePointer(
         xTaskToQuery: TaskHandle_t,
         xIndex: BaseType_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 #[doc = " Prototype of local storage pointer deletion callback."]
 pub type TlsDeleteCallbackFunction_t = ::core::option::Option<
-    unsafe extern "C" fn(arg1: ::std::os::raw::c_int, arg2: *mut ::core::ffi::c_void),
+    unsafe extern "C" fn(arg1: bindgen_ctypes::c_int, arg2: *mut bindgen_ctypes::c_void),
 >;
 extern "C" {
     #[doc = " Set local storage pointer and deletion callback."]
@@ -9583,7 +9607,7 @@ extern "C" {
     pub fn vTaskSetThreadLocalStoragePointerAndDelCallback(
         xTaskToSet: TaskHandle_t,
         xIndex: BaseType_t,
-        pvValue: *mut ::core::ffi::c_void,
+        pvValue: *mut bindgen_ctypes::c_void,
         pvDelCallback: TlsDeleteCallbackFunction_t,
     );
 }
@@ -9597,7 +9621,7 @@ extern "C" {
     #[doc = " registered by the user."]
     pub fn xTaskCallApplicationTaskHook(
         xTask: TaskHandle_t,
-        pvParameter: *mut ::core::ffi::c_void,
+        pvParameter: *mut bindgen_ctypes::c_void,
     ) -> BaseType_t;
 }
 extern "C" {
@@ -9766,7 +9790,7 @@ extern "C" {
     #[doc = " task should be sufficient."]
     #[doc = ""]
     #[doc = " \\ingroup TaskUtils"]
-    pub fn vTaskList(pcWriteBuffer: *mut ::std::os::raw::c_char);
+    pub fn vTaskList(pcWriteBuffer: *mut bindgen_ctypes::c_char);
 }
 extern "C" {
     #[doc = " Get the state of running tasks as a string"]
@@ -9815,7 +9839,7 @@ extern "C" {
     #[doc = " be sufficient."]
     #[doc = ""]
     #[doc = " \\ingroup TaskUtils"]
-    pub fn vTaskGetRunTimeStats(pcWriteBuffer: *mut ::std::os::raw::c_char);
+    pub fn vTaskGetRunTimeStats(pcWriteBuffer: *mut bindgen_ctypes::c_char);
 }
 extern "C" {
     #[doc = " Send task notification."]
@@ -10257,7 +10281,7 @@ extern "C" {
     pub fn eTaskConfirmSleepModeStatus() -> eSleepModeStatus;
 }
 extern "C" {
-    pub fn pvTaskIncrementMutexHeldCount() -> *mut ::core::ffi::c_void;
+    pub fn pvTaskIncrementMutexHeldCount() -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     pub fn uxTaskGetSnapshotAll(
@@ -10269,7 +10293,7 @@ extern "C" {
 #[doc = " Type by which ring buffers are referenced. For example, a call to xRingbufferCreate()"]
 #[doc = " returns a RingbufHandle_t variable that can then be used as a parameter to"]
 #[doc = " xRingbufferSend(), xRingbufferReceive(), etc."]
-pub type RingbufHandle_t = *mut ::core::ffi::c_void;
+pub type RingbufHandle_t = *mut bindgen_ctypes::c_void;
 #[doc = " No-split buffers will only store an item in contiguous memory and will"]
 #[doc = " never split an item. Each item requires an 8 byte overhead for a header"]
 #[doc = " and will always internally occupy a 32-bit aligned size of space."]
@@ -10289,7 +10313,7 @@ pub const RingbufferType_t_RINGBUF_TYPE_BYTEBUF: RingbufferType_t = 2;
 #[doc = " sequence of byte and any number of bytes can be sent or retrieved each"]
 #[doc = " time."]
 pub const RingbufferType_t_RINGBUF_TYPE_MAX: RingbufferType_t = 3;
-pub type RingbufferType_t = ::std::os::raw::c_int;
+pub type RingbufferType_t = bindgen_ctypes::c_int;
 extern "C" {
     #[doc = " @brief       Create a ring buffer"]
     #[doc = ""]
@@ -10336,7 +10360,7 @@ extern "C" {
     #[doc = "      - pdFALSE on time-out or when the data is larger than the maximum permissible size of the buffer"]
     pub fn xRingbufferSend(
         xRingbuffer: RingbufHandle_t,
-        pvItem: *mut ::core::ffi::c_void,
+        pvItem: *mut bindgen_ctypes::c_void,
         xItemSize: size_t,
         xTicksToWait: TickType_t,
     ) -> BaseType_t;
@@ -10362,7 +10386,7 @@ extern "C" {
     #[doc = "      - pdFALSE when the ring buffer does not have space."]
     pub fn xRingbufferSendFromISR(
         xRingbuffer: RingbufHandle_t,
-        pvItem: *mut ::core::ffi::c_void,
+        pvItem: *mut bindgen_ctypes::c_void,
         xItemSize: size_t,
         pxHigherPriorityTaskWoken: *mut BaseType_t,
     ) -> BaseType_t;
@@ -10394,7 +10418,7 @@ extern "C" {
     #[doc = "      - pdFALSE on time-out or when the data is larger than the maximum permissible size of the buffer"]
     pub fn xRingbufferSendAcquire(
         xRingbuffer: RingbufHandle_t,
-        ppvItem: *mut *mut ::core::ffi::c_void,
+        ppvItem: *mut *mut bindgen_ctypes::c_void,
         xItemSize: size_t,
         xTicksToWait: TickType_t,
     ) -> BaseType_t;
@@ -10414,7 +10438,7 @@ extern "C" {
     #[doc = "      - pdFALSE if fail for some reason."]
     pub fn xRingbufferSendComplete(
         xRingbuffer: RingbufHandle_t,
-        pvItem: *mut ::core::ffi::c_void,
+        pvItem: *mut bindgen_ctypes::c_void,
     ) -> BaseType_t;
 }
 extern "C" {
@@ -10436,7 +10460,7 @@ extern "C" {
         xRingbuffer: RingbufHandle_t,
         pxItemSize: *mut size_t,
         xTicksToWait: TickType_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief   Retrieve an item from the ring buffer in an ISR"]
@@ -10457,7 +10481,7 @@ extern "C" {
     pub fn xRingbufferReceiveFromISR(
         xRingbuffer: RingbufHandle_t,
         pxItemSize: *mut size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief   Retrieve a split item from an allow-split ring buffer"]
@@ -10482,8 +10506,8 @@ extern "C" {
     #[doc = "      - pdFALSE when no item was retrieved"]
     pub fn xRingbufferReceiveSplit(
         xRingbuffer: RingbufHandle_t,
-        ppvHeadItem: *mut *mut ::core::ffi::c_void,
-        ppvTailItem: *mut *mut ::core::ffi::c_void,
+        ppvHeadItem: *mut *mut bindgen_ctypes::c_void,
+        ppvTailItem: *mut *mut bindgen_ctypes::c_void,
         pxHeadItemSize: *mut size_t,
         pxTailItemSize: *mut size_t,
         xTicksToWait: TickType_t,
@@ -10511,8 +10535,8 @@ extern "C" {
     #[doc = "      - pdFALSE when no item was retrieved"]
     pub fn xRingbufferReceiveSplitFromISR(
         xRingbuffer: RingbufHandle_t,
-        ppvHeadItem: *mut *mut ::core::ffi::c_void,
-        ppvTailItem: *mut *mut ::core::ffi::c_void,
+        ppvHeadItem: *mut *mut bindgen_ctypes::c_void,
+        ppvTailItem: *mut *mut bindgen_ctypes::c_void,
         pxHeadItemSize: *mut size_t,
         pxTailItemSize: *mut size_t,
     ) -> BaseType_t;
@@ -10542,7 +10566,7 @@ extern "C" {
         pxItemSize: *mut size_t,
         xTicksToWait: TickType_t,
         xMaxSize: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief   Retrieve bytes from a byte buffer, specifying the maximum amount of"]
@@ -10568,7 +10592,7 @@ extern "C" {
         xRingbuffer: RingbufHandle_t,
         pxItemSize: *mut size_t,
         xMaxSize: size_t,
-    ) -> *mut ::core::ffi::c_void;
+    ) -> *mut bindgen_ctypes::c_void;
 }
 extern "C" {
     #[doc = " @brief   Return a previously-retrieved item to the ring buffer"]
@@ -10577,7 +10601,7 @@ extern "C" {
     #[doc = " @param[in]   pvItem      Item that was received earlier"]
     #[doc = ""]
     #[doc = " @note    If a split item is retrieved, both parts should be returned by calling this function twice"]
-    pub fn vRingbufferReturnItem(xRingbuffer: RingbufHandle_t, pvItem: *mut ::core::ffi::c_void);
+    pub fn vRingbufferReturnItem(xRingbuffer: RingbufHandle_t, pvItem: *mut bindgen_ctypes::c_void);
 }
 extern "C" {
     #[doc = " @brief   Return a previously-retrieved item to the ring buffer from an ISR"]
@@ -10590,7 +10614,7 @@ extern "C" {
     #[doc = " @note    If a split item is retrieved, both parts should be returned by calling this function twice"]
     pub fn vRingbufferReturnItemFromISR(
         xRingbuffer: RingbufHandle_t,
-        pvItem: *mut ::core::ffi::c_void,
+        pvItem: *mut bindgen_ctypes::c_void,
         pxHigherPriorityTaskWoken: *mut BaseType_t,
     );
 }
@@ -10722,7 +10746,7 @@ extern "C" {
     pub fn xRingbufferPrintInfo(xRingbuffer: RingbufHandle_t);
 }
 #[doc = " @brief UART port number, can be UART_NUM_0 ~ (UART_NUM_MAX -1)."]
-pub type uart_port_t = ::std::os::raw::c_int;
+pub type uart_port_t = bindgen_ctypes::c_int;
 #[doc = "< mode: regular UART mode"]
 pub const uart_mode_t_UART_MODE_UART: uart_mode_t = 0;
 #[doc = "< mode: half duplex RS485 UART mode control by RTS pin"]
@@ -10734,7 +10758,7 @@ pub const uart_mode_t_UART_MODE_RS485_COLLISION_DETECT: uart_mode_t = 3;
 #[doc = "< mode: application control RS485 UART mode (used for test purposes)"]
 pub const uart_mode_t_UART_MODE_RS485_APP_CTRL: uart_mode_t = 4;
 #[doc = " @brief UART mode selection"]
-pub type uart_mode_t = ::std::os::raw::c_int;
+pub type uart_mode_t = bindgen_ctypes::c_int;
 #[doc = "< word length: 5bits"]
 pub const uart_word_length_t_UART_DATA_5_BITS: uart_word_length_t = 0;
 #[doc = "< word length: 6bits"]
@@ -10745,7 +10769,7 @@ pub const uart_word_length_t_UART_DATA_7_BITS: uart_word_length_t = 2;
 pub const uart_word_length_t_UART_DATA_8_BITS: uart_word_length_t = 3;
 pub const uart_word_length_t_UART_DATA_BITS_MAX: uart_word_length_t = 4;
 #[doc = " @brief UART word length constants"]
-pub type uart_word_length_t = ::std::os::raw::c_int;
+pub type uart_word_length_t = bindgen_ctypes::c_int;
 #[doc = "< stop bit: 1bit"]
 pub const uart_stop_bits_t_UART_STOP_BITS_1: uart_stop_bits_t = 1;
 #[doc = "< stop bit: 1.5bits"]
@@ -10754,7 +10778,7 @@ pub const uart_stop_bits_t_UART_STOP_BITS_1_5: uart_stop_bits_t = 2;
 pub const uart_stop_bits_t_UART_STOP_BITS_2: uart_stop_bits_t = 3;
 pub const uart_stop_bits_t_UART_STOP_BITS_MAX: uart_stop_bits_t = 4;
 #[doc = " @brief UART stop bits number"]
-pub type uart_stop_bits_t = ::std::os::raw::c_int;
+pub type uart_stop_bits_t = bindgen_ctypes::c_int;
 #[doc = "< Disable UART parity"]
 pub const uart_parity_t_UART_PARITY_DISABLE: uart_parity_t = 0;
 #[doc = "< Enable UART even parity"]
@@ -10762,7 +10786,7 @@ pub const uart_parity_t_UART_PARITY_EVEN: uart_parity_t = 2;
 #[doc = "< Enable UART odd parity"]
 pub const uart_parity_t_UART_PARITY_ODD: uart_parity_t = 3;
 #[doc = " @brief UART parity constants"]
-pub type uart_parity_t = ::std::os::raw::c_int;
+pub type uart_parity_t = bindgen_ctypes::c_int;
 #[doc = "< disable hardware flow control"]
 pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_DISABLE: uart_hw_flowcontrol_t = 0;
 #[doc = "< enable RX hardware flow control (rts)"]
@@ -10773,7 +10797,7 @@ pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_CTS: uart_hw_flowcontrol_t = 2;
 pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_CTS_RTS: uart_hw_flowcontrol_t = 3;
 pub const uart_hw_flowcontrol_t_UART_HW_FLOWCTRL_MAX: uart_hw_flowcontrol_t = 4;
 #[doc = " @brief UART hardware flow control modes"]
-pub type uart_hw_flowcontrol_t = ::std::os::raw::c_int;
+pub type uart_hw_flowcontrol_t = bindgen_ctypes::c_int;
 #[doc = "< Disable UART signal inverse"]
 pub const uart_signal_inv_t_UART_SIGNAL_INV_DISABLE: uart_signal_inv_t = 0;
 #[doc = "< inverse the UART irda_tx signal"]
@@ -10793,13 +10817,13 @@ pub const uart_signal_inv_t_UART_SIGNAL_RTS_INV: uart_signal_inv_t = 64;
 #[doc = "< inverse the UART dtr signal"]
 pub const uart_signal_inv_t_UART_SIGNAL_DTR_INV: uart_signal_inv_t = 128;
 #[doc = " @brief UART signal bit map"]
-pub type uart_signal_inv_t = ::std::os::raw::c_int;
+pub type uart_signal_inv_t = bindgen_ctypes::c_int;
 #[doc = "< UART source clock from APB"]
 pub const uart_sclk_t_UART_SCLK_APB: uart_sclk_t = 0;
 #[doc = "< UART source clock from REF_TICK"]
 pub const uart_sclk_t_UART_SCLK_REF_TICK: uart_sclk_t = 1;
 #[doc = " @brief UART source clock"]
-pub type uart_sclk_t = ::std::os::raw::c_int;
+pub type uart_sclk_t = bindgen_ctypes::c_int;
 #[doc = " @brief UART AT cmd char configuration parameters"]
 #[doc = "        Note that this function may different on different chip. Please refer to the TRM at confirguration."]
 #[repr(C)]
@@ -10834,7 +10858,7 @@ pub struct uart_sw_flowctrl_t {
 #[derive(Copy, Clone)]
 pub struct uart_config_t {
     #[doc = "< UART baud rate"]
-    pub baud_rate: ::std::os::raw::c_int,
+    pub baud_rate: bindgen_ctypes::c_int,
     #[doc = "< UART byte size"]
     pub data_bits: uart_word_length_t,
     #[doc = "< UART parity mode"]
@@ -10888,7 +10912,7 @@ pub const uart_event_type_t_UART_PATTERN_DET: uart_event_type_t = 7;
 #[doc = "< UART event max index"]
 pub const uart_event_type_t_UART_EVENT_MAX: uart_event_type_t = 8;
 #[doc = " @brief UART event types used in the ring buffer"]
-pub type uart_event_type_t = ::std::os::raw::c_int;
+pub type uart_event_type_t = bindgen_ctypes::c_int;
 #[doc = " @brief Event structure used in UART event queue"]
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -10924,11 +10948,11 @@ extern "C" {
     #[doc = "     - ESP_FAIL Parameter error"]
     pub fn uart_driver_install(
         uart_num: uart_port_t,
-        rx_buffer_size: ::std::os::raw::c_int,
-        tx_buffer_size: ::std::os::raw::c_int,
-        queue_size: ::std::os::raw::c_int,
+        rx_buffer_size: bindgen_ctypes::c_int,
+        tx_buffer_size: bindgen_ctypes::c_int,
+        queue_size: bindgen_ctypes::c_int,
         uart_queue: *mut QueueHandle_t,
-        intr_alloc_flags: ::std::os::raw::c_int,
+        intr_alloc_flags: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11180,8 +11204,8 @@ extern "C" {
     #[doc = "     - ESP_FAIL Parameter error"]
     pub fn uart_enable_tx_intr(
         uart_num: uart_port_t,
-        enable: ::std::os::raw::c_int,
-        thresh: ::std::os::raw::c_int,
+        enable: bindgen_ctypes::c_int,
+        thresh: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11202,9 +11226,9 @@ extern "C" {
     #[doc = "     - ESP_FAIL Parameter error"]
     pub fn uart_isr_register(
         uart_num: uart_port_t,
-        fn_: ::core::option::Option<unsafe extern "C" fn(arg1: *mut ::core::ffi::c_void)>,
-        arg: *mut ::core::ffi::c_void,
-        intr_alloc_flags: ::std::os::raw::c_int,
+        fn_: ::core::option::Option<unsafe extern "C" fn(arg1: *mut bindgen_ctypes::c_void)>,
+        arg: *mut bindgen_ctypes::c_void,
+        intr_alloc_flags: bindgen_ctypes::c_int,
         handle: *mut uart_isr_handle_t,
     ) -> esp_err_t;
 }
@@ -11239,10 +11263,10 @@ extern "C" {
     #[doc = "     - ESP_FAIL Parameter error"]
     pub fn uart_set_pin(
         uart_num: uart_port_t,
-        tx_io_num: ::std::os::raw::c_int,
-        rx_io_num: ::std::os::raw::c_int,
-        rts_io_num: ::std::os::raw::c_int,
-        cts_io_num: ::std::os::raw::c_int,
+        tx_io_num: bindgen_ctypes::c_int,
+        rx_io_num: bindgen_ctypes::c_int,
+        rts_io_num: bindgen_ctypes::c_int,
+        cts_io_num: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11255,7 +11279,7 @@ extern "C" {
     #[doc = " @return"]
     #[doc = "     - ESP_OK   Success"]
     #[doc = "     - ESP_FAIL Parameter error"]
-    pub fn uart_set_rts(uart_num: uart_port_t, level: ::std::os::raw::c_int) -> esp_err_t;
+    pub fn uart_set_rts(uart_num: uart_port_t, level: bindgen_ctypes::c_int) -> esp_err_t;
 }
 extern "C" {
     #[doc = " @brief Manually set the UART DTR pin level."]
@@ -11266,7 +11290,7 @@ extern "C" {
     #[doc = " @return"]
     #[doc = "     - ESP_OK   Success"]
     #[doc = "     - ESP_FAIL Parameter error"]
-    pub fn uart_set_dtr(uart_num: uart_port_t, level: ::std::os::raw::c_int) -> esp_err_t;
+    pub fn uart_set_dtr(uart_num: uart_port_t, level: bindgen_ctypes::c_int) -> esp_err_t;
 }
 extern "C" {
     #[doc = " @brief Set UART idle interval after tx FIFO is empty"]
@@ -11330,9 +11354,9 @@ extern "C" {
     #[doc = "     - OTHERS (>=0) The number of bytes pushed to the TX FIFO"]
     pub fn uart_tx_chars(
         uart_num: uart_port_t,
-        buffer: *mut ::std::os::raw::c_char,
+        buffer: *mut bindgen_ctypes::c_char,
         len: u32,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Send data to the UART port from a given buffer and length,"]
@@ -11352,9 +11376,9 @@ extern "C" {
     #[doc = "     - OTHERS (>=0) The number of bytes pushed to the TX FIFO"]
     pub fn uart_write_bytes(
         uart_num: uart_port_t,
-        src: *mut ::std::os::raw::c_char,
+        src: *mut bindgen_ctypes::c_char,
         size: size_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Send data to the UART port from a given buffer and length,"]
@@ -11377,10 +11401,10 @@ extern "C" {
     #[doc = "     - OTHERS (>=0) The number of bytes pushed to the TX FIFO"]
     pub fn uart_write_bytes_with_break(
         uart_num: uart_port_t,
-        src: *mut ::std::os::raw::c_char,
+        src: *mut bindgen_ctypes::c_char,
         size: size_t,
-        brk_len: ::std::os::raw::c_int,
-    ) -> ::std::os::raw::c_int;
+        brk_len: bindgen_ctypes::c_int,
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief UART read bytes from UART buffer"]
@@ -11398,7 +11422,7 @@ extern "C" {
         buf: *mut u8,
         length: u32,
         ticks_to_wait: TickType_t,
-    ) -> ::std::os::raw::c_int;
+    ) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Alias of uart_flush_input."]
@@ -11467,11 +11491,11 @@ extern "C" {
     #[doc = "     - ESP_FAIL Parameter error"]
     pub fn uart_enable_pattern_det_intr(
         uart_num: uart_port_t,
-        pattern_chr: ::std::os::raw::c_char,
+        pattern_chr: bindgen_ctypes::c_char,
         chr_num: u8,
-        chr_tout: ::std::os::raw::c_int,
-        post_idle: ::std::os::raw::c_int,
-        pre_idle: ::std::os::raw::c_int,
+        chr_tout: bindgen_ctypes::c_int,
+        post_idle: bindgen_ctypes::c_int,
+        pre_idle: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11494,11 +11518,11 @@ extern "C" {
     #[doc = "     - ESP_FAIL Parameter error"]
     pub fn uart_enable_pattern_det_baud_intr(
         uart_num: uart_port_t,
-        pattern_chr: ::std::os::raw::c_char,
+        pattern_chr: bindgen_ctypes::c_char,
         chr_num: u8,
-        chr_tout: ::std::os::raw::c_int,
-        post_idle: ::std::os::raw::c_int,
-        pre_idle: ::std::os::raw::c_int,
+        chr_tout: bindgen_ctypes::c_int,
+        post_idle: bindgen_ctypes::c_int,
+        pre_idle: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11517,7 +11541,7 @@ extern "C" {
     #[doc = " @return"]
     #[doc = "     - (-1) No pattern found for current index or parameter error"]
     #[doc = "     - others the pattern position in rx buffer."]
-    pub fn uart_pattern_pop_pos(uart_num: uart_port_t) -> ::std::os::raw::c_int;
+    pub fn uart_pattern_pop_pos(uart_num: uart_port_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Return the nearest detected pattern position in buffer."]
@@ -11535,7 +11559,7 @@ extern "C" {
     #[doc = " @return"]
     #[doc = "     - (-1) No pattern found for current index or parameter error"]
     #[doc = "     - others the pattern position in rx buffer."]
-    pub fn uart_pattern_get_pos(uart_num: uart_port_t) -> ::std::os::raw::c_int;
+    pub fn uart_pattern_get_pos(uart_num: uart_port_t) -> bindgen_ctypes::c_int;
 }
 extern "C" {
     #[doc = " @brief Allocate a new memory with the given length to save record the detected pattern position in rx buffer."]
@@ -11551,7 +11575,7 @@ extern "C" {
     #[doc = "     - ESP_OK Success"]
     pub fn uart_pattern_queue_reset(
         uart_num: uart_port_t,
-        queue_length: ::std::os::raw::c_int,
+        queue_length: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11580,7 +11604,7 @@ extern "C" {
     #[doc = "     - ESP_ERR_INVALID_STATE Driver is not installed"]
     pub fn uart_set_rx_full_threshold(
         uart_num: uart_port_t,
-        threshold: ::std::os::raw::c_int,
+        threshold: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11595,7 +11619,7 @@ extern "C" {
     #[doc = "     - ESP_ERR_INVALID_STATE Driver is not installed"]
     pub fn uart_set_tx_empty_threshold(
         uart_num: uart_port_t,
-        threshold: ::std::os::raw::c_int,
+        threshold: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11661,7 +11685,7 @@ extern "C" {
     #[doc = "        outside of [3, 0x3ff] range."]
     pub fn uart_set_wakeup_threshold(
         uart_num: uart_port_t,
-        wakeup_threshold: ::std::os::raw::c_int,
+        wakeup_threshold: bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11678,7 +11702,7 @@ extern "C" {
     #[doc = "      - ESP_ERR_INVALID_ARG if out_wakeup_threshold is NULL"]
     pub fn uart_get_wakeup_threshold(
         uart_num: uart_port_t,
-        out_wakeup_threshold: *mut ::std::os::raw::c_int,
+        out_wakeup_threshold: *mut bindgen_ctypes::c_int,
     ) -> esp_err_t;
 }
 extern "C" {
@@ -11717,4 +11741,4 @@ extern "C" {
     #[doc = ""]
     pub fn uart_set_always_rx_timeout(uart_num: uart_port_t, always_rx_timeout_en: bool);
 }
-pub type __builtin_va_list = *mut ::std::os::raw::c_char;
+pub type __builtin_va_list = *mut bindgen_ctypes::c_char;

@@ -77,6 +77,7 @@ class BuildBindgen(object):
         # Bindgen options
         cmdopts = [self.BINDGEN]
         cmdopts += ["--use-core", "--no-layout-tests"]
+        cmdopts += ["--ctypes-prefix=bindgen_ctypes"]
         cmdopts += ["--output", "src/bindings.rs"]
         cmdopts += ["src/bindings.h", "--"]
 

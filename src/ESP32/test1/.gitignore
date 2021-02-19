@@ -3,3 +3,5 @@
 
 # Cargo package versions
 Cargo.lock
+
+/bin

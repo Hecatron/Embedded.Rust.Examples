@@ -4,16 +4,22 @@ This is a bunch of docs I've created for how to get the ESP32 working with rust
 Some of this is based on the xtensa-rust-quickstart
 
   * [Hardware](./Hardware.md)
-  * [Installation of Tools](./Install.md)
-  * [Building the toolchain](./ToolchainBuild.md)
 
-  * [Building the Source](./Build.md)
-  * [Flashing to the Board](./Flashing.md)
+## Setup
 
-  * [JTag Setup](./JTagSetup.md)
-  * [Debugging using JTag](./Debug.md)
+  * [Installation of Tools](./Setup/Install.md)
+  * [Building the toolchain](./Setup/ToolchainBuild.md)
+  * [VSCode Setup](./Setup/VSCode.md)
 
-  * [VSCode Setup](./VSCode.md)
+## Develop
+
+  * [Building the Source](./Develop/Build.md)
+
+## Debugging
+
+  * [Flashing to the Board](./Debug/Flashing.md)
+  * [JTag Setup](./Debug/JTagSetup.md)
+  * [Debugging using JTag](./Debug/Debug.md)
 
 ## Links
 
@@ -33,6 +39,7 @@ Some of this is based on the xtensa-rust-quickstart
 
 ## Examples
 
+  * https://github.com/ivmarkov/rust-esp32-std-demo
   * https://github.com/esp-rs/esp32-hal/tree/master/examples
   * https://dentrassi.de/2019/06/16/rust-on-the-esp-and-how-to-get-started/
   * https://github.com/lexxvir/esp32-hello

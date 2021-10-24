@@ -21,3 +21,9 @@ https://github.com/mettke/cargo-patch
   * https://stackoverflow.com/questions/48967583/how-to-get-executables-full-target-triple-as-a-compile-time-constant-without-us
 
 note doesn't work with vscode as we don't have a custom rustc option yet
+
+## Other Links
+
+  * https://github.com/espressif/rust-esp32-example
+  * https://github.com/orgs/esp-rs/repositories
+  * https://github.com/esp-rs/esp-idf-svc

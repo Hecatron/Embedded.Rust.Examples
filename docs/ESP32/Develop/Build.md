@@ -32,6 +32,26 @@ cargo install cargo-xbuild
 rustup component add rust-src
 ```
 
+## Updating
+
+There are two forms of package within rust
+crates handled by cargo and components handled by rustup typically for the compiler
+
+To update the rust compiler from an older version using rustup
+```
+# Update the rust compiler
+rustup update
+```
+
+To update global cargo crates
+```
+# Make sure this is installed
+cargo install cargo-update
+
+# Update all global crates
+cargo install-update -a
+```
+
 
 ## Building
 

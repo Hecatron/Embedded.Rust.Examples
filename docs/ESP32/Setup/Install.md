@@ -1,6 +1,5 @@
 # Install
 
-
 ## Build Tools
 
 ### Cargo xbuild
@@ -26,7 +25,7 @@ One of the tools we'll need is the version of gcc for the esp32
 Download and extract the following then add to you're path
 
   * https://github.com/espressif/crosstool-NG/releases
-  * For Windows: xtensa-esp32-elf-gcc8_4_0-esp-2020r3-win64.zip
+  * For Windows: xtensa-esp32-elf-gcc8_4_0-esp-2021r2-win64.zip
 
 For example if you extracted it to C:Apps\ then you'd need to add the following to your path under windows
 C:\Apps\xtensa-esp32-elf\bin

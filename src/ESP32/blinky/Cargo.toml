@@ -18,19 +18,3 @@ default = ["xtensa-lx-rt/lx6", "xtensa-lx/lx6", "esp32-hal"]
 [[bin]]
 name = "blinky"
 required-features = ["xtensa-lx-rt/lx6", "xtensa-lx/lx6", "esp32-hal"]
-
-# Todo remove after moving to cargo proper
-# [package.metadata.cargo-xbuild]
-
-# We use mem functions from esp32 hal
-# memcpy = false
-
-# Saves 24Kb in size
-# panic_immediate_abort = true
-
-# TODO
-# https://github.com/rust-osdev/cargo-xbuild/issues/55
-# https://github.com/rust-lang/rust/issues/54981
-# cargo build --release
-# Saves 24Kb in size
-# cargo build -Z build-std=std,panic_abort -Z build-std-features=panic_immediate_abort --release

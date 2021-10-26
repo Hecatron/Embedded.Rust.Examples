@@ -1,9 +1,8 @@
+# Cargo Make Task runner
+# Run via "cargo make build"
+
 # Read in the settings
 extend = "./.cargo/env-settings.toml"
-
-[tasks.install-rust-src]
-description = "install rust-src via rustup component add"
-install_crate = { rustup_component_name = "rust-src" }
 
 [tasks.format]
 description = "reformat the rust code using rustfmt"
@@ -14,41 +13,35 @@ args = ["fmt", "--", "--emit=files"]
 [tasks.build]
 description = "build the source in debug mode - ESP32"
 command = "cargo"
-dependencies = [ "install-rust-src" ]
-args = ["xbuild", "${@}"]
+args = ["build", "${@}"]
 category = "ESP32-Build"
 
 [tasks.build-release]
 description = "build the source in release mode - ESP32"
 command = "cargo"
-dependencies = [ "install-rust-src" ]
-args = ["xbuild", "--release", "${@}"]
+args = ["build", "--release", "${@}"]
 category = "ESP32-Build"
 
 [tasks.flash-build]
 description = "build the source in debug mode and upload to the flash - ESP32"
 command = "cargo"
-dependencies = [ "install-rust-src" ]
 args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "${ESP32_FLASH_SERIAL}", "${@}"]
 category = "ESP32-Build"
 
 [tasks.flash-build-release]
 description = "build the source in release mode and upload to the flash - ESP32"
 command = "cargo"
-dependencies = [ "install-rust-src" ]
 args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "--release", "${ESP32_FLASH_SERIAL}", "${@}"]
 category = "ESP32-Build"
 
 [tasks.esp32-flashid]
 description = "Get the flashid / details from the esp32"
 command = "esptool"
-dependencies = [ "install-rust-src" ]
 args = ["--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "flash_id", "${@}"]
 category = "ESP32-Flash"
 
 [tasks.esp32-eraseflash]
 description = "Erase the flash on the ESP32"
 command = "esptool"
-dependencies = [ "install-rust-src" ]
 args = ["--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "erase_flash", "${@}"]
 category = "ESP32-Flash"

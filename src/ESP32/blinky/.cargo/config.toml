@@ -1,6 +1,3 @@
-# Todo rename this file to config.toml
-# after moving from cargo xbuild to cargo build using build-std
-
 [build]
 target = "xtensa-esp32-none-elf"
 

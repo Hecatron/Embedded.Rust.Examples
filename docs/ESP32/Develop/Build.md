@@ -14,6 +14,16 @@ cargo-xbuild replaced xargo and used to be the best option for the esp32
 Native cargo now seems to work ok for the esp32 due to some underlying lib changed.
 So it's best to just use this now.
 
+## Switching toolchains
+
+first we need to make sure we're on the esp toolchain
+```
+# To switch to the custom esp toolchain that is installed
+rustup default esp
+# to switch back to the stable x86 toolchain
+rustup default stable
+``
+
 
 ## Building
 

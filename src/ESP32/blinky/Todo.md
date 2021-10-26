@@ -29,3 +29,27 @@ Cargo includes the following additional libs or it might be the additional memor
    Compiling rustc-std-workspace-core v1.99.0 (D:\SourceCode\External\rust-xtensa\build\x86_64-pc-windows-msvc\stage2\lib\rustlib\src\rust\library\rustc-std-workspace-core)
 ```
 Size increased from 473Kb to 573Kb for release
+
+
+## Flashing tool broken
+
+esptool --chip esp32 -p COM4 flash_id
+cargo espflash --chip=esp32 COM4 board-info
+
+https://lib.rs/crates/cargo-espflash
+
+cargo install -f cargo-espflash --version 0.1.1
+
+
+version 0.1.3 board info works
+cargo espflash --board-info COM4
+
+
+
+
+TODO try this
+
+https://github.com/ctron/rust-esp32-hono
+
+esptool.py --chip esp32 elf2image target/xtensa-esp32-none-elf/release/blinky
+esptool.py --chip esp32 --baud 115200 --port COM4 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 ../bootloader/esp32-bootloader.bin 0x8000 ../bootloader/partitions.bin 0x10000 target/xtensa-esp32-none-elf/release/blinky.bin

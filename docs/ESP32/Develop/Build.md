@@ -4,80 +4,49 @@
 
 Currently there are 3 different build systems for rust
 
-  * cargo - the original build system (depreciated)
+  * cargo - the original build system
   * xargo - a modified version of cargo for embedded builds (depreciated)
-  * cargo xbuild - a variant based on xargo
+  * cargo xbuild - a variant based on xargo (depreciated)
 
 xargo is now under maintenance mode so should be avoided for now.
-cargo-xbuild has replaced xargo and is what I'm using at the moment for the esp32
+cargo-xbuild replaced xargo and used to be the best option for the esp32
 
-However cargo-xbuild recommends using the original cargo in build-std mode
-Unfortunatly I've not quite managed to get build-std mode working yet for the esp32
-So cargo xbuild is used here untill the bugs are sorted out
-
-In order to build the source from the command line
-
-## Setup
-
-First the setup
-```
-# Note if we decide to switch to cargo build instead of cargo.xbuild later on
-# Then the nightly version of cargo is needed for custom rustc to be used via .config/config.toml
-rustup default nightly
-
-# For now use cargo-xbuild until the mem issue with esp32-hal / compiler-builtins is fixed
-cargo install cargo-xbuild
-
-# Make sure this is installed on the system
-rustup component add rust-src
-```
-
-## Updating
-
-There are two forms of package within rust
-crates handled by cargo and components handled by rustup typically for the compiler
-
-To update the rust compiler from an older version using rustup
-```
-# Update the rust compiler
-rustup update
-```
-
-To update global cargo crates
-```
-# Make sure this is installed
-cargo install cargo-update
-
-# Update all global crates
-cargo install-update -a
-```
+Native cargo now seems to work ok for the esp32 due to some underlying lib changed.
+So it's best to just use this now.
 
 
 ## Building
 
-To build
+Building should be as simple as the following within the source directory
 ```
-# Set Backtrace
+# Set Backtrace, this displays additional info on build / test failure
 set export RUST_BACKTRACE=1
 
 # To clean
 cargo clean
 
-# We should be able to get rid of these once these can be placed into .cargo/cargo.toml
-# when using cargo build instead of cargo xbuild
-set XARGO_RUST_SRC=D:\SourceCode\External\rust-xtensa\library
-set RUSTC=D:\SourceCode\External\rust-xtensa\build\x86_64-pc-windows-msvc\stage2\bin\rustc
-set RUSTDOC=D:\SourceCode\External\rust-xtensa\build\x86_64-pc-windows-msvc\stage2\bin\rustdoc
-
-# To build debug
-cargo xbuild
-# To buld release
+# To Build - debug
+cargo build
+# To Build - release (smaller)
 cargo xbuild --release
 ```
 
+If we want to use some of the cutting edge features of cargo then we can use the following before hand
+```
+rustup default nightly
+```
+
+
 ### Minimising build size
 
-So far I've not managed to get all of these to work for the ESP32
-Probably due to the use of xbuild and not build-std
+The first way to minimise the build size is by building in release instead of debug mode.
+
+The next is the use of the panic_immediate_abort / panic_abort features for build-std
+This seems to nock off a few Kb in terms of the final binary size
+```
+cargo build -Z build-std=std,panic_abort -Z build-std-features=panic_immediate_abort --release
+```
+
+TODO I've not tried all of these just yet.
 
   * https://github.com/johnthagen/min-sized-rust

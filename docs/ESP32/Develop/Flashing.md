@@ -5,7 +5,7 @@ The first is used for Jtag, the second for uploading the flash
 
 To determine the size of the flash try doing a release build then looking at the final binary
 ```
-cargo xbuild -- release
+cargo build -- release
 # e.g. see size of target/xtensa-esp32-none-elf/release/blinky
 ```
 

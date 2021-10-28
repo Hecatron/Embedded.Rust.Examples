@@ -23,7 +23,7 @@ fn main() -> ! {
 
     // Set GPIO4 for output
     let pins = dp.GPIO.split();
-    let mut led = pins.gpio4.into_push_pull_output();
+    let mut led = pins.gpio2.into_push_pull_output();
 
     //let mut testint = 0;
 

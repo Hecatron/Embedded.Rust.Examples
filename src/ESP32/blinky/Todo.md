@@ -33,23 +33,37 @@ Size increased from 473Kb to 573Kb for release
 
 ## Flashing tool broken
 
-esptool --chip esp32 -p COM4 flash_id
-cargo espflash --chip=esp32 COM4 board-info
+currently cargo espflash has issues under windows
 
-https://lib.rs/crates/cargo-espflash
+  * https://lib.rs/crates/cargo-espflash
 
-cargo install -f cargo-espflash --version 0.1.1
-
-
-version 0.1.3 board info works
-cargo espflash --board-info COM4
+```
+cargo espflash COM4
+cargo espflash board-info COM4 
+```
 
 
-
-
-TODO try this
+TODO this works
+make a python wrapper script
 
 https://github.com/ctron/rust-esp32-hono
 
 esptool.py --chip esp32 elf2image target/xtensa-esp32-none-elf/release/blinky
 esptool.py --chip esp32 --baud 115200 --port COM4 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 ../bootloader/esp32-bootloader.bin 0x8000 ../bootloader/partitions.bin 0x10000 target/xtensa-esp32-none-elf/release/blinky.bin
+
+
+
+# Ram Boot doesn't work?
+esptool.py --chip esp32 --baud 115200 --port COM4 load_ram target/xtensa-esp32-none-elf/release/blinky.bin
+xtensa-esp32-elf-objdump -h target\xtensa-esp32-none-elf\release\blinky
+esptool.py --chip esp32 image_info target\xtensa-esp32-none-elf\release\blinky.bin
+
+
+flash entry is 4007c6a0
+ram entry is   3f400020
+
+
+
+CARGO_MAKE_CRATE_TARGET_DIRECTORY
+CARGO_MAKE_CRATE_CUSTOM_TRIPLE_TARGET_DIRECTORY
+CARGO_MAKE_CRATE_TARGET_TRIPLE

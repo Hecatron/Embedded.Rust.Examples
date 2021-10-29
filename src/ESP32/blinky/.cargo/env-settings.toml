@@ -1,6 +1,4 @@
 [env]
-# Show debugging info on error of build
-RUST_BACKTRACE = 1
-
 # Serial port for flashing
 ESP32_FLASH_SERIAL = "COM4"
+ESP32_FLASH_SERIAL_BAUD = "115200"

@@ -6,8 +6,24 @@ use colored::*;
 fn main() {
     let mut s = String::new();
 
-    append(&mut s, "test ");
-    append(&mut s, "test2 ".green());
+    append(&mut s, "");
+    append(&mut s, "Build Functions".bold().yellow());
+    append(&mut s, "===============");
+    append(&mut s, "cargo make build [-p prod] \t Build the source in development mode");
+
+
+    append(&mut s, "");
+    append(&mut s, "Flash Functions".bold().yellow());
+    append(&mut s, "===============");
+    append(&mut s, "cargo make flash [-p prod] \t Build and Upload the flash image to the board");
+    append(&mut s, "cargo make flashid \t\t Display flash information about the attached board");
+    append(&mut s, "cargo make eraseflash \t\t Erase the flash on the attached board");
+    append(&mut s, "cargo make elf2image [-p prod] \t Convert the built elf file into a flashable .bin file");
+    append(&mut s, "cargo make imageinfo \t\t Show information about the flash bin image");
+
+    append(&mut s, "");
+    append(&mut s, "The default is to build a development / debug image");
+    append(&mut s, "use -p prod to build a smaller release image with no debugging info");
 
     println!("{}", s);
 }
@@ -15,4 +31,5 @@ fn main() {
 // Append String or ColoredString
 fn append<I>(source: &mut String, val: I) where I: ToString {
     let _ = &source.push_str(&val.to_string());
+    let _ = &source.push_str(&"\n");
 }

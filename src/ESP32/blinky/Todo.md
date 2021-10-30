@@ -67,3 +67,6 @@ ram entry is   3f400020
 CARGO_MAKE_CRATE_TARGET_DIRECTORY
 CARGO_MAKE_CRATE_CUSTOM_TRIPLE_TARGET_DIRECTORY
 CARGO_MAKE_CRATE_TARGET_TRIPLE
+
+
+https://medium.com/@jreem/advanced-rust-using-traits-for-argument-overloading-c6a6c8ba2e17

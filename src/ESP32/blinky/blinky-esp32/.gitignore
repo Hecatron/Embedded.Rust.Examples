@@ -3,3 +3,6 @@
 
 # Cargo package versions
 Cargo.lock
+
+# Local settings
+/LocalSettings.toml

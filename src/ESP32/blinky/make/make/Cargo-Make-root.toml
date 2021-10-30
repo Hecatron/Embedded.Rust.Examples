@@ -1,0 +1,6 @@
+extend = [
+  # Build tools
+  { path = "./Cargo-Make-build.toml" },
+  # Flash tools
+  { path = "./Cargo-Make-esptool.toml" },  
+]

@@ -111,7 +111,6 @@ args = ["fmt", "--", "--emit=files"]
 [tasks.list]
 script_runner = "@duckscript"
 script = '''
-echo \033[2;31;43m
 echo "Build Functions"
 echo "==============="
 echo "cargo make build [-p prod] \t Build the source in development mode"

@@ -2,10 +2,19 @@
 # See "cargo make list"
 
 extend = [
-  # Read in the settings
-  { path = ".cargo/make-env.toml" },
-  # Build tools
-  { path = "../make/make/Cargo-Make-build.toml" },
-  # Flash tools
-  { path = "../make/make/Cargo-Make-esptool.toml" },  
+  # Make files
+  { path = "../make/make/Cargo-Make-root.toml" },
+  # Read in the local settings
+  { path = "./LocalSettings.toml", optional = true },
 ]
+
+# Ether uncomment the below or create a file called LocalSettings.toml
+# To set / override env variables for settings such as the com port to use
+# LocalSettings.toml will be ignored by source control
+
+#[env]
+## Serial port for flashing
+#ESP32_FLASH_SERIAL = "COM4"
+
+## Serial board rate
+#ESP32_FLASH_SERIAL_BAUD = "115200"

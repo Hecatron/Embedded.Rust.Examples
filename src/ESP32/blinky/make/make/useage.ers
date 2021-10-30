@@ -1,7 +1,19 @@
 #!/usr/bin/env rust-script
-// cargo-deps: colored
+// cargo-deps: colored, vararg
 
 use colored::*;
+use vararg::vararg;
+
+// Append String or ColoredString
+fn append<I>(source: &mut String, val: I) where I: ToString {
+    let _ = &source.push_str(&val.to_string());
+    let _ = &source.push_str(&"\n");
+}
+
+#[vararg]
+fn append2<const L: usize>(source: &mut String, arr: [ToString; L]) {
+    append(source, arr.join(""));
+}
 
 fn main() {
     let mut s = String::new();
@@ -10,7 +22,6 @@ fn main() {
     append(&mut s, "Build Functions".bold().yellow());
     append(&mut s, "===============");
     append(&mut s, "cargo make build [-p prod] \t Build the source in development mode");
-
 
     append(&mut s, "");
     append(&mut s, "Flash Functions".bold().yellow());
@@ -25,11 +36,9 @@ fn main() {
     append(&mut s, "The default is to build a development / debug image");
     append(&mut s, "use -p prod to build a smaller release image with no debugging info");
 
+    append2!(&mut s, "Test".to_string(), "Test".bold());
+
     println!("{}", s);
 }
 
-// Append String or ColoredString
-fn append<I>(source: &mut String, val: I) where I: ToString {
-    let _ = &source.push_str(&val.to_string());
-    let _ = &source.push_str(&"\n");
-}
+

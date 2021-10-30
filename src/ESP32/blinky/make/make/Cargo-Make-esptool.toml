@@ -41,7 +41,4 @@ category = "ESP32"
 
 
 
-# Todo testing
-#[tasks.test123]
-#command = "echo"
-#args = ["${BUILD_BIN_FILE}"]
+

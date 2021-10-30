@@ -3,6 +3,10 @@
     {
       "name": "root",
       "path": "."
+    },
+    {
+      "name": "blinky-esp32",
+      "path": "blinky-esp32"
     }
   ],
   "settings": {

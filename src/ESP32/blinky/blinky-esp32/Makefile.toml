@@ -1,0 +1,11 @@
+# Cargo Make Task runner
+# See "cargo make list"
+
+extend = [
+  # Read in the settings
+  { path = ".cargo/make-env.toml" },
+  # Build tools
+  { path = "../make/make/Cargo-Make-build.toml" },
+  # Flash tools
+  { path = "../make/make/Cargo-Make-esptool.toml" },  
+]

@@ -1,0 +1,40 @@
+// Fields
+struct ConsoleWriter {
+    out: String,
+}
+
+// Default values
+impl Default for ConsoleWriter {
+    fn default() -> ConsoleWriter {
+        ConsoleWriter {
+            out: String::new(),
+        }
+    }
+}
+
+// Members
+impl ConsoleWriter {
+    pub fn append<I>(&mut self, val: I) where I: AppendString {
+        self.push_str(&val.to_string())
+    }
+}
+
+
+// Generic interface
+trait AppendString {
+    fn append(self);
+}
+
+// Applies the interface to an object type
+impl AppendString for String {
+    fn append(self) {
+    
+    }
+}
+
+// Applies the interface to an object type
+impl AppendString for ColoredString {
+    fn append(self) {
+    
+    }
+}

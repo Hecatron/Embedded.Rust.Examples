@@ -1,0 +1,131 @@
+
+# Common to all profiles
+[env]
+# Show debugging info on error of build
+RUST_BACKTRACE = 1
+# Use the custom esp toolchain
+RUSTUP_TOOLCHAIN="esp"
+
+# Default Profile
+[env.development]
+BUILD_OUT_DIR = "./${CARGO_MAKE_CRATE_CUSTOM_TRIPLE_TARGET_DIRECTORY}/debug"
+BUILD_ELF_FILE = "${BUILD_OUT_DIR}/${CARGO_MAKE_PROJECT_NAME}"
+BUILD_BIN_FILE = "${BUILD_ELF_FILE}.bin"
+
+# Production / Release Profile
+[env.production]
+BUILD_OUT_DIR = "./${CARGO_MAKE_CRATE_CUSTOM_TRIPLE_TARGET_DIRECTORY}/release"
+BUILD_ELF_FILE = "${BUILD_OUT_DIR}/${CARGO_MAKE_PROJECT_NAME}"
+BUILD_BIN_FILE = "${BUILD_ELF_FILE}.bin"
+
+
+[tasks.build]
+description = "build the source - development"
+#run_task = [
+#    { name = "test1", condition = { platforms = ["windows", "linux"], channels = ["beta", "stable"] } },
+#    { name = "test2", condition = { platforms = ["mac"], rust_version = { min = "1.20.0", max = "1.30.0" } } },
+#    { name = "test3", condition_script = [ "somecommand" ] },
+#    { name = "test-default" }
+#]
+
+
+
+dependencies = ["build-development", "build-production"]
+category = "ESP32"
+
+# TODO
+[tasks.build-prod]
+description = "build the source - production"
+#env = { PROFILE_ENV_KEY = "production" }
+#run_task = { name = "build-production", fork = true }
+#command = "cargo"
+#args = ["make", "--disable-check-for-updates", "--no-on-error", "--loglevel=info",
+#"--profile=production", "--allow-private", "--skip-init-end-tasks", "--makefile", "D:\\SourceCode\\Private\\Hecatron\\Embedded.Rust.Examples\\src\\ESP32\\blinky\\Makefile.toml",  "build-production"]
+#args = ["make", "build-production"]
+#category = "ESP32"
+
+
+
+[tasks.build-development]
+description = "build the source - development"
+condition = { profiles = [ "development" ] }
+command = "cargo"
+args = ["build"]
+
+[tasks.build-production]
+description = "build the source - production"
+#condition = { profiles = [ "production" ] }
+command = "cargo"
+args = ["build", "--release"]
+
+
+# Todo testing
+[tasks.test123]
+env = { PROFILE_ENV_KEY = "production" }
+run_task = { name = "build-production", fork = true }
+
+#command = "echo"
+#args = ["${PROFILE_ENV_KEY}"]
+#command = "cargo"
+#args = [ "make", "--verbose", "build-production" ]
+
+
+# "@@split(CARGO_ARGS, )"
+# "@@remove-empty(VERBOSE_FLAGS)",
+# https://github.com/sagiegurari/cargo-make/discussions/517
+
+
+# TODO production profile ${@}
+#[tasks.build]
+#description = "build the source"
+#command = "cargo"
+#args = ["build", "${BUILD_FLAGS} ${@}"]
+#category = "ESP32"
+
+# TODO alias?
+
+#command = "cargo"
+#args = ["build", "--release", "${@}"]
+
+#category = "ESP32"
+
+
+
+[tasks.format]
+description = "reformat the rust code using rustfmt"
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+# Todo
+# waiting for some form of this to go through
+# https://github.com/sagiegurari/cargo-make/pull/603
+
+# Todo try an embedded echo shell script instead
+
+#[tasks.list]
+#description = "List all of the associated build / flash tasks - ESP32"
+#command = "D:/SourceCode/Forks/cargo-make/target/debug/makers.exe"
+#args = ["--list-category-steps", "ESP32"]
+
+[tasks.list]
+script_runner = "@duckscript"
+script = '''
+echo \033[2;31;43m
+echo "Build Functions"
+echo "==============="
+echo "cargo make build [-p prod] \t Build the source in development mode"
+echo ""
+echo "Note the default is to build a development / debug image"
+echo "use -p prod to build a smaller release image with no debugging info"
+
+echo ""
+echo "Flash Functions"
+echo "==============="
+echo "cargo make flash [-p prod] \t Build and Upload the flash image to the board"
+echo "cargo make flashid \t\t Display flash information about the attached board"
+echo "cargo make eraseflash \t\t Erase the flash on the attached board"
+echo "cargo make elf2image [-p prod] \t Convert the built elf file into a flashable .bin file"
+echo "cargo make imageinfo \t\t Show information about the flash bin image"
+echo ""
+'''

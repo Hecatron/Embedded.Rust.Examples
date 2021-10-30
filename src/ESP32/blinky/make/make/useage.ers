@@ -1,0 +1,18 @@
+#!/usr/bin/env rust-script
+// cargo-deps: colored
+
+use colored::*;
+
+fn main() {
+    let mut s = String::new();
+
+    append(&mut s, "test ");
+    append(&mut s, "test2 ".green());
+
+    println!("{}", s);
+}
+
+// Append String or ColoredString
+fn append<I>(source: &mut String, val: I) where I: ToString {
+    let _ = &source.push_str(&val.to_string());
+}

@@ -1,11 +1,14 @@
 # Cargo Make Task runner
-# Run via "cargo make build"
+# See "cargo make list"
 
 extend = [
   # Read in the settings
-  { path = "./.cargo/env-settings.toml" },
+  { path = "./blinky-esp32/.cargo/make-env.toml" },
   # Build tools
-  { path = "./build/make/Cargo-Make-build.toml" },
+  { path = "./make/make/Cargo-Make-build.toml" },
   # Flash tools
-  { path = "./build/make/Cargo-Make-esptool.toml" },  
+  { path = "./make/make/Cargo-Make-esptool.toml" },  
 ]
+
+[env]
+CARGO_MAKE_WORKING_DIRECTORY = "./blinky-esp32"

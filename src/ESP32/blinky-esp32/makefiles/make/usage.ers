@@ -13,19 +13,21 @@ fn main() {
     append(&mut s, "\t\t\t List the available tasks\n".cyan());
     append(&mut s, "cargo make fmt".bold());
     append(&mut s, "\t\t\t Reformat the source\n".cyan());
-    append(&mut s, "cargo make build [-p prod]".bold());
+    append(&mut s, "cargo make [-p prod] build".bold());
     append(&mut s, "\t Build the source\n".cyan());
+    append(&mut s, "cargo make clean".bold());
+    append(&mut s, "\t\t Clean the target directory\n".cyan());
 
     append(&mut s, "\n");
     append(&mut s, "Flash Tasks\n".bold().yellow());
     append(&mut s, "===============\n");
-    append(&mut s, "cargo make flash [-p prod]".bold());
+    append(&mut s, "cargo make [-p prod] flash".bold());
     append(&mut s, "\t Build and Upload the flash image to the board\n".cyan());
     append(&mut s, "cargo make flashid".bold());
     append(&mut s, "\t\t Display flash information about the attached board\n".cyan());
     append(&mut s, "cargo make eraseflash".bold());
     append(&mut s, "\t\t Erase the flash on the attached board\n".cyan());
-    append(&mut s, "cargo make elf2image [-p prod]".bold());
+    append(&mut s, "cargo make [-p prod] elf2image".bold());
     append(&mut s, "\t Convert the built elf file into a flashable .bin file\n".cyan());
     append(&mut s, "cargo make imageinfo".bold());
     append(&mut s, "\t\t Show information about the flash bin image\n".cyan());

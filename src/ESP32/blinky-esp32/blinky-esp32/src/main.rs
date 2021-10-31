@@ -30,9 +30,9 @@ fn main() -> ! {
     loop {
         //testint = 1;
         led.set_high().unwrap();
-        delay(CORE_HZ);
+        delay(CORE_HZ / 2);
         //testint = 3;
         led.set_low().unwrap();
-        delay(CORE_HZ);
+        delay(CORE_HZ / 2);
     }
 }

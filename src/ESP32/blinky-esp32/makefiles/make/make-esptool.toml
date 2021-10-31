@@ -1,3 +1,10 @@
+[env]
+ESP32_BOOTLOADER = "../../bootloader/esp32-bootloader.bin"
+ESP32_PARTBIN = "../../bootloader/partitions.bin"
+ESP32_FLASHMODE = "dio"
+ESP32_FLASHFREQ = "40m"
+ESP32_FLASHSIZE = "detect"
+
 [tasks.flashid]
 description = "Get the flashid / details from the esp32"
 command = "python"
@@ -12,6 +19,7 @@ category = "Common"
 
 [tasks.imageinfo]
 description = "Show the image info"
+condition = { files_exist = [ "${BUILD_BIN_FILE}" ] }
 command = "python"
 args = ["-m", "esptool", "--chip", "esp32", "image_info", "${BUILD_BIN_FILE}", "${@}"]
 category = "Common"
@@ -23,17 +31,18 @@ args = ["-m", "esptool", "--chip", "esp32", "elf2image", "${BUILD_ELF_FILE}", "$
 dependencies = ["build"]
 category = "Common"
 
-# Todo move some of these to seperate env vars and test
-# such as bootloader / partition table
-# also add depends on elf2image
 [tasks.flash]
 description = "Upload / Flash the source to the esp32"
 command = "python"
-args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "--baud", "${ESP32_FLASH_SERIAL_BAUD}",
+args = ["-m", "esptool", "--chip", "esp32",
+"-p", "${ESP32_FLASH_SERIAL}",
+"--baud", "${ESP32_FLASH_SERIAL_BAUD}",
 "--before", "default_reset", "--after", "hard_reset", "write_flash",
-"--flash_mode", "dio", "--flash_freq", "40m", "--flash_size", "detect",
-"0x1000", "../bootloader/esp32-bootloader.bin",
-"0x8000", "../bootloader/partitions.bin",
+"--flash_mode", "${ESP32_FLASHMODE}",
+"--flash_freq", "${ESP32_FLASHFREQ}",
+"--flash_size", "${ESP32_FLASHSIZE}",
+"0x1000", "${ESP32_BOOTLOADER}",
+"0x8000", "${ESP32_PARTBIN}",
 "0x10000", "${BUILD_BIN_FILE}",
 "${@}"]
 dependencies = ["elf2image"]

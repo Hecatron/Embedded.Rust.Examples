@@ -1,6 +1,5 @@
 # Build Tasks
 
-# Common to all profiles
 [env]
 # Show debugging info on error of build
 RUST_BACKTRACE = 1
@@ -21,18 +20,17 @@ BUILD_BIN_FILE = "${BUILD_ELF_FILE}.bin"
 
 [tasks.build]
 description = "build the source"
-run_task = [
-    { name = "build-development", condition = { profiles = [ "development" ] } },
-    { name = "build-prod", condition = { profiles = [ "prod" ] } },
-]
+dependencies = ["build-development", "build-prod"]
 category = "Common"
 
 [tasks.build-development]
 description = "build the source - development"
+condition = { profiles = [ "development" ] }
 command = "cargo"
 args = ["build"]
 
 [tasks.build-prod]
 description = "build the source - production"
+condition = { profiles = [ "prod" ] }
 command = "cargo"
 args = ["build", "--release"]

@@ -1,14 +1,27 @@
-[env]
-ESP32_BOOTLOADER = "../../bootloader/esp32-bootloader.bin"
-ESP32_PARTBIN = "../../bootloader/partitions.bin"
-ESP32_FLASHMODE = "dio"
-ESP32_FLASHFREQ = "40m"
-ESP32_FLASHSIZE = "detect"
+# ESP32 Flash Util Tasks
 
 [tasks.flashid]
 description = "Get the flashid / details from the esp32"
 command = "python"
 args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "flash_id", "${@}"]
+category = "Common"
+
+[tasks.chipid]
+description = "Get the chipid / details from the esp32"
+command = "python"
+args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "chip_id", "${@}"]
+category = "Common"
+
+[tasks.flashstatus]
+description = "Get the flash status / details from the esp32"
+command = "python"
+args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "read_flash_status", "${@}"]
+category = "Common"
+
+[tasks.readmac]
+description = "Read the mac address of the board"
+command = "python"
+args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "read_mac", "${@}"]
 category = "Common"
 
 [tasks.eraseflash]
@@ -31,19 +44,8 @@ args = ["-m", "esptool", "--chip", "esp32", "elf2image", "${BUILD_ELF_FILE}", "$
 dependencies = ["build"]
 category = "Common"
 
-[tasks.flash]
-description = "Upload / Flash the source to the esp32"
+[tasks.run]
+description = "Trigger running of the flash"
 command = "python"
-args = ["-m", "esptool", "--chip", "esp32",
-"-p", "${ESP32_FLASH_SERIAL}",
-"--baud", "${ESP32_FLASH_SERIAL_BAUD}",
-"--before", "default_reset", "--after", "hard_reset", "write_flash",
-"--flash_mode", "${ESP32_FLASHMODE}",
-"--flash_freq", "${ESP32_FLASHFREQ}",
-"--flash_size", "${ESP32_FLASHSIZE}",
-"0x1000", "${ESP32_BOOTLOADER}",
-"0x8000", "${ESP32_PARTBIN}",
-"0x10000", "${BUILD_BIN_FILE}",
-"${@}"]
-dependencies = ["elf2image"]
+args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "run", "${@}"]
 category = "Common"

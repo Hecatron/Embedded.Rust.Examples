@@ -30,6 +30,9 @@ https://github.com/MabezDev/xtensa-rust-quickstart
   * does println work via jtag?
   * set env vars via cargo-make
 
+See if we can debug while setting ESP32_AFTERFLASH to no_reset
+then running esptool.py 0p COM4 run to start it up
+to capure / start the debug on the start of the code
 
 ## Ram Boot
 

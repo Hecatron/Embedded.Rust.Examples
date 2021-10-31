@@ -43,6 +43,15 @@
       "options": { "cwd": "blinky-esp32" },
     },
 
+    {
+      "label": "debug-verify",
+      "detail": "Verify the uploaded flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "verifyflash" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
     // Production Tasks
 
     {
@@ -84,14 +93,50 @@
       "options": { "cwd": "blinky-esp32" },
     },
 
+    {
+      "label": "prod-verify",
+      "detail": "Verify the uploaded flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "verifyflash" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
     // Flash Util
 
     {
       "label": "flash-device id",
-      "detail": "This gets the ESP32 Flash id and displays it in the console. It can also be used to reset the device",
+      "detail": "This gets the ESP32 Flash id and displays it in the console.",
       "type": "process",
       "command": "cargo",
       "args": [ "make", "flashid" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "flash-chip id",
+      "detail": "This gets the ESP32 Chip id and displays it in the console.",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "chipid" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "flash-flash status",
+      "detail": "This gets the ESP32 Flash Status and displays it in the console.",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "flashstatus" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "flash-read mac address",
+      "detail": "Read the mac address of the board",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "readmac" ],
       "options": { "cwd": "blinky-esp32" },
     },
 
@@ -101,6 +146,15 @@
       "type": "process",
       "command": "cargo",
       "args": [ "make", "eraseflash" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "flash-run",
+      "detail": "Run the app code in flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "run" ],
       "options": { "cwd": "blinky-esp32" },
     },
 

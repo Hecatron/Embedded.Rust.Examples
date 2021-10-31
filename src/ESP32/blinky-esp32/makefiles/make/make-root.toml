@@ -6,5 +6,6 @@ extend = [
   # Build tasks
   { path = "./make-build.toml" },
   # Flash tasks
-  { path = "./make-esptool.toml" },
+  { path = "./make-esptool-upload.toml" },
+  { path = "./make-esptool-util.toml" },
 ]

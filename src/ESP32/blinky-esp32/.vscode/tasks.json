@@ -2,41 +2,109 @@
   "version": "2.0.0",
   "tasks": [
 
+    // Debug Tasks
+
     {
-      "label": "build debug",
+      "label": "debug-build",
       "detail": "Build in debug mode",
       "type": "process",
       "group": "build",
       "command": "cargo",
-      "args": [ "make", "build" ]
+      "args": [ "make", "build" ],
+      "options": { "cwd": "blinky-esp32" },
     },
 
     {
-      "label": "build debug - flash upload",
+      "label": "debug-flash upload",
       "detail": "Build in debug mode then upload to the flash",
       "type": "process",
       "group": "build",
       "command": "cargo",
-      "args": [ "make", "flash-build" ]
+      "args": [ "make", "flash" ],
+      "options": { "cwd": "blinky-esp32" },
     },
 
     {
-      "label": "build release",
+      "label": "debug-elf2image",
+      "detail": "Build then generate a flashable image from the elf file",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "elf2image" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "debug-image info",
+      "detail": "Show info on the generated flash binary",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "imageinfo" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    // Production Tasks
+
+    {
+      "label": "prod-build",
       "detail": "Build in release mode",
       "type": "process",
       "group": "build",
       "command": "cargo",
-      "args": [ "make", "build-release" ]
+      "args": [ "make", "-p", "prod", "build" ],
+      "options": { "cwd": "blinky-esp32" },
     },
 
     {
-      "label": "build release - flash upload",
-      "detail": "Build in release mode then upload to the flash",
+      "label": "prod-flash upload",
+      "detail": "Build in debug mode then upload to the flash",
       "type": "process",
       "group": "build",
       "command": "cargo",
-      "args": [ "make", "flash-build-release" ]
+      "args": [ "make", "-p", "prod", "flash" ],
+      "options": { "cwd": "blinky-esp32" },
     },
+
+    {
+      "label": "prod-elf2image",
+      "detail": "Build then generate a flashable image from the elf file",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "elf2image" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "prod-image info",
+      "detail": "Show info on the generated flash binary",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "imageinfo" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    // Flash Util
+
+    {
+      "label": "flash-device id",
+      "detail": "This gets the ESP32 Flash id and displays it in the console. It can also be used to reset the device",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "flashid" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    {
+      "label": "flash-erase",
+      "detail": "Erase the flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "eraseflash" ],
+      "options": { "cwd": "blinky-esp32" },
+    },
+
+    // Other
 
     {
       "label": "clean",
@@ -44,32 +112,19 @@
       "type": "process",
       "group": "build",
       "command": "cargo",
-      "args": [ "make", "clean" ]
+      "args": [ "make", "clean" ],
+      "options": { "cwd": "blinky-esp32" },
     },
 
     {
-      "label": "rust format",
+      "label": "format rust code",
       "detail": "Auto format the code",
       "type": "process",
       "group": "build",
       "command": "cargo",
-      "args": [ "make", "clean" ]
+      "args": [ "make", "fmt" ],
+      "options": { "cwd": "blinky-esp32" },
     },
 
-    {
-      "label": "esp32 get flashid",
-      "detail": "This gets the ESP32 Flash id and displays it in the console. It can also be used to reset the device",
-      "type": "process",
-      "command": "cargo",
-      "args": [ "make", "esp32-flashid" ],
-    },
-
-    {
-      "label": "esp32 erase flash",
-      "detail": "Erase the flash",
-      "type": "process",
-      "command": "cargo",
-      "args": [ "make", "esp32-eraseflash" ]
-    },
   ],
 }

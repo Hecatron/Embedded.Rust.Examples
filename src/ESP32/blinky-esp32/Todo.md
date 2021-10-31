@@ -7,6 +7,10 @@ https://github.com/lexxvir/esp32-hello
 https://github.com/MabezDev/xtensa-rust-quickstart
 
 
+## VSCode
+
+  * Issues with vscode rust-analyser
+
 ## Building
 
   * build calls - "cargo" "build" "--all-features", can we prevent this?

@@ -29,8 +29,8 @@ fn main() {
     append(&mut s, "\t\t Erase the flash on the attached board\n".cyan());
     append(&mut s, "cargo make [-p prod] elf2image".bold());
     append(&mut s, "\t Convert the built elf file into a flashable .bin file\n".cyan());
-    append(&mut s, "cargo make imageinfo".bold());
-    append(&mut s, "\t\t Show information about the flash bin image\n".cyan());
+    append(&mut s, "cargo make [-p prod] imageinfo".bold());
+    append(&mut s, "\t Show information about the flash bin image\n".cyan());
 
     append(&mut s, "\n");
     append(&mut s, "The default is to build a development / debug image\n".yellow());

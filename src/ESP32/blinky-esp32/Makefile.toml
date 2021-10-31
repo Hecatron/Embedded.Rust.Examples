@@ -1,9 +1,0 @@
-# Cargo Make Task runner
-# See "cargo make list"
-
-extend = [
-  { path = "./blinky-esp32/Makefile.toml" },
-]
-
-[env]
-CARGO_MAKE_WORKING_DIRECTORY = "./blinky-esp32"

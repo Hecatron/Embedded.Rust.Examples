@@ -1,0 +1,8 @@
+# Reformat / Linting Tasks
+
+[tasks.format]
+description = "reformat the rust code using rustfmt"
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+category = "Common"

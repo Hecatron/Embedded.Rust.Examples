@@ -8,10 +8,10 @@
 #description = "build the source in debug mode and upload to the flash - ESP32"
 #command = "cargo"
 #args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "${ESP32_FLASH_SERIAL}", "${@}"]
-#category = "ESP32"
+#category = "Common"
 
 #[tasks.flash-release]
 #description = "build the source in release mode and upload to the flash - ESP32"
 #command = "cargo"
 #args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "--release", "${ESP32_FLASH_SERIAL}", "${@}"]
-#category = "ESP32"
+#category = "Common"

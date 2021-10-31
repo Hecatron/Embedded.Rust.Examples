@@ -1,0 +1,19 @@
+# List Tasks
+
+# If we're building for a different platform from the host
+# And we don't want the different platform settings to influence the running of a script
+# Make sure the script isn't within a parent directory of the project and that the current working directory is changed.
+# To avoid .cargo/config.toml from being picked up
+
+[tasks.list]
+command = "rust-script"
+cwd = "${CARGO_MAKE_CURRENT_TASK_INITIAL_MAKEFILE_DIRECTORY}"
+args = ["./usage.ers"]
+category = "Common"
+
+[tasks.usage]
+alias = "list"
+
+# Override default alias
+[tasks.default]
+alias = "list"

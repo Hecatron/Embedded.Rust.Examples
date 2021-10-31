@@ -3,9 +3,9 @@
 
 extend = [
   # Make files
-  { path = "../makefiles/make/Cargo-Make-root.toml" },
+  { path = "../makefiles/make/make-root.toml" },
   # Read in the local settings
-  { path = "./LocalSettings.toml", optional = true },
+  { path = "./.make-cfg.toml", optional = true },
 ]
 
 # Ether uncomment the below or create a file called LocalSettings.toml

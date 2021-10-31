@@ -1,0 +1,10 @@
+extend = [
+  # List tasks
+  { path = "./make-list.toml" },
+  # Linting / Formatting tasks
+  { path = "./make-lint.toml" },
+  # Build tasks
+  { path = "./make-build.toml" },
+  # Flash tasks
+  { path = "./make-esptool.toml" },
+]

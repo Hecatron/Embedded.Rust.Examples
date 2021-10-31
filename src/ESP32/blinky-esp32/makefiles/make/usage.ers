@@ -7,15 +7,17 @@ fn main() {
     let mut s = String::new();
 
     append(&mut s, "\n");
-    append(&mut s, "Build Functions\n".bold().yellow());
+    append(&mut s, "Code Tasks\n".bold().yellow());
     append(&mut s, "===============\n");
     append(&mut s, "cargo make list".bold());
     append(&mut s, "\t\t\t List the available tasks\n".cyan());
+    append(&mut s, "cargo make fmt".bold());
+    append(&mut s, "\t\t\t Reformat the source\n".cyan());
     append(&mut s, "cargo make build [-p prod]".bold());
     append(&mut s, "\t Build the source\n".cyan());
 
     append(&mut s, "\n");
-    append(&mut s, "Flash Functions\n".bold().yellow());
+    append(&mut s, "Flash Tasks\n".bold().yellow());
     append(&mut s, "===============\n");
     append(&mut s, "cargo make flash [-p prod]".bold());
     append(&mut s, "\t Build and Upload the flash image to the board\n".cyan());
@@ -35,7 +37,7 @@ fn main() {
     println!("{}", s);
 }
 
-// Append String or ColoredString
+// Append String or ColoredString to source string
 fn append<I>(source: &mut String, val: I) where I: ToString {
     let _ = &source.push_str(&val.to_string());
 }

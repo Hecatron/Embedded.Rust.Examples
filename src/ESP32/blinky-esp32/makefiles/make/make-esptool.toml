@@ -2,26 +2,26 @@
 description = "Get the flashid / details from the esp32"
 command = "python"
 args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "flash_id", "${@}"]
-category = "ESP32"
+category = "Common"
 
 [tasks.eraseflash]
 description = "Erase the flash on the ESP32"
 command = "python"
 args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "erase_flash", "${@}"]
-category = "ESP32"
+category = "Common"
 
 [tasks.imageinfo]
 description = "Show the image info"
 command = "python"
-args = ["-m", "esptool", "--chip", "esp32", "elf2image", "${BUILD_BIN_FILE}", "${@}"]
-category = "ESP32"
+args = ["-m", "esptool", "--chip", "esp32", "image_info", "${BUILD_BIN_FILE}", "${@}"]
+category = "Common"
 
 [tasks.elf2image]
 description = "Generate a flashable binary from the elf file"
 command = "python"
 args = ["-m", "esptool", "--chip", "esp32", "elf2image", "${BUILD_ELF_FILE}", "${@}"]
 dependencies = ["build"]
-category = "ESP32"
+category = "Common"
 
 # Todo move some of these to seperate env vars and test
 # such as bootloader / partition table
@@ -37,8 +37,4 @@ args = ["-m", "esptool", "--chip", "esp32", "-p", "${ESP32_FLASH_SERIAL}", "--ba
 "0x10000", "${BUILD_BIN_FILE}",
 "${@}"]
 dependencies = ["elf2image"]
-category = "ESP32"
-
-
-
-
+category = "Common"

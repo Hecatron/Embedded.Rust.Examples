@@ -3,7 +3,7 @@
 
 extend = [
   # Make files
-  { path = "../make/make/Cargo-Make-root.toml" },
+  { path = "../makefiles/make/Cargo-Make-root.toml" },
   # Read in the local settings
   { path = "./LocalSettings.toml", optional = true },
 ]

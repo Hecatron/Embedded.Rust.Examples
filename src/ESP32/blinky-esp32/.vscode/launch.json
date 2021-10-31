@@ -3,17 +3,17 @@
     "configurations": [
         {
             "name": "debug: cortex-debug",
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceRoot}/blinky-esp32",
             "executable": "target/xtensa-esp32-none-elf/debug/blinky",
             "request": "attach",
             "type": "cortex-debug",
             "servertype": "openocd",
             "interface": "jtag",
-            "svdFile": "gdb/svd/esp32.svd",
+            "svdFile": "${workspaceRoot}/makefiles/gdb/svd/esp32.svd",
             "serverpath": "C:\\Apps\\openocd-esp32\\bin\\openocd.exe",
             "toolchainPrefix": "C:\\Apps\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf",
             "configFiles": [
-                "gdb/openocd-wrover-kit.cfg"
+                "${workspaceRoot}/makefiles/gdb/openocd-wrover-kit.cfg"
             ],
         },
         {

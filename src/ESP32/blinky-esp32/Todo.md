@@ -34,6 +34,9 @@ See if we can debug while setting ESP32_AFTERFLASH to no_reset
 then running esptool.py 0p COM4 run to start it up
 to capure / start the debug on the start of the code
 
+Current cortex-debug seems to work, may need a bit of tweaking
+
+
 ## Ram Boot
 
 Ram booting doesnt work?

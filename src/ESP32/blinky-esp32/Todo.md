@@ -13,11 +13,6 @@ https://github.com/MabezDev/xtensa-rust-quickstart
     Seems to be a wider issue with custom toolchains under windows where cargo is run in parallel
     https://github.com/rust-analyzer/rust-analyzer/issues/10674
 
-## Building
-
-  * build calls - "cargo" "build" "--all-features", can we prevent this?
-    Or set it to not do anything?
-
 ## Code Formatting
 
   * format has issues with esp when run from cargo make

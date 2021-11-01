@@ -21,7 +21,7 @@ BUILD_BIN_FILE = "${BUILD_ELF_FILE}.bin"
 [tasks.build]
 description = "build the source"
 dependencies = ["build-development", "build-prod"]
-category = "Common"
+clear = true
 
 [tasks.build-development]
 description = "build the source - development"

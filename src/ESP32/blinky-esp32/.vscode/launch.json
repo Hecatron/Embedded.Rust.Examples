@@ -10,8 +10,8 @@
             "servertype": "openocd",
             "interface": "jtag",
             "svdFile": "${workspaceRoot}/makefiles/gdb/svd/esp32.svd",
-            "serverpath": "C:\\Apps\\openocd-esp32\\bin\\openocd.exe",
-            "toolchainPrefix": "C:\\Apps\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf",
+            "serverpath": "C:\\Apps\\dev-tools\\openocd-esp32\\bin\\openocd.exe",
+            "toolchainPrefix": "C:\\Apps\\dev-tools\\xtensa-esp32-elf\\bin\\xtensa-esp32-elf",
             "configFiles": [
                 "${workspaceRoot}/makefiles/gdb/openocd-wrover-kit.cfg"
             ],

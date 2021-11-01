@@ -11,5 +11,8 @@
   ],
   "settings": {
     "taskExplorer.showLastTasks": false,
+    // This seems to mostly work under windows
+    // but there are still issues with cargo check running from rust-analyser
+    "rust-analyzer.server.extraEnv": {"RUSTUP_TOOLCHAIN": "esp"},
   }
 }

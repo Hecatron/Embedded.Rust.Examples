@@ -5,7 +5,7 @@ extend = [
   # Make files
   { path = "../makefiles/make/make-root.toml" },
   # Read in the local settings
-  { path = "./.make-cfg.toml", optional = true },
+  { path = "./.cargo/.make-cfg.toml", optional = true },
 ]
 
 # Ether uncomment the below or create a file called LocalSettings.toml

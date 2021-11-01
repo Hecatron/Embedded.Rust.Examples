@@ -1,7 +1,6 @@
 [build]
 target = "xtensa-esp32-none-elf"
 
-# Re-enable when we switch from xbuild to build
 [unstable]
 build-std = ["core", "alloc"]
 

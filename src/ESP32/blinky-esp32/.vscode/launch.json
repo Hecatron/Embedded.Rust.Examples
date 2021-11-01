@@ -16,28 +16,28 @@
                 "${workspaceRoot}/makefiles/gdb/openocd-wrover-kit.cfg"
             ],
         },
-        {
-            "name": "debug: gdb attach debug",
-            "type": "gdb",
-            "request": "launch",
-            "target": "target/xtensa-esp32-none-elf/debug/blinky",
-            "gdbpath": "xtensa-esp32-elf-gdb",
-            "cwd": "${workspaceRoot}",
-            "autorun": [
-                "source xtensa.gdb"
-            ]
-        },
-        {
-            "name": "debug: gdb attach release",
-            "type": "gdb",
-            "request": "launch",
-            "target": "target/xtensa-esp32-none-elf/release/blinky",
-            "gdbpath": "xtensa-esp32-elf-gdb",
-            "cwd": "${workspaceRoot}",
-            "autorun": [
-                "source xtensa.gdb"
-            ]
-        },
+        // {
+        //     "name": "debug: gdb attach debug",
+        //     "type": "gdb",
+        //     "request": "launch",
+        //     "target": "target/xtensa-esp32-none-elf/debug/blinky",
+        //     "gdbpath": "xtensa-esp32-elf-gdb",
+        //     "cwd": "${workspaceRoot}",
+        //     "autorun": [
+        //         "source xtensa.gdb"
+        //     ]
+        // },
+        // {
+        //     "name": "debug: gdb attach release",
+        //     "type": "gdb",
+        //     "request": "launch",
+        //     "target": "target/xtensa-esp32-none-elf/release/blinky",
+        //     "gdbpath": "xtensa-esp32-elf-gdb",
+        //     "cwd": "${workspaceRoot}",
+        //     "autorun": [
+        //         "source xtensa.gdb"
+        //     ]
+        // },
         
     ]
 }

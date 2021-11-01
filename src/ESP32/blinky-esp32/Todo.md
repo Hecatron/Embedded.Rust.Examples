@@ -7,16 +7,6 @@ https://github.com/lexxvir/esp32-hello
 https://github.com/MabezDev/xtensa-rust-quickstart
 
 
-## VSCode
-
-  * Issues with vscode rust-analyser
-    Seems to be a wider issue with custom toolchains under windows where cargo is run in parallel
-    https://github.com/rust-analyzer/rust-analyzer/issues/10674
-
-## Code Formatting
-
-  * format has issues with esp when run from cargo make
-
 ## Remote Debuging
 
   * try different debuggers for launch.json - CodeLLDB / Native Debug

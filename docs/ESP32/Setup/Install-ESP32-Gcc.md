@@ -14,10 +14,10 @@ xtensa-esp32-elf-gcc8_4_0-esp-2021r2-win64.zip
 
 Extract this to a path such as
 ```
-C:\Apps\xtensa-esp32-elf
+C:\Apps\dev-tools\xtensa-esp32-elf
 ```
 
 Then add the following to the path
 ```
-C:\Apps\xtensa-esp32-elf\bin
+C:\Apps\dev-tools\xtensa-esp32-elf\bin
 ```

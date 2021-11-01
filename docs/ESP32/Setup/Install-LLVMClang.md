@@ -10,10 +10,10 @@ Download and extract the latest release
 Make sure any existing versions of LLVM are uninstalled to avoid being picked up
 For Windows typically this would be some place such as
 ```
-C:\Apps\xtensa-esp32-elf-clang
+C:\Apps\dev-tools\xtensa-esp32-elf-clang
 ```
 
 Add the following to the Path
 ```
-C:\Apps\xtensa-esp32-elf-clang\bin
+C:\Apps\dev-tools\xtensa-esp32-elf-clang\bin
 ```

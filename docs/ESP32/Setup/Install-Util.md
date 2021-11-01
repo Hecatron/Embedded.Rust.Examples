@@ -11,7 +11,7 @@ This can be used with the ESP32 Wrover Kit board
 
 For Windows for example extract it to some place such as
 ```
-C:\Apps\openocd-esp32
+C:\Apps\dev-tools\openocd-esp32
 ```
 
 

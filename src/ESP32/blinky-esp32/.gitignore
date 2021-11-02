@@ -5,4 +5,4 @@
 Cargo.lock
 
 # Local settings
-/.make-cfg.toml
+/.cargo/.make-cfg.toml

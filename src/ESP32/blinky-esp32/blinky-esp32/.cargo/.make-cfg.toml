@@ -1,6 +1,0 @@
-[env]
-# Serial port for flashing
-ESP32_FLASH_SERIAL = "COM4"
-
-# Serial board rate
-ESP32_FLASH_SERIAL_BAUD = "115200"

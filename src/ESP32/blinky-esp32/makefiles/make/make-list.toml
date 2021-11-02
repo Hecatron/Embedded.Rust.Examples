@@ -13,15 +13,13 @@ alias = "list"
 [tasks.default]
 alias = "list"
 
+#[tasks.list]
+#command = "rust-script"
+#cwd = "${CARGO_MAKE_CURRENT_TASK_INITIAL_MAKEFILE_DIRECTORY}"
+#args = ["./usage.ers"]
+#category = "Common"
+
 [tasks.list]
-command = "rust-script"
-cwd = "${CARGO_MAKE_CURRENT_TASK_INITIAL_MAKEFILE_DIRECTORY}"
-args = ["./usage.ers"]
-category = "Common"
-
-
-
-[tasks.test1]
 script_runner = "@duckscript"
 script = '''
 fn title

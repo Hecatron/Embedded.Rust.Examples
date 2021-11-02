@@ -1,8 +1,8 @@
 # ESP32 Flash Tasks
 
 [env]
-ESP32_BOOTLOADER = "../../bootloader/esp32-bootloader.bin"
-ESP32_PARTBIN = "../../bootloader/partitions.bin"
+ESP32_BOOTLOADER = "../bootloader/esp32-bootloader.bin"
+ESP32_PARTBIN = "../bootloader/partitions.bin"
 ESP32_FLASHMODE = "dio"
 ESP32_FLASHFREQ = "40m"
 ESP32_FLASHSIZE = "detect"

@@ -1,16 +1,9 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
-            "name": "PlatformIO Debugger",
-            "request": "launch",
-            "type": "platformio-debug",
-            "executable": "target/xtensa-esp32-none-elf/debug/blinky",
-            "toolchainBinDir": "C:\\Apps\\dev-tools\\xtensa-esp32-elf\\bin\\",
-            "svdPath": "${workspaceRoot}/../bootloader/svd/esp32.svd",
-        },
-        {
-            "name": "debug: cortex-debug",
+            "name": "debug: cortex-debug - openocd",
             "cwd": "${workspaceRoot}",
             "executable": "target/xtensa-esp32-none-elf/debug/blinky",
             "request": "attach",
@@ -24,28 +17,9 @@
                 "${workspaceRoot}/makefiles/gdb/openocd-wrover-kit.cfg"
             ],
         },
-        // {
-        //     "name": "debug: gdb attach debug",
-        //     "type": "gdb",
-        //     "request": "launch",
-        //     "target": "target/xtensa-esp32-none-elf/debug/blinky",
-        //     "gdbpath": "xtensa-esp32-elf-gdb",
-        //     "cwd": "${workspaceRoot}",
-        //     "autorun": [
-        //         "source xtensa.gdb"
-        //     ]
-        // },
-        // {
-        //     "name": "debug: gdb attach release",
-        //     "type": "gdb",
-        //     "request": "launch",
-        //     "target": "target/xtensa-esp32-none-elf/release/blinky",
-        //     "gdbpath": "xtensa-esp32-elf-gdb",
-        //     "cwd": "${workspaceRoot}",
-        //     "autorun": [
-        //         "source xtensa.gdb"
-        //     ]
-        // },
-        
+
+
+
+
     ]
 }

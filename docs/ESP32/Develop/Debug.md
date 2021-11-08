@@ -10,6 +10,12 @@ JTag Jumpers:
   * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-wrover-kit.html
 
 
+## VSCode
+
+For the ESP32 only cortex-debug seems like an option
+LLDB doesn't seem to be included by default with the esp32 version of llvm
+
+
 ## JTag (esp32 dev board)
 
 Typically there are 2 serial ports on the ESP32 dev board
@@ -24,7 +30,7 @@ so once replaced the device will show up as a HID instead of a serial port
 A reboot may be needed afterwards in order for the serial port for flashing to continue working
 
 
-## Jtag Segger
+## Jtag (Segger)
 
   * https://dzone.com/articles/eclipse-jtag-debugging-the-esp32-with-a-segger-j-l
 

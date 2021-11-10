@@ -1,0 +1,17 @@
+# Note espflash currently has issues under windows
+# So we use esptool instead of the below
+
+# Also "--chip=esp32" and "--tool=\"xbuild\""
+# Shouldn't be needed in the newer versions
+
+#[tasks.flash]
+#description = "build the source in debug mode and upload to the flash - ESP32"
+#command = "cargo"
+#args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "${ESP32_FLASH_SERIAL}", "${@}"]
+#category = "Common"
+
+#[tasks.flash-release]
+#description = "build the source in release mode and upload to the flash - ESP32"
+#command = "cargo"
+#args = ["espflash", "--chip=esp32", "--tool=\"xbuild\"", "--release", "${ESP32_FLASH_SERIAL}", "${@}"]
+#category = "Common"

@@ -1,0 +1,36 @@
+# Build Tasks
+
+[env]
+# Show debugging info on error of build
+RUST_BACKTRACE = 1
+# Use the custom esp toolchain
+RUSTUP_TOOLCHAIN="esp"
+
+# Development Profile - Default
+[env.development]
+BUILD_OUT_DIR = "${CARGO_MAKE_CRATE_CUSTOM_TRIPLE_TARGET_DIRECTORY}/debug"
+BUILD_ELF_FILE = "${BUILD_OUT_DIR}/${CARGO_MAKE_PROJECT_NAME}"
+BUILD_BIN_FILE = "${BUILD_ELF_FILE}.bin"
+
+# Production / Release Profile
+[env.prod]
+BUILD_OUT_DIR = "${CARGO_MAKE_CRATE_CUSTOM_TRIPLE_TARGET_DIRECTORY}/release"
+BUILD_ELF_FILE = "${BUILD_OUT_DIR}/${CARGO_MAKE_PROJECT_NAME}"
+BUILD_BIN_FILE = "${BUILD_ELF_FILE}.bin"
+
+[tasks.build]
+description = "build the source"
+dependencies = ["build-development", "build-prod"]
+clear = true
+
+[tasks.build-development]
+description = "build the source - development"
+condition = { profiles = [ "development" ] }
+command = "cargo"
+args = ["build"]
+
+[tasks.build-prod]
+description = "build the source - production"
+condition = { profiles = [ "prod" ] }
+command = "cargo"
+args = ["build", "--release"]

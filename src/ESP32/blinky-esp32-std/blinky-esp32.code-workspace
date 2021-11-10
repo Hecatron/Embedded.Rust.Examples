@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "name": "blinky-esp32",
+      "path": "."
+    },
+  ],
+  "settings": {
+    "taskExplorer.showLastTasks": false,
+  }
+}

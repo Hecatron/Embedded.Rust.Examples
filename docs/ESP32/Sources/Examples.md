@@ -18,6 +18,8 @@
   * https://github.com/orgs/esp-rs/repositories
     Other rust / esp related repos
 
+  * https://github.com/ctron/rust-esp32-hono
+
 ## Blog Posts
 
   * https://dentrassi.de/2019/06/16/rust-on-the-esp-and-how-to-get-started/

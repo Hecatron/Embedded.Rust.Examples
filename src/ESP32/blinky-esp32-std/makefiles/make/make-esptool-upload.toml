@@ -1,0 +1,46 @@
+# ESP32 Flash Tasks
+
+[env]
+ESP32_BOOTLOADER = "../bootloader/esp32-bootloader.bin"
+ESP32_PARTBIN = "../bootloader/partitions.bin"
+ESP32_FLASHMODE = "dio"
+ESP32_FLASHFREQ = "40m"
+ESP32_FLASHSIZE = "detect"
+# Action after flash, default is hard_reset
+# Set this to no_reset to prevent resetting after a flash
+ESP32_AFTERFLASH = "hard_reset"
+
+[tasks.flash]
+description = "Upload / Flash the source to the esp32"
+command = "python"
+args = ["-m", "esptool", "--chip", "esp32",
+"-p", "${ESP32_FLASH_SERIAL}",
+"--baud", "${ESP32_FLASH_SERIAL_BAUD}",
+"--before", "default_reset", "--after", "${ESP32_AFTERFLASH}", "write_flash",
+"--flash_mode", "${ESP32_FLASHMODE}",
+"--flash_freq", "${ESP32_FLASHFREQ}",
+"--flash_size", "${ESP32_FLASHSIZE}",
+"0x1000", "${ESP32_BOOTLOADER}",
+"0x8000", "${ESP32_PARTBIN}",
+"0x10000", "${BUILD_BIN_FILE}",
+"${@}"]
+dependencies = ["elf2image"]
+category = "Common"
+
+[tasks.verifyflash]
+description = "Verify the uploaded flash"
+command = "python"
+args = ["-m", "esptool", "--chip", "esp32",
+"-p", "${ESP32_FLASH_SERIAL}",
+"--baud", "${ESP32_FLASH_SERIAL_BAUD}",
+"--before", "default_reset", "--after", "${ESP32_AFTERFLASH}", "verify_flash",
+"--diff", "yes",
+"--flash_mode", "${ESP32_FLASHMODE}",
+"--flash_freq", "${ESP32_FLASHFREQ}",
+"--flash_size", "${ESP32_FLASHSIZE}",
+"0x1000", "${ESP32_BOOTLOADER}",
+"0x8000", "${ESP32_PARTBIN}",
+"0x10000", "${BUILD_BIN_FILE}",
+"${@}"]
+dependencies = ["elf2image"]
+category = "Common"

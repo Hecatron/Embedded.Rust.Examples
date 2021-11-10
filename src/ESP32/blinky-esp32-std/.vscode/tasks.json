@@ -1,0 +1,166 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+
+    // Debug Tasks
+
+    {
+      "label": "debug-build",
+      "detail": "Build in debug mode",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "build" ],
+    },
+
+    {
+      "label": "debug-flash upload",
+      "detail": "Build in debug mode then upload to the flash",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "flash" ],
+    },
+
+    {
+      "label": "debug-elf2image",
+      "detail": "Build then generate a flashable image from the elf file",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "elf2image" ],
+    },
+
+    {
+      "label": "debug-image info",
+      "detail": "Show info on the generated flash binary",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "imageinfo" ],
+    },
+
+    {
+      "label": "debug-verify",
+      "detail": "Verify the uploaded flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "verifyflash" ],
+    },
+
+    // Production Tasks
+
+    {
+      "label": "prod-build",
+      "detail": "Build in release mode",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "build" ],
+    },
+
+    {
+      "label": "prod-flash upload",
+      "detail": "Build in debug mode then upload to the flash",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "flash" ],
+    },
+
+    {
+      "label": "prod-elf2image",
+      "detail": "Build then generate a flashable image from the elf file",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "elf2image" ],
+    },
+
+    {
+      "label": "prod-image info",
+      "detail": "Show info on the generated flash binary",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "imageinfo" ],
+    },
+
+    {
+      "label": "prod-verify",
+      "detail": "Verify the uploaded flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "-p", "prod", "verifyflash" ],
+    },
+
+    // Flash Util
+
+    {
+      "label": "flash-device id",
+      "detail": "This gets the ESP32 Flash id and displays it in the console.",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "flashid" ],
+    },
+
+    {
+      "label": "flash-chip id",
+      "detail": "This gets the ESP32 Chip id and displays it in the console.",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "chipid" ],
+    },
+
+    {
+      "label": "flash-flash status",
+      "detail": "This gets the ESP32 Flash Status and displays it in the console.",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "flashstatus" ],
+    },
+
+    {
+      "label": "flash-read mac address",
+      "detail": "Read the mac address of the board",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "readmac" ],
+    },
+
+    {
+      "label": "flash-erase",
+      "detail": "Erase the flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "eraseflash" ],
+    },
+
+    {
+      "label": "flash-run",
+      "detail": "Run the app code in flash",
+      "type": "process",
+      "command": "cargo",
+      "args": [ "make", "run" ],
+    },
+
+    // Other
+
+    {
+      "label": "clean",
+      "detail": "Clean the target build directory",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "clean" ],
+    },
+
+    {
+      "label": "format rust code",
+      "detail": "Auto format the code",
+      "type": "process",
+      "group": "build",
+      "command": "cargo",
+      "args": [ "make", "fmt" ],
+    },
+
+  ],
+}

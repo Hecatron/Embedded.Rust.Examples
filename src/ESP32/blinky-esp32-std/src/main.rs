@@ -1,10 +1,9 @@
-#![no_std]
 #![no_main]
+#![feature(restricted_std)]
 
 use esp32_hal as hal;
 use esp32_hal::target;
 use hal::prelude::*;
-use panic_halt as _;
 use xtensa_lx::timer::delay;
 
 mod wdt;
@@ -13,8 +12,8 @@ mod wdt;
 /// In most cases 40mhz (but can be as low as 2mhz depending on the board)
 const CORE_HZ: u32 = 40_000_000;
 
-#[entry]
-fn main() -> ! {
+#[no_mangle]
+fn main() {
     // Get Peripherals
     let mut dp = target::Peripherals::take().expect("Failed to obtain Peripherals");
 
@@ -25,14 +24,23 @@ fn main() -> ! {
     let pins = dp.GPIO.split();
     let mut led = pins.gpio2.into_push_pull_output();
 
-    //let mut testint = 0;
+    let mut count1 = 0;
 
     loop {
-        //testint = 1;
+        // Set Led
         led.set_high().unwrap();
+        // Delay
         delay(CORE_HZ / 2);
-        //testint = 3;
+        // Set Led
         led.set_low().unwrap();
+        // Delay
         delay(CORE_HZ / 2);
+
+        // Print to console
+        //println!("Hello World {:?}", count1);
+        count1 += 1;
+        if count1 > 100 {
+            count1 = 0;
+        }
     }
 }

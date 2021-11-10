@@ -17,9 +17,5 @@
                 "${workspaceRoot}/makefiles/gdb/openocd-wrover-kit.cfg"
             ],
         },
-
-
-
-
     ]
 }

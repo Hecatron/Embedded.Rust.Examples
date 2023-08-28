@@ -92,3 +92,125 @@ rustup default esp
 # Check to make sure the list of targets includes xtensa
 rustc --print target-list
 ```
+
+
+
+## TODO
+
+```
+# Make sure you are using python 3.8 at least
+python src/bootstrap/configure.py --experimental-targets=Xtensa
+
+# Configure
+python src/bootstrap/configure.py ${{ matrix.LLVM_ROOT_OPTION }} --experimental-targets=Xtensa --enable-extended --tools=rustfmt --dist-compression-formats='xz'
+
+# Build
+python x.py build --stage 2
+```
+
+
+```
+mkdir vendor
+cd vendor
+
+# For Windows we use mklink
+mklink /D rustc-std-workspace-alloc ..\library\rustc-std-workspace-alloc\
+mklink /D rustc-std-workspace-core ..\library\rustc-std-workspace-core\
+mklink /D rustc-std-workspace-std ..\library\rustc-std-workspace-std\
+```
+
+
+I think the way to do this would be to first add cargo to the list of tools option
+```
+python src/bootstrap/configure.py --experimental-targets=Xtensa --enable-extended --tools=rustfmt,cargo --dist-compression-formats="xz"
+```
+
+Insert a build before the dist so that the tools get built
+```
+python x.py build --stage 2
+```
+
+Then do the dist stage
+```
+python x.py dist --stage 2
+```
+
+At this point the dist will fail but we have the compressed files
+So as part of the powershell script, copy the content of build\x86_64-pc-windows-msvc\stage2-tools-bin
+into the bin directory under the destination esp dir
+
+build-rust-dispatch
+
+
+
+
+
+# Prepare Build
+# Added Cargo
+python src/bootstrap/configure.py --experimental-targets=Xtensa --enable-extended --tools=rustfmt,cargo --dist-compression-formats="xz"
+
+# Added this
+python x.py build --exclude src/doc --stage 2 
+
+# Build Only components - not needed
+# python x.py build compiler/rustc src/tools/rustfmt library/std --stage 2
+
+# Dist the Source
+#python x.py dist src --stage 2
+
+# Dist with x.py - this fails
+python x.py dist --exclude src/doc --stage 2
+
+# Dist the tools seperatley
+python x.py dist --exclude src/doc --stage 2 rustfmt cargo
+
+
+
+
+
+
+
+# Build with x.py - dist packages - continue on error - problem with Long path on Windows
+python x.py dist --stage 2
+
+# Build with x.py - dist packages - with cached LLVM
+python x.py dist --stage 2 --exclude src/doc --llvm-skip-rebuild TRUE
+
+
+
+# Build All
+python x.py build --stage 2 --exclude src/doc
+
+# This will error out but create the needed compressed files under build/dist
+python x.py dist --stage 2 --exclude src/doc
+
+# Dist bundle for Windows
+Power shell script
+
+
+
+
+
+          cd build/dist
+          mkdir esp
+          7z e rust-1.56.0-dev-x86_64-pc-windows-msvc.tar.xz
+          7z x rust-1.56.0-dev-x86_64-pc-windows-msvc.tar
+          pushd rust-1.56.0-dev-x86_64-pc-windows-msvc
+          cp -Recurse .\rustc\bin ..\esp\
+          cp -Recurse .\rustc\lib ..\esp\
+          cp -Recurse .\rustc\share ..\esp\
+          cp -ErrorAction SilentlyContinue -Recurse .\rust-std-x86_64-pc-windows-msvc\lib\* ..\esp\lib\
+          popd
+          7z e rust-src-1.56.0-dev.tar.xz
+          7z x rust-src-1.56.0-dev.tar
+          pushd rust-src-1.56.0-dev
+          cp -ErrorAction SilentlyContinue -Recurse .\rust-src\lib\* ..\esp\lib\
+          popd
+          7z a esp.zip esp/
+
+D:/rust/build/dist
+
+
+
+To get a list of targets
+rustc --print=[target-list, target-cpus, target-features]

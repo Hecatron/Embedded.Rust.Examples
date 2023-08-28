@@ -1,5 +1,16 @@
 # Todo
 
+
+## Ldproxy
+
+the following is needed
+
+cargo install ldproxy
+
+also see
+https://kerkour.com/rust-on-esp32/
+
+
 ## Remote Debuging
 
   * look at the runner under .cargo/config
@@ -24,3 +35,8 @@ Need to study this next, it seems to be similar to the fork I'm using but uses
 https://github.com/esp-rs/rust-build - binary build of the above, but also including idf?
 https://github.com/ivmarkov/rust-esp32-std-demo
 
+the windows build seems to be within
+https://github.com/esp-rs/rust-build/blob/main/.github/workflows/build-rust-x86_64-pc-windows-msvc-dispatch.yaml
+```
+python3 src/bootstrap/configure.py ${{ matrix.LLVM_ROOT_OPTION }} --experimental-targets=Xtensa --enable-extended --tools=rustfmt --dist-compression-formats='xz'
+```

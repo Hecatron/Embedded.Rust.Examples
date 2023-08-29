@@ -1,0 +1,26 @@
+{
+  "name": "docus-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "lint": "eslint .",
+    "upd": "ncu -p pnpm -i"
+  },
+  "devDependencies": {
+    "@nuxt-themes/docus": "1.14.6",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@types/node": "^20.5.7",
+    "eslint": "^8.48.0",
+    "npm-check-updates": "^16.13.2",
+    "nuxt": "3.7.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "micromark": "3.2.0"
+    }
+  }
+}

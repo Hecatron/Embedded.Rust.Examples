@@ -1,0 +1,27 @@
+:root {
+  --prose-p-br-margin: 0 0 0 0;
+  --prose-li-margin: 0 0 0 0;
+  --elements-container-maxWidth: 120em;
+  --prose-h6-margin: 0;
+  --prose-h5-margin: 0;
+  --prose-h4-margin: 0;
+  --prose-h3-margin: 0;
+  --prose-h2-margin: 0;
+}
+
+article ul {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  width: 100em !important;
+}
+
+.card-grid {
+  padding-bottom: 0 !important;
+}
+
+.prose-code.highlight-sh code .line::before {
+  color: var(--typography-color-primary-800) !important;
+}

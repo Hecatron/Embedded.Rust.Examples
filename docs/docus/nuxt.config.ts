@@ -23,5 +23,10 @@ export default defineNuxtConfig({
   ],
   dir: {
     public: '../public'
-  }
+  },
+  // Fix for https://github.com/nuxt-themes/docus/issues/970
+  alias: {
+    "micromark/lib/preprocess.js": "micromark",
+    "micromark/lib/postprocess.js": "micromark",
+  },
 })

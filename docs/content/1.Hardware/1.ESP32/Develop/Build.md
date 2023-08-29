@@ -22,7 +22,7 @@ first we need to make sure we're on the esp toolchain
 rustup default esp
 # to switch back to the stable x86 toolchain
 rustup default stable
-``
+```
 
 
 ## Building

@@ -1,0 +1,22 @@
+# ESP Idf Toolchain
+
+There are two ways to use the esp toolchain
+
+## Switch rustup
+
+The first method is to change the default toolchain in use
+```sh
+# To switch to the custom esp toolchain that is installed
+rustup default esp
+# to switch back to the stable x86 toolchain
+rustup default stable
+```
+
+## Toolchain config file
+
+The second method is to create a file in the root of the project `rust-toolchain.toml`
+With the following content in
+```toml
+[toolchain]
+channel = "esp"
+```

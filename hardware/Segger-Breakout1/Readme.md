@@ -33,3 +33,7 @@ TMS   GPIO3   5
 
 DBG RX  GPIO4   6
 DBG TX  GPIO5   7
+
+https://github.com/rgrr/yapicoprobe
+
+https://reltech.substack.com/p/getting-started-with-rust-on-a-raspberry

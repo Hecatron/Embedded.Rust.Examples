@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"rust-analyzer.cargo.features": [
+			"rtic",
+			"stm32f767"
+		]
+	}
+}

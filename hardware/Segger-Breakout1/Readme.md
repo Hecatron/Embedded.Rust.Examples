@@ -37,3 +37,4 @@ DBG TX  GPIO5   7
 https://github.com/rgrr/yapicoprobe
 
 https://reltech.substack.com/p/getting-started-with-rust-on-a-raspberry
+https://shop.segger.com/debug-trace-probes/debug-probes/adapters/flying-wire-adapter

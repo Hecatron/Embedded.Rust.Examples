@@ -11,12 +11,27 @@ use cortex_m_rt::entry;
 // Blinks an LED
 #[entry]
 fn main() -> ! {
+    loop1();
+}
+
+pub fn static1() -> ! {
     let p = pac::Peripherals::take().unwrap();
     let gpiob = p.GPIOB.split();
     let mut led_red = gpiob.pb14.into_push_pull_output();
     let mut led_blue = gpiob.pb7.into_push_pull_output();
     let mut led_green = gpiob.pb0.into_push_pull_output();
+    led_red.set_high();
+    led_blue.set_high();
+    led_green.set_low();
+    loop {};
+}
 
+pub fn loop1() -> ! {
+    let p = pac::Peripherals::take().unwrap();
+    let gpiob = p.GPIOB.split();
+    let mut led_red = gpiob.pb14.into_push_pull_output();
+    let mut led_blue = gpiob.pb7.into_push_pull_output();
+    let mut led_green = gpiob.pb0.into_push_pull_output();
     loop {
         for _ in 0..10_000_000 {
             led_red.set_high();

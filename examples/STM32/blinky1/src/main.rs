@@ -12,15 +12,26 @@ use cortex_m_rt::entry;
 #[entry]
 fn main() -> ! {
     let p = pac::Peripherals::take().unwrap();
-    let gpioi = p.GPIOI.split();
-    let mut led = gpioi.pi1.into_push_pull_output();
+    let gpiob = p.GPIOB.split();
+    let mut led_red = gpiob.pb14.into_push_pull_output();
+    let mut led_blue = gpiob.pb7.into_push_pull_output();
+    let mut led_green = gpiob.pb0.into_push_pull_output();
 
     loop {
         for _ in 0..10_000 {
-            led.set_high();
+            led_red.set_high();
+            led_blue.set_low();
+            led_green.set_low();
         }
         for _ in 0..10_000 {
-            led.set_low();
+            led_red.set_low();
+            led_blue.set_high();
+            led_green.set_low();
+        }
+        for _ in 0..10_000 {
+            led_red.set_low();
+            led_blue.set_low();
+            led_green.set_high();
         }
     }
 }

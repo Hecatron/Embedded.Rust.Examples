@@ -18,17 +18,17 @@ fn main() -> ! {
     let mut led_green = gpiob.pb0.into_push_pull_output();
 
     loop {
-        for _ in 0..10_000 {
+        for _ in 0..10_000_000 {
             led_red.set_high();
             led_blue.set_low();
             led_green.set_low();
         }
-        for _ in 0..10_000 {
+        for _ in 0..10_000_000 {
             led_red.set_low();
             led_blue.set_high();
             led_green.set_low();
         }
-        for _ in 0..10_000 {
+        for _ in 0..10_000_000 {
             led_red.set_low();
             led_blue.set_low();
             led_green.set_high();

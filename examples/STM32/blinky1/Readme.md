@@ -17,6 +17,18 @@ For VSCode install the extension "Debugger for probe-rs"
 
   * https://probe.rs/docs/tools/debugger/#using-the-launch-request-type
 
+Switched the "JLink" driver to "WinUSB"
+using Zadig
+note don't target the JLinkCDC driver, just the JLink one under interface 2 / bulk device
+
+
+Seems to only work with the latest STLink Firmware for the STLink Interface
+```sh
+cargo flash --release --chip STM32F767ZITx --connect-under-reset
+```
+
+
+
 ## Depends
 
 ```sh

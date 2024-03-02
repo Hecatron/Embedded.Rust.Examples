@@ -19,7 +19,5 @@ To build the below library outside of a dependency `cargo build --features=stm32
 # To build a release version
 cargo build --release
 # To flash the code to the device
-cargo flash --release --chip STM32F767ZITx --connect-under-reset
+cargo embed --release
 ```
-
-TODO switch to cargo embed

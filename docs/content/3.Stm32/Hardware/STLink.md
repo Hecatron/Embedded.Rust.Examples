@@ -1,0 +1,16 @@
+# STLink
+
+While using the probe-rs tools I've found for stlink boards
+the best approach is to not use the j-link driver, but just update the stlink firmware to the latest version
+
+  * https://www.st.com/en/development-tools/stsw-link007.html
+
+## JLink Firmware
+
+I've tried flashing the jlink firmware to the stlink
+using zadig to switch the "interface 2 Bulk device" to winusb
+
+  * https://zadig.akeo.ie/
+
+However this doesn't appear to work with probe-rs
+

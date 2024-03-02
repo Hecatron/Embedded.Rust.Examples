@@ -10,44 +10,16 @@ This uses the below Hal library and uses this as an example
 To build the below library outside of a dependency `cargo build --features=stm32f767,rt`
 
   * https://github.com/stm32-rs/stm32f7xx-hal
-
-## Debugger
-
-For VSCode install the extension "Debugger for probe-rs"
-
-  * https://probe.rs/docs/tools/debugger/#using-the-launch-request-type
-
-Switched the "JLink" driver to "WinUSB"
-using Zadig
-note don't target the JLinkCDC driver, just the JLink one under interface 2 / bulk device
+  * https://github.com/stm32-rs/stm32f7xx-hal/blob/main/examples/blinky.rs
 
 
-Seems to only work with the latest STLink Firmware for the STLink Interface
-```sh
+## Building / Flashing
+
+```
+# To build a release version
+cargo build --release
+# To flash the code to the device
 cargo flash --release --chip STM32F767ZITx --connect-under-reset
 ```
 
-
-
-## Depends
-
-```sh
-# Needed target for the stm32
-rustup target add thumbv7em-none-eabihf
-
-# For flashing / debugging
-cargo install cargo-binstall
-cargo binstall probe-rs
-```
-
-## Building
-
-```
-cargo build --release
-```
-
-## Flashing
-
-Todo switch the driver using
-
-  * https://zadig.akeo.ie/
+TODO switch to cargo embed

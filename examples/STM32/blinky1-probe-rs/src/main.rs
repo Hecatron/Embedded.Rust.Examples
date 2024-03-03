@@ -17,9 +17,10 @@ use crate::hal::{
 #[entry]
 fn main() -> ! {
     loop1();
+    loop {}
 }
 
-pub fn loop1() -> ! {
+pub fn loop1() {
     if let (Some(dp), Some(_cp)) = (
         pac::Peripherals::take(),
         cortex_m::peripheral::Peripherals::take(),
@@ -58,5 +59,4 @@ pub fn loop1() -> ! {
             led_green.set_high();
         }
     }
-    loop {}
 }

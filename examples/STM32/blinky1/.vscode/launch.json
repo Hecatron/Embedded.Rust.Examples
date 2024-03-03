@@ -13,7 +13,7 @@
       "coreConfigs": [
         {
           "coreIndex": 0,
-          "programBinary": "target\\thumbv7em-none-eabihf\\debug\\blinky1-probe-rs",
+          "programBinary": "target\\thumbv7em-none-eabihf\\debug\\blinky1",
           "svdFile": ".vscode\\svd\\stm32f7x7.svd.patched"
         }
       ],

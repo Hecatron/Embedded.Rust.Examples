@@ -3,4 +3,9 @@
   * https://github.com/Marus/cortex-debug
   * https://betterprogramming.pub/debugging-embedded-rust-e92ff0b8b8e5
 
-TODO
+I'm not sure if there are any advantages of probe-rs vs cortex-debug.
+But it does appear cortex-debug does now have rust support.
+Also it can connect to GDB Servers as well
+
+  * TODO Setup of a launch config for stlink
+  * TODO Setup of a launch config for Segger

@@ -12,6 +12,9 @@ To build the below library outside of a dependency `cargo build --features=stm32
   * https://github.com/stm32-rs/stm32f7xx-hal
   * https://github.com/stm32-rs/stm32f7xx-hal/blob/main/examples/blinky.rs
 
+For the debugger it's setup to use probe-rs
+
+  * https://probe.rs/docs/tools/debugger/
 
 ## Building / Flashing
 

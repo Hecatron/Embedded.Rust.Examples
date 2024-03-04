@@ -9,6 +9,7 @@ cortex-m-rt = ">=0.6.15, <0.8"
 panic-halt = "0.2.0"
 ssd1306 = "0.8.4"
 embedded-graphics = "0.8.1"
+rand = { version = "0.8.4", default-features = false, features = [ "small_rng" ] }
 
 [dependencies.stm32f7xx-hal]
 version = "0.7.0"

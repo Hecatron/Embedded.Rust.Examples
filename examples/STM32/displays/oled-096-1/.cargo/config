@@ -1,0 +1,10 @@
+[target.thumbv7em-none-eabihf]
+# Needed to generate the correct type of elf
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
+
+runner = 'probe-rs run --chip STM32F767ZITx'
+
+[build]
+target = "thumbv7em-none-eabihf"

@@ -1,11 +1,13 @@
 use embedded_graphics::{
+    mono_font::{ascii::FONT_6X9, MonoTextStyle},
     pixelcolor::BinaryColor,
     prelude::*,
-    primitives::{Circle, Line, Rectangle, PrimitiveStyle},
-    mono_font::{ascii::FONT_6X9, MonoTextStyle},
+    primitives::{Circle, Line, PrimitiveStyle, Rectangle},
     text::Text,
 };
-use embedded_graphics_simulator::{BinaryColorTheme, SimulatorDisplay, Window, OutputSettingsBuilder};
+use embedded_graphics_simulator::{
+    BinaryColorTheme, OutputSettingsBuilder, SimulatorDisplay, Window,
+};
 
 fn main() -> Result<(), core::convert::Infallible> {
     let mut display = SimulatorDisplay::<BinaryColor>::new(Size::new(128, 64));

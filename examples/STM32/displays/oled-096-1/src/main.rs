@@ -37,11 +37,11 @@ fn main() -> ! {
 
     let mut rcc = dp.RCC.constrain();
     let clocks = rcc.cfgr.freeze();
-    let gpiob = dp.GPIOB.split();
+    let gpiof = dp.GPIOB.split();
 
     // Configure I2C1
-    let scl = gpiob.pb8.into_alternate_open_drain::<4>();
-    let sda = gpiob.pb7.into_alternate_open_drain::<4>();
+    let scl = gpiof.pb8.into_alternate_open_drain::<4>();
+    let sda = gpiof.pb9.into_alternate_open_drain::<4>();
     let i2c = hal::i2c::BlockingI2c::i2c1(
         dp.I2C1,
         (scl, sda),

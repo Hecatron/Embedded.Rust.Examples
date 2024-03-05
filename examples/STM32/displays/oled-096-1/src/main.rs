@@ -1,3 +1,18 @@
+// Send random raw data to the display, emulating an old untuned TV. This example retrieves the
+// underlying display properties struct and allows calling of the low-level `draw()` method,
+// sending a 1024 byte buffer straight to the display.
+// Run with `cargo run --example noise1`. Best results when using `--release`.
+// https://github.com/embedded-graphics/embedded-graphics/blob/master/src/image/image_raw.rs
+
+// TODO re-write for ARM
+// TODO move common code into lib.rs
+// TODO write i2c scanner
+// https://github.com/jamwaffles/ssd1306
+// https://github.com/jamwaffles/ssd1306/blob/master/examples/noise_i2c.rs
+
+// TODO Upload Examples instead of main
+// cargo build --example noise1
+
 #![deny(unsafe_code)]
 #![allow(clippy::empty_loop)]
 #![no_main]
@@ -10,53 +25,44 @@ use stm32f7xx_hal as hal;
 use crate::hal::{
     pac,
     prelude::*,
-    rcc::{HSEClock, HSEClockMode},
 };
 
-// Blinks an LED
+use embedded_graphics::{image::Image, image::ImageRaw, pixelcolor::BinaryColor, prelude::*};
+use rand::prelude::*;
+use ssd1306::{prelude::*, I2CDisplayInterface, Ssd1306};
+
 #[entry]
 fn main() -> ! {
-    loop1();
-    loop {}
-}
+    let dp = pac::Peripherals::take().unwrap();
 
-pub fn loop1() {
-    if let (Some(dp), Some(_cp)) = (
-        pac::Peripherals::take(),
-        cortex_m::peripheral::Peripherals::take(),
-    ) {
-        // Setup the gpio
-        let gpiob = dp.GPIOB.split();
-        let mut led_red = gpiob.pb14.into_push_pull_output();
-        let mut led_blue = gpiob.pb7.into_push_pull_output();
-        let mut led_green = gpiob.pb0.into_push_pull_output();
+    let mut rcc = dp.RCC.constrain();
+    let clocks = rcc.cfgr.freeze();
+    let gpiob = dp.GPIOB.split();
 
-        // Set up the system clock. We want to run at 48MHz for this one.
-        let rcc = dp.RCC.constrain();
-        let clocks = rcc
-            .cfgr
-            .hse(HSEClock::new(25.MHz(), HSEClockMode::Bypass))
-            .sysclk(48.MHz())
-            .freeze();
+    // Configure I2C1
+    let scl = gpiob.pb8.into_alternate_open_drain::<4>();
+    let sda = gpiob.pb7.into_alternate_open_drain::<4>();
+    let i2c = hal::i2c::BlockingI2c::i2c1(
+        dp.I2C1,
+        (scl, sda),
+        hal::i2c::Mode::fast(400_000.Hz()),
+        &clocks,
+        &mut rcc.apb1,
+        50_000,
+    );
 
-        // Create a delay abstraction based on general-pupose 32-bit timer TIM5
-        let mut delay = dp.TIM5.delay_us(&clocks);
+    let interface = I2CDisplayInterface::new(i2c);
+    let mut display = Ssd1306::new(interface, DisplaySize128x64, DisplayRotation::Rotate0)
+    .into_buffered_graphics_mode();
 
-        loop {
-            delay.delay(1.secs());
-            led_red.set_high();
-            led_blue.set_low();
-            led_green.set_low();
+    let mut buf = [0x00u8; 8192];
+    let mut rng = SmallRng::seed_from_u64(0xdead_beef_cafe_d00d);
 
-            delay.delay(1.secs());
-            led_red.set_low();
-            led_blue.set_high();
-            led_green.set_low();
-
-            delay.delay(1.secs());
-            led_red.set_low();
-            led_blue.set_low();
-            led_green.set_high();
-        }
+    loop {
+        // Draw a random image
+        rng.fill_bytes(&mut buf);
+        let raw_image = ImageRaw::<BinaryColor>::new(&buf, 128);
+        let image = Image::new(&raw_image, Point::zero());
+        image.draw(&mut display).unwrap();
     }
 }

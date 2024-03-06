@@ -8,9 +8,6 @@ Pins PB7 and PB8 are used for i2c
 
 ## Driver
 
-I think the driver is a ssd1306
-so trying this first
-
   * https://github.com/jamwaffles/ssd1306
 
 ## Power

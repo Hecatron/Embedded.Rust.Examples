@@ -22,4 +22,6 @@ I think this display uses up to 20mA
 ## TODO
 
   * Create an embedded graphics example
-  * document the wiring needed
+
+According to the I2C scanner 3C is used
+The wiring output from the mbed site is a bit misleading

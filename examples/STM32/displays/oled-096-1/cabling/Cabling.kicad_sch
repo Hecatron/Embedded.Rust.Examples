@@ -2881,6 +2881,36 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 55.88) (xy 261.62 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "172288f4-ebb2-4b7d-9f24-19648f9b44d8")
+	)
+	(wire
+		(pts
+			(xy 256.54 53.34) (xy 261.62 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26627ce5-8cbf-4e02-8e74-3d35fea0bd7c")
+	)
+	(wire
+		(pts
+			(xy 256.54 48.26) (xy 261.62 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48edcbc0-b6a6-43c8-9cad-29b9e5f1baf7")
+	)
+	(wire
+		(pts
 			(xy 356.87 100.33) (xy 361.95 100.33)
 		)
 		(stroke
@@ -2911,6 +2941,16 @@
 	)
 	(wire
 		(pts
+			(xy 256.54 50.8) (xy 261.62 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3d14b5c-8f00-4cf6-b003-4b468e49cdfe")
+	)
+	(wire
+		(pts
 			(xy 311.15 20.32) (xy 311.15 26.67)
 		)
 		(stroke
@@ -2931,7 +2971,7 @@
 		(uuid "269d87ea-6236-4cda-aad7-71c7799e5f96")
 	)
 	(label "GND"
-		(at 261.62 55.88 0)
+		(at 261.62 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2942,7 +2982,7 @@
 		(uuid "36b35f84-f4fe-42c9-b2c1-f30d9e553e58")
 	)
 	(label "SDA"
-		(at 261.62 50.8 0)
+		(at 261.62 55.88 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2964,7 +3004,7 @@
 		(uuid "bc240a21-fd29-481b-a8e2-47b5370bcfb1")
 	)
 	(label "+3.3V"
-		(at 261.62 48.26 0)
+		(at 261.62 50.8 0)
 		(fields_autoplaced yes)
 		(effects
 			(font

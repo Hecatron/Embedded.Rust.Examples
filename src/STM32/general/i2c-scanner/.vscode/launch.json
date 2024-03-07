@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "probe-rs Start Debug",
+      "type": "probe-rs-debug",
+      "request": "launch",
+      "flashingConfig": {
+        "flashingEnabled": true,
+        "haltAfterReset": false
+      },
+      "chip": "STM32F767ZITx",
+      "coreConfigs": [
+        {
+          "coreIndex": 0,
+          "programBinary": "target\\thumbv7em-none-eabihf\\debug\\rtt-log",
+          "svdFile": ".vscode\\svd\\stm32f7x7.svd.patched",
+          "rttEnabled": true,
+          "rttChannelFormats": [
+            {
+              "channelNumber": 0,
+              "dataFormat": "String",
+              "showTimestamps": true,
+            }
+          ]
+        }
+      ],
+      "preLaunchTask": "${defaultBuildTask}",
+    }
+  ]
+}

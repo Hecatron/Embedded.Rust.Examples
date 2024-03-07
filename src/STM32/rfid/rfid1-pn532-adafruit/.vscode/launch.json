@@ -13,8 +13,16 @@
       "coreConfigs": [
         {
           "coreIndex": 0,
-          "programBinary": "target\\thumbv7em-none-eabihf\\debug\\i2c-scanner",
-          "svdFile": ".vscode\\svd\\stm32f7x7.svd.patched"
+          "programBinary": "target\\thumbv7em-none-eabihf\\debug\\rfid1-pn532-adafruit",
+          "svdFile": ".vscode\\svd\\stm32f7x7.svd.patched",
+          "rttEnabled": true,
+          "rttChannelFormats": [
+            {
+              "channelNumber": 0,
+              "dataFormat": "String",
+              "showTimestamps": true,
+            }
+          ]
         }
       ],
       "preLaunchTask": "${defaultBuildTask}",

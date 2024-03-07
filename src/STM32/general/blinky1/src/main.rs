@@ -4,7 +4,7 @@
 #![no_std]
 
 use cortex_m_rt::entry;
-use panic_halt as _; // panic handler
+use panic_halt as _;
 use stm32f7xx_hal as hal;
 
 use crate::hal::{
@@ -21,42 +21,45 @@ fn main() -> ! {
 }
 
 pub fn loop1() {
-    if let (Some(dp), Some(_cp)) = (
-        pac::Peripherals::take(),
-        cortex_m::peripheral::Peripherals::take(),
-    ) {
-        // Setup the gpio
-        let gpiob = dp.GPIOB.split();
-        let mut led_red = gpiob.pb14.into_push_pull_output();
-        let mut led_blue = gpiob.pb7.into_push_pull_output();
-        let mut led_green = gpiob.pb0.into_push_pull_output();
+    let dp = pac::Peripherals::take().unwrap();
+    let _cp = cortex_m::peripheral::Peripherals::take().unwrap();
 
-        // Set up the system clock. We want to run at 48MHz for this one.
-        let rcc = dp.RCC.constrain();
-        let clocks = rcc
-            .cfgr
-            .hse(HSEClock::new(25.MHz(), HSEClockMode::Bypass))
-            .sysclk(48.MHz())
-            .freeze();
+    // if let (Some(dp), Some(_cp)) = (
+    //     pac::Peripherals::take(),
+    //     cortex_m::peripheral::Peripherals::take(),
+    // ) {
 
-        // Create a delay abstraction based on general-pupose 32-bit timer TIM5
-        let mut delay = dp.TIM5.delay_us(&clocks);
+    // Setup the gpio
+    let gpiob = dp.GPIOB.split();
+    let mut led_red = gpiob.pb14.into_push_pull_output();
+    let mut led_blue = gpiob.pb7.into_push_pull_output();
+    let mut led_green = gpiob.pb0.into_push_pull_output();
 
-        loop {
-            delay.delay(1.secs());
-            led_red.set_high();
-            led_blue.set_low();
-            led_green.set_low();
+    // Set up the system clock. We want to run at 48MHz for this one.
+    let rcc = dp.RCC.constrain();
+    let clocks = rcc
+        .cfgr
+        .hse(HSEClock::new(25.MHz(), HSEClockMode::Bypass))
+        .sysclk(48.MHz())
+        .freeze();
 
-            delay.delay(1.secs());
-            led_red.set_low();
-            led_blue.set_high();
-            led_green.set_low();
+    // Create a delay abstraction based on general-pupose 32-bit timer TIM5
+    let mut delay = dp.TIM5.delay_us(&clocks);
 
-            delay.delay(1.secs());
-            led_red.set_low();
-            led_blue.set_low();
-            led_green.set_high();
-        }
+    loop {
+        delay.delay(1.secs());
+        led_red.set_high();
+        led_blue.set_low();
+        led_green.set_low();
+
+        delay.delay(1.secs());
+        led_red.set_low();
+        led_blue.set_high();
+        led_green.set_low();
+
+        delay.delay(1.secs());
+        led_red.set_low();
+        led_blue.set_low();
+        led_green.set_high();
     }
 }

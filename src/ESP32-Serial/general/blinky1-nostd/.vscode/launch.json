@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "probe-rs Start Debug",
+      "type": "probe-rs-debug",
+      "request": "launch",
+      "flashingConfig": {
+        "flashingEnabled": true,
+        "haltAfterReset": false
+      },
+      "chip": "esp32-3.3v",
+      "coreConfigs": [
+        {
+          "coreIndex": 0,
+          "programBinary": "target\\xtensa-esp32-none-elf\\debug\\blinky1-nostd",
+          //"svdFile": ".vscode\\svd\\stm32f7x7.svd.patched"
+        }
+      ],
+      "preLaunchTask": "${defaultBuildTask}",
+    },
+    {
+      "name": "probe-rs Attach",
+      "type": "probe-rs-debug",
+      "request": "attach",
+      "chip": "esp32-3.3v",
+      "coreConfigs": [
+        {
+          "coreIndex": 0,
+          "programBinary": "target\\xtensa-esp32-none-elf\\debug\\blinky1-nostd",
+          //"svdFile": "Relative or fully qualified path to your programBinary"
+        }
+      ],
+      "env": {
+        // If you set this variable, check the VSCode console log window for the location of the log file.
+        "RUST_LOG": "info"
+      },
+      // Info, Debug
+      "consoleLogLevel": "Console"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+[default.general]
+chip = "esp32-3.3v"

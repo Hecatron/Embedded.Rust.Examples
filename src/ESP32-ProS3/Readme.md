@@ -34,3 +34,5 @@ cargo espflash flash
 ## TODO
 
   * For launch.json The svd file?
+  * Can't seemn to get this to flash at the moment as its non serial
+

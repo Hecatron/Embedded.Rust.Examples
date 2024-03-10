@@ -1,5 +1,23 @@
 # Todo
 
+## Devices
+
+The PROS3 I think works after switching the WinUSB drivers over to non WCD ones
+https://github.com/probe-rs/probe-rs/discussions/2272
+
+### Segger required
+
+The following devices show up as UART / Serial ports
+so would probably need a segger to debug
+
+  * TTGO ESP32 dev board
+    Shows as 2 x serial ports
+  * The older official ESP32 wroom board (the one with the LCD)
+    Shows as a single serial port
+  * The smaller ESP32 Wroom board
+
+Probe-rs doesn't currentlt work with uart serial ports
+
 
 ## Ldproxy
 

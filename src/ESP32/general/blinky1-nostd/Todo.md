@@ -8,4 +8,3 @@
 
   * comment out Cargo.lock in the other examples
   * for release we have debug enabled?
-  * esp32s3-hal replaced by esp-hal

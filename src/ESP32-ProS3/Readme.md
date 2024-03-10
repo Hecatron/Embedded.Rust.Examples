@@ -24,6 +24,8 @@ espup install
 It looks as if probe-rs can't flash this board at the moment.
 It's interface is a Espjtag interface
 
+In order to flash we need to use the esptool flash util
+also make sure the driver isn't set to winusb (it's set to it's original) so that we can access it as a com port
 ```
 # Install the cargo flashing tool
 cargo install cargo-espflash
@@ -34,5 +36,3 @@ cargo espflash flash
 ## TODO
 
   * For launch.json The svd file?
-  * Can't seemn to get this to flash at the moment as its non serial
-

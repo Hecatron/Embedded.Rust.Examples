@@ -14,9 +14,7 @@ Access the onboard ws2812 led
 
 ### Flashing
 
-this doesnt work?
 ```
 cargo install cargo-espflash
 cargo espflash flash
 ```
-

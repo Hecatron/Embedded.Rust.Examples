@@ -13,11 +13,24 @@
       "coreConfigs": [
         {
           "coreIndex": 0,
-          "programBinary": "target\\thumbv7em-none-eabihf\\debug\\blinky1-nostd",
+          "programBinary": "target\\xtensa-esp32s3-none-elf\\debug\\blinky1-nostd",
           //"svdFile": ".vscode\\svd\\stm32f7x7.svd.patched"
         }
       ],
       "preLaunchTask": "${defaultBuildTask}",
+    },
+    {
+      "name": "probe-rs Attach",
+      "type": "probe-rs-debug",
+      "request": "attach",
+      "chip": "esp32s3",
+      "coreConfigs": [
+        {
+          "coreIndex": 0,
+          "programBinary": "target\\xtensa-esp32s3-none-elf\\debug\\blinky1-nostd",
+          //"svdFile": "Relative or fully qualified path to your programBinary"
+        }
+      ]
     }
   ]
 }

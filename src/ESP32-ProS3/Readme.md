@@ -8,6 +8,17 @@ Currently I'm trying to use this with probe-rs
 
   * https://github.com/probe-rs/probe-rs
 
+## Toolchain
+
+To setup the toolchain for the ESP32
+
+  * https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html
+
+```
+cargo install espup
+espup install
+```
+
 ## flashing
 
 It looks as if probe-rs can't flash this board at the moment.

@@ -1,20 +1,8 @@
 # Readme
 
-This basic example is targeted at the STM32F767ZI
-for the NUCLEO-F767ZI board
+Basic blinky example based on
 
-  * https://www.st.com/en/evaluation-tools/nucleo-f767zi.html
-  * https://www.st.com/resource/en/user_manual/um1974-stm32-nucleo144-boards-mb1137-stmicroelectronics.pdf
-
-This uses the below Hal library and uses this as an example
-To build the below library outside of a dependency `cargo build --features=stm32f767,rt`
-
-  * https://github.com/stm32-rs/stm32f7xx-hal
   * https://github.com/stm32-rs/stm32f7xx-hal/blob/main/examples/blinky.rs
-
-For the debugger it's setup to use probe-rs
-
-  * https://probe.rs/docs/tools/debugger/
 
 ## Building / Flashing
 

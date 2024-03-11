@@ -1,0 +1,12 @@
+[package]
+name = "blinky1-nostd"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+#debug = true
+
+[dependencies]
+esp-hal = { version ="0.16.0", features = ["esp32"]}
+esp-backtrace = { version = "0.11.0", features = ["esp32", "panic-handler", "exception-handler", "println"] }
+esp-println = { version = "0.9.0", features = ["esp32"] }

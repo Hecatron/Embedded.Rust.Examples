@@ -2,12 +2,9 @@
 
 This is a set of examples relating to the ESP-WROVER-KIT use with rust
 This is the plain original ESP32 variant
+Currently I'm trying to use this with cortex-debug
 
   * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-wrover-kit-v3.html
-
-Currently I'm trying to use this with probe-rs
-
-  * https://github.com/probe-rs/probe-rs
 
 ## Toolchain
 
@@ -20,9 +17,16 @@ cargo install espup
 espup install
 ```
 
-## flashing
+## OpenOcd / GDB
 
-### Flashing with espflash
+  * Openocd for the esp32 can be downloaded from  
+    https://github.com/espressif/openocd-esp32/releases
+  * GDB can be obtained from
+    https://github.com/espressif/binutils-gdb/releases
+  * we also need xtensa-esp-elf for objdump
+    https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/tools/idf-tools.html#xtensa-esp-elf
+
+## flashing
 
 For the original ESP32 dev boards they typically show up as a serial / com port
 ```
@@ -35,48 +39,19 @@ cargo espflash flash
 Typically this shows up as the last com port under windows
 so with COM6 and COM7 it'd be COM7
 
-## Flashing with probe-rs
 
-In order to flash with probe-rs you need to switch the serial port driver with WinUsb using zadig
-To flash
-```
-cargo embed
-```
+## SPI Flash Voltage
 
-### ESP-WROVER-KIT
+Depending on the model there's a different voltage to pick.
+Currently I'm using the 3.3V one
 
-For the ESP-WROVER-KIT there were two serial ports, for me trying this with the first port - interface0 seems to work
-listed as FTDIBUS (v2.12.28.0) by default
-
-### ESP-WROOM-32
-
-This is one of the cheap china boards, probe-rs didn't seem to recognise this as acceptable
-
-  * CP2102 USB to UART Bridge Controller
-  * USB\VID_10C4&PID_EA60\0001
-
-## ESP TTGo Board
-
-This is another china esp32 board
-also not recognised
-
-  * CP2104 USB to UART Bridge Controller
-  * USB\VID_10C4&PID_EA60\018A8812
-
-### Restoring driver from zadig
-
-To restore the original driver:
-
-  * https://github.com/pbatard/libwdi/wiki/FAQ#Help_Zadig_replaced_the_driver_for_the_wrong_device_How_do_I_restore_it
+  * ESP32-WROVER - 1.8V
+  * ESP32-WROVER-B - 3.3V
+  * https://docs.espressif.com/projects/esp-idf/en/v4.2.1/esp32/hw-reference/modules-and-boards.html
 
 ## TODO
 
-From the looks of things with probe-rs
+From the looks of things with cortex-debug
 
-  * Flashing sort of works, but the probe-rs halts / pauses after the flash as does the esp32
-    requiring a unplug / plugin of the device to reset
-  * For debugging attaching works but not launching I think due to the above
-  * single stepping doesn't work but breakpoints does
-  * RTT logging doesn't work
-
+  * Flashing through openocd doesn't seem to update the board
   * For launch.json The svd file?

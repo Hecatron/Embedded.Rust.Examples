@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "cortex-debug Attach",
+      "type": "cortex-debug",
+      "request": "attach",
+      "cwd": "${workspaceRoot}",
+      "executable": "target/xtensa-esp32-none-elf/debug/blinky1-nostd",
+      "servertype": "openocd",
+      "interface": "jtag",
+      "toolchainPrefix": "xtensa-esp32-elf",
+      "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
+      "serverpath": "C:/Apps/dev-tools/openocd-esp32/bin/openocd.exe",
+      "gdbPath": "C:/Apps/dev-tools/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gdb.exe",
+      "objdumpPath": "C:/Apps/dev-tools/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump.exe",
+      // Openocd config file
+      "configFiles": ["board/esp32-wrover-kit-3.3v.cfg"],
+      "overrideAttachCommands": [
+        "set remote hardware-watchpoint-limit 2",
+        "mon halt",
+        "flushregs"
+      ],
+      "overrideRestartCommands": ["mon reset halt", "flushregs", "c"]
+    },
+    {
+      // TODO This currently doesn't flash / update properly but does attach
+      "name": "cortex-debug Launch",
+      "type": "cortex-debug",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "executable": "target\\xtensa-esp32-none-elf\\debug\\blinky1-nostd",
+      "servertype": "openocd",
+      "interface": "jtag",
+      "toolchainPrefix": "xtensa-esp32-elf",
+      "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
+      "serverpath": "C:/Apps/dev-tools/openocd-esp32/bin/openocd.exe",
+      "gdbPath": "C:/Apps/dev-tools/xtensa-esp-elf-gdb/bin/xtensa-esp32-elf-gdb.exe",
+      "objdumpPath": "C:/Apps/dev-tools/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump.exe",
+      // Openocd config file
+      "configFiles": ["board/esp32-wrover-kit-3.3v.cfg"],
+      "overrideRestartCommands": ["mon reset halt", "flushregs", "c"],
+      "overrideLaunchCommands": [
+        "set remote hardware-watchpoint-limit 2",
+        "mon halt",
+        "flushregs"
+      ],
+      "preLaunchTask": "${defaultBuildTask}",
+    }
+  ]
+}

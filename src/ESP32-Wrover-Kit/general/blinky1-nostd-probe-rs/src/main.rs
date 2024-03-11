@@ -7,8 +7,8 @@ use rtt_target::{rprintln, rtt_init_print};
 
 #[entry]
 fn main() -> ! {
-    rtt_init_print!();
-    rprintln!("Setup");
+    //rtt_init_print!();
+    //rprintln!("Setup");
     let peripherals = Peripherals::take();
     let system = peripherals.SYSTEM.split();
     let clocks = ClockControl::boot_defaults(system.clock_control).freeze();
@@ -24,7 +24,7 @@ fn main() -> ! {
     let mut delay = Delay::new(&clocks);
 
     loop {
-        rprintln!("Loop");
+        //rprintln!("Loop");
         led.toggle().unwrap();
         delay.delay_ms(500u32);
     }

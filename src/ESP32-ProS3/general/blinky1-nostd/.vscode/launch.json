@@ -13,6 +13,7 @@
       "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
       "serverpath": "C:/Apps/dev-tools/openocd-esp32/bin/openocd.exe",
       "gdbPath": "C:/Apps/dev-tools/xtensa-esp-elf-gdb/bin/xtensa-esp32s3-elf-gdb.exe",
+      "objdumpPath": "C:/Apps/dev-tools/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump.exe",
       // Openocd config file
       "configFiles": ["board/esp32s3-ftdi.cfg"],
       "overrideAttachCommands": [
@@ -34,8 +35,9 @@
       "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
       "serverpath": "C:/Apps/dev-tools/openocd-esp32/bin/openocd.exe",
       "gdbPath": "C:/Apps/dev-tools/xtensa-esp-elf-gdb/bin/xtensa-esp32s3-elf-gdb.exe",
+      "objdumpPath": "C:/Apps/dev-tools/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump.exe",
       // Openocd config file
-      "configFiles": ["board/esp32s3-ftdi.cfg"],
+      "configFiles": ["board/esp32s3-builtin"],
       "overrideRestartCommands": ["mon reset halt", "flushregs", "c"],
       "preLaunchTask": "${defaultBuildTask}",
     }

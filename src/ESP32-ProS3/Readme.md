@@ -26,6 +26,9 @@ espup install
     https://github.com/espressif/openocd-esp32/releases
   * GDB can be obtained from
     https://github.com/espressif/binutils-gdb/releases
+  * we also need xtensa-esp-elf for objdump
+    https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/tools/idf-tools.html#xtensa-esp-elf
+
 
 ## flashing
 
@@ -44,3 +47,11 @@ cargo espflash flash
 ## TODO
 
   * For launch.json The svd file?
+
+for debugging the current issue is the board config for openocd
+C:\Apps\dev-tools\openocd-esp32\share\openocd\scripts\board
+
+Non of the configs I've tried can find the connected com port
+next step might be try switching the driver to winusb, or manually create a config file
+
+Also try the same setup with an original ESP32 board

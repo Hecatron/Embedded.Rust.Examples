@@ -6,14 +6,15 @@
       "type": "cortex-debug",
       "request": "attach",
       "cwd": "${workspaceRoot}",
-      "executable": "target\\xtensa-esp32s3-none-elf\\debug\\blinky1-nostd",
+      "executable": "target/xtensa-esp32s3-none-elf/debug/blinky1-nostd",
       "servertype": "openocd",
       "interface": "jtag",
       "toolchainPrefix": "xtensa-esp32s3-elf",
       "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
-      "serverpath": "C:/Espressif/tools/openocd-esp32/v0.11.0-esp32-20220411/openocd-esp32/bin/openocd.exe", //!MODIFY
-      "gdbPath": "C:/Espressif/tools/riscv32-esp-elf-gdb/riscv32-esp-elf-gdb/bin/riscv32-esp-elf-gdb.exe", //!MODIFY
-      "configFiles": ["board/esp32-wrover-kit-3.3v.cfg"], //!MODIFY
+      "serverpath": "C:/Apps/dev-tools/openocd-esp32/bin/openocd.exe",
+      "gdbPath": "C:/Apps/dev-tools/xtensa-esp-elf-gdb/bin/xtensa-esp32s3-elf-gdb.exe",
+      // Openocd config file
+      "configFiles": ["board/esp32s3-ftdi.cfg"],
       "overrideAttachCommands": [
         "set remote hardware-watchpoint-limit 2",
         "mon halt",
@@ -31,14 +32,10 @@
       "interface": "jtag",
       "toolchainPrefix": "xtensa-esp32s3-elf",
       "openOCDPreConfigLaunchCommands": ["set ESP_RTOS none"],
-      "serverpath": "C:/Espressif/tools/openocd-esp32/v0.11.0-esp32-20220411/openocd-esp32/bin/openocd.exe", //!MODIFY
-      "gdbPath": "C:/Espressif/tools/riscv32-esp-elf-gdb/riscv32-esp-elf-gdb/bin/riscv32-esp-elf-gdb.exe", //!MODIFY
-      "configFiles": ["board/esp32-wrover-kit-3.3v.cfg"], //!MODIFY
-      "overrideAttachCommands": [
-        "set remote hardware-watchpoint-limit 2",
-        "mon halt",
-        "flushregs"
-      ],
+      "serverpath": "C:/Apps/dev-tools/openocd-esp32/bin/openocd.exe",
+      "gdbPath": "C:/Apps/dev-tools/xtensa-esp-elf-gdb/bin/xtensa-esp32s3-elf-gdb.exe",
+      // Openocd config file
+      "configFiles": ["board/esp32s3-ftdi.cfg"],
       "overrideRestartCommands": ["mon reset halt", "flushregs", "c"],
       "preLaunchTask": "${defaultBuildTask}",
     }

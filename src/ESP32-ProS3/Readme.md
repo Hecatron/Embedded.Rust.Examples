@@ -20,6 +20,13 @@ cargo install espup
 espup install
 ```
 
+## OpenOcd / GDB
+
+  * Openocd for the esp32 can be downloaded from  
+    https://github.com/espressif/openocd-esp32/releases
+  * GDB can be obtained from
+    https://github.com/espressif/binutils-gdb/releases
+
 ## flashing
 
 It looks as if probe-rs can't flash this board at the moment.

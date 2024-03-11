@@ -1,0 +1,5 @@
+[default.general]
+chip = "esp32s3"
+
+[default.probe]
+protocol = "Jtag"

@@ -4,9 +4,10 @@ This is a set of examples relating to the ES32 ProS3 board use with rust
 
   * https://esp32s3.com/pros3.html
 
-Currently I'm trying to use this with probe-rs
+probe-rs seems to not be not far enough along for the ESP32
+so trying cortex-debug next
 
-  * https://github.com/probe-rs/probe-rs
+  * https://docs.esp-rs.org/book/tooling/debugging/openocd.html
 
 ## Toolchain
 

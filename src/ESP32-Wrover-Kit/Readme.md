@@ -55,3 +55,17 @@ From the looks of things with cortex-debug
 
   * Flashing through openocd doesn't seem to update the board
   * For launch.json The svd file?
+
+## Other Devices
+
+Typically with devices such as the TTGo or ESP-WROOM-32
+They seem to use a CP210x usb to serial uart, this however cannot be used for debugging over jtag
+For jtag to work it needs to be a FT2232, this typically has support for a serial port and a jtag interface
+whereby it can operating in MPSSE mode for jtag, the CP210x serial interfaces cannot do this.
+
+  * https://forum.sparkfun.com/viewtopic.php?t=15930
+  * https://community.platformio.org/t/esp32-debugging-with-onboard-cp210/5215
+
+So for these other devices a hookup of the segger is needed
+
+  * https://dzone.com/articles/eclipse-jtag-debugging-the-esp32-with-a-segger-j-l

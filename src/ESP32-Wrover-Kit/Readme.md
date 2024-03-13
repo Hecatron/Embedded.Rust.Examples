@@ -66,6 +66,8 @@ whereby it can operating in MPSSE mode for jtag, the CP210x serial interfaces ca
   * https://forum.sparkfun.com/viewtopic.php?t=15930
   * https://community.platformio.org/t/esp32-debugging-with-onboard-cp210/5215
 
-So for these other devices a hookup of the segger is needed
+It's possible to flash but not jtag debug through a CP210x serial port
+
+So for these other devices a hookup of the segger is needed for jtag to work
 
   * https://dzone.com/articles/eclipse-jtag-debugging-the-esp32-with-a-segger-j-l

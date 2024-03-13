@@ -1,0 +1,23 @@
+{
+  "name": "astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "upd": "ncu -p pnpm -i"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.21.1",
+    "astro": "^4.5.2",
+    "sharp": "^0.33.2",
+    "@astrojs/check": "^0.5.8",
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^16.14.15"
+  }
+}

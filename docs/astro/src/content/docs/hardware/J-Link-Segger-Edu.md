@@ -1,6 +1,7 @@
 ---
-title: JLink Segger Edu
+title: "JLink Segger Edu"
 description: A guide in my new Starlight docs site.
+sidebar: {label: "[box] JLink Segger Edu"}
 ---
 
 One o the debugging tools I use is the Segger JLink Edu.

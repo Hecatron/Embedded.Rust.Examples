@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 640 476" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1;">
+    <g id="Artboard1" transform="matrix(0.476896,0,0,0.426795,-54.9301,-290.053)">
+        <rect x="115.182" y="679.606" width="1341.47" height="1113.42" style="fill:rgb(96,103,117);"/>
+        <g transform="matrix(0.776466,0,0,2.03369,148.361,483.886)">
+            <rect x="276.233" y="313.961" width="1084.47" height="136.076" style="fill:rgb(81,86,98);stroke:white;stroke-width:1.99px;"/>
+        </g>
+        <g transform="matrix(0.776466,0,0,4.47413,148.361,-448.357)">
+            <rect x="276.233" y="313.961" width="1084.47" height="136.076" style="fill:none;stroke:white;stroke-width:1.02px;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,368.182,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(168,71,156);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,305.275,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(168,71,71);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,431.088,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(89,145,191);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,493.995,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(109,71,168);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,556.902,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(163,87,0);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,619.809,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(71,94,168);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,682.715,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(89,168,71);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,745.622,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(188,181,45);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,808.529,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(71,144,168);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,871.436,112.484)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(199,123,59);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.957081,0,0,0.6511,-91.5468,555.264)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="stroke:white;stroke-width:3.08px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(0.768531,0,0,0.6511,-184.387,555.264)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(70,70,70);stroke:white;stroke-width:3.58px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(2.09689,0,0,2.34304,-1155.21,-792.841)">
+            <g transform="matrix(25,0,0,25,865.519,979.706)">
+            </g>
+            <text x="801.712px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:25px;fill:white;">GND*</text>
+        </g>
+        <g transform="matrix(2.09689,0,0,2.34304,-871.375,-792.841)">
+            <g transform="matrix(25,0,0,25,860.306,979.706)">
+            </g>
+            <text x="806.925px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:25px;fill:white;">GND</text>
+        </g>
+        <g transform="matrix(0.191567,0,0,0.6511,871.436,555.264)">
+            <rect x="847.399" y="1296.05" width="328.38" height="255.018" style="fill:rgb(149,149,149);stroke:white;stroke-width:5.62px;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1.73446e-16,-2.34304,2.09689,1.66556e-16,-970.761,3436.54)">
+            <g transform="matrix(25,0,0,25,850.705,979.706)">
+            </g>
+            <text x="816.526px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:25px;fill:white;">NC</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1540.24,2995.25)">
+            <g transform="matrix(20.8333,0,0,20.8333,852.826,979.706)">
+            </g>
+            <text x="814.405px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">+5V</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1477.07,3060.16)">
+            <g transform="matrix(20.8333,0,0,20.8333,872.592,979.706)">
+            </g>
+            <text x="850.568px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Rx</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-972.966,2955.58)">
+            <g transform="matrix(20.8333,0,0,20.8333,839.851,979.706)">
+            </g>
+            <text x="795.194px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Vtref</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1099.63,3058.4)">
+            <g transform="matrix(20.8333,0,0,20.8333,871.818,979.706)">
+            </g>
+            <text x="851.341px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Tx</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1414.42,3049.42)">
+            <g transform="matrix(20.8333,0,0,20.8333,882.21,979.706)">
+            </g>
+            <text x="832.059px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Reset</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1351.26,3011.19)">
+            <g transform="matrix(20.8333,0,0,20.8333,860.593,979.706)">
+            </g>
+            <text x="822.263px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Swo</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1162.54,3058.41)">
+            <g transform="matrix(20.8333,0,0,20.8333,889.402,979.706)">
+            </g>
+            <text x="833.758px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Swdio</text>
+        </g>
+        <g transform="matrix(1.28398e-16,-2.34304,2.09689,1.4347e-16,-1225.45,3091.07)">
+            <g transform="matrix(20.8333,0,0,20.8333,900.693,979.706)">
+            </g>
+            <text x="849.546px" y="979.706px" style="font-family:'MyanmarText', 'Myanmar Text', sans-serif;font-size:20.833px;fill:white;">Swclk</text>
+        </g>
+    </g>
+</svg>

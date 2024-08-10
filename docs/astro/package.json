@@ -1,23 +1,25 @@
 {
-  "name": "astro",
+  "name": "verdant-velocity",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "node ./dist/server/entry.mjs",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "upd": "ncu -p pnpm -i"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.21.1",
-    "astro": "^4.5.2",
-    "sharp": "^0.33.2",
-    "@astrojs/check": "^0.5.8",
-    "typescript": "^5.4.2"
+    "@astrojs/check": "^0.9.2",
+    "@astrojs/starlight": "^0.25.4",
+    "@fontsource-variable/space-grotesk": "^5.0.18",
+    "@fontsource/space-mono": "^5.0.20",
+    "astro": "^4.13.3",
+    "sharp": "^0.33.4",
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.14.15"
+    "npm-check-updates": "^17.0.6"
   }
 }

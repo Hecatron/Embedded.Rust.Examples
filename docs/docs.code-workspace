@@ -2,7 +2,11 @@
   "folders": [
     {
       "name": "content",
-      "path": "./content"
-    }
+      "path": "./astro/src/content/docs"
+    },
+    {
+      "name": "astro",
+      "path": "./astro"
+    },
   ],
 }

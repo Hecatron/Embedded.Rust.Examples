@@ -1,9 +1,13 @@
-# Embuild build Directory
+---
+title: Windows Notes
+description: An overview of STM32 Development
+---
+
+Sometimes when building under windows there can be issues with the created .embuild directory having paths that are too long.
 
   * https://github.com/esp-rs/embuild/issues/79
   * https://github.com/esp-rs/esp-idf-sys/blob/master/BUILD_OPTIONS.md#esp_idf_tools_install_dir-esp_idf_tools_install_dir
 
-Typically when building under windows there can be issues with the created .embuild directory having paths that are too long.
 One workaround is to specify an alternate path for the directory.
 
 `.cargo/config.toml`

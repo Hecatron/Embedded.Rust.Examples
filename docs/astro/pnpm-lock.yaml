@@ -14,12 +14,6 @@ importers:
       '@astrojs/starlight':
         specifier: ^0.25.4
         version: 0.25.4(astro@4.13.3(typescript@5.5.4))
-      '@fontsource-variable/space-grotesk':
-        specifier: ^5.0.18
-        version: 5.0.18
-      '@fontsource/space-mono':
-        specifier: ^5.0.20
-        version: 5.0.20
       astro:
         specifier: ^4.13.3
         version: 4.13.3(typescript@5.5.4)
@@ -357,12 +351,6 @@ packages:
 
   '@expressive-code/plugin-text-markers@0.35.6':
     resolution: {integrity: sha512-/k9eWVZSCs+uEKHR++22Uu6eIbHWEciVHbIuD8frT8DlqTtHYaaiwHPncO6KFWnGDz5i/gL7oyl6XmOi/E6GVg==}
-
-  '@fontsource-variable/space-grotesk@5.0.18':
-    resolution: {integrity: sha512-Z5uQmCjPdNobaFCtdA7aguerAQi4uvMRcUXhD+74N6Nq2Shxr0skvNzxB9mQVtkddGpB996RXipCDq9qzb525g==}
-
-  '@fontsource/space-mono@5.0.20':
-    resolution: {integrity: sha512-F+9Y/PA06mB6kXI6l8ub0vSR72x3wpzJtxAUoPpvJDu9nWADFIwunkfzSS9PyzFQOgAPPzuCfywTTG+GfQxqeg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2539,10 +2527,6 @@ snapshots:
   '@expressive-code/plugin-text-markers@0.35.6':
     dependencies:
       '@expressive-code/core': 0.35.6
-
-  '@fontsource-variable/space-grotesk@5.0.18': {}
-
-  '@fontsource/space-mono@5.0.20': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:

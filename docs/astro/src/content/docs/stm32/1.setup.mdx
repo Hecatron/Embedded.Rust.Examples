@@ -1,23 +1,18 @@
 ---
-title: Setup
+title: STM32 Setup
+sidebar: {label: "Setup"}
 ---
 
-## ARM Target
+## Installation
 
-For the dependencies first we need the arm target for the stm32
 ```sh
+# First we need the arm target for the stm32
 rustup target add thumbv7em-none-eabihf
-```
 
-## Flash Tools
-
-Next we need to install binstall for using cargo to do binary installs
-```sh
+# Next we need to install binstall for using cargo to do binary installs
 cargo install cargo-binstall
-```
 
-Finally we need probe-rs, this includes flashing and debugging utils
-```sh
+# we need probe-rs, this includes flashing and debugging utils
 cargo binstall probe-rs
 ```
 

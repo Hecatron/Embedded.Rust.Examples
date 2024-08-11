@@ -12,25 +12,30 @@ export default defineConfig({
             customCss: [
                 './src/styles/theme-colors.css',
             ],
-            sidebar: [
+            sidebar: [          
                 {
                     label: 'STM32',
+                    collapsed: true,
                     autogenerate: { directory: 'stm32' },
                 },
                 {
                     label: 'ESP32',
+                    collapsed: true,
                     autogenerate: { directory: 'esp32' },
                 },
                 {
                     label: 'RP2040',
+                    collapsed: true,
                     autogenerate: { directory: 'rp2040' },
                 },
                 {
                     label: 'Debugging',
+                    collapsed: true,
                     autogenerate: { directory: 'debug' },
                 },
                 {
                     label: 'Debugging Hardware',
+                    collapsed: true,
                     autogenerate: { directory: 'debug-hardware' },
                 },
             ],

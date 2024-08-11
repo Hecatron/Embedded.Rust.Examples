@@ -1,9 +1,10 @@
 ---
-title: Flashing
-description: An overview of STM32 Development
+title: STM32 Flashing
+sidebar: {label: "Flashing"}
 ---
 
-THe below lists 3 different ways to flash the firmware
+There are a few different methods to flash an STM32 board
+
 
 TODO in debug mode (non release) the board just halts without looping
 I think its the for loop
@@ -21,6 +22,8 @@ The second approach is to use cargo embed which is a more advanced version of ca
 ```sh
 cargo embed --release
 ```
+
+### Cargo Embed Configuration
 
 cargo embed can be configured with a `Embed.toml` file
 
@@ -48,8 +51,3 @@ We can also set this to run via `cargo run`
 [target.thumbv7em-none-eabihf]
 runner = 'probe-rs run --chip STM32F767ZITx'
 ```
-
-## TODO
-
-TODO try and use cargo embed
-to flash to a device via a JLink

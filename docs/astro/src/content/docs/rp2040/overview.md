@@ -1,6 +1,5 @@
 ---
-title: RP2040
-description: An overview of STM32 Development
+title: Overview
 ---
 
 Template is based on

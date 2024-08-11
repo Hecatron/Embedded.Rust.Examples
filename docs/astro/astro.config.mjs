@@ -9,21 +9,29 @@ export default defineConfig({
             social: {
                 github: 'https://github.com/withastro/starlight',
             },
-	    customCss: [
+            customCss: [
                 './src/styles/theme-colors.css',
             ],
             sidebar: [
-	        {
+                {
                     label: 'STM32',
                     autogenerate: { directory: 'stm32' },
                 },
-	        {
+                {
                     label: 'ESP32',
                     autogenerate: { directory: 'esp32' },
                 },
                 {
+                    label: 'RP2040',
+                    autogenerate: { directory: 'rp2040' },
+                },
+                {
                     label: 'Debugging',
                     autogenerate: { directory: 'debug' },
+                },
+                {
+                    label: 'Debugging Hardware',
+                    autogenerate: { directory: 'debug-hardware' },
                 },
             ],
         }),

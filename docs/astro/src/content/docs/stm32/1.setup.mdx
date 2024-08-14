@@ -3,9 +3,11 @@ title: STM32 Setup
 sidebar: {label: "Setup"}
 ---
 
+To setup the needed tools for rust development
+
 ## Installation
 
-```sh
+```sh frame="none"
 # First we need the arm target for the stm32
 rustup target add thumbv7em-none-eabihf
 
@@ -18,6 +20,7 @@ cargo binstall probe-rs
 
 ## VSCode debugger
 
-For VSCode install the extension "Debugger for probe-rs"
-
-  * https://probe.rs/docs/tools/debugger/#using-the-launch-request-type
+  * For VSCode install the extension  
+    [Debugger for probe-rs](https://marketplace.visualstudio.com/items?itemName=probe-rs.probe-rs-debugger)
+  * For the launch.json file we can use an example like this  
+    https://probe.rs/docs/tools/debugger/#using-the-launch-request-type

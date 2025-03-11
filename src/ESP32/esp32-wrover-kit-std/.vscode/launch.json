@@ -25,7 +25,7 @@
                 {
                     "coreIndex": 0,
                     "rttEnabled": true,
-                    "programBinary": "${workspaceFolder}/target/xtensa-esp32-espidf/debug/ESP32-Wrover-Kit-Std",
+                    "programBinary": "${workspaceFolder}/target/xtensa-esp32-espidf/debug/esp32-wrover-kit-std",
                     // Sourced from https://github.com/espressif/svd/tree/main/svd
                     "svdFile": "${workspaceFolder}/.cargo/svd/esp32.svd"
                 }
@@ -42,7 +42,7 @@
                 {
                     "coreIndex": 0,
                     "rttEnabled": true,
-                    "programBinary": "${workspaceFolder}/target/xtensa-esp32-espidf/debug/ESP32-Wrover-Kit-Std",
+                    "programBinary": "${workspaceFolder}/target/xtensa-esp32-espidf/debug/esp32-wrover-kit-std",
                     "svdFile": "${workspaceFolder}/.cargo/svd/esp32.svd"
                 }
             ]
@@ -70,7 +70,7 @@
                 {
                     "coreIndex": 0,
                     "rttEnabled": true,
-                    "programBinary": "${workspaceFolder}/target/xtensa-esp32-espidf/debug/ESP32-Wrover-Kit-Std",
+                    "programBinary": "${workspaceFolder}/target/xtensa-esp32-espidf/debug/esp32-wrover-kit-std",
                     // Sourced from https://github.com/espressif/svd/tree/main/svd
                     "svdFile": "${workspaceFolder}/.cargo/svd/esp32.svd"
                 }

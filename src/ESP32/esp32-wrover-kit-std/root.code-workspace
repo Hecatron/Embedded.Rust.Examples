@@ -1,0 +1,7 @@
+{
+	"folders": [
+		{
+			"path": ".", "name": "esp32-wrover-kit-std"
+		}
+	]
+}

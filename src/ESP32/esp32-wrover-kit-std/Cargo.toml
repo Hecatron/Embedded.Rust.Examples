@@ -1,5 +1,5 @@
 [package]
-name = "ESP32-Wrover-Kit-Std"
+name = "esp32-wrover-kit-std"
 version = "0.1.0"
 authors = ["grbd <hecatrons.workshop@gmail.com>"]
 edition = "2021"
@@ -7,7 +7,7 @@ resolver = "2"
 rust-version = "1.77"
 
 [[bin]]
-name = "ESP32-Wrover-Kit-Std"
+name = "esp32-wrover-kit-std"
 harness = false # do not use the built in cargo test harness -> resolve rust-analyzer errors
 
 [profile.release]

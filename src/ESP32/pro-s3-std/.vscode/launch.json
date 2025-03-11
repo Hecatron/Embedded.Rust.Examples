@@ -1,0 +1,80 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "probers-launch",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "chip": "esp32s3",
+            // probe field only needed if multiple probes connected.
+            // <Serial> is the MAC address of your esp in case of usb-jtag       
+            //"probe": "VID:PID:<Serial>",
+            //"probe": "303a:1001:84:F7:03:C0:5B:7C",
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true,
+                "formatOptions": {
+                    "binaryFormat": "idf"
+                }
+            },
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "rttEnabled": true,
+                    "programBinary": "${workspaceFolder}/target/xtensa-esp32s3-espidf/debug/pro-s3-std",
+                    // Sourced from https://github.com/espressif/svd/tree/main/svd
+                    "svdFile": "${workspaceFolder}/.cargo/svd/esp32s3.svd"
+                }
+            ]
+        },
+        {
+            "name": "probers-attach",
+            "type": "probe-rs-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}",
+            "chip": "esp32s3",       
+            //"probe": "VID:PID:<Serial>",
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "rttEnabled": true,
+                    "programBinary": "${workspaceFolder}/target/xtensa-esp32s3-espidf/debug/pro-s3-std",
+                    "svdFile": "${workspaceFolder}/.cargo/svd/esp32s3.svd"
+                }
+            ]
+        },
+        {
+            "name": "probers-launch-remote",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "chip": "esp32s3",
+            // On the server end run "probe-rs dap-server --port 50000 --ip 192.168.111.66"
+            "server": "192.168.111.136:50000",
+            // probe field only needed if multiple probes connected.
+            // <Serial> is the MAC address of your esp in case of usb-jtag       
+            //"probe": "VID:PID:<Serial>",
+            //"probe": "303a:1001:84:F7:03:C0:5B:7C",
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true,
+                "formatOptions": {
+                    "binaryFormat": "idf"
+                }
+            },
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "rttEnabled": true,
+                    "programBinary": "${workspaceFolder}/target/xtensa-esp32s3-espidf/debug/pro-s3-std",
+                    // Sourced from https://github.com/espressif/svd/tree/main/svd
+                    "svdFile": "${workspaceFolder}/.cargo/svd/esp32s3.svd"
+                }
+            ]
+        },
+    ]
+}

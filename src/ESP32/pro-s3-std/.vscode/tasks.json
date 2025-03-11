@@ -1,0 +1,202 @@
+// Available variables which can be used inside of strings.
+// ${workspaceRoot}: the root folder of the team
+// ${file}: the current opened file
+// ${fileBasename}: the current opened file's basename
+// ${fileDirname}: the current opened file's dirname
+// ${fileExtname}: the current opened file's extension
+// ${cwd}: the current working directory of the spawned process
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // cargo build
+            "label": "build",
+            "command": "cargo",
+            "args": [
+                "build",
+                "-v"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "build",
+            "problemMatcher": [
+                {
+                    "owner": "rust",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(\\d+):(\\d+)\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "endLine": 4,
+                        "endColumn": 5,
+                        "severity": 6,
+                        "message": 7
+                    }
+                }
+            ]
+        },
+        {
+            // cargo clean
+            "label": "clean",
+            "command": "cargo",
+            "args": [
+                "clean"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            // cargo run
+            "label": "run",
+            "command": "cargo",
+            "args": [
+                "run",
+                "-v"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                {
+                    "owner": "rust",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(\\d+):(\\d+)\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "endLine": 4,
+                        "endColumn": 5,
+                        "severity": 6,
+                        "message": 7
+                    }
+                }
+            ]
+        },
+        {
+            // cargo test
+            "label": "test",
+            "command": "cargo",
+            "args": [
+                "test"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": {
+                "kind": "z",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                {
+                    "owner": "rust",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(\\d+):(\\d+)\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "endLine": 4,
+                        "endColumn": 5,
+                        "severity": 6,
+                        "message": 7
+                    }
+                },
+                {
+                    "owner": "rust",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "severity": "error",
+                    "pattern": {
+                        "regexp": "^.*panicked\\s+at\\s+'(.*)',\\s+(.*):(\\d+)$",
+                        "message": 1,
+                        "file": 2,
+                        "line": 3
+                    }
+                }
+            ]
+        },
+        {
+            // cargo bench
+            "label": "bench",
+            "command": "cargo",
+            "args": [
+                "bench"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": "test",
+            "problemMatcher": [
+                {
+                    "owner": "rust",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(\\d+):(\\d+)\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "endLine": 4,
+                        "endColumn": 5,
+                        "severity": 6,
+                        "message": 7
+                    }
+                },
+                {
+                    "owner": "rust",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceRoot}"
+                    ],
+                    "severity": "error",
+                    "pattern": {
+                        "regexp": "^.*panicked\\s+at\\s+'(.*)',\\s+(.*):(\\d+)$",
+                        "message": 1,
+                        "file": 2,
+                        "line": 3
+                    }
+                }
+            ]
+        },
+        {
+            // Display VSCode Variables
+            // https://code.visualstudio.com/docs/reference/variables-reference
+            "label": "echo",
+            "type": "shell",
+            "command": "echo ${workspaceFolder}/target/xtensa-esp32s3-espidf/debug/locktimus-esp32s3"
+        }
+    ]
+}

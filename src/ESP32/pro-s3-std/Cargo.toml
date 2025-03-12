@@ -23,9 +23,19 @@ default = []
 experimental = ["esp-idf-svc/experimental"]
 
 [dependencies]
-log = "0.4"
+# ESP32 std support
 esp-idf-svc = { version = "0.51", features = ["critical-section", "embassy-time-driver", "embassy-sync"] }
 esp-idf-hal ={ version = "0.45" }
+
+# Used for debug logging
+defmt = { version = "0.3" }
+rtt-target = { version = "0.6", features = ["defmt"] }
+log = "0.4"
+
+# Used for WS2812 LED's
+ws2812-spi = { version = "0.5", features = ["mosi_idle_high", "std"]}
+#smart-leds-trait = "0.3"
+smart-leds = "0.4.0"
 
 [build-dependencies]
 embuild = "0.33"

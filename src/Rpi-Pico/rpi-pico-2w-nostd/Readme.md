@@ -43,3 +43,16 @@ such as via the pico probe
   * https://crates.io/crates/cyw43
 
 Also the LED for the wireless boards is connected to gpio0 of the cyw43 wireless chip
+
+
+## TODO
+
+Debug with the pico probe
+
+  * https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html
+
+See if issue gets fixed
+
+  * https://github.com/rp-rs/rp-hal/issues/910
+
+Try turning on the LED via the Wireless GPIO

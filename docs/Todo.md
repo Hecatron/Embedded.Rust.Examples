@@ -11,3 +11,8 @@ https://developer.espressif.com/blog/2025/02/rust-esp-hal-beta/
 nonstd uses esp-hal
 std uses esp-idf-hal
 
+## RP2040
+
+https://github.com/rp-rs/rp2040-project-template?tab=readme-ov-file
+https://github.com/knurling-rs/app-template
+https://github.com/knurling-rs

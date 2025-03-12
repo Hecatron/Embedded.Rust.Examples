@@ -4,7 +4,6 @@
 // Ensure we halt the program on panic (if we don't mention this crate it won't
 // be linked)
 use panic_halt as _;
-mod bin_info;
 
 // Alias for our HAL crate
 use rp235x_hal as hal;
@@ -62,10 +61,7 @@ fn main() -> ! {
         &mut pac.RESETS,
     );
 
-    // TODO for wireless versions the led is on GPIO0 of the wireless chip
-    //cyw43_arch_gpio_put - https://docs.rs/cyw43/latest/cyw43/
-
-    // Configure GPIO25 as an output - non wireless version
+    // Configure GPIO25 as an output
     let mut led_pin = pins.gpio25.into_push_pull_output();
     loop {
         led_pin.set_high().unwrap();
@@ -79,14 +75,11 @@ fn main() -> ! {
 #[link_section = ".bi_entries"]
 #[used]
 pub static PICOTOOL_ENTRIES: [hal::binary_info::EntryAddr; 5] = [
-    rp_cargo_bin_name!(),
-    //hal::binary_info::rp_cargo_bin_name!(),
+    hal::binary_info::rp_cargo_bin_name!(),
     hal::binary_info::rp_cargo_version!(),
     hal::binary_info::rp_program_description!(c"Blinky Example"),
-    //hal::binary_info::rp_cargo_homepage_url!(),
-    rp_cargo_homepage_url!(),
+    hal::binary_info::rp_cargo_homepage_url!(),
     hal::binary_info::rp_program_build_attribute!(),
 ];
-
 
 // End of file

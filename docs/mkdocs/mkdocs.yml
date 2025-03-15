@@ -6,6 +6,7 @@ theme:
   name: material
   features:
     - tabs
+    - navigation.indexes 
 
   palette:
     - media: "(prefers-color-scheme)"
@@ -29,7 +30,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/favicon.ico
   icon:
     logo: logo
 

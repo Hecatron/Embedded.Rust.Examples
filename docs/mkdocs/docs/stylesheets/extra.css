@@ -1,0 +1,16 @@
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #90030C;
+  --md-primary-fg-color--light: #90030C;
+  --md-primary-fg-color--dark:  #90030C;
+  --md-typeset-a-color:         #d78186;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #90030C;
+  --md-primary-fg-color--light: #90030C;
+  --md-primary-fg-color--dark:  #90030C;
+}
+
+.md-grid {
+	max-width: 72rem;
+}

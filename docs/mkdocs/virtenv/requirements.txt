@@ -1,0 +1,11 @@
+# Depends
+mkdocs
+mkdocs-material
+mkdocs-video
+
+# Protection for email links
+git+https://github.com/rkoe/mkdocs-emailprotect
+
+# enables displaying the date of the last git modification of a page
+# https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+mkdocs-git-revision-date-localized-plugin

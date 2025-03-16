@@ -1,0 +1,34 @@
+// The format of this file is specified in https://probe.rs/docs/tools/debugger/#start-a-debug-session-with-minimum-configuration
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "probers-launch",
+            "request": "launch",
+            "preLaunchTask": "${defaultBuildTask}",
+            "type": "probe-rs-debug",
+            "cwd": "${workspaceFolder}",
+            "chip": "nRF51822_xxAA",
+            //"connectUnderReset": false,
+            //"speed": 4000,
+            "runtimeExecutable": "probe-rs",
+            //"runtimeArgs": [
+            //    "dap-server"
+            //],
+            "flashingConfig": {
+                "flashingEnabled": true,
+                //"haltAfterReset": false
+            },
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv6m-none-eabi/debug/microbit-13-nostd",
+                    "rttEnabled": true,
+                    // Downloaded from - https://github.com/nrf-rs/nrf-pacs/tree/master/svds
+                    "svdFile": "./.vscode/svd/nrf51.svd",
+                }
+            ],
+            "consoleLogLevel": "Info", //Error, Warn, Info, Debug, Trace
+            "wireProtocol": "Swd"
+        }
+    ]
+}

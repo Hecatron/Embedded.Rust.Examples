@@ -1,7 +1,11 @@
 {
 	"folders": [
 		{
-			"path": ".", "name": "rpi-pico-2w-nostd"
+			"path": ".", "name": "microbit-13-nostd"
 		}
-	]
+	],
+	"settings": {
+		"rust-analyzer.cargo.target": "thumbv6m-none-eabi",
+		"rust-analyzer.check.allTargets": false
+	}
 }

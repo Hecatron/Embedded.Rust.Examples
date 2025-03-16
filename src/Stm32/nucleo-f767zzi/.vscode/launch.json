@@ -2,20 +2,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "preLaunchTask": "cargo_build_debug",
+            "name": "probe-rs debug",
             "type": "probe-rs-debug",
             "request": "launch",
-            "name": "probe-rs-debugger",
-            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
-            "chip": "STM32F767ZIx",
+            "preLaunchTask": "build_debug",
             "cwd": "${workspaceFolder}",
+            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
+            "chip": "STM32F767ZI",
             "coreConfigs": [
                 {
                     "programBinary": "target/thumbv7em-none-eabihf/debug/nucleo-f767zzi",
                     "coreIndex": 0,
-                    
                     "svdFile": "./.vscode/svd/stm32f767.svd",
-                    
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
@@ -27,34 +25,36 @@
                 },
             ],
             "runtimeExecutable": "probe-rs",
-            "runtimeArgs": ["dap-server"],
+            "runtimeArgs": [
+                "dap-server"
+            ],
             "flashingConfig": {
-              "flashingEnabled": true,
-              "haltAfterReset": false,
-              "formatOptions": {
-                "format": "elf" //!MODIFY (or remove). Valid values are: 'bin', 'hex', 'elf'(default), 'idf'
-              }
+                "flashingEnabled": true,
+                "haltAfterReset": false,
+                "formatOptions": {
+                    "binaryFormat": "elf"
+                }
             },
             "connectUnderReset": false,
             "consoleLogLevel": "Console" //Info, Debug
-            //"speed": 24000, //!MODIFY (or remove)
-            //"probe": "VID:PID:<Serial>", //!MODIFY (or remove)
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
         },
         {
-            "preLaunchTask": "cargo_build_release",
+            "name": "probe-rs release",
             "type": "probe-rs-debug",
             "request": "launch",
-            "name": "probe-rs-release",
-            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
-            "chip": "STM32F767ZIx",
+            "preLaunchTask": "cargo_build_release",
             "cwd": "${workspaceFolder}",
+            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
+            "chip": "STM32F767ZI",
             "coreConfigs": [
                 {
                     "programBinary": "target/thumbv7em-none-eabihf/release/nucleo-f767zzi",
                     "coreIndex": 0,
-                    
                     "svdFile": "./.vscode/svd/stm32f767.svd",
-                    
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
@@ -66,18 +66,50 @@
                 },
             ],
             "runtimeExecutable": "probe-rs",
-            "runtimeArgs": ["dap-server"],
+            "runtimeArgs": [
+                "dap-server"
+            ],
             "flashingConfig": {
-              "flashingEnabled": true,
-              "haltAfterReset": false,
-              "formatOptions": {
-                "format": "elf" //!MODIFY (or remove). Valid values are: 'bin', 'hex', 'elf'(default), 'idf'
-              }
+                "flashingEnabled": true,
+                "haltAfterReset": false,
+                "formatOptions": {
+                    "binaryFormat": "elf"
+                }
             },
             "connectUnderReset": false,
             "consoleLogLevel": "Console" //Info, Debug
-            //"speed": 24000, //!MODIFY (or remove)
-            //"probe": "VID:PID:<Serial>", //!MODIFY (or remove)
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
+        },
+        {
+            "name": "probe-rs attach",
+            "type": "probe-rs-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}",
+            "chip": "STM32F767ZI",       
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv7em-none-eabihf/debug/nucleo-f767zzi",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/stm32f767.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "dataFormat": "String",
+                            "channelNumber": 0,
+                            "showTimestamps": true
+                        }
+                    ],
+                },
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "connectUnderReset": false,
+            "consoleLogLevel": "Console" //Info, Debug
         },
     ]
 }

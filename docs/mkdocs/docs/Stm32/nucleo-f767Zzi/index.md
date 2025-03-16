@@ -9,3 +9,4 @@ https://stm32-rs.github.io/stm32-rs/
 Procesor: STM32F767ZIx
 
 Target: thumbv7em-none-eabihf
+

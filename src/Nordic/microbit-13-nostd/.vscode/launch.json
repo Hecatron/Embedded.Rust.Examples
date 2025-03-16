@@ -8,21 +8,18 @@
             "request": "launch",
             "preLaunchTask": "${defaultBuildTask}",
             "cwd": "${workspaceFolder}",
-            "chip": "nRF51822_xxAA",
+            "chip": "nRF51822_xxAB",
             //"connectUnderReset": false,
             //"speed": 4000,
             "runtimeExecutable": "probe-rs",
-            //"runtimeArgs": [
-            //    "dap-server"
-            //],
             "flashingConfig": {
-                "flashingEnabled": true,
+                "flashingEnabled": false,
                 //"haltAfterReset": false
             },
             "coreConfigs": [
                 {
                     "programBinary": "target/thumbv6m-none-eabi/debug/microbit-13-nostd",
-                    "rttEnabled": true,
+                    //"rttEnabled": true,
                     "svdFile": "./.vscode/svd/nrf51.svd",
                 }
             ],
@@ -34,7 +31,7 @@
             "type": "probe-rs-debug",
             "request": "attach",
             "cwd": "${workspaceFolder}",
-            "chip": "nRF51822_xxAA",
+            "chip": "nRF51822_xxAB",
             "coreConfigs": [
                 {
                     "programBinary": "target/thumbv6m-none-eabi/debug/microbit-13-nostd",
@@ -50,7 +47,7 @@
             "type": "probe-rs-debug",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "chip": "nRF51822_xxAA",
+            "chip": "nRF51822_xxAB",
             // On the server end run "probe-rs dap-server --port 50000 --ip 192.168.111.66"
             "server": "192.168.111.136:50000",
             "flashingConfig": {

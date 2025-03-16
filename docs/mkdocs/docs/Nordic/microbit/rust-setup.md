@@ -35,6 +35,10 @@ rustup target add thumbv7em-none-eabi
 
 ## Debugging
 
+The svd files are available from
+
+  * https://github.com/nrf-rs/nrf-pacs/tree/master/svds
+
 TODO
 
 This seems to be one of the boards that works fine with probe-rs under windows

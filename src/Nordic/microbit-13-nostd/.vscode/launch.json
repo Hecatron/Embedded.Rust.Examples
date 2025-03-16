@@ -4,9 +4,9 @@
     "configurations": [
         {
             "name": "probers-launch",
+            "type": "probe-rs-debug",
             "request": "launch",
             "preLaunchTask": "${defaultBuildTask}",
-            "type": "probe-rs-debug",
             "cwd": "${workspaceFolder}",
             "chip": "nRF51822_xxAA",
             //"connectUnderReset": false,
@@ -23,12 +23,47 @@
                 {
                     "programBinary": "target/thumbv6m-none-eabi/debug/microbit-13-nostd",
                     "rttEnabled": true,
-                    // Downloaded from - https://github.com/nrf-rs/nrf-pacs/tree/master/svds
                     "svdFile": "./.vscode/svd/nrf51.svd",
                 }
             ],
             "consoleLogLevel": "Info", //Error, Warn, Info, Debug, Trace
             "wireProtocol": "Swd"
-        }
+        },
+        {
+            "name": "probers-attach",
+            "type": "probe-rs-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}",
+            "chip": "nRF51822_xxAA",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv6m-none-eabi/debug/microbit-13-nostd",
+                    "rttEnabled": true,
+                    "svdFile": "./.vscode/svd/nrf51.svd",
+                }
+            ],
+            "consoleLogLevel": "Info", //Error, Warn, Info, Debug, Trace
+            "wireProtocol": "Swd"
+        },
+        {
+            "name": "probers-launch-remote",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "chip": "nRF51822_xxAA",
+            // On the server end run "probe-rs dap-server --port 50000 --ip 192.168.111.66"
+            "server": "192.168.111.136:50000",
+            "flashingConfig": {
+                "flashingEnabled": true,
+                //"haltAfterReset": true,
+            },
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv6m-none-eabi/debug/microbit-13-nostd",
+                    "rttEnabled": true,
+                    "svdFile": "./.vscode/svd/nrf51.svd",
+                }
+            ]
+        },
     ]
 }

@@ -40,7 +40,7 @@ The svd files are available from
   * https://github.com/nrf-rs/nrf-pacs/tree/master/svds
 
 TODO
+If I launch then attach afterwards then it seems to work, however
 
-This seems to be one of the boards that works fine with probe-rs under windows
-Probably due to the onboard Jtag
-Although the firmware does need to be udpated first for the Jtag interface
+  1. After the preLaunchTask it doesn't seem to realise that the flash has finished
+  2. Error trying to attach during launch

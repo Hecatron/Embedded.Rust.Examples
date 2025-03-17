@@ -12,6 +12,9 @@ Target: thumbv7em-none-eabihf
 Jtag: STLink V2-1
 
 
-## Links
+## TODO
 
   * https://github.com/rust-embedded/cortex-m-quickstart/tree/master
+
+By default all examples are nostd unless suffixed with -std
+TODO rename some projects

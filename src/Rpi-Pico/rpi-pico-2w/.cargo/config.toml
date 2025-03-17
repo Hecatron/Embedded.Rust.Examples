@@ -1,0 +1,87 @@
+#
+# Cargo Configuration for a RP2350
+# https://github.com/rp-rs/rp-hal.git
+
+[build]
+# target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
+# target = "thumbv7m-none-eabi"        # Cortex-M3
+# target = "thumbv7em-none-eabi"       # Cortex-M4 and Cortex-M7 (no FPU)
+# target = "thumbv7em-none-eabihf"     # Cortex-M4F and Cortex-M7F (with FPU)
+# target = "thumbv8m.base-none-eabi"   # Cortex-M23
+# target = "thumbv8m.main-none-eabi"   # Cortex-M33 (no FPU)
+target = "thumbv8m.main-none-eabihf" # Cortex-M33 (with FPU)
+
+[env]
+DEFMT_LOG = "info"
+
+# Add aliases for building and running for the ARM and RISC-V targets.
+[alias]
+
+# Build arm or riscv
+build-arm = "build --target=thumbv8m.main-none-eabihf"
+build-riscv = "build --target=riscv32imac-unknown-none-elf"
+
+# Run arm or riscv
+run-arm = "run --target=thumbv8m.main-none-eabihf"
+run-riscv = "run --target=riscv32imac-unknown-none-elf"
+
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+
+# Use picotool for loading.
+# Load an elf, skipping unchanged flash sectors, verify it, and execute it
+runner = "picotool load -u -v -x -t elf"
+
+# Runner for probe-rs
+# Requires rpi pico debug probe
+# runner = "probe-rs run --chip RP2040"
+
+
+# Linker Flags
+# The default linker used is LLD (shipped with the Rust toolchain)
+# --nmagic
+# Turns off page alignment of sections (which saves flash space)
+# 
+# -Tlink.x 
+# Tells the linker to use link.x as a linker script. This is usually provided by the cortex-m-rt crate
+# and by default the version in that crate will include a file called `memory.x` which describes
+# the particular memory layout for your specific chip. 
+#
+# -Tdefmt.x
+# Also tells the linker to use `defmt.x` as a secondary linker script. This is required to make defmt_rtt work.
+#
+# target-cpu=xxxx
+# Specify the specific CPU in use
+# List available CPU's with `rustc --target=thumbv7em-none-eabihf --print=target-cpus`
+#
+# -Tstlog.x
+# stlog - https://japaric.github.io/stlog/stlog/
+
+
+# This is the hard-float ABI for Arm mode.
+# The FPU is enabled by default, and float function arguments use FPU registers.
+[target.thumbv8m.main-none-eabihf]
+rustflags = [
+    "-C", "link-arg=--nmagic",
+    "-C", "link-arg=-Tlink.x",
+    "-C", "link-arg=-Tdefmt.x",
+    "-C", "target-cpu=cortex-m33",
+]
+
+# This is the soft-float ABI for Arm mode.
+# The FPU is disabled by default, and float function arguments use integer registers.
+# Only useful for making the `float_test` example give really bad results on the `f32` benchmark.
+[target.thumbv8m.main-none-eabi]
+rustflags = [
+    "-C", "link-arg=--nmagic",
+    "-C", "link-arg=-Tlink.x",
+    "-C", "link-arg=-Tdefmt.x",
+]
+
+# This is the soft-float ABI for RISC-V mode.
+# Hazard 3 does not have an FPU and so float function arguments use integer registers.
+[target.riscv32imac-unknown-none-elf]
+rustflags = [
+    "-C", "link-arg=--nmagic",
+    "-C", "link-arg=-Trp235x_riscv.x",
+    "-C", "link-arg=-Tdefmt.x",
+]

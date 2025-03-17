@@ -1,5 +1,5 @@
 [package]
-name = "rpi-pico-2w-nostd"
+name = "rpi-pico-2w"
 edition = "2021"
 rust-version = "1.79"
 version = "0.1.0"

@@ -6,6 +6,10 @@ https://github.com/rp-rs/rp-hal/tree/main/rp235x-hal-examples
 run-riscv --release --bin=blinky
 cargo build --release --bin=blinky
 
+Hardware:
+rustup target add thumbv8m.main-none-eabihf
+
+
 ## Picotool
 
 this can be obtained from

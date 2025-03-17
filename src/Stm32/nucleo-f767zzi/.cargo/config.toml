@@ -1,32 +1,6 @@
-rustflags = [
-  # LLD (shipped with the Rust toolchain) is used as the default linker
-
-  # --nmagic turns off page alignment of sections (which saves flash space)
-  "-C", "link-arg=--nmagic",
-  # tells the linker to use link.x as a linker script. This is usually provided by the cortex-m-rt crate
-  # and by default the version in that crate will include a file called `memory.x` which describes
-  # the particular memory layout for your specific chip. 
-  "-C", "link-arg=-Tlink.x",
-  # also tells the linker to use `defmt.x` as a secondary linker script. This is required to make defmt_rtt work.
-  "-C", "link-arg=-Tdefmt.x",
-  # Specify the specific CPU in use
-  # List available CPU's with `rustc --target=thumbv7em-none-eabihf --print=target-cpus`
-  "-C", "target-cpu=cortex-m7",
-  # stlog - https://japaric.github.io/stlog/stlog/
-  # "-C", "link-arg=-Tstlog.x",
-
-  # GNU Linker:
-  # if you run into problems with LLD switch to the GNU linker by commenting out
-  # this line
-  # "-C", "linker=arm-none-eabi-ld",
-
-  # if you need to link to pre-compiled C libraries provided by a C toolchain
-  # use GCC as the linker by commenting out both lines above and then
-  # uncommenting the three lines below
-  # "-C", "linker=arm-none-eabi-gcc",
-  # "-C", "link-arg=-Wl,-Tlink.x",
-  # "-C", "link-arg=-nostartfiles",
-]
+#
+# Cargo Configuration for a stm32 nucleo f767zzi
+# https://github.com/stm32-rs/stm32f7xx-hal
 
 [build]
 # target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
@@ -41,4 +15,48 @@ target = "thumbv7em-none-eabihf"     # Cortex-M4F and Cortex-M7F (with FPU)
 DEFMT_LOG = "info"
 
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
+
+# Runner for probe-rs
 runner = "probe-rs run --chip STM32F767ZI"
+
+
+# Linker Flags
+# The default linker used is LLD (shipped with the Rust toolchain)
+# --nmagic
+# Turns off page alignment of sections (which saves flash space)
+# 
+# -Tlink.x 
+# Tells the linker to use link.x as a linker script. This is usually provided by the cortex-m-rt crate
+# and by default the version in that crate will include a file called `memory.x` which describes
+# the particular memory layout for your specific chip. 
+#
+# -Tdefmt.x
+# Also tells the linker to use `defmt.x` as a secondary linker script. This is required to make defmt_rtt work.
+#
+# target-cpu=xxxx
+# Specify the specific CPU in use
+# List available CPU's with `rustc --target=thumbv7em-none-eabihf --print=target-cpus`
+#
+# -Tstlog.x
+# stlog - https://japaric.github.io/stlog/stlog/
+
+# Rust Flags for the linker
+rustflags = [
+  "-C", "link-arg=--nmagic",
+  "-C", "link-arg=-Tlink.x",
+  "-C", "link-arg=-Tdefmt.x",
+  "-C", "target-cpu=cortex-m7",
+  # "-C", "link-arg=-Tstlog.x",
+
+  # GNU Linker:
+  # if you run into problems with LLD switch to the GNU linker by commenting out
+  # this line
+  # "-C", "linker=arm-none-eabi-ld",
+
+  # if you need to link to pre-compiled C libraries provided by a C toolchain
+  # use GCC as the linker by commenting out both lines above and then
+  # uncommenting the three lines below
+  # "-C", "linker=arm-none-eabi-gcc",
+  # "-C", "link-arg=-Wl,-Tlink.x",
+  # "-C", "link-arg=-nostartfiles",
+]

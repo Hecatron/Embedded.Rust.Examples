@@ -12,6 +12,7 @@
 target = "thumbv8m.main-none-eabihf" # Cortex-M33 (with FPU)
 
 [env]
+# Enable printing of defmt debug, info and warning messages by default
 DEFMT_LOG = "info"
 
 # Add aliases for building and running for the ARM and RISC-V targets.

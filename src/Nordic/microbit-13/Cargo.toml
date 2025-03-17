@@ -1,5 +1,5 @@
 [package]
-name = "microbit-13-nostd"
+name = "microbit-13"
 edition = "2018"
 version = "0.1.0"
 

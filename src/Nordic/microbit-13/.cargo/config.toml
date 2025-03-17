@@ -1,28 +1,33 @@
 #
-# Cargo Configuration for a stm32 nucleo f767zzi
-# https://github.com/stm32-rs/stm32f7xx-hal
+# Cargo Configuration for a microbit 1.3
+# https://github.com/nrf-rs/microbit
 
 [build]
-# target = "thumbv6m-none-eabi"        # Cortex-M0 and Cortex-M0+
+target = "thumbv6m-none-eabi"          # Cortex-M0 and Cortex-M0+
 # target = "thumbv7m-none-eabi"        # Cortex-M3
 # target = "thumbv7em-none-eabi"       # Cortex-M4 and Cortex-M7 (no FPU)
-target = "thumbv7em-none-eabihf"     # Cortex-M4F and Cortex-M7F (with FPU)
+# target = "thumbv7em-none-eabihf"     # Cortex-M4F and Cortex-M7F (with FPU)
 # target = "thumbv8m.base-none-eabi"   # Cortex-M23
 # target = "thumbv8m.main-none-eabi"   # Cortex-M33 (no FPU)
 # target = "thumbv8m.main-none-eabihf" # Cortex-M33 (with FPU)
 
+
 [env]
 # Enable printing of defmt debug, info and warning messages by default
-DEFMT_LOG = "info"
+DEFMT_LOG="debug"
 
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
 
 # Runner for probe-rs
-runner = "probe-rs run --chip STM32F767ZI"
+runner = 'probe-rs run --chip nRF51822_xxAA --protocol swd'
 
 
 # Linker Flags
-# The default linker used is LLD (shipped with the Rust toolchain)
+#
+# linker=flip-link
+# adds zero-cost stack overflow protection to your embedded programs
+# https://github.com/knurling-rs/flip-link
+#
 # --nmagic
 # Turns off page alignment of sections (which saves flash space)
 # 
@@ -36,28 +41,18 @@ runner = "probe-rs run --chip STM32F767ZI"
 #
 # target-cpu=xxxx
 # Specify the specific CPU in use
-# List available CPU's with `rustc --target=thumbv7em-none-eabihf --print=target-cpus`
+# List available CPU's with `rustc --target=thumbv6m-none-eabi --print=target-cpus`
 #
 # -Tstlog.x
 # stlog - https://japaric.github.io/stlog/stlog/
 
-# Rust Flags for the linker
+# For micro:bit v1.x
+[target.thumbv6m-none-eabi]
 rustflags = [
-  "-C", "link-arg=--nmagic",
+  "-C", "linker=flip-link",
+#  "-C", "link-arg=--nmagic",
   "-C", "link-arg=-Tlink.x",
   "-C", "link-arg=-Tdefmt.x",
-  "-C", "target-cpu=cortex-m7",
+  "-C", "target-cpu=cortex-m0",
   # "-C", "link-arg=-Tstlog.x",
-
-  # GNU Linker:
-  # if you run into problems with LLD switch to the GNU linker by commenting out
-  # this line
-  # "-C", "linker=arm-none-eabi-ld",
-
-  # if you need to link to pre-compiled C libraries provided by a C toolchain
-  # use GCC as the linker by commenting out both lines above and then
-  # uncommenting the three lines below
-  # "-C", "linker=arm-none-eabi-gcc",
-  # "-C", "link-arg=-Wl,-Tlink.x",
-  # "-C", "link-arg=-nostartfiles",
 ]

@@ -1,15 +1,21 @@
-[target.'cfg(all(target_arch = "arm", target_os = "none"))']
-runner = "probe-rs run --chip STM32F767ZI"
-
 rustflags = [
   # LLD (shipped with the Rust toolchain) is used as the default linker
+
+  # --nmagic turns off page alignment of sections (which saves flash space)
   "-C", "link-arg=--nmagic",
+  # tells the linker to use link.x as a linker script. This is usually provided by the cortex-m-rt crate
+  # and by default the version in that crate will include a file called `memory.x` which describes
+  # the particular memory layout for your specific chip. 
   "-C", "link-arg=-Tlink.x",
+  # also tells the linker to use `defmt.x` as a secondary linker script. This is required to make defmt_rtt work.
   "-C", "link-arg=-Tdefmt.x",
+  # Specify the specific CPU in use
+  # List available CPU's with `rustc --target=thumbv7em-none-eabihf --print=target-cpus`
   "-C", "target-cpu=cortex-m7",
   # stlog - https://japaric.github.io/stlog/stlog/
   # "-C", "link-arg=-Tstlog.x",
 
+  # GNU Linker:
   # if you run into problems with LLD switch to the GNU linker by commenting out
   # this line
   # "-C", "linker=arm-none-eabi-ld",
@@ -31,7 +37,8 @@ target = "thumbv7em-none-eabihf"     # Cortex-M4F and Cortex-M7F (with FPU)
 # target = "thumbv8m.main-none-eabi"   # Cortex-M33 (no FPU)
 # target = "thumbv8m.main-none-eabihf" # Cortex-M33 (with FPU)
 
-
 [env]
 DEFMT_LOG = "info"
-CHIPSERIE = "stm32f767"
+
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "probe-rs run --chip STM32F767ZI"

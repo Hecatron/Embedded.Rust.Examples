@@ -10,3 +10,8 @@ Procesor: STM32F767ZIx
 
 Target: thumbv7em-none-eabihf
 Jtag: STLink V2-1
+
+
+## Links
+
+  * https://github.com/rust-embedded/cortex-m-quickstart/tree/master

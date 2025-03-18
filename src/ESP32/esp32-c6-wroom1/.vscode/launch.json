@@ -11,7 +11,7 @@
             "chip": "esp32c6",
             "coreConfigs": [
                 {
-                    "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
+                    "programBinary": "target/riscv32imac-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
                     "svdFile": "./.vscode/svd/esp32c6.svd",
                     "rttEnabled": true,
@@ -32,7 +32,7 @@
                 "flashingEnabled": true,
                 "haltAfterReset": true,
                 "formatOptions": {
-                    "binaryFormat": "idf"
+                    //"binaryFormat": "idf"
                 }
             },
             "consoleLogLevel": "Console" //Info, Debug
@@ -50,7 +50,7 @@
             "chip": "esp32c6",
             "coreConfigs": [
                 {
-                    "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
+                    "programBinary": "target/riscv32imac-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
                     "svdFile": "./.vscode/svd/esp32c6.svd",
                     "rttEnabled": true,
@@ -71,7 +71,7 @@
                 "flashingEnabled": true,
                 "haltAfterReset": true,
                 "formatOptions": {
-                    "binaryFormat": "idf"
+                    //"binaryFormat": "idf"
                 }
             },
             "consoleLogLevel": "Console" //Info, Debug
@@ -88,7 +88,7 @@
             "chip": "esp32c6",
             "coreConfigs": [
                 {
-                    "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
+                    "programBinary": "target/riscv32imac-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
                     "svdFile": "./.vscode/svd/esp32c6.svd",
                     "rttEnabled": true,

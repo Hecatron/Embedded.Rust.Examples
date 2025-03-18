@@ -5,7 +5,7 @@
     "tasks": [
         {
             // Build for Debugging
-            "label": "build_debug",
+            "label": "build-debug",
             "type": "process",
             "command": "cargo",
             "args": [
@@ -26,7 +26,7 @@
         },
         {
             // Build for Release
-            "label": "build_release",
+            "label": "build-release",
             "type": "process",
             "command": "cargo",
             "args": [

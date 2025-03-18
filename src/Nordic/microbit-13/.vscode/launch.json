@@ -44,7 +44,7 @@
             "name": "probe-rs release",
             "type": "probe-rs-debug",
             "request": "launch",
-            "preLaunchTask": "cargo_build_release",
+            "preLaunchTask": "build_release",
             "cwd": "${workspaceFolder}",
             // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
             "chip": "nRF51822_xxAB",

@@ -1,3 +1,4 @@
+//INCLUDEFILE vscode
 {
     "version": "0.2.0",
     "configurations": [
@@ -5,24 +6,23 @@
             "name": "probe-rs debug",
             "type": "probe-rs-debug",
             "request": "launch",
-            "preLaunchTask": "build_debug",
+            "preLaunchTask": "build-debug",
             "cwd": "${workspaceFolder}",
-            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
-            "chip": "STM32F767ZI",
+            "chip": "esp32c6",
             "coreConfigs": [
                 {
-                    "programBinary": "target/thumbv7em-none-eabihf/debug/nucleo-f767zzi",
+                    "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
-                    "svdFile": "./.vscode/svd/stm32f767.svd",
+                    // TODO svd
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
-                            "dataFormat": "String",
                             "channelNumber": 0,
+                            "dataFormat": "Defmt",
                             "showTimestamps": true
                         }
-                    ],
-                },
+                    ]
+                }
             ],
             "runtimeExecutable": "probe-rs",
             "runtimeArgs": [
@@ -30,12 +30,11 @@
             ],
             "flashingConfig": {
                 "flashingEnabled": true,
-                "haltAfterReset": false,
+                "haltAfterReset": true,
                 "formatOptions": {
-                    "binaryFormat": "elf"
+                    "binaryFormat": "idf"
                 }
             },
-            "connectUnderReset": false,
             "consoleLogLevel": "Console" //Info, Debug
             // Override the speed
             //"speed": 24000
@@ -46,24 +45,23 @@
             "name": "probe-rs release",
             "type": "probe-rs-debug",
             "request": "launch",
-            "preLaunchTask": "build_release",
+            "preLaunchTask": "build-release",
             "cwd": "${workspaceFolder}",
-            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
-            "chip": "STM32F767ZI",
+            "chip": "esp32c6",
             "coreConfigs": [
                 {
-                    "programBinary": "target/thumbv7em-none-eabihf/release/nucleo-f767zzi",
+                    "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
-                    "svdFile": "./.vscode/svd/stm32f767.svd",
+                    // TODO svd
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
-                            "dataFormat": "String",
                             "channelNumber": 0,
+                            "dataFormat": "Defmt",
                             "showTimestamps": true
                         }
-                    ],
-                },
+                    ]
+                }
             ],
             "runtimeExecutable": "probe-rs",
             "runtimeArgs": [
@@ -71,12 +69,11 @@
             ],
             "flashingConfig": {
                 "flashingEnabled": true,
-                "haltAfterReset": false,
+                "haltAfterReset": true,
                 "formatOptions": {
-                    "binaryFormat": "elf"
+                    "binaryFormat": "idf"
                 }
             },
-            "connectUnderReset": false,
             "consoleLogLevel": "Console" //Info, Debug
             // Override the speed
             //"speed": 24000
@@ -88,12 +85,12 @@
             "type": "probe-rs-debug",
             "request": "attach",
             "cwd": "${workspaceFolder}",
-            "chip": "STM32F767ZI",       
+            "chip": "esp32c6",
             "coreConfigs": [
                 {
-                    "programBinary": "target/thumbv7em-none-eabihf/debug/nucleo-f767zzi",
+                    "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
-                    "svdFile": "./.vscode/svd/stm32f767.svd",
+                    //"svdFile": "./.vscode/svd/stm32f767.svd",
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
@@ -108,7 +105,6 @@
             "runtimeArgs": [
                 "dap-server"
             ],
-            "connectUnderReset": false,
             "consoleLogLevel": "Console" //Info, Debug
         },
     ]

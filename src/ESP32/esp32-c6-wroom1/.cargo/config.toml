@@ -23,4 +23,4 @@ rustflags = [
 ]
 
 [unstable]
-build-std = ["alloc", "core"]
+build-std = ["core"]

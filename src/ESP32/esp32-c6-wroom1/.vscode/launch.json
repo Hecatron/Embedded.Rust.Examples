@@ -13,7 +13,7 @@
                 {
                     "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
-                    // TODO svd
+                    "svdFile": "./.vscode/svd/esp32c6.svd",
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
@@ -52,7 +52,7 @@
                 {
                     "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
-                    // TODO svd
+                    "svdFile": "./.vscode/svd/esp32c6.svd",
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
@@ -90,7 +90,7 @@
                 {
                     "programBinary": "target/riscv32imc-unknown-none-elf/debug/${workspaceFolderBasename}",
                     "coreIndex": 0,
-                    //"svdFile": "./.vscode/svd/stm32f767.svd",
+                    "svdFile": "./.vscode/svd/esp32c6.svd",
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {

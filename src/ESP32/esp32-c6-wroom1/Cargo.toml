@@ -3,10 +3,6 @@ edition = "2021"
 name    = "esp32-c6-wroom1"
 version = "0.1.0"
 
-[[bin]]
-name = "esp32-c6-wroom1"
-path = "./src/bin/main.rs"
-
 [dependencies]
 critical-section = "1.2.0"
 embassy-net = { version = "0.6.0", features = [

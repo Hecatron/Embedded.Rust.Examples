@@ -4,6 +4,10 @@
 // examples at https://github.com/esp-rs/esp-hal/tree/esp-hal-v1.0.0-beta.0/examples/src/bin
 // Also at https://github.com/okhsunrog/esp32s3test/tree/main
 
+// TODO use this example as bare metal - esp-hal
+// Create another one that uses esp-idf-hal called esp32-c6-wroom1-idf
+// Move the LED code into that other one
+
 use defmt::info;
 use esp_hal::clock::CpuClock;
 use esp_hal::gpio::{Level, Output, OutputConfig};
@@ -32,7 +36,7 @@ fn main() -> ! {
             .with_frequency(esp_hal::time::Rate::from_khz(3200))
             .with_mode(Mode::_0),
     );
-    
+
 
 
     // TODO LED is a WS2812B on GPIO8

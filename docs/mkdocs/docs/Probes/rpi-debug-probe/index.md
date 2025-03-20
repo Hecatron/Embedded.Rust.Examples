@@ -5,9 +5,9 @@
   * https://github.com/raspberrypi/debugprobe
   * https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html
 
-The Rpi Debug probe low cost AWD Debug probe.
+The Rpi Debug probe low cost AWD Debug probe that uses the CMSIS-DAP standard.
 It's powered by a RP2040 and can provide SWD Debugging for ARM based micro's similar to the Segger.
-It also has a seperate UART Port for serial communication.
+It also has a separate UART Port for serial communication.
 
 ## Ports
 

@@ -1,21 +1,15 @@
 #![no_std]
 #![no_main]
 
-// Ensure we halt the program on panic (if we don't mention this crate it won't
-// be linked)
+mod rp_meta;
+
+// Ensure we halt the program on panic (if we don't mention this crate it won't be linked)
 use panic_halt as _;
 
-// Alias for our HAL crate
+// Depends
 use rp235x_hal as hal;
-
-// Some things we need
 use embedded_hal::delay::DelayNs;
 use embedded_hal::digital::OutputPin;
-
-/// Tell the Boot ROM about our application
-#[link_section = ".start_block"]
-#[used]
-pub static IMAGE_DEF: hal::block::ImageDef = hal::block::ImageDef::secure_exe();
 
 /// External high-speed crystal on the Raspberry Pi Pico 2 board is 12 MHz.
 /// Adjust if your board has a different frequency
@@ -73,14 +67,3 @@ fn main() -> ! {
         timer.delay_ms(500);
     }
 }
-
-/// Program metadata for `picotool info`
-#[link_section = ".bi_entries"]
-#[used]
-pub static PICOTOOL_ENTRIES: [hal::binary_info::EntryAddr; 5] = [
-    hal::binary_info::rp_cargo_bin_name!(),
-    hal::binary_info::rp_cargo_version!(),
-    hal::binary_info::rp_program_description!(c"Blinky Example"),
-    hal::binary_info::rp_cargo_homepage_url!(),
-    hal::binary_info::rp_program_build_attribute!(),
-];

@@ -29,7 +29,8 @@ rp235x-hal = {version = "0.3.0", features = ["binary-info", "critical-section-im
 usb-device = "0.3.2"
 usbd-serial = "0.2.2"
 static_cell = "2.1.0"
-rp-binary-info = {version = "0.1.0", features = ["binary-info"]}
+rp-binary-info = {version = "0.1.1", features = ["binary-info"]}
+
 
 [target.'cfg( target_arch = "arm" )'.dependencies]
 embassy-executor = {version = "0.5", features = ["arch-cortex-m", "executor-thread"]}

@@ -4,7 +4,6 @@
 // Ensure we halt the program on panic (if we don't mention this crate it won't
 // be linked)
 use panic_halt as _;
-mod bin_info;
 
 // Alias for our HAL crate
 use rp235x_hal as hal;
@@ -79,14 +78,9 @@ fn main() -> ! {
 #[link_section = ".bi_entries"]
 #[used]
 pub static PICOTOOL_ENTRIES: [hal::binary_info::EntryAddr; 5] = [
-    rp_cargo_bin_name!(),
-    //hal::binary_info::rp_cargo_bin_name!(),
+    hal::binary_info::rp_cargo_bin_name!(),
     hal::binary_info::rp_cargo_version!(),
     hal::binary_info::rp_program_description!(c"Blinky Example"),
-    //hal::binary_info::rp_cargo_homepage_url!(),
-    rp_cargo_homepage_url!(),
+    hal::binary_info::rp_cargo_homepage_url!(),
     hal::binary_info::rp_program_build_attribute!(),
 ];
-
-
-// End of file

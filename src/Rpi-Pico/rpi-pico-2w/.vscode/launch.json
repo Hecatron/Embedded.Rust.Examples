@@ -35,7 +35,7 @@
                 "haltAfterReset": false
             },
             "connectUnderReset": false,
-            "consoleLogLevel": "Console" //Info, Debug
+            "consoleLogLevel": "Debug", //Info, Debug
             // Override the speed
             //"speed": 24000
             // If there are multiple probes attached
@@ -152,5 +152,4 @@
     ]
 }
 
-// "speed": 4000,
-// "wireProtocol": "Swd"
+

@@ -19,7 +19,3 @@ esptool.py --chip esp32 elf2image target/xtensa-esp32-none-elf/release/blinky
   * https://github.com/espressif/esptool
   * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/bootloader.html
   * https://blog.espressif.com/esp32-programmers-memory-model-259444d89387
-
-
-
-TODO

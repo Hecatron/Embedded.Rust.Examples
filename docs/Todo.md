@@ -16,3 +16,7 @@ std uses esp-idf-hal
 https://github.com/rp-rs/rp2040-project-template?tab=readme-ov-file
 https://github.com/knurling-rs/app-template
 https://github.com/knurling-rs
+
+## Links
+
+https://towardsdatascience.com/nine-rules-for-running-rust-on-embedded-systems-b0c247ee877e/

@@ -13,3 +13,8 @@ To switch from the stable to the latest git release for probe-rs-tools
 cargo uninstall probe-rs-tools
 cargo install --git https://github.com/probe-rs/probe-rs.git --branch master probe-rs-tools
 ```
+
+
+https://craigjb.com/2024/09/12/probe-rs-vexriscv/
+
+https://github.com/dbrgn/embedded-hal-mock

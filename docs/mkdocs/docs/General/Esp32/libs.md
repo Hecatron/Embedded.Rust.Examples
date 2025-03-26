@@ -1,6 +1,5 @@
 # Libs
 
-
 ## Root Org
 
 First we have the top level git organisation for esp32 / rust

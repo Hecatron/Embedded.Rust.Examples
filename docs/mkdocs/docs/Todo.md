@@ -18,3 +18,9 @@ cargo install --git https://github.com/probe-rs/probe-rs.git --branch master pro
 https://craigjb.com/2024/09/12/probe-rs-vexriscv/
 
 https://github.com/dbrgn/embedded-hal-mock
+
+
+## Web Assembly
+
+https://github.com/barafael/wasm-on-mcu/tree/main
+https://github.com/wasmi-labs/wasmi

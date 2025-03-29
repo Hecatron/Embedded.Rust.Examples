@@ -1,0 +1,155 @@
+// The format of this file is specified in https://probe.rs/docs/tools/debugger/#start-a-debug-session-with-minimum-configuration
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "probe-rs debug",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "preLaunchTask": "build_debug",
+            "cwd": "${workspaceFolder}",
+            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
+            "chip": "RP235x",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv8m.main-none-eabihf/debug/rpi-pico-2w",
+                    "coreIndex": 0,
+		    // pulled from https://github.com/raspberrypi/pico-sdk/tree/master/src/rp2040/hardware_regs
+                    "svdFile": "./.vscode/svd/RP2350.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "dataFormat": "String",
+                            "channelNumber": 0,
+                            "showTimestamps": true
+                        }
+                    ],
+                },
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": false
+            },
+            "connectUnderReset": false,
+            "consoleLogLevel": "Debug", //Info, Debug
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
+        },
+        {
+            "name": "probe-rs release",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "preLaunchTask": "build_release",
+            "cwd": "${workspaceFolder}",
+            // "server": "127.0.0.1:50001", // For connecting to an existing probe-rs-debugger process
+            "chip": "RP235x",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv8m.main-none-eabihf/debug/rpi-pico-2w",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/RP2350.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "dataFormat": "String",
+                            "channelNumber": 0,
+                            "showTimestamps": true
+                        }
+                    ],
+                },
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": false,
+                "formatOptions": {
+                    "binaryFormat": "elf"
+                }
+            },
+            "connectUnderReset": false,
+            "consoleLogLevel": "Console" //Info, Debug
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
+        },
+        {
+            "name": "probe-rs attach",
+            "type": "probe-rs-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}",
+            "chip": "RP235x",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv8m.main-none-eabihf/debug/rpi-pico-2w",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/RP2350.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "dataFormat": "String",
+                            "channelNumber": 0,
+                            "showTimestamps": true
+                        }
+                    ],
+                },
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "connectUnderReset": false,
+            "consoleLogLevel": "Console" //Info, Debug
+        },
+        // TODO how do we pass the file remotely across for flashing?
+        {
+            "name": "probe-rs debug remote",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "preLaunchTask": "build_debug",
+            "cwd": "${workspaceFolder}",
+            "server": "192.168.111.136:50000",
+            "chip": "RP235x",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/thumbv8m.main-none-eabihf/debug/rpi-pico-2w",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/RP2350.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "dataFormat": "String",
+                            "channelNumber": 0,
+                            "showTimestamps": true
+                        }
+                    ],
+                },
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": false
+            },
+            "connectUnderReset": false,
+            "consoleLogLevel": "Console" //Info, Debug
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
+        }
+    ]
+}
+
+

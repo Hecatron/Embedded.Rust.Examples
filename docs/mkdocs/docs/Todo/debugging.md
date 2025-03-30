@@ -1,4 +1,4 @@
-# TODO
+# Debugging
 
 ## Windows debugging
 
@@ -14,13 +14,13 @@ cargo uninstall probe-rs-tools
 cargo install --git https://github.com/probe-rs/probe-rs.git --branch master probe-rs-tools
 ```
 
+## Breakpoints
 
-https://craigjb.com/2024/09/12/probe-rs-vexriscv/
+There seems to be an issue with probe-rs and debugging
 
-https://github.com/dbrgn/embedded-hal-mock
+  * When debugging with the pico probe
+    If Step into or Step Over is used, then breakpoints stop working?
 
-
-## Web Assembly
-
-https://github.com/barafael/wasm-on-mcu/tree/main
-https://github.com/wasmi-labs/wasmi
+  * Might be a probe-rs issue considering master is being used
+  * Try Linux with 0.27
+  * Try using the segger instead of picoprobe

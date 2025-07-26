@@ -32,7 +32,7 @@
                 "flashingEnabled": true,
                 "haltAfterReset": true,
                 "formatOptions": {
-                    //"binaryFormat": "idf"
+                    "binaryFormat": "idf"
                 }
             },
             "consoleLogLevel": "Console" //Info, Debug

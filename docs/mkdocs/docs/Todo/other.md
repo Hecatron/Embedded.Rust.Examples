@@ -26,3 +26,6 @@ https://github.com/hobofan/cargo-nono
 rustup +nightly target add thumbv8m.main-none-eabihf
 
 https://github.com/nostd-rs/nostd
+
+
+https://github.com/gerardcl/esp32-c3-rust-std

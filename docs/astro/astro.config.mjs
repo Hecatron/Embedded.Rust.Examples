@@ -22,8 +22,16 @@ export default defineConfig({
           link: "/",
         },
         {
+          label: '[lucide:wrench] General',
+          autogenerate: { directory: 'general' },
+        },
+        {
           label: '[book] Boards',
           autogenerate: { directory: 'boards' },
+        },
+        {
+          label: '[lucide:pen] Probes',
+          autogenerate: { directory: 'probes' },
         },
 	{
           label: '[lucide:wrench] TODO',

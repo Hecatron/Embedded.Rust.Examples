@@ -25,6 +25,10 @@ export default defineConfig({
           label: '[book] Boards',
           autogenerate: { directory: 'boards' },
         },
+	{
+          label: '[lucide:wrench] TODO',
+          autogenerate: { directory: 'todo' },
+        },
       ],
       customCss: [
         "@fontsource-variable/space-grotesk/index.css",

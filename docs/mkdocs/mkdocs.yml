@@ -1,4 +1,4 @@
-site_name: Hecatronic Embedded Rust Examples
+site_name: Embedded Rust Examples
 site_url: https://Hecatron.github.io/Embedded.Rust.Examples
 repo_url: https://github.com/Hecatron/Embedded.Rust.Examples.git
 
@@ -28,8 +28,8 @@ theme:
         icon: material/toggle-switch-off
         name: Switch to system preference
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: SpaceGrotesk
+    code: SpaceMono
   favicon: assets/favicon.ico
   icon:
     logo: logo

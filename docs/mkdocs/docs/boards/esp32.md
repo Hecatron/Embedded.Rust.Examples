@@ -1,0 +1,16 @@
+# ESP32 Boards
+
+## TODO
+
+with ESP32 there are two crates available
+
+  * esp-hal - bare metal access
+  * esp-idf-hal - provides wrappers around the ESP IDF Libraries
+
+esp-generate --chip esp32c6 esp32-c6-wroom1
+
+  * https://github.com/esp-rs/esp-idf-template
+
+```bash
+cargo generate esp-rs/esp-idf-template cargo
+```

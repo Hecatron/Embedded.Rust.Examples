@@ -1,8 +1,10 @@
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color:        #90030C;
-  --md-primary-fg-color--light: #90030C;
-  --md-primary-fg-color--dark:  #90030C;
+  --md-primary-fg-color:        #470106;
+  --md-primary-fg-color--light: #470106;
+  --md-primary-fg-color--dark:  #470106;
   --md-typeset-a-color:         #d78186;
+  --md-default-bg-color:        #070707;
+  --md-code-bg-color:           #121212;
 }
 
 [data-md-color-scheme="default"] {
@@ -13,4 +15,41 @@
 
 .md-grid {
 	max-width: 72rem;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.md-main__inner {
+    margin-top: 1px;
+}
+
+.md-nav__title {
+  border-bottom: 1px solid;
+  border-color: #262626;
+  padding-bottom: 16px;
+}
+
+.md-nav {
+    font-size: 14px;
+}
+
+.md-search__form {
+  border: 1px solid #1b1f23;
+  border-radius: 6px;
+}
+
+.md-typeset code {
+  border: 1px solid #1b1f23;
+  border-radius: 6px;
+  border-color: #262626;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/Embedded.Rust.Examples/assets/fonts/SpaceGrotesk-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/Embedded.Rust.Examples/assets/fonts/SpaceMono-Regular.ttf") format('truetype');
 }

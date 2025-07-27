@@ -1,0 +1,15 @@
+# Remote Debugging
+
+## Server Side
+
+On the server side we can run probe-rs 
+```bash
+probe-rs dap-server --port 50000 --ip 0.0.0.0
+```
+
+TODO
+not sure how to get the binary transfered across remotely
+without it being on the server before hand
+vscode extension option?
+
+  * https://bugadani.github.io/rust/probe-rs/2025/02/20/probe-rs-server.html

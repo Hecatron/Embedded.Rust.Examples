@@ -1,0 +1,27 @@
+---
+icon: material/integrated-circuit-chip
+---
+
+# Nano ESP32 C6
+
+<Image src={board_img} alt="Nano ESP32 C6"  />
+
+This board is a china clone of the esp32-c6-wroom
+
+## USB Ports
+
+There are two usb ports on this device
+
+  * The one on the left is wired into the MCU via a USB to Serial Adapter for UART Access
+  * The one of the right is wired directly to the MCU
+
+## LED
+
+There is a single RGB LED WS2812B wired in via GPIO8
+
+## Links
+
+  * https://www.amazon.co.uk/dp/B0DBVM51MP
+  * https://github.com/wuxx/nanoESP32-C6
+  * https://github.com/wuxx/nanoESP32-C6/blob/master/hardware/nanoESP32C6.pdf
+  * https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32c6/esp32-c6-devkitc-1/index.html

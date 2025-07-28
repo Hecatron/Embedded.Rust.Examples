@@ -1,6 +1,6 @@
-use esp_idf_hal::delay::FreeRtos;
-use esp_idf_hal::gpio::*;
-use esp_idf_hal::peripherals::Peripherals;
+//use esp_idf_hal::delay::FreeRtos;
+//use esp_idf_hal::gpio::*;
+//use esp_idf_hal::peripherals::Peripherals;
 
 //use defmt::info;
 //use esp_hal::clock::CpuClock;
@@ -9,9 +9,9 @@ use esp_idf_hal::peripherals::Peripherals;
 //use panic_rtt_target as _;
 
 fn main() -> anyhow::Result<()> {
-    esp_idf_hal::sys::link_patches();
-    let peripherals = Peripherals::take()?;
-    let mut led = PinDriver::output(peripherals.pins.gpio4)?;
+    esp_idf_svc::sys::link_patches();
+    //let peripherals = Peripherals::take()?;
+    //let mut led = PinDriver::output(peripherals.pins.gpio4)?;
 
     //rtt_target::rtt_init_defmt!();
 
@@ -21,11 +21,11 @@ fn main() -> anyhow::Result<()> {
 
     loop {
         //info!("Hello world!");
-        led.set_high()?;
+        //led.set_high()?;
         // we are sleeping here to make sure the watchdog isn't triggered
-        FreeRtos::delay_ms(1000);
+        //FreeRtos::delay_ms(1000);
 
-        led.set_low()?;
-        FreeRtos::delay_ms(1000);
+        //led.set_low()?;
+        //FreeRtos::delay_ms(1000);
     }
 }

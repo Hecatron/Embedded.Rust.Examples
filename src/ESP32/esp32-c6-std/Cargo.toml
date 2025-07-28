@@ -3,36 +3,38 @@ edition = "2024"
 name    = "esp32-c6-nostd"
 version = "0.1.0"
 
-[dependencies]
-defmt = "1.0.1"
-esp-bootloader-esp-idf = { version = "0.2.0", features = ["esp32c6"] }
-esp-idf-hal = { version = "0.45.2", features = [
-  "std",
-  "binstart",
-] }
-critical-section = "1.2.0"
-esp-alloc        = { version = "0.8.0", features = ["defmt"] }
-panic-rtt-target = { version = "0.2.0", features = ["defmt"] }
-rtt-target       = { version = "0.6.1", features = ["defmt"] }
+[features]
+default = []
+experimental = ["esp-idf-svc/experimental"]
 
-smart-leds = "0.4.0"
-ws2812-spi = {version = "0.5.1",  features = ["mosi_idle_high"]}
+
+[dependencies]
+esp-idf-svc = "0.51"
+#defmt = "1.0.1"
+#esp-bootloader-esp-idf = { version = "0.2.0", features = ["esp32c6"] }
+#esp-idf-hal = { version = "0.45.2", features = [
+#  "std",
+#  "binstart",
+#] }
+#critical-section = "1.2.0"
+#esp-alloc        = { version = "0.8.0", features = ["defmt"] }
+#panic-rtt-target = { version = "0.2.0", features = ["defmt"] }
+#rtt-target       = { version = "0.6.1", features = ["defmt"] }
+
+#smart-leds = "0.4.0"
+#ws2812-spi = {version = "0.5.1",  features = ["mosi_idle_high"]}
 
 [dev-dependencies]
 anyhow = "1"
-esp-idf-sys = { version = "0.36", features = ["binstart"] }
+#esp-idf-sys = { version = "0.36", features = ["binstart"] }
+
+[build-dependencies]
+embuild = "0.33"
 
 
 [profile.dev]
-# Rust debug is too slow.
-# For debug builds always builds with some optimization
-opt-level = "s"
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
 
 [profile.release]
-codegen-units    = 1     # LLVM can perform better optimizations using a single thread
-debug            = 2
-debug-assertions = false
-incremental      = false
-lto              = 'fat'
-opt-level        = 's'
-overflow-checks  = false
+opt-level = "s"

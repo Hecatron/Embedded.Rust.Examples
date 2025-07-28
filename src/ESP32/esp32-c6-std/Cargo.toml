@@ -6,10 +6,9 @@ version = "0.1.0"
 [dependencies]
 defmt = "1.0.1"
 esp-bootloader-esp-idf = { version = "0.2.0", features = ["esp32c6"] }
-esp-hal = { version = "=1.0.0-rc.0", features = [
-  "defmt",
-  "esp32c6",
-  "unstable",
+esp-idf-hal = { version = "0.45.2", features = [
+  "std",
+  "binstart",
 ] }
 critical-section = "1.2.0"
 esp-alloc        = { version = "0.8.0", features = ["defmt"] }

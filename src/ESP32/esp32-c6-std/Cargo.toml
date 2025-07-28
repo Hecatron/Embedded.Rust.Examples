@@ -18,6 +18,11 @@ rtt-target       = { version = "0.6.1", features = ["defmt"] }
 smart-leds = "0.4.0"
 ws2812-spi = {version = "0.5.1",  features = ["mosi_idle_high"]}
 
+[dev-dependencies]
+anyhow = "1"
+esp-idf-sys = { version = "0.36", features = ["binstart"] }
+
+
 [profile.dev]
 # Rust debug is too slow.
 # For debug builds always builds with some optimization

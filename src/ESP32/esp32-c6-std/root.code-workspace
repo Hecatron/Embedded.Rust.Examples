@@ -1,11 +1,11 @@
 {
 	"folders": [
 		{
-			"path": ".", "name": "esp32-c6-wroom1"
+			"path": ".", "name": "esp32-c6-std"
 		}
 	],
 	"settings": {
-		"rust-analyzer.cargo.target": "riscv32imac-unknown-none-elf",
+		"rust-analyzer.cargo.target": "riscv32imac-esp-espidf",
 		"rust-analyzer.check.allTargets": false
 	}
 }

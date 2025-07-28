@@ -1,1 +1,1 @@
-#![no_std]
+#![warn(clippy::large_futures)]

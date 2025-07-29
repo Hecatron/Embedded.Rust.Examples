@@ -9,24 +9,26 @@ experimental = ["esp-idf-svc/experimental"]
 
 
 [dependencies]
-esp-idf-svc = "0.51"
+# Basic Access
+anyhow = "1"
+esp-idf-svc = { version = "0.51", features = ["binstart"] }
+esp-idf-hal = { version = "0.45.2", features = [
+  "std",
+  "binstart",
+] }
+# RTT Logging
+log = { version = "0.4.27" }
+# issue with defmt in rtt_target?
 #defmt = "1.0.1"
-#esp-bootloader-esp-idf = { version = "0.2.0", features = ["esp32c6"] }
-#esp-idf-hal = { version = "0.45.2", features = [
-#  "std",
-#  "binstart",
-#] }
-#critical-section = "1.2.0"
-#esp-alloc        = { version = "0.8.0", features = ["defmt"] }
-#panic-rtt-target = { version = "0.2.0", features = ["defmt"] }
-#rtt-target       = { version = "0.6.1", features = ["defmt"] }
+rtt-target = { version = "0.6.1", features = ["log"] }
+#rtt-target = { version = "0.6.1" }
+
+critical-section = { version = "1.2.0", features = ["std"], default-features = false }
+
 
 #smart-leds = "0.4.0"
 #ws2812-spi = {version = "0.5.1",  features = ["mosi_idle_high"]}
 
-[dev-dependencies]
-anyhow = "1"
-#esp-idf-sys = { version = "0.36", features = ["binstart"] }
 
 [build-dependencies]
 embuild = "0.33"

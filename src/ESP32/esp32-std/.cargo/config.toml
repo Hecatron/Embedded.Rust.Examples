@@ -1,0 +1,29 @@
+#
+# Cargo Configuration for a ESP32
+# https://github.com/esp-rs/esp-hal
+
+[build]
+target = "xtensa-esp32-espidf"
+
+[target.xtensa-esp32-espidf]
+linker = "ldproxy"
+rustflags = ["--cfg", "espidf_time64"]
+# Runner for probe-rs
+runner = "probe-rs run --chip=esp32 --preverify --always-print-stacktrace --no-location --catch-hardfault"
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+# Enable printing of defmt debug, info and warning messages by default
+DEFMT_LOG = "info"
+MCU="esp32"
+
+ESP_IDF_VERSION = "v5.4.1"
+#ESP_IDF_SDKCONFIG_DEFAULTS = ".cargo/sdkconfig.defaults"
+# This places the esp-idf-sys build dir under
+# Windows: C:\Users\<username>\.espressif
+# Linux: ~/.espressif
+# This avoids path too long issues -https://github.com/esp-rs/esp-idf-sys/blob/master/BUILD-OPTIONS.md
+ESP_IDF_TOOLS_INSTALL_DIR="global"
+ESP_IDF_PATH_ISSUES="warn"

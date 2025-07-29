@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".", "name": "esp32-std"
+		}
+	],
+	"settings": {
+		"rust-analyzer.cargo.target": "xtensa-esp32-espidf",
+		"rust-analyzer.check.allTargets": false
+	}
+}

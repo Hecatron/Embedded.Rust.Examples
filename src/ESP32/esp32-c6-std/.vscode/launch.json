@@ -19,7 +19,7 @@
                         {
                             "channelNumber": 0,
                             // TODO
-                            "dataFormat": "Defmt",
+                            "dataFormat": "String",
                             "showTimestamps": true
                         }
                     ]
@@ -58,7 +58,7 @@
                     "rttChannelFormats": [
                         {
                             "channelNumber": 0,
-                            "dataFormat": "Defmt",
+                            "dataFormat": "String",
                             "showTimestamps": true
                         }
                     ]

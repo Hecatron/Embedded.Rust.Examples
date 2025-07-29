@@ -42,7 +42,7 @@ plugins:
   - mkdocs-video
   - tags
   - git-revision-date-localized
-
+  - glightbox
 
 
 markdown_extensions:
@@ -56,9 +56,11 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.blocks.admonition
   - pymdownx.blocks.details
+  - pymdownx.blocks.caption
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
 
 extra_javascript:
 

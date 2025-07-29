@@ -1,8 +1,11 @@
+---
+icon: material/integrated-circuit-chip
+---
+
 # Waveshare ESP32 C6 1.47 LCD
 
-import board_img from './esp32-c6-waveshare-147.jpg';
+![Waveshare ESP32 C6 1.47 LCD](esp32-c6-waveshare-147.jpg)
 
-<Image src={board_img} alt="Waveshare ESP32 C6 1.47 LCD"  />
 
 This board is a ESP32-C6 with an onboard LCD, RGB Backlight and micro sd card slot
 
@@ -18,6 +21,6 @@ This board is a ESP32-C6 with an onboard LCD, RGB Backlight and micro sd card sl
 
 ## Links
 
-  * https://www.amazon.co.uk/dp/B0DHTMYTCY
-  * https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47
-  * https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47#Resources
+  * <https://www.amazon.co.uk/dp/B0DHTMYTCY>
+  * <https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47>
+  * <https://www.waveshare.com/wiki/ESP32-C6-LCD-1.47#Resources>

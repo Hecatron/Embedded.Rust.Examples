@@ -2,6 +2,7 @@
 mkdocs
 mkdocs-material
 mkdocs-video
+mkdocs-glightbox
 
 # Protection for email links
 git+https://github.com/rkoe/mkdocs-emailprotect

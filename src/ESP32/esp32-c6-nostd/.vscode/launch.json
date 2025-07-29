@@ -94,7 +94,7 @@
                     "rttEnabled": true,
                     "rttChannelFormats": [
                         {
-                            "dataFormat": "String",
+                            "dataFormat": "Defmt",
                             "channelNumber": 0,
                             "showTimestamps": true
                         }

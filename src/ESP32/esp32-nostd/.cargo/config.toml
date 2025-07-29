@@ -1,0 +1,22 @@
+#
+# Cargo Configuration for a ESP32
+# https://github.com/esp-rs/esp-hal
+
+[build]
+target = "xtensa-esp32-none-elf"
+
+[target.xtensa-esp32-none-elf]
+# Runner for probe-rs
+runner = "probe-rs run --chip=esp32 --preverify --always-print-stacktrace --no-location --catch-hardfault"
+
+# Linker Flags
+rustflags = [
+  "-C", "link-arg=-nostartfiles",
+]
+
+[env]
+# Enable printing of defmt debug, info and warning messages by default
+DEFMT_LOG = "info"
+
+[unstable]
+build-std = ["alloc", "core"]

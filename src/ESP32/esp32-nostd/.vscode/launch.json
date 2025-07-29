@@ -1,0 +1,111 @@
+//INCLUDEFILE vscode
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "probe-rs debug",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "preLaunchTask": "build-debug",
+            "cwd": "${workspaceFolder}",
+            "chip": "esp32",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/xtensa-esp32-none-elf/debug/examples/${fileDirnameBasename}",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/esp32.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "channelNumber": 0,
+                            "dataFormat": "Defmt",
+                            "showTimestamps": true
+                        }
+                    ]
+                }
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true,
+                "formatOptions": {
+                    "binaryFormat": "idf"
+                }
+            },
+            "consoleLogLevel": "Console" //Info, Debug
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
+        },
+        {
+            "name": "probe-rs release",
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "preLaunchTask": "build-release",
+            "cwd": "${workspaceFolder}",
+            "chip": "esp32",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/xtensa-esp32-none-elf/debug/examples/${fileDirnameBasename}",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/esp32.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "channelNumber": 0,
+                            "dataFormat": "Defmt",
+                            "showTimestamps": true
+                        }
+                    ]
+                }
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true,
+                "formatOptions": {
+                    //"binaryFormat": "idf"
+                }
+            },
+            "consoleLogLevel": "Console" //Info, Debug
+            // Override the speed
+            //"speed": 24000
+            // If there are multiple probes attached
+            //"probe": "VID:PID:<Serial>"
+        },
+        {
+            "name": "probe-rs attach",
+            "type": "probe-rs-debug",
+            "request": "attach",
+            "cwd": "${workspaceFolder}",
+            "chip": "esp32",
+            "coreConfigs": [
+                {
+                    "programBinary": "target/xtensa-esp32-none-elf/debug/examples/${fileDirnameBasename}",
+                    "coreIndex": 0,
+                    "svdFile": "./.vscode/svd/esp32.svd",
+                    "rttEnabled": true,
+                    "rttChannelFormats": [
+                        {
+                            "dataFormat": "Defmt",
+                            "channelNumber": 0,
+                            "showTimestamps": true
+                        }
+                    ],
+                },
+            ],
+            "runtimeExecutable": "probe-rs",
+            "runtimeArgs": [
+                "dap-server"
+            ],
+            "consoleLogLevel": "Console" //Info, Debug
+        },
+    ]
+}

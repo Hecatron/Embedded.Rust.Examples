@@ -5,7 +5,7 @@
 First we need to download the latest U2F File from here
 The file we're looking for is `debugprobe.uf2` under the latest release
 
-  * https://github.com/raspberrypi/debugprobe/tags
+  * <https://github.com/raspberrypi/debugprobe/tags>
 
 ## Flashing the Firmware
 

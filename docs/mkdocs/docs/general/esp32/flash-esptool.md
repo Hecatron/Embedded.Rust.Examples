@@ -1,11 +1,11 @@
 # Flashing with ESP Tool
 
-  * https://github.com/ctron/rust-esp32-hono
+  * <https://github.com/ctron/rust-esp32-hono>
     An example of some command line options here
-  * https://github.com/esp-rs/esp32-hal/blob/master/flash
+  * <https://github.com/esp-rs/esp32-hal/blob/master/flash>
     An example of a wrapper script
 
-  * https://github.com/sagiegurari/cargo-make
+  * <https://github.com/sagiegurari/cargo-make>
     TODO
 
 
@@ -27,14 +27,14 @@ esptool.py --chip esp32 --baud 115200 --port COM4 --before default_reset --after
   * partitions.bin - This is a compiled version of the partition table to use
 
 For the bootloader and the partition table these can be sourced from
-https://github.com/esp-rs/espflash/tree/master/espflash/bootloader
+<https://github.com/esp-rs/espflash/tree/master/espflash/bootloader>
 Or the esp-idf repo, with esp-idf normally the partition table csv is compiled into a bin as part of that build process.
 
 
 ## Determine Onboard Flash size
 
 One feature of esptool is to lookup the flash size / get the model id
-We can also lookup the flashid within https://review.coreboot.org/cgit/flashrom.git/plain/flashchips.h
+We can also lookup the flashid within <https://review.coreboot.org/cgit/flashrom.git/plain/flashchips.h>
 ```
 esptool.py -p COM2 flash_id
 ```

@@ -1,3 +1,3 @@
 # Std / NoStd Libs
 
-  * https://blog.timhutt.co.uk/std-embedded-rust/index.html
+  * <https://blog.timhutt.co.uk/std-embedded-rust/index.html>

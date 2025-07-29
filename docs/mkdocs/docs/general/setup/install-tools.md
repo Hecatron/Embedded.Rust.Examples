@@ -47,7 +47,7 @@ rustup component add rust-src
 
 ## ESP32 Development
 
-  * https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html
+  * <https://docs.esp-rs.org/book/installation/riscv-and-xtensa.html>
 
 ```bash
 cargo install espup
@@ -74,7 +74,7 @@ rustup target add thumbv8m.main-none-eabihf
 
 ## Rpi Pico
 
-  * https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust
+  * <https://www.alexdwilson.dev/how-to-program-raspberry-pi-pico-with-rust>
 
 ```bash
 rustup target add thumbv6m-none-eabi

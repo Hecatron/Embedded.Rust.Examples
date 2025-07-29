@@ -1,9 +1,9 @@
 # Rpi Pico Degug Probe
 
-  * https://www.raspberrypi.com/products/debug-probe/
-  * https://datasheets.raspberrypi.com/debug/debug-connector-specification.pdf
-  * https://github.com/raspberrypi/debugprobe
-  * https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html
+  * <https://www.raspberrypi.com/products/debug-probe/>
+  * <https://datasheets.raspberrypi.com/debug/debug-connector-specification.pdf>
+  * <https://github.com/raspberrypi/debugprobe>
+  * <https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html>
 
 The Rpi Debug probe low cost AWD Debug probe that uses the CMSIS-DAP standard.
 It's powered by a RP2040 and can provide SWD Debugging for ARM based micro's similar to the Segger.

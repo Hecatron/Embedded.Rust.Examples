@@ -27,7 +27,7 @@ cargo install --git https://github.com/probe-rs/probe-rs.git --branch master pro
 
 Under Linux depending on the distro permission needs to be granted for the user to access the devices
 
-  * https://probe.rs/docs/getting-started/probe-setup/#linux%3A-udev-rules
+  * <https://probe.rs/docs/getting-started/probe-setup/#linux%3A-udev-rules>
 
 First we add the user account to the plugdev group
 ```bash

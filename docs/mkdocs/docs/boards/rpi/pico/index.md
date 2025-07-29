@@ -1,7 +1,7 @@
 # Rpi Pico
 
-https://github.com/rp-rs/rp2040-project-template
-https://github.com/rp-rs/rp-hal/tree/main/rp235x-hal-examples
+<https://github.com/rp-rs/rp2040-project-template>
+<https://github.com/rp-rs/rp-hal/tree/main/rp235x-hal-examples>
 
 run-riscv --release --bin=blinky
 cargo build --release --bin=blinky
@@ -14,12 +14,12 @@ rustup target add thumbv8m.main-none-eabihf
 
 this can be obtained from
 
- * https://www.raspberrypi.com/news/raspberry-pi-pico-windows-installer/
+ * <https://www.raspberrypi.com/news/raspberry-pi-pico-windows-installer/>
 
 ## Modes
 
 The Rpi Pico 2W has two modes of operation
-https://www.youtube.com/watch?v=qNbKqf8ZLKY
+<https://www.youtube.com/watch?v=qNbKqf8ZLKY>
 
 ### BootSel Mode
 
@@ -43,8 +43,8 @@ such as via the pico probe
 
 ## Wireless
 
-  * https://docs.rs/cyw43/latest/cyw43/
-  * https://crates.io/crates/cyw43
+  * <https://docs.rs/cyw43/latest/cyw43/>
+  * <https://crates.io/crates/cyw43>
 
 Also the LED for the wireless boards is connected to gpio0 of the cyw43 wireless chip
 
@@ -53,10 +53,10 @@ Also the LED for the wireless boards is connected to gpio0 of the cyw43 wireless
 
 Debug with the pico probe
 
-  * https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html
+  * <https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html>
 
 See if issue gets fixed
 
-  * https://github.com/rp-rs/rp-hal/issues/910
+  * <https://github.com/rp-rs/rp-hal/issues/910>
 
 Try turning on the LED via the Wireless GPIO

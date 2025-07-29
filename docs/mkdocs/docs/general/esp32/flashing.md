@@ -15,7 +15,7 @@ esptool.py --chip esp32 elf2image target/xtensa-esp32-none-elf/release/blinky
 
 ## Memory Map ESP32
 
-  * https://www.lucadentella.it/en/2017/09/30/esp32-22-spiffs/
-  * https://github.com/espressif/esptool
-  * https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/bootloader.html
-  * https://blog.espressif.com/esp32-programmers-memory-model-259444d89387
+  * <https://www.lucadentella.it/en/2017/09/30/esp32-22-spiffs/>
+  * <https://github.com/espressif/esptool>
+  * <https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/bootloader.html>
+  * <https://blog.espressif.com/esp32-programmers-memory-model-259444d89387>

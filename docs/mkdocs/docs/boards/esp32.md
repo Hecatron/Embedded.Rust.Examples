@@ -9,7 +9,7 @@ with ESP32 there are two crates available
 
 esp-generate --chip esp32c6 esp32-c6-wroom1
 
-  * https://github.com/esp-rs/esp-idf-template
+  * <https://github.com/esp-rs/esp-idf-template>
 
 ```bash
 cargo generate esp-rs/esp-idf-template cargo

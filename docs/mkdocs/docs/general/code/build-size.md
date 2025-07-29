@@ -11,4 +11,4 @@ cargo build -Z build-std=std,panic_abort -Z build-std-features=panic_immediate_a
 
 TODO I've not tried all of these just yet.
 
-  * https://github.com/johnthagen/min-sized-rust
+  * <https://github.com/johnthagen/min-sized-rust>

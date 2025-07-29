@@ -1,11 +1,11 @@
 {
 	"folders": [
 		{
-			"path": ".", "name": "esp32-c6-nostd"
+			"path": ".", "name": "esp32-nostd"
 		}
 	],
 	"settings": {
-		"rust-analyzer.cargo.target": "riscv32imac-unknown-none-elf",
+		"rust-analyzer.cargo.target": "xtensa-esp32-none-elf",
 		"rust-analyzer.check.allTargets": false
 	}
 }

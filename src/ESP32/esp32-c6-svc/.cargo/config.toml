@@ -9,7 +9,7 @@ target = "riscv32imac-esp-espidf"
 linker = "ldproxy"
 rustflags = ["--cfg", "espidf_time64"]
 # Runner for probe-rs
-runner = "probe-rs run --chip=esp32c6 --preverify --always-print-stacktrace --no-location --catch-hardfault"
+runner = "probe-rs run --chip=esp32c6 --preverify --always-print-stacktrace --no-location --catch-hardfault --idf-partition-table partitions.csv"
 
 [unstable]
 build-std = ["std", "panic_abort"]
@@ -19,7 +19,9 @@ build-std = ["std", "panic_abort"]
 DEFMT_LOG = "info"
 MCU="esp32c6"
 
-ESP_IDF_VERSION = "v5.4.1"
+#ESP_IDF_VERSION = "v5.4.1"
+ESP_IDF_VERSION = "v5.3.2"
+
 #ESP_IDF_SDKCONFIG_DEFAULTS = ".cargo/sdkconfig.defaults"
 # This places the esp-idf-sys build dir under
 # Windows: C:\Users\<username>\.espressif
